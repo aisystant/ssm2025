@@ -16,6 +16,7 @@ const { site, frontmatter } = useData()
   </div>
   <div v-else>
     <a href="/">Home</a>
+    <a href="/team">Команда</a>
     <Content />
   </div>
 </template>
