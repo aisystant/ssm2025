@@ -3,7 +3,7 @@ card:
     name: Рукавишников Валерий
     post: Преподаватель Школы
     text: PhD (Petroleum Engineering), выпускник ШСМ. Руководитель Центра Хериот-Ватт при Томском политехе.
-index: 140
+order: 140
 image: rukavishnikov.jpg
 name: Валерий
 surname: Рукавишников

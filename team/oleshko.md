@@ -3,7 +3,7 @@ card:
     name: Олешко Яна
     post: Преподавательница Школы
     text: Профессиональная танцовщица, хореограф, телесный практик
-index: 90
+order: 90
 image: oleshko.jpg
 name: Яна
 surname: Олешко

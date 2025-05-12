@@ -3,7 +3,7 @@ card:
     name: Левенчук Анатолий
     post: Партнёр
     text: Директор по исследованиям Русского отделения INCOSE, научный руководитель Школы.
-index: 20
+order: 20
 image: levenchuk.webp
 name: Анатолий Игоревич
 surname: Левенчук

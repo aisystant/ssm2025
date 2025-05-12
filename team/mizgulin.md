@@ -3,7 +3,7 @@ card:
     name: Мизгулин Вячеслав
     post: Преподаватель Школы
     text: Кандидат технических наук, член INCOSE, эксперт по системной инженерии.
-index: 40
+order: 40
 image: mizgulin.jpg
 name: Вячеслав
 surname: Мизгулин
