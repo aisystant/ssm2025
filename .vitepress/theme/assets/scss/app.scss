@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+// include custom settings for whore website
+@import "other/variables";
+@import "other/fonts";
+@import "other/mixins";
+@import "other/placeholders";
+@import "other/typography";
+
+@import "bootstrap";
+
+// include settings for global layouts
+@import "layout/body";
+@import "layout/header";
+@import "layout/footer";
+@import "general/buttons";
+@import "general/forms";
+@import "general/elements";
+
+// Include Core Theme Components
+@import "components/social";

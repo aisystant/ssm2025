@@ -1,0 +1,25 @@
+.btn {
+    &-outline {
+        --bs-btn-bg: #{$white};
+        @extend .btn-outline-dark;
+    }
+
+    &.btn-dark,
+    &.btn-outline {
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: shade-color($dark, $btn-hover-bg-shade-amount);
+            color: $white;
+        }
+    }
+
+    &-loading {
+        &:before {
+            content: '';
+            @extend .spinner-border;
+            @extend .spinner-border-sm;
+            margin-right: .5rem;
+        }
+    }
+}

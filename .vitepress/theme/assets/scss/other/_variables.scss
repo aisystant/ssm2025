@@ -1,0 +1,173 @@
+// Options
+
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-responsive-font-sizes: true;
+$enable-validation-icons: false;
+$enable-caret: true;
+
+// Grid containers
+
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$grid-gutter-width: 2.5rem;
+
+// Spacing
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 3,
+);
+
+// Color system
+
+$white:    #fff;
+$gray-100: #F9F9F9;
+$gray-200: #f3f3f3;
+$gray-300: #EEEEEE;
+$gray-400: #bdbdbd;
+$gray-500: #A7A7A7;
+$gray-600: #757575;
+$gray-700: #4C4C4C;
+$gray-800: #424242;
+$gray-900: #212121;
+$black:    #000;
+
+$blue:    #0d6efd;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #D61E1E;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #389D2D;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+
+$primary:       $gray-700;
+$secondary:     $green;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-300;
+$dark:          $gray-700;
+
+// Body
+
+$body-bg:       $gray-100;
+$body-color:    $gray-700;
+
+// Links
+
+$link-color:                  $secondary;
+$link-decoration:             underline;
+$link-hover-decoration:       none;
+
+// Typography
+
+$base-font-path:              '../fonts';
+$base-font-name:              'Rubik';
+$font-family-base:            $base-font-name, sans-serif;
+$line-height-base:            1.5;
+
+$font-size-base:              1rem;
+$font-size-sm:                $font-size-base * .875;
+$font-size-lg:                $font-size-base * 1.125;
+
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-semibold:        500;
+$font-weight-bold:            600;
+
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+
+$headings-font-weight:        400;
+$headings-line-height:        1.3;
+$headings-margin-bottom:      1.25rem;
+
+$lead-font-size:              $font-size-base * 1.125;
+$lead-font-weight:            $font-weight-normal;
+
+$small-font-size:             .825em;
+
+// Components
+
+$border-radius:               .625rem;
+$border-radius-sm:            .375rem;
+$border-radius-lg:            1rem;
+$spinner-border-width-sm:    .12em;
+$caret-width:                .25em;
+$caret-vertical-align:        $caret-width * .75;
+$caret-spacing:               .3em;
+$color-transition:            color .15s ease-in-out;
+
+// Buttons + Forms
+
+$input-btn-focus-box-shadow: none;
+
+$btn-font-weight: $font-weight-normal;
+$btn-close-focus-shadow: none;
+$btn-border-radius: 1.875rem;
+$btn-border-radius-lg: $btn-border-radius;
+$btn-border-radius-sm: $btn-border-radius;
+$btn-padding-y: 0.62rem;
+$btn-padding-x: 2rem;
+$btn-padding-y-lg: .75rem;
+$btn-padding-x-lg: 2.25rem;
+$btn-padding-y-sm: .42rem;
+$btn-padding-x-sm: 1.5rem;
+$btn-hover-bg-shade-amount: 15%;
+$btn-focus-width: 0;
+
+$input-bg: $white;
+$input-font-weight: $font-weight-light;
+$input-border-color: $gray-500;
+$input-focus-border-color: $gray-700;
+$input-border-radius: $border-radius-sm;
+$input-placeholder-color: $gray-500;
+$input-padding-x: 1rem;
+$input-padding-y: .777rem;
+
+// Navbar
+
+$navbar-padding-x: calc($grid-gutter-width * .5);
+$navbar-nav-link-padding-x: 1rem;
+$navbar-light-color: $body-color;
+$navbar-light-hover-color: $gray-600;
+$navbar-light-active-color: $secondary;
+$navbar-light-icon-color: $body-color;
+$navbar-toggler-padding-x: .25rem;
+
+// Dropdowns
+
+$dropdown-border-width: 0;
+$dropdown-padding-y: .75rem;
+$dropdown-item-padding-y: .35em;
+$dropdown-item-padding-x: 1.25em;
+$dropdown-link-hover-color: $navbar-light-hover-color;
+$dropdown-link-hover-bg: transparent;
+$dropdown-link-active-color: $navbar-light-active-color;
+$dropdown-link-active-bg: transparent;
+
+// Offcanvas
+
+$offcanvas-padding-x: 1.5rem;
+$offcanvas-padding-y: 1rem;

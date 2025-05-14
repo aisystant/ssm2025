@@ -1,0 +1,120 @@
+.header {
+    @extend .sticky-top;
+    background-color: $body-bg;
+    box-shadow: $box-shadow-sm;
+}
+
+.navbar {
+    @extend .navbar-expand-xl;
+    @extend .container-xxl;
+
+    &-brand {
+        & img {
+            width: 8.125rem;
+        }
+    }
+
+    & .nav-item {
+        position: relative;
+    }
+
+    & .nav-link {
+        &.accent {
+            color: $secondary;
+            font-weight: $font-weight-semibold;
+        }
+    }
+
+    &-menu {
+        @extend .offcanvas-start;
+        flex-grow: 1;
+    }
+
+    & .offcanvas-footer {
+        @extend .d-xl-none;
+        padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+        font-size: .8rem;
+    }
+
+    & .dropdown-menu {
+        --bs-dropdown-spacer: 0;
+    }
+
+    &-actions {
+        display: none;
+        @extend .order-xl-1;
+        @extend .d-sm-block;
+        margin-left: auto;
+
+        & .btn {
+            @extend .btn-sm;
+            display: inline-flex;
+            align-items: center;
+            margin-left: .25rem;
+            @extend .px-xxl-5;
+
+            & .svg-icon {
+                width: 1.5em;
+                height: 1.5em;
+                margin-left: .25rem;
+            }
+        }
+    }
+
+    &-toggler {
+        border: 0;
+        margin-left: 1rem;
+    }
+
+    @include media-breakpoint-only(xl) {
+        & .dropdown-item,
+        & .nav-link {
+            font-size: $font-size-sm;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .offcanvas-body {
+            justify-content: center;
+        }
+
+        & .nav-item {
+            &:hover {
+                & > .dropdown-menu {
+                    display: block !important;
+                }
+            }
+        }
+
+        & .dropdown-menu {
+            min-width: 20rem;
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        & .dropdown-menu {
+            box-shadow: none;
+            @include padding-y(.25rem);
+
+            & .dropdown-item {
+                white-space: normal;
+                @include padding-x(.75rem);
+                margin-bottom: .25rem;
+            }
+        }
+
+        & .offcanvas-title img,
+        & .navbar-brand img {
+            width: 7rem;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: .25rem 1rem;
+
+        & .offcanvas-title img,
+        & .navbar-brand img {
+            width: 6rem;
+        }
+    }
+}

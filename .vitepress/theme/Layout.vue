@@ -22,7 +22,7 @@ const teamPages = computed(() =>
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <h2>Team Members</h2>
     <ul v-if="teamPages.length">
       <li v-for="p in teamPages" :key="p.id">

@@ -1,0 +1,17 @@
+$font-base-300: 'rubik-v28-cyrillic_latin-300';
+$font-base-400: 'rubik-v28-cyrillic_latin-regular';
+$font-base-500: 'rubik-v28-cyrillic_latin-500';
+$font-base-600: 'rubik-v28-cyrillic_latin-600';
+$fonts: (300, $font-base-300),
+        (400, $font-base-400),
+        (500, $font-base-500),
+        (600, $font-base-600);
+@each $weight, $file in $fonts {
+    @font-face {
+        font-display: swap;
+        font-family: $base-font-name;
+        src: url('#{$base-font-path}/#{$file}.woff2') format('woff2');
+        font-weight: $weight;
+        font-style: normal;
+    }
+}

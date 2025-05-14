@@ -1,0 +1,23 @@
+.media-links {
+    @extend .row;
+    @extend .g-2;
+}
+
+.media-item {
+    @extend .col-auto;
+
+    & a {
+        color: $body-color;
+        @extend .text-decoration-none;
+        transition: $color-transition;
+
+        &:hover {
+            color: $gray-600;
+        }
+
+        & .svg-icon {
+            width: 2.5em;
+            height: 2.5em;
+        }
+    }
+}

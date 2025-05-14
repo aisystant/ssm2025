@@ -1,0 +1,33 @@
+@mixin padding-x($left, $right: $left) {
+    padding-left: $left;
+    padding-right: $right;
+}
+
+@mixin padding-y($top, $bottom: $top) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+
+@mixin flex($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin back-image($repeat: no-repeat, $position: center, $size: cover) {
+    background-repeat: $repeat;
+    background-position: $position;
+    background-size: $size;
+}
+
+@mixin back-color($bgcolor: $primary, $color: $white) {
+    background-color: $bgcolor;
+    color: $color;
+}
+
+@mixin circle($size) {
+    display: block;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+}
