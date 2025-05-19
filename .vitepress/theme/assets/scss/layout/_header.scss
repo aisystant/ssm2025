@@ -30,6 +30,10 @@
         flex-grow: 1;
     }
 
+    & .offcanvas-title {
+        @extend %unstyled;
+    }
+
     & .offcanvas-footer {
         @extend .d-xl-none;
         padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);

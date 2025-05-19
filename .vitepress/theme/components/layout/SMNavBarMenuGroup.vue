@@ -1,44 +1,39 @@
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
 import { isActive } from '../../shared'
 import { useData } from '../../composables/data'
-import bootstrap from 'bootstrap/js/dist/dropdown'
 
 defineProps<{
     text: string
     items: any[]
 }>()
 
-const { page } = useData()
-const Dropdown = bootstrap.default || bootstrap
-const dropdownToggle = ref<HTMLElement | null>(null)
+const emit = defineEmits<{
+    (e: 'close'): void
+}>()
 
-onMounted(() => {
-    if (typeof window !== 'undefined' && dropdownToggle.value) {
-        new Dropdown(dropdownToggle.value)
-    }
-})
+const { page } = useData()
 </script>
 
 <template>
-    <button class="nav-link dropdown-toggle" ref="dropdownToggle" data-bs-toggle="dropdown">
+    <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
         {{ text }}
     </button>
 
     <div class="dropdown-menu">
         <template v-for="item in items" :key="JSON.stringify(item)">
-        <a
-            :class="[
-                'dropdown-item',
-                { 'active': isActive(
-                    page.relativePath,
-                    item.activeMatch || item.link,
-                    !!item.activeMatch)
-                }
-            ]"
-            :href="item.link">
-            {{ item.text }}
-        </a>
+            <a
+                :class="[
+                    'dropdown-item',
+                    { 'active': isActive(
+                        page.relativePath,
+                        item.activeMatch || item.link,
+                        !!item.activeMatch)
+                    }
+                ]"
+                :href="item.link"
+                @click="emit('close')">
+                {{ item.text }}
+            </a>
         </template>
     </div>
 </template>

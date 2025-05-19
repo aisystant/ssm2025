@@ -7,6 +7,10 @@ defineProps<{
     item: DefaultTheme.NavItemWithLink
 }>()
 
+const emit = defineEmits<{
+    (e: 'close'): void
+}>()
+
 const { page } = useData()
 </script>
 
@@ -18,7 +22,8 @@ const { page } = useData()
             { 'accent': item.accent }
         ]"
         :href="item.link"
-        :target="item.target ?? undefined">
+        :target="item.target ?? undefined"
+        @click="emit('close')">
         {{ item.text }}
     </a>
 </template>

@@ -4,40 +4,59 @@ import SMLogo from './SMLogo.vue'
 import SMSocial from './SMSocial.vue'
 import SMNavBarMenuLink from './SMNavBarMenuLink.vue'
 import SMNavBarMenuGroup from './SMNavBarMenuGroup.vue'
-import bootstrap from 'bootstrap/js/dist/offcanvas'
 import { useData } from '../../composables/data'
 
 const { theme } = useData()
-const Offcanvas = bootstrap.default || bootstrap
 const navMenu = ref<HTMLElement | null>(null)
 const offcanvasInstance = ref<Offcanvas | null>(null)
 
 onMounted(() => {
-    if (typeof window !== 'undefined' && navMenu.value) {
-        offcanvasInstance.value = new Offcanvas(navMenu.value)
+     if (typeof window !== 'undefined' && navMenu.value) {
+        import('bootstrap/js/dist/offcanvas').then((bootstrap) => {
+            const Offcanvas = bootstrap.default || bootstrap
+            offcanvasInstance.value = new Offcanvas(navMenu.value)
+        })
     }
 })
+
+const openMenu = () => {
+    offcanvasInstance.value?.show()
+}
+
+const closeMenu = () => {
+    offcanvasInstance.value?.hide()
+}
 </script>
 
 <template>
-    <button class="navbar-toggler" type="button" @click="offcanvasInstance?.toggle()">
+    <button class="navbar-toggler" type="button" @click="openMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="navbar-menu offcanvas-xl" ref="navMenu" tabindex="-1">
         <div class="offcanvas-header">
-            <div class="offcanvas-title">
+            <a href="/" class="offcanvas-title" @click="closeMenu">
                 <SMLogo />
-            </div>
-            <button type="button" class="btn-close" @click="offcanvasInstance?.hide()"></button>
+            </a>
+            <button type="button" class="btn-close" @click="closeMenu"></button>
         </div>
 
         <div class="offcanvas-body">
             <ul class="navbar-nav">
-                <li class="nav-item" v-for="item in theme.nav" :key="JSON.stringify(item)">
-                    <SMNavBarMenuLink v-if="'link' in item" :item="item" />
-                    <SMNavBarMenuGroup v-else :text="item.text" :items="item.items" />
-                </li>
+                <template v-for="item in theme.nav" :key="JSON.stringify(item)">
+                    <li class="nav-item">
+                        <SMNavBarMenuLink
+                            :item="item"
+                            @close="closeMenu"
+                            v-if="'link' in item" />
+
+                        <SMNavBarMenuGroup
+                            :text="item.text"
+                            :items="item.items"
+                            @close="closeMenu"
+                            v-else />
+                    </li>
+                </template>
             </ul>
         </div>
 
