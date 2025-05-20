@@ -47,6 +47,7 @@ export default defineConfig({
             {
                 text: "Соцсети",
                 link: "#footer",
+                onlyDekstop: true,
             },
             {
                 text: "С чего начать?",

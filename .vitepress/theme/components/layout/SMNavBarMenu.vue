@@ -5,8 +5,10 @@ import SMSocial from './SMSocial.vue'
 import SMNavBarMenuLink from './SMNavBarMenuLink.vue'
 import SMNavBarMenuGroup from './SMNavBarMenuGroup.vue'
 import { useData } from '../../composables/data'
+import { useDisplay } from '../../composables/media'
 
 const { theme } = useData()
+const { isDekstop } = useDisplay()
 const navMenu = ref<HTMLElement | null>(null)
 const offcanvasInstance = ref<Offcanvas | null>(null)
 
@@ -34,7 +36,7 @@ const closeMenu = () => {
     </button>
 
     <div class="navbar-menu offcanvas-xl" ref="navMenu" tabindex="-1">
-        <div class="offcanvas-header">
+        <div class="offcanvas-header" v-if="!isDekstop">
             <a href="/" class="offcanvas-title" @click="closeMenu">
                 <SMLogo />
             </a>
@@ -44,7 +46,7 @@ const closeMenu = () => {
         <div class="offcanvas-body">
             <ul class="navbar-nav">
                 <template v-for="item in theme.nav" :key="JSON.stringify(item)">
-                    <li class="nav-item">
+                    <li class="nav-item" v-if="isDekstop || !item.onlyDekstop">
                         <SMNavBarMenuLink
                             :item="item"
                             @close="closeMenu"
@@ -60,7 +62,7 @@ const closeMenu = () => {
             </ul>
         </div>
 
-        <div class="offcanvas-footer">
+        <div class="offcanvas-footer" v-if="!isDekstop">
             <SMSocial />
         </div>
     </div>
