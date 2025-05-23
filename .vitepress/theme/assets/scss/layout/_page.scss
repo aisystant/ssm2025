@@ -13,4 +13,11 @@
             }
         }
     }
+
+    &-title {
+        text-align: center;
+        @extend .mb-md-4;
+        @extend .mb-lg-5;
+        @extend .mb-xl-6;
+    }
 }

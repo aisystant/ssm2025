@@ -1,0 +1,29 @@
+.section-title {
+    @extend h1;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-weight: $font-weight-light;
+    line-height: $headings-line-height;
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-up(md) {
+        font-size: $lead-font-size;
+        margin-bottom: 2rem;
+    }
+}
+
+%section-margin {
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 3.5rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 5rem;
+    }
+}

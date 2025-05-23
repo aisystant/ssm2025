@@ -1,0 +1,90 @@
+.team-section {
+    @extend .container;
+    @extend %section-margin;
+}
+
+.team {
+    @extend .row;
+    @extend .g-3;
+    @extend .g-lg-4;
+    @extend .g-xxl-5;
+
+    &__item {
+        @extend .col-lg-6;
+        display: flex;
+    }
+
+    &-card {
+        @extend .card;
+        width: 100%;
+        @extend %unstyled;
+        @extend .mx-auto;
+
+        & .card-image {
+            position: relative;
+
+            & img {
+                @include img-cover(50% 20%);
+                position: absolute;
+                inset: 0;
+            }
+        }
+
+        & .card-title {
+            @extend h5;
+            font-weight: $font-weight-semibold;
+            margin-bottom: .5rem;
+        }
+
+        & .card-small {
+            font-size: $font-size-sm;
+            color: $gray-500;
+        }
+
+        & .card-text {
+            font-weight: $font-weight-light;
+            padding-top: .5rem;
+        }
+
+        @include media-breakpoint-up(sm) {
+            flex-direction: row;
+            min-height: 11rem;
+
+            & .card-image {
+                flex: 0 0 auto;
+                width: 36%;
+                order: 1;
+                border-radius: 0 $card-border-radius $card-border-radius 0;
+                overflow: hidden;
+            }
+
+            & .card-body {
+                align-self: center;
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            max-width: 40rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            & .card-body {
+                padding: 1.25rem;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 2rem;
+            margin-top: 130px;
+
+            & .card-image {
+                width: 200px;
+                height: 150px;
+                position: absolute;
+                left: 1.25rem;
+                bottom: 100%;
+                margin-bottom: -2rem;
+            }
+        }
+    }
+}

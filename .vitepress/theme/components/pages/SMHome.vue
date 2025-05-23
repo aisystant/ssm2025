@@ -1,34 +1,30 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import TeamCards from './../TeamCards.vue'
+import { useData } from '../../composables/data'
 
-const modules = import.meta.glob('/team/*.md', { eager: true })
-
-const teamPages = computed(() =>
-    Object.entries(modules)
-        .map(([path, mod]: any) => {
-            const id = path.match(/\/team\/(.*?)\.md$/)?.[1]
-            const fm = mod.__pageData?.frontmatter ?? {}
-
-            return {
-                id,
-                name: fm.name,
-                surname: fm.surname,
-                order: fm.order,
-            }
-        })
-        .filter(p => typeof p.order === 'number')
-        .sort((a, b) => a.order - b.order)
-)
+const { frontmatter } = useData()
 </script>
 
 <template>
-    <div class="container">
-        <h2>Team Members</h2>
-        <ul v-if="teamPages.length">
-            <li v-for="p in teamPages" :key="p.id">
-                <a :href="`/team/${p.id}/`">{{ p.name }} {{ p.surname }}</a>
-            </li>
-        </ul>
-        <p v-else>No valid team members found</p>
+    <div class="programs-section">
+        <div class="section-row">
+            <div class="section-col" v-for="program in frontmatter.programs" :key="JSON.stringify(program)">
+                <div class="program-item">
+                    <a :href="program.anchor" class="btn">
+                        {{ program.name }}
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <section class="team-section">
+        <h2 class="section-title">
+            {{ frontmatter.team.title }}
+        </h2>
+        <div class="section-subtitle">
+            {{ frontmatter.team.subtitle }}
+        </div>
+        <TeamCards />
+    </section>
 </template>
