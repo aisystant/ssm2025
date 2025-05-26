@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ProgramCard from './../ProgramCard.vue'
+import SubscribeForm from './../SubscribeForm.vue'
 import TeamCards from './../TeamCards.vue'
 import { useData } from '../../composables/data'
 
@@ -21,6 +22,7 @@ const { frontmatter } = useData()
 
     <ProgramCard id="selfdev" />
     <ProgramCard id="orgdev" />
+    <SubscribeForm />
 
     <section class="team-section">
         <h2 class="section-title" v-html="frontmatter.team.title"></h2>
