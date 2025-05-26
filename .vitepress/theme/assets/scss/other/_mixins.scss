@@ -38,3 +38,10 @@
     object-fit: cover;
     object-position: $position;
 }
+
+@mixin mask($image, $size: 100% 100%, $repeat: no-repeat, $color: currentColor) {
+    mask-image: $image;
+    mask-size: $size;
+    mask-repeat: $repeat;
+    background-color: $color;
+}

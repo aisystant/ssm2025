@@ -13,7 +13,7 @@ $container-max-widths: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px,
+  xxl: 1340px,
 );
 
 $grid-gutter-width: 2.5rem;
@@ -37,7 +37,7 @@ $white:    #fff;
 $gray-100: #F9F9F9;
 $gray-200: #f3f3f3;
 $gray-300: #EEEEEE;
-$gray-400: #bdbdbd;
+$gray-400: #DBDBDB;
 $gray-500: #A7A7A7;
 $gray-600: #757575;
 $gray-700: #4C4C4C;
@@ -186,3 +186,4 @@ $card-spacer-x: 1.5rem;
 $card-border-width: 0;
 $card-border-radius: $border-radius-sm;
 $card-bg: $white;
+$card-cap-bg: $card-bg;

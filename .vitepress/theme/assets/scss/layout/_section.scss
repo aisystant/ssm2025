@@ -27,3 +27,15 @@
         margin-bottom: 5rem;
     }
 }
+
+%section-padding {
+    padding-top: 2rem;
+
+    @include media-breakpoint-up(md) {
+        padding-top: 3.5rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-top: 5rem;
+    }
+}
