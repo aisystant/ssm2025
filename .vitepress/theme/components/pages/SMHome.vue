@@ -8,7 +8,7 @@ const { frontmatter } = useData()
 </script>
 
 <template>
-    <div class="programs-section">
+    <div class="programs-section" v-if="frontmatter.programs">
         <div class="section-row">
             <div class="section-col" v-for="program in frontmatter.programs" :key="JSON.stringify(program)">
                 <div class="program-item">
@@ -22,6 +22,20 @@ const { frontmatter } = useData()
 
     <ProgramCard id="selfdev" />
     <ProgramCard id="orgdev" />
+
+    <div class="education-section" v-if="frontmatter.education">
+        <div class="section-row">
+            <div class="section-col" v-for="item in frontmatter.education" :key="JSON.stringify(item)">
+                <div class="education-item">
+                    <a :href="item.link" class="btn">
+                        {{ item.button }}
+                    </a>
+                    <div class="card-text" v-html="item.text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <SubscribeForm />
 
     <section class="team-section">

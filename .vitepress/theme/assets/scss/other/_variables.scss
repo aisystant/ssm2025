@@ -112,7 +112,7 @@ $small-font-size:             .825em;
 
 $border-radius:               .625rem;
 $border-radius-sm:            .375rem;
-$border-radius-lg:            1rem;
+$border-radius-lg:            1.25rem;
 $spinner-border-width-sm:    .12em;
 $caret-width:                .25em;
 $caret-vertical-align:        $caret-width * .75;
@@ -184,6 +184,6 @@ $btn-close-focus-shadow: none;
 $card-spacer-y: 1.5rem;
 $card-spacer-x: 1.5rem;
 $card-border-width: 0;
-$card-border-radius: $border-radius-sm;
+$card-border-radius: $border-radius;
 $card-bg: $white;
 $card-cap-bg: $card-bg;

@@ -1,0 +1,67 @@
+.education-section {
+    @extend .container;
+    @extend %section-margin;
+
+    & .section-row {
+        @extend .row;
+        @extend .g-3;
+        @extend .gx-lg-4;
+        @extend .gx-xxl-5;
+    }
+
+    & .section-col {
+        @extend .col-md-6;
+    }
+
+    & .education-item {
+        @include flex();
+        flex-direction: column;
+        background-image: url(../img/education-bg.jpg);
+        @include back-image();
+        @include padding-y(2.5rem);
+        box-shadow: $box-shadow-sm;
+
+        & .btn {
+            @extend .btn-outline;
+            min-width: 18em;
+        }
+
+        & .card-text {
+            text-align: center;
+            width: 17em;
+            margin-top: .75rem;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        & .education-item {
+            border-radius: $border-radius;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .education-item {
+            aspect-ratio: 7 / 4;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .education-item {
+            border-radius: $border-radius-lg;
+
+            & .btn {
+                padding: $btn-padding-y-lg $btn-padding-x-lg;
+                font-size: $btn-font-size-lg;
+            }
+
+            & .card-text {
+                font-size: $font-size-lg;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        @include padding-x(0);
+    }
+}

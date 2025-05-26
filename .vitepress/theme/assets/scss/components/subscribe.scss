@@ -54,6 +54,7 @@
     @include media-breakpoint-up(md) {
         &__body {
             padding: 3rem;
+            border-radius: $border-radius-lg;
         }
 
         & .form-submit {
@@ -62,9 +63,6 @@
     }
 
     @include media-breakpoint-up(xl) {
-        padding: 2rem;
-        border-radius: $border-radius-lg;
-
         &__body {
             @include padding-y(3.5rem);
         }
