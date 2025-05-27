@@ -2,6 +2,7 @@
 import ProgramCard from './../ProgramCard.vue'
 import SubscribeForm from './../SubscribeForm.vue'
 import TeamCards from './../TeamCards.vue'
+import ContactUs from './../ContactUs.vue'
 import { useData } from '../../composables/data'
 
 const { frontmatter } = useData()
@@ -43,4 +44,6 @@ const { frontmatter } = useData()
         <div class="section-subtitle" v-html="frontmatter.team.subtitle" v-if="frontmatter.team.subtitle"></div>
         <TeamCards />
     </section>
+
+    <ContactUs />
 </template>

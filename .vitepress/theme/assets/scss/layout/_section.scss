@@ -37,6 +37,10 @@
     @include media-breakpoint-up(xl) {
         margin-bottom: 5rem;
     }
+
+    @include media-breakpoint-up(xxl) {
+        margin-bottom: 6rem;
+    }
 }
 
 %section-padding {
