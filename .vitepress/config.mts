@@ -3,6 +3,7 @@ import createSvgSpritePlugin from 'vite-plugin-svg-sprite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+    srcDir: "src",
     lang: "ru-RU",
     title: "Школа системного менеджмента",
     description: "Готовим директоров по развитию, меняющих мир к лучшему",
