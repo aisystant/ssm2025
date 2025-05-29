@@ -4,7 +4,7 @@
 
     & .section-row {
         @extend .row;
-        @extend .g-3;
+        @extend .gy-3;
         @extend .gx-lg-4;
         @extend .gx-xxl-5;
     }
@@ -62,6 +62,8 @@
     }
 
     @include media-breakpoint-down(sm) {
-        @include padding-x(0);
+        & .section-col {
+            @include padding-x(0);
+        }
     }
 }

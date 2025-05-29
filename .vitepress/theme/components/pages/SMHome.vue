@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import CardSwiper from './../CardSwiper.vue'
 import ProgramCard from './../ProgramCard.vue'
 import SubscribeForm from './../SubscribeForm.vue'
 import TeamCards from './../TeamCards.vue'
@@ -21,6 +22,8 @@ const { frontmatter } = useData()
         </div>
     </div>
 
+    <CardSwiper :data="frontmatter.swiper1" :dark="true" />
+
     <ProgramCard id="selfdev" />
     <ProgramCard id="orgdev" />
 
@@ -36,6 +39,10 @@ const { frontmatter } = useData()
             </div>
         </div>
     </div>
+
+    <CardSwiper :data="frontmatter.swiper2" :dark="true" />
+    <CardSwiper :data="frontmatter.swiper3" />
+    <CardSwiper :data="frontmatter.swiper4" />
 
     <SubscribeForm />
 
