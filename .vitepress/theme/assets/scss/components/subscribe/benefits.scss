@@ -1,0 +1,49 @@
+.benefits-subscribe {
+    background-color: $light;
+    text-align: center;
+    @include padding-y(2.5rem);
+    @extend %section-margin;
+
+    & .benefits-container {
+        @extend .container;
+        max-width: 57rem;
+    }
+
+    & .section-row {
+        @extend .row;
+        @extend .g-3;
+        @extend .g-lg-4;
+        justify-content: center;
+    }
+
+    & .section-col {
+        @extend .col-md-4;
+        display: flex;
+    }
+
+    & .simple-card {
+        @extend .py-md-3;
+        @extend .py-lg-4;
+    }
+
+    & .benefits-footer {
+        font-weight: $font-weight-light;
+        margin-top: 1.5rem;
+    }
+
+    @include media-breakpoint-up(md) {
+        @include padding-y(3.5rem);
+
+        & .section-row {
+            padding-top: 1rem;
+        }
+
+        & .benefits-footer {
+            margin-top: 2.5rem;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include padding-y(4.5rem);
+    }
+}

@@ -7,7 +7,9 @@ const { frontmatter } = useData()
 
 <template>
     <div class="page__content">
-        <h1 class="page-title">{{ frontmatter.title }}</h1>
+        <div class="page-header">
+            <h1 class="page-title">{{ frontmatter.title }}</h1>
+        </div>
         <TeamCards />
     </div>
 </template>

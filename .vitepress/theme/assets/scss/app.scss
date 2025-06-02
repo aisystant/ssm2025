@@ -19,14 +19,16 @@
 @import "general/buttons";
 @import "general/forms";
 @import "general/elements";
+@import "general/card";
 
 // Include Core Theme Components
 @import "components/social";
 @import "components/cookies";
-@import "components/subscribe";
 @import "components/feedback";
 @import "components/home/programs";
 @import "components/home/program";
 @import "components/home/team";
 @import "components/home/education";
 @import "components/home/carousel";
+@import "components/subscribe/subscribe";
+@import "components/subscribe/benefits";

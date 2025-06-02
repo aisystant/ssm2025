@@ -19,9 +19,11 @@
         @extend .mx-auto;
     }
 
-    & .section-subtitle {
-        max-width: 30em;
+    & .section-head {
+        max-width: 34rem;
         @extend .mx-auto;
+        @extend .mb-4;
+        @extend .mb-md-5;
     }
 
     & .form-submit {

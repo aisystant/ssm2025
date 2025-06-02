@@ -1,0 +1,12 @@
+.card {
+    width: 100%;
+    @extend %unstyled;
+}
+
+.simple-card {
+    @extend .card;
+
+    & .card-body {
+        @include flex();
+    }
+}

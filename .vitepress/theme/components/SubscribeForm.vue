@@ -1,10 +1,29 @@
+<script lang="ts" setup>
+import { computed } from 'vue'
+import { useData } from './../composables/data'
+import { isActive } from './../shared'
+
+const { page, frontmatter } = useData()
+
+const isSubscribe = computed(() => {
+    return isActive(page.value.relativePath, '/subscribe')
+})
+</script>
+
 <template>
     <section class="subscribe">
         <div class="subscribe__body">
-            <h2 class="section-title">Системный еженедельник</h2>
-            <div class="section-subtitle">
-                Лучшие посты сообщества инженеров, менеджеров и бизнесменов, использующих системный подход для развития себя, команд, сообществ и преобразования мира
+            <div class="section-head">
+                <h2 class="h4" v-html="frontmatter.form.title" v-if="isSubscribe && frontmatter.form.title"></h2>
+
+                <template v-else>
+                    <h2 class="section-title">Системный еженедельник</h2>
+                    <div class="section-subtitle">
+                        Лучшие посты сообщества инженеров, менеджеров и бизнесменов, использующих системный подход для развития себя, команд, сообществ и преобразования мира
+                    </div>
+                </template>
             </div>
+
             <div class="subscribe__form">
                 <form method="post">
                     <div class="mb-3">
@@ -23,8 +42,8 @@
                     и даёте согласие на обработку <a href="/agreement">персональных данных</a>.
                 </div>
 
-                <div class="form-footer">
-                    <a href="#">Что такое системный еженедельник?</a>
+                <div class="form-footer" v-if="!isSubscribe">
+                    <a href="/subscribe">Что такое системный еженедельник?</a>
                 </div>
             </div>
         </div>

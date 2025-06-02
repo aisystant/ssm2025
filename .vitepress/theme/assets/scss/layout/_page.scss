@@ -4,9 +4,13 @@
         @extend .py-4;
         @extend .py-xl-6;
 
-        & .text-content {
+        & .text-wrap {
             max-width: 50rem;
             @extend .mx-auto;
+        }
+
+        & .text-content {
+            @extend .text-wrap;
 
             & h1 {
                 @extend h3;
@@ -14,10 +18,37 @@
         }
     }
 
-    &-title {
+    &-header {
         text-align: center;
+        margin-bottom: $headings-margin-bottom;
         @extend .mb-md-4;
         @extend .mb-lg-5;
         @extend .mb-xl-6;
+    }
+
+    &-title {
+        margin-bottom: 0;
+    }
+
+    &-subtitle {
+        font-weight: $font-weight-light;
+        line-height: 1.4;
+        margin-top: 1rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        &-title {
+            font-size: 2.75rem;
+        }
+
+        &-subtitle {
+            font-size: $lead-font-size;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        &-subtitle {
+            font-size: $font-size-sm;
+        }
     }
 }

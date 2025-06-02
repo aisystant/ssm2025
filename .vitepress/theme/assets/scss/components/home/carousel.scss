@@ -64,7 +64,6 @@
 .carousel-card {
     position: relative;
     @extend .card;
-    @extend %unstyled;
     aspect-ratio: 3 / 4;
     background-color: $light;
     @include back-image();

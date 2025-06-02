@@ -35,8 +35,6 @@
 
 .program-card {
     @extend .card;
-    width: 100%;
-    @extend %unstyled;
     @extend .mx-auto;
     @include transition($btn-transition);
 
