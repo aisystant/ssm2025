@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import { isActive } from '../../shared'
 import { useData } from '../../composables/data'
+import { useDisplay } from '../../composables/media'
+
+const { isDekstop } = useDisplay()
 
 defineProps<{
     text: string
@@ -31,7 +34,9 @@ const { page } = useData()
                     }
                 ]"
                 :href="item.link"
-                @click="emit('close')">
+                :target="item.target ?? undefined"
+                @click="emit('close')"
+                v-if="isDekstop || !item.onlyDekstop">
                 {{ item.text }}
             </a>
         </template>

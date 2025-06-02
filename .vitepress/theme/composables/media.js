@@ -7,7 +7,7 @@ export function useDisplay() {
     onMounted(() => {
         if (typeof window !== 'undefined') {
             const updateMediaQueries = () => {
-                isMobile.value = window.matchMedia('(max-width: 576px)').matches;
+                isMobile.value = window.matchMedia('(max-width: 575.98px)').matches;
                 isDekstop.value = window.matchMedia('(min-width: 1200px)').matches;
             };
 

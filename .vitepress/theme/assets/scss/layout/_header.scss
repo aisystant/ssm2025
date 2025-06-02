@@ -1,7 +1,7 @@
 .header {
     @extend .sticky-top;
-    background-color: $body-bg;
-    box-shadow: $box-shadow-sm;
+    background-color: $white;
+    box-shadow: 0 .15rem .5rem rgba($black, .05);
 }
 
 .navbar {
@@ -45,9 +45,7 @@
     }
 
     &-actions {
-        display: none;
         @extend .order-xl-1;
-        @extend .d-sm-block;
         margin-left: auto;
 
         & .btn {
@@ -60,7 +58,7 @@
             & .svg-icon {
                 width: 1.5em;
                 height: 1.5em;
-                margin-left: .25rem;
+                @extend .ms-sm-1;
             }
         }
     }
@@ -91,7 +89,7 @@
         }
 
         & .dropdown-menu {
-            min-width: 20rem;
+            min-width: 18rem;
         }
     }
 
@@ -119,6 +117,13 @@
         & .offcanvas-title img,
         & .navbar-brand img {
             width: 6rem;
+        }
+
+        &-actions {
+            & .btn {
+                font-size: $small-font-size;
+                padding: .35rem;
+            }
         }
     }
 }

@@ -15,45 +15,35 @@ export default defineConfig({
                 text: "О ШСМ",
                 items: [
                     { text: "Коротко о ШСМ", link: "#" },
+                    { text: "Квалификации", link: "#" },
                     { text: "Команда", link: "/team/", activeMatch: "^/team" },
-                    { text: "Контакты", link: "#footer" },
-                    { text: "Волонтерство", link: "#" },
-                    { text: "Амбассадоры ШСМ", link: "#" },
+                    { text: "Контакты", link: "#" },
                 ],
             },
             {
-                text: "Обучение",
+                text: "Стажировки",
                 items: [
-                    { text: "Образовательная программа", link: "#" },
+                    { text: "Программы", link: "#" },
                     { text: "Расписание", link: "#" },
-                    { text: "Чему и как учиться", link: "#" },
-                    { text: "Что получает наш студент", link: "#" },
-                    { text: "Квалификация", link: "#" },
-                    { text: "Литература", link: "#" },
+                    { text: "Подписка", link: "#" },
                 ],
             },
             {
                 text: "Исследования",
                 items: [
                     { text: "Обзор исследований", link: "#" },
-                    { text: "О системном мышлении", link: "#" },
                     { text: "Интеллект-стек и стек практик саморазвития", link: "#" },
+                    { text: "Новости исследований", link: "https://systemsworld.club/c/issledovaniya/1020", target: "_blank" },
                 ],
             },
             {
-                text: "Клуб",
-                link: "https://systemsworld.club/",
-                target: "_blank",
-            },
-            {
-                text: "Соцсети",
-                link: "#footer",
-                onlyDekstop: true,
-            },
-            {
-                text: "С чего начать?",
-                link: "#",
-                accent: true,
+                text: "Сообщество",
+                items: [
+                    { text: "Клуб", link: "https://systemsworld.club/", target: "_blank" },
+                    { text: "Амбассадоры", link: "#" },
+                    { text: "Волонтёры", link: "#" },
+                    { text: "Соцсети", link: "#footer", onlyDekstop: true },
+                ],
             },
         ],
         socialLinks: [

@@ -3,8 +3,10 @@ import SMLogo from './SMLogo.vue'
 import SMNavBarMenu from './SMNavBarMenu.vue'
 import SvgIcon from '../SvgIcon.vue'
 import { useData } from '../../composables/data'
+import { useDisplay } from '../../composables/media'
 
 const { theme } = useData()
+const { isMobile } = useDisplay()
 </script>
 
 <template>
@@ -16,7 +18,7 @@ const { theme } = useData()
 
             <div class="navbar-actions">
                 <a :href="theme.extLinks.aisystant" class="btn btn-outline" target="_blank">
-                    Aisystant
+                    <template v-if="!isMobile">Aisystant</template>
                     <SvgIcon name="magic" />
                 </a>
             </div>
