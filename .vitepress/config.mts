@@ -15,7 +15,7 @@ export default defineConfig({
                 text: "О ШСМ",
                 items: [
                     { text: "Коротко о ШСМ", link: "#" },
-                    { text: "Квалификации", link: "#" },
+                    { text: "Квалификации", link: "/qualification" },
                     { text: "Команда", link: "/team/", activeMatch: "^/team" },
                     { text: "Контакты", link: "#" },
                 ],

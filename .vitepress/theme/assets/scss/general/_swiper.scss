@@ -1,0 +1,27 @@
+.swiper {
+    &-slide {
+        height: initial;
+    }
+
+    &-control {
+        display: flex;
+
+        & [class^="button-"] {
+            margin-left: .25rem;
+
+            & .svg-icon {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            &.swiper-button-disabled {
+                opacity: .4;
+                pointer-events: none;
+            }
+
+            &.swiper-button-lock {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,8 +1,5 @@
 .benefits-subscribe {
-    background-color: $light;
-    text-align: center;
-    @include padding-y(2.5rem);
-    @extend %section-margin;
+    @extend .section-light;
 
     & .benefits-container {
         @extend .container;
@@ -32,8 +29,6 @@
     }
 
     @include media-breakpoint-up(md) {
-        @include padding-y(3.5rem);
-
         & .section-row {
             padding-top: 1rem;
         }
@@ -41,9 +36,5 @@
         & .benefits-footer {
             margin-top: 2.5rem;
         }
-    }
-
-    @include media-breakpoint-up(xl) {
-        @include padding-y(4.5rem);
     }
 }

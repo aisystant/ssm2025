@@ -1,0 +1,37 @@
+.cert-check {
+    @extend .container;
+    @extend %section-margin;
+    text-align: center;
+
+    &__text {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-semibold;
+        margin-bottom: 1rem;
+        @extend .mx-auto;
+    }
+
+    & .btn {
+        @extend .btn-outline;
+        min-width: 14em;
+    }
+
+    @include media-breakpoint-up(md) {
+        &__text {
+            font-size: $h5-font-size;
+            max-width: 26em;
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        &__text {
+            font-size: $h4-font-size;
+            margin-bottom: 1.5rem;
+        }
+
+        & .btn {
+            padding: $btn-padding-y-lg $btn-padding-x-lg;
+            font-size: $btn-font-size-lg;
+        }
+    }
+}

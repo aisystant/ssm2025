@@ -20,6 +20,7 @@
 @import "general/forms";
 @import "general/elements";
 @import "general/card";
+@import "general/swiper";
 
 // Include Core Theme Components
 @import "components/social";
@@ -32,3 +33,5 @@
 @import "components/home/carousel";
 @import "components/subscribe/subscribe";
 @import "components/subscribe/benefits";
+@import "components/qualification/qualification";
+@import "components/qualification/checking";

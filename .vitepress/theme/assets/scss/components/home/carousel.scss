@@ -15,26 +15,7 @@
     }
 
     & .swiper-control {
-        display: flex;
         margin-left: .5rem;
-
-        & [class^="button-"] {
-            margin-left: .25rem;
-
-            & .svg-icon {
-                width: 1.5rem;
-                height: 1.5rem;
-            }
-
-            &.swiper-button-disabled {
-                opacity: .4;
-                pointer-events: none;
-            }
-
-            &.swiper-button-lock {
-                display: none;
-            }
-        }
     }
 
     @include media-breakpoint-up(lg) {

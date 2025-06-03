@@ -54,3 +54,18 @@
         padding-top: 5rem;
     }
 }
+
+.section-light {
+    background-color: $light;
+    text-align: center;
+    @include padding-y(2.5rem);
+    @extend %section-margin;
+
+    @include media-breakpoint-up(md) {
+        @include padding-y(3.5rem);
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include padding-y(4.5rem);
+    }
+}
