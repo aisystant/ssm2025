@@ -5,16 +5,16 @@ import createSvgSpritePlugin from 'vite-plugin-svg-sprite'
 export default defineConfig({
     srcDir: "src",
     lang: "ru-RU",
-    title: "Школа системного менеджмента",
+    title: "Мастерская инженеров-менеджеров",
     description: "Готовим директоров по развитию, меняющих мир к лучшему",
 
     themeConfig: {
-        siteTitle: "Школа системного менеджмента",
+        siteTitle: "Мастерская инженеров-менеджеров",
         nav: [
             {
-                text: "О ШСМ",
+                text: "О нас",
                 items: [
-                    { text: "Коротко о ШСМ", link: "#" },
+                    { text: "Коротко о нас", link: "#" },
                     { text: "Квалификации", link: "/qualification" },
                     { text: "Команда", link: "/team/", activeMatch: "^/team" },
                     { text: "Контакты", link: "#" },
@@ -26,6 +26,7 @@ export default defineConfig({
                     { text: "Программы", link: "#" },
                     { text: "Расписание", link: "#" },
                     { text: "Подписка", link: "#" },
+                    { text: "Литература", link: "#" },
                 ],
             },
             {
@@ -45,6 +46,13 @@ export default defineConfig({
                     { text: "Соцсети", link: "#footer", onlyDekstop: true },
                 ],
             },
+        ],
+        expandButtons: [
+            { icon: "magic", text: "ИТ-платформа Aisystant", link: "https://aisystant.system-school.ru/", target: "_blank" },
+            { icon: "ruble", text: "Купить", link: "#" },
+            { icon: "global", text: "Соцсети", link: "#footer" },
+            { icon: "club", text: "Клуб", link: "https://systemsworld.club/", target: "_blank" },
+            { icon: "contacts", text: "Контакты", link: "#" },
         ],
         socialLinks: [
             { icon: "youtube", link: "https://www.youtube.com/channel/UCJ0Uq_WB7GLmY-NTz2oFoUQ" },

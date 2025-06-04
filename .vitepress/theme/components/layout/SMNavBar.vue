@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import SMLogo from './SMLogo.vue'
+import SMNavBarButtons from './SMNavBarButtons.vue'
 import SMNavBarMenu from './SMNavBarMenu.vue'
-import SvgIcon from '../SvgIcon.vue'
-import { useData } from '../../composables/data'
 import { useDisplay } from '../../composables/media'
 
-const { theme } = useData()
-const { isMobile } = useDisplay()
+const { isDekstop } = useDisplay()
 </script>
 
 <template>
@@ -16,11 +14,8 @@ const { isMobile } = useDisplay()
                 <SMLogo />
             </a>
 
-            <div class="navbar-actions">
-                <a :href="theme.extLinks.aisystant" class="btn btn-outline" target="_blank">
-                    <template v-if="!isMobile">Aisystant</template>
-                    <SvgIcon name="magic" />
-                </a>
+            <div class="navbar-actions" v-if="isDekstop">
+                <SMNavBarButtons />
             </div>
 
             <SMNavBarMenu />

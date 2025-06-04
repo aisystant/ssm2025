@@ -10,7 +10,7 @@
 
     &-brand {
         & img {
-            width: 8.125rem;
+            width: 7rem;
         }
     }
 
@@ -45,21 +45,11 @@
     }
 
     &-actions {
-        @extend .order-xl-1;
+        position: relative;
         margin-left: auto;
 
         & .btn {
-            @extend .btn-sm;
-            display: inline-flex;
-            align-items: center;
-            margin-left: .25rem;
-            @extend .px-xxl-5;
-
-            & .svg-icon {
-                width: 1.5em;
-                height: 1.5em;
-                @extend .ms-sm-1;
-            }
+            @extend .ms-1;
         }
     }
 
@@ -91,6 +81,19 @@
         & .dropdown-menu {
             min-width: 18rem;
         }
+
+        &-actions {
+            order: 1;
+            padding-right: 8rem;
+            padding-bottom: 2.275rem;
+
+            & .button-wrapper {
+                display: flex;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
     }
 
     @include media-breakpoint-down(xl) {
@@ -107,7 +110,7 @@
 
         & .offcanvas-title img,
         & .navbar-brand img {
-            width: 7rem;
+            width: 6rem;
         }
     }
 
@@ -116,14 +119,7 @@
 
         & .offcanvas-title img,
         & .navbar-brand img {
-            width: 6rem;
-        }
-
-        &-actions {
-            & .btn {
-                font-size: $small-font-size;
-                padding: .35rem;
-            }
+            width: 5rem;
         }
     }
 }
