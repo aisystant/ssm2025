@@ -1,5 +1,4 @@
 .intro {
-    @extend %section-margin;
     background-image: url(../img/grid.svg);
     @include back-image($size: auto 500px, $position: bottom center);
     @include padding-y(2rem);

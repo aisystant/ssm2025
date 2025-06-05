@@ -10,6 +10,7 @@
 
     & .swiper-title {
         @extend h3;
+        text-align: left;
         flex: 1 0 0%;
         margin-bottom: 0;
     }

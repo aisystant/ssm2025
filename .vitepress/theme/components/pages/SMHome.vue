@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import FeatureSwiper from './../FeatureSwiper.vue'
 import CardSwiper from './../CardSwiper.vue'
 import ProgramCard from './../ProgramCard.vue'
 import SubscribeForm from './../SubscribeForm.vue'
@@ -37,10 +38,12 @@ const { frontmatter } = useData()
         </div>
     </section>
 
-    <CardSwiper :data="frontmatter.swiper1" :dark="true" />
+    <FeatureSwiper :data="frontmatter.features" v-if="frontmatter.features" />
 
     <ProgramCard id="selfdev" />
     <ProgramCard id="orgdev" />
+
+    <CardSwiper :data="frontmatter.swiper1" :dark="true" />
 
     <section class="education-section" v-if="frontmatter.education">
         <div class="container">

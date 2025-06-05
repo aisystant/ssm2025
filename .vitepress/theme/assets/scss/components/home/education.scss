@@ -24,6 +24,7 @@
         background-image: url(../img/grid.svg);
         @include back-image($size: auto 50%, $position: bottom center);
         border: 1px solid $secondary;
+        border-radius: $border-radius;
         @include padding-y(2.5rem);
 
         & img {
@@ -41,12 +42,6 @@
             text-align: center;
             width: 17em;
             margin-bottom: 1rem;
-        }
-    }
-
-    @include media-breakpoint-up(sm) {
-        & .education-item {
-            border-radius: $border-radius;
         }
     }
 
@@ -68,12 +63,6 @@
             & .card-text {
                 margin-bottom: 1.25rem;
             }
-        }
-    }
-
-    @include media-breakpoint-down(sm) {
-        & .section-col {
-            @include padding-x(0);
         }
     }
 }
