@@ -43,7 +43,6 @@ export default defineConfig({
                     { text: "Клуб", link: "https://systemsworld.club/", target: "_blank" },
                     { text: "Амбассадоры", link: "#" },
                     { text: "Волонтёры", link: "#" },
-                    { text: "Соцсети", link: "#footer", onlyDekstop: true },
                 ],
             },
         ],

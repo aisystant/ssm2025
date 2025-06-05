@@ -27,18 +27,22 @@ const { frontmatter } = useData()
     <ProgramCard id="selfdev" />
     <ProgramCard id="orgdev" />
 
-    <div class="education-section" v-if="frontmatter.education">
-        <div class="section-row">
-            <div class="section-col" v-for="item in frontmatter.education" :key="JSON.stringify(item)">
-                <div class="education-item">
-                    <a :href="item.link" class="btn">
-                        {{ item.button }}
-                    </a>
-                    <div class="card-text" v-html="item.text"></div>
+    <section class="education-section" v-if="frontmatter.education">
+        <div class="container">
+            <h2 class="section-title" v-html="frontmatter.education.title"></h2>
+            <div class="section-row" v-if="frontmatter.education.items">
+                <div class="section-col" v-for="item in frontmatter.education.items" :key="JSON.stringify(item)">
+                    <div class="education-item">
+                        <img :src="`/images/${item.image}`" :alt="item.button">
+                        <div class="card-text" v-html="item.text"></div>
+                        <a :href="item.link" class="btn">
+                            {{ item.button }}
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <CardSwiper :data="frontmatter.swiper2" :dark="true" />
     <CardSwiper :data="frontmatter.swiper3" />
