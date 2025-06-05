@@ -10,17 +10,32 @@ const { frontmatter } = useData()
 </script>
 
 <template>
-    <div class="programs-section" v-if="frontmatter.programs">
-        <div class="section-row">
-            <div class="section-col" v-for="program in frontmatter.programs" :key="JSON.stringify(program)">
-                <div class="program-item">
-                    <a :href="`#${program.id}`" class="btn">
-                        {{ program.name }}
-                    </a>
+    <section class="intro" v-if="frontmatter.intro">
+        <div class="container">
+            <div class="intro__body">
+                <div class="intro__col">
+                    <div class="intro-text">
+                        <h1 class="intro-title" v-html="frontmatter.intro.title"></h1>
+                        <div class="row g-3" v-if="frontmatter.intro.text">
+                            <template v-for="item in frontmatter.intro.text" :key="JSON.stringify(item)">
+                                <div class="col-md-6 col-lg-12" v-html="item"></div>
+                            </template>
+                        </div>
+                    </div>
+                    <div class="intro-buttons" v-if="frontmatter.intro.buttons">
+                        <template v-for="button in frontmatter.intro.buttons" :key="JSON.stringify(button)">
+                            <a :href="button.link" :class="`btn ${button.style}`">
+                                {{ button.name }}
+                            </a>
+                        </template>
+                    </div>
+                </div>
+                <div class="intro__col">
+                    <img :src="`/images/${frontmatter.intro.image}`" class="intro-image" alt="Программы обучения">
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <CardSwiper :data="frontmatter.swiper1" :dark="true" />
 

@@ -5,7 +5,6 @@
 @import "other/fonts";
 @import "other/mixins";
 @import "other/placeholders";
-@import "other/typography";
 
 @import "bootstrap";
 @import "swiper/css";
@@ -19,6 +18,7 @@
 @import "general/buttons";
 @import "general/forms";
 @import "general/elements";
+@import "general/typography";
 @import "general/card";
 @import "general/swiper";
 
@@ -26,6 +26,7 @@
 @import "components/social";
 @import "components/cookies";
 @import "components/feedback";
+@import "components/home/intro";
 @import "components/home/programs";
 @import "components/home/program";
 @import "components/home/team";
