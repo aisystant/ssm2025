@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import SvgIcon from './SvgIcon.vue'
-import Swiper from 'swiper/bundle'
+import { initCardSwiper } from '../support/swiper'
 
 interface Slide {
     head: string
@@ -21,53 +21,8 @@ defineProps<{
 
 const swiper = ref<HTMLElement | null>(null)
 
-const initSwiper = () => {
-    new Swiper(swiper.value!, {
-        navigation: {
-            nextEl: '.button-next',
-            prevEl: '.button-prev',
-        },
-        breakpoints: {
-            0: {
-                loop: true,
-                centeredSlides: false,
-                slidesPerView: 1,
-                spaceBetween: 16,
-            },
-            460: {
-                loop: true,
-                centeredSlides: true,
-                slidesPerView: 2,
-                spaceBetween: 16,
-            },
-            576: {
-                loop: false,
-                centeredSlides: false,
-                slidesPerView: 2,
-                spaceBetween: 16,
-            },
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 16,
-            },
-            992: {
-                slidesPerView: 3,
-                spaceBetween: 24,
-            },
-            1200: {
-                slidesPerView: 4,
-                spaceBetween: 16,
-            },
-            1400: {
-                slidesPerView: 4,
-                spaceBetween: 24,
-            }
-        }
-    })
-}
-
 onMounted(() => {
-    if (swiper.value) initSwiper()
+    if (swiper.value) initCardSwiper(swiper.value)
 })
 </script>
 
