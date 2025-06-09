@@ -1,0 +1,42 @@
+.schedule {
+    @extend .container-xl;
+    @extend .pt-4;
+    @extend .pt-xl-6;
+    @extend %section-margin;
+
+    &-table {
+        @extend .table-striped;
+        @extend .align-middle;
+        min-width: 50rem;
+
+        thead {
+            & th {
+                vertical-align: middle;
+                background-color: $light;
+                font-size: .9em;
+                border: 1px solid $body-bg;
+                white-space: nowrap;
+            }
+        }
+        & tbody {
+            & tr {
+                & td {
+                    &:first-child {
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-down(xl) {
+            font-size: $font-size-sm;
+        }
+
+        @include media-breakpoint-down(xl) {
+            & th,
+            & td {
+                padding: .5rem;
+            }
+        }
+    }
+}
