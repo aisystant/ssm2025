@@ -10,7 +10,19 @@
         &:active,
         &:focus {
             background-color: shade-color($dark, $btn-hover-bg-shade-amount);
+            border-color: shade-color($dark, $btn-hover-bg-shade-amount);
             color: $white;
+        }
+    }
+
+    &-secondary {
+        @extend .text-white;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: saturate($secondary, 10%);
+            border-color: saturate($secondary, 10%);
         }
     }
 

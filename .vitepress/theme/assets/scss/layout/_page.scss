@@ -1,8 +1,7 @@
 .page {
     &__content {
         @extend .container;
-        @extend .py-4;
-        @extend .py-xl-6;
+        @include padding-y(1.5rem);
 
         & .text-wrap {
             max-width: 50rem;
@@ -37,6 +36,10 @@
     }
 
     @include media-breakpoint-up(xl) {
+        &__content {
+            @include padding-y(3rem);
+        }
+
         &-title {
             font-size: 2.75rem;
         }

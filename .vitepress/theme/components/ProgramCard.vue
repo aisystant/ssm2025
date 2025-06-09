@@ -1,59 +1,49 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useData } from './../composables/data'
+interface Course {
+    name: string
+    date: string
+}
 
-const { frontmatter } = useData()
+interface Program {
+    head?: string
+    title: string
+    button?: string
+    link: string
+    text?: string[]
+    courses: Course[]
+}
 
-const props = defineProps<{
-    id: string
+defineProps<{
+    program: Program
 }>()
-
-const program = computed(() => {
-    return frontmatter.value[props.id]
-})
 </script>
 
 <template>
-    <section class="program-block" :id="id">
-        <h2 class="section-title" v-html="program.title"></h2>
-        <div class="section-subtitle" v-html="program.subtitle" v-if="program.subtitle"></div>
+    <div class="program-card">
+        <div class="card-body">
+            <div class="card-head">
+                <div class="card-sup" v-html="program.head" v-if="program.head"></div>
+                <h3 class="card-title" v-html="program.title"></h3>
+            </div>
 
-        <div class="section-row" v-if="program.cards">
-            <div class="section-col" v-for="card in program.cards" :key="JSON.stringify(card)">
-                <a :href="card.link" :class="`program-card ${id}`">
-                    <div class="card-body">
-                        <div class="mb-2" v-html="card.semester" v-if="card.semester"></div>
-                        <div class="card-title" v-html="card.name"></div>
-                        <div class="card-text">
-                            <ul class="courses-list" v-if="card.courses">
-                                <li v-for="course in card.courses" :key="JSON.stringify(course)">
-                                    <span class="course-name" v-html="course"></span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="card-date" v-if="card.date">
-                            <time v-html="card.date"></time>
-                        </div>
-                    </div>
+            <div class="card-button">
+                <a :href="program.link" class="btn">
+                    {{ program.button || 'Подробнее о программе' }}
                 </a>
             </div>
-        </div>
 
-        <div class="section-row" v-else>
-            <div class="section-col">
-                <a :href="program.link" :class="`program-card ${id}`">
-                    <div class="card-body">
-                        <div class="card-title" v-html="program.name"></div>
-                        <ul class="courses-list" v-if="program.courses">
-                            <li v-for="course in program.courses" :key="JSON.stringify(course)">
-                                <time v-html="course.date" v-if="course.date"></time>
-                                <span class="course-name" v-html="course.name"></span>
-                            </li>
-                        </ul>
-                    </div>
-                </a>
+            <div class="card-text" v-if="program.text">
+                <p v-for="item in program.text" :key="JSON.stringify(item)" v-html="item"></p>
             </div>
         </div>
-    </section>
+    </div>
+
+    <div class="program-courses">
+        <div class="course-item" v-for="course in program.courses" :key="JSON.stringify(course)">
+            <div class="course-name" v-html="course.name"></div>
+            <div class="start-date">
+                Старт — {{ course.date }}
+            </div>
+        </div>
+    </div>
 </template>

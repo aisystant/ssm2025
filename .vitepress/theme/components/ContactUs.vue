@@ -10,7 +10,7 @@ import FeedbackForm from './FeedbackForm.vue'
                 <div class="section-col">
                     <div class="feedback__invite">
                         <h2 class="section-title">
-                            Связь с&nbsp;нами и&nbsp;помощь в&nbsp;выборе курса
+                            Связь с&nbsp;нами
                         </h2>
                         <p class="mb-2">Используйте наш бот ШСМ в Telegram, чтобы:</p>
                         <ul>
