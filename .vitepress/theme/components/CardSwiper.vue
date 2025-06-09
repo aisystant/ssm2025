@@ -47,7 +47,7 @@ onMounted(() => {
             <div class="swiper-wrapper" v-if="data.slides">
                 <div class="swiper-slide" v-for="slide in data.slides" :key="JSON.stringify(slide)">
                     <a
-                        :href="slide.link"
+                        :href="slide.link.trim()"
                         class="carousel-card"
                         :style="slide.image ? `background-image: url(/images/${slide.image})` : undefined"
                         :target="slide.target ?? undefined"

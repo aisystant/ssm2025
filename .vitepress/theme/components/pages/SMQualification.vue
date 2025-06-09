@@ -31,7 +31,7 @@ const { frontmatter } = useData()
 
     <div class="cert-check" v-if="frontmatter.checking">
         <div class="cert-check__text" v-html="frontmatter.checking.text"></div>
-        <a :href="frontmatter.checking.link" target="_blank" class="btn">
+        <a :href="frontmatter.checking.link.trim()" target="_blank" class="btn">
             {{ frontmatter.checking.button }}
         </a>
     </div>

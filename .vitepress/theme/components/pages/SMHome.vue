@@ -25,7 +25,7 @@ const { frontmatter } = useData()
                     </div>
                     <div class="intro-buttons" v-if="frontmatter.intro.buttons">
                         <template v-for="button in frontmatter.intro.buttons" :key="JSON.stringify(button)">
-                            <a :href="button.link" :class="`btn ${button.style}`">
+                            <a :href="button.link.trim()" :class="`btn ${button.style}`">
                                 {{ button.name }}
                             </a>
                         </template>
@@ -40,7 +40,7 @@ const { frontmatter } = useData()
 
     <FeatureSwiper :data="frontmatter.features" v-if="frontmatter.features" />
 
-    <section class="container">
+    <section class="container" id="programs">
         <ProgramList />
     </section>
 
@@ -54,7 +54,7 @@ const { frontmatter } = useData()
                     <div class="education-item">
                         <img :src="`/images/${item.image}`" :alt="item.button">
                         <div class="card-text" v-html="item.text"></div>
-                        <a :href="item.link" class="btn">
+                        <a :href="item.link.trim()" class="btn">
                             {{ item.button }}
                         </a>
                     </div>

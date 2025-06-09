@@ -21,7 +21,7 @@ const { page } = useData()
             { 'active': isActive(page.relativePath, item.link) },
             { 'accent': item.accent }
         ]"
-        :href="item.link"
+        :href="item.link.trim()"
         :target="item.target ?? undefined"
         @click="emit('close')">
         {{ item.text }}

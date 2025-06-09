@@ -27,7 +27,7 @@ defineProps<{
             </div>
 
             <div class="card-button">
-                <a :href="program.link" class="btn">
+                <a :href="program.link.trim()" class="btn">
                     {{ program.button || 'Подробнее о программе' }}
                 </a>
             </div>

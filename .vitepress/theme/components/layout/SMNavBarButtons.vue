@@ -10,7 +10,7 @@ const { theme } = useData()
         <template v-for="item in theme.expandButtons" :key="JSON.stringify(item)">
             <a
                 class="btn btn-expand"
-                :href="item.link"
+                :href="item.link.trim()"
                 :target="item.target ?? undefined">
                 <SvgIcon :name="item.icon" />
                 <span class="label">{{ item.text }}</span>

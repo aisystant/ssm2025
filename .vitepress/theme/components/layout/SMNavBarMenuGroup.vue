@@ -33,7 +33,7 @@ const { page } = useData()
                         !!item.activeMatch)
                     }
                 ]"
-                :href="item.link"
+                :href="item.link.trim()"
                 :target="item.target ?? undefined"
                 @click="emit('close')"
                 v-if="isDekstop || !item.onlyDekstop">
