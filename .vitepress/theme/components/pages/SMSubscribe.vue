@@ -13,9 +13,7 @@ const { frontmatter } = useData()
         </div>
 
         <div class="text-content">
-            <template v-for="item in frontmatter.text" :key="JSON.stringify(item)">
-                <p v-html="item"></p>
-            </template>
+            <Content />
         </div>
     </div>
 
