@@ -5,6 +5,7 @@ import SMPrograms from '../pages/SMPrograms.vue'
 import SMSchedule from '../pages/SMSchedule.vue'
 import SMTeam from '../pages/SMTeam.vue'
 import SMQualification from '../pages/SMQualification.vue'
+import SMConsultation from '../pages/SMConsultation.vue'
 import SMSubscribe from '../pages/SMSubscribe.vue'
 import NotFound from '../pages/NotFound.vue'
 import SMSimplePage from '../pages/SMSimplePage.vue'
@@ -20,6 +21,7 @@ const { page, frontmatter } = useData()
         <SMSchedule v-else-if="frontmatter.layout === 'schedule'" />
         <SMTeam v-else-if="frontmatter.layout === 'team'" />
         <SMQualification v-else-if="frontmatter.layout === 'qualification'" />
+        <SMConsultation v-else-if="frontmatter.layout === 'consultation'" />
         <SMSubscribe v-else-if="frontmatter.layout === 'subscribe'" />
         <SMSimplePage v-else />
     </main>

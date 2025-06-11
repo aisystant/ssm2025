@@ -1,0 +1,79 @@
+.calendar {
+    @extend .container;
+    @extend %section-margin;
+
+    &__body {
+        width: 60rem;
+        max-width: 100%;
+        @extend .mx-auto;
+        background-color: $light;
+        font-size: $font-size-lg;
+        border-radius: $border-radius;
+    }
+
+    & .section-row {
+        @extend .row;
+        align-items: flex-end;
+    }
+
+    & .section-col {
+        @extend .col-md-6;
+        @include padding-y(2rem);
+    }
+
+    &-image {
+        @extend .mx-auto;
+    }
+
+    & .btn {
+        @extend .btn-dark;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding-top: 2rem;
+
+        &__body {
+            @include padding-x(2rem);
+        }
+
+        &-image {
+            position: relative;
+
+            & img {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 4rem;
+
+        &__body {
+            @include padding-x(3rem);
+            border-radius: $border-radius-lg;
+        }
+
+        & .section-col {
+            @include padding-y(2.5rem);
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        margin-bottom: 3rem;
+
+        &-image {
+            width: 20rem;
+        }
+
+        & .section-col {
+            text-align: center;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        background-color: $light;
+    }
+}

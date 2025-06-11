@@ -145,6 +145,12 @@
     }
 
     @include media-breakpoint-down(sm) {
+        &__item {
+            margin-right: -$grid-gutter-width *.5;
+            margin-left: -$grid-gutter-width *.5;
+            @include padding-x($grid-gutter-width *.5);
+        }
+
         & .course-item {
             flex-direction: column;
             align-items: flex-start;
