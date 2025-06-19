@@ -9,6 +9,7 @@ import ProgramPrerequisites from './../program/ProgramPrerequisites.vue'
 import TrainingSystem from './../program/TrainingSystem.vue'
 import StartSchedule from './../program/StartSchedule.vue'
 import ReviewSwiper from './../ReviewSwiper.vue'
+import MentorSwiper from './../MentorSwiper.vue'
 import AboutProject from './../AboutProject.vue'
 import ContactUs from './../ContactUs.vue'
 import FAQ from './../FAQ.vue'
@@ -78,6 +79,11 @@ const { frontmatter } = useData()
     :title="frontmatter.faq.title"
     :items="frontmatter.faq.items"
     v-if="frontmatter.faq" />
+
+    <MentorSwiper
+    :title="frontmatter.mentors.title"
+    :items="frontmatter.mentors.items"
+    v-if="frontmatter.mentors" />
 
     <AboutProject />
     <ContactUs />

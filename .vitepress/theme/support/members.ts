@@ -10,9 +10,12 @@ export const teamPages = computed(() =>
 
             return {
                 id,
-                card: fm.card,
-                image: fm.image,
                 order: fm.order,
+                image: fm.image,
+                name: fm.name,
+                surname: fm.surname,
+                post: fm.post,
+                description: fm.description,
             }
         })
         .filter(p => typeof p.order === 'number')

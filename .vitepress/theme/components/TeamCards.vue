@@ -9,17 +9,24 @@ const members = teamPages
         <div class="team__item" v-for="member in members" :key="member.id">
             <a :href="`/team/${member.id}/`" class="team-card">
                 <div class="card-image">
-                    <img :src="`/images/${member.image}`" :alt="member.card.name">
+                    <img
+                        :src="`/images/team/${member.image}`"
+                        :alt="`${member.surname} ${member.name}`">
                 </div>
+
                 <div class="card-body">
                     <div class="card-title">
-                        {{ member.card.name }}
+                        {{ member.surname }} {{ member.name }}
                     </div>
-                    <div class="card-small" v-if="member.card.post">
-                        {{ member.card.post }}
+                    <div
+                        class="card-small"
+                        v-html="member.post"
+                        v-if="member.post">
                     </div>
-                    <div class="card-text" v-if="member.card.text">
-                        {{ member.card.text }}
+                    <div
+                        class="card-text"
+                        v-html="member.description"
+                        v-if="member.description">
                     </div>
                 </div>
             </a>
