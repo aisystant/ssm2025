@@ -46,8 +46,6 @@ const { frontmatter } = useData()
     :items="frontmatter.objectives.items"
     v-if="frontmatter.objectives" />
 
-    <FormatsComparing />
-
     <ProgramContent
     :title="frontmatter.content.title"
     :subtitle="frontmatter.content.subtitle"
@@ -55,6 +53,8 @@ const { frontmatter } = useData()
     :link="frontmatter.content.link"
     :courses="frontmatter.content.courses"
     v-if="frontmatter.content" />
+
+    <FormatsComparing />
 
     <ProgramResources
     :title="frontmatter.resources.title"
