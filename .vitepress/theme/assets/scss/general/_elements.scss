@@ -13,6 +13,28 @@
     margin-top: 1.25rem;
 
     & a {
-        @extend .text-reset
+        @extend .text-reset;
+    }
+}
+
+.list-point {
+    @extend .list-unstyled;
+
+    & li {
+        position: relative;
+        line-height: 1.4;
+        padding-left: 1.75rem;
+
+        & ~ li {
+            margin-top: .75rem;
+        }
+
+        &:before {
+            content: '';
+            @include point();
+            position: absolute;
+            top: .2em;
+            left: 0;
+        }
     }
 }

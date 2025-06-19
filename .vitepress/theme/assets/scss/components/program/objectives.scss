@@ -1,0 +1,129 @@
+.program-objectives {
+    @extend .container;
+    @extend %section-margin;
+
+    & .section-row {
+        @extend .slim-body;
+        display: flex;
+    }
+
+    & .objectives-head {
+        display: flex;
+        flex-direction: column;
+        @include back-color();
+        font-weight: $font-weight-light;
+        border-radius: $border-radius;
+        padding: 1.5rem 1.25rem;
+    }
+
+    & .objectives-title {
+        flex-grow: 1;
+    }
+
+    & .objectives-item {
+        position: relative;
+        @extend .bg-light;
+        @extend .rounded;
+        line-height: 1.4;
+        padding: 1rem 1.25rem;
+
+        & ~ .objectives-item {
+            margin-top: .75rem;
+        }
+
+        & .objective-name {
+            font-weight: $font-weight-semibold;
+        }
+
+        & .objective-text {
+            font-weight: $font-weight-light;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        & .objectives-item {
+            display: flex;
+            align-items: center;
+        }
+
+        & .objective-name {
+            flex: 0 0 auto;
+            width: 35%;
+            margin-right: 1.25rem;
+        }
+
+        & .objective-text {
+            font-size: $font-size-sm;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .objectives-body {
+            padding-left: 2rem;
+        }
+
+        & .objectives-item {
+            &:before {
+                content: '';
+                display: block;
+                width: 1.15em;
+                height: 1.15em;
+                background-image: url(../img/arrow.svg);
+                @include back-image($size: 100% auto);
+                position: absolute;
+                top: 50%;
+                right: 100%;
+                margin-right: 1rem;
+                transform: translate(50%, -50%);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .objectives-head {
+            flex: 0 0 auto;
+            width: 19rem;
+            padding: 1.5rem;
+        }
+
+        & .objectives-body {
+            flex: 1 0 0%;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .objectives-head {
+            width: 22rem;
+            border-radius: $border-radius-lg;
+            padding: 2rem;
+        }
+
+        & .objectives-body {
+            padding-left: 3rem;
+        }
+
+        & .objectives-item {
+            @include padding-x(2rem);
+
+            &:before {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        & .section-row {
+            flex-direction: column;
+        }
+
+        & .objectives-head {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        & .objective-name {
+            margin-bottom: .25rem;
+        }
+    }
+}

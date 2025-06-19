@@ -1,0 +1,117 @@
+.program-content {
+    @extend .section-light;
+    text-align: left;
+
+    & .section-body {
+        max-width: 52rem;
+        @extend .mx-auto;
+    }
+
+    & .section-button {
+        text-align: center;
+        margin-top: 2rem;
+
+        & .btn {
+            @extend .btn-dark;
+            min-width: 18em;
+        }
+    }
+
+    & .course-collapse {
+        @extend .rounded;
+        background-color: $gray-100;
+
+        & .course-head {
+            display: flex;
+            align-items: center;
+            font-size: $font-size-lg;
+            padding: 1rem 1.25rem;
+            @extend %unstyled;
+            line-height: 1.4;
+
+            & .course-name {
+                flex-grow: 1;
+                margin-right: 1em;
+            }
+
+            &:after {
+                content: '';
+                width: 1.5em;
+                height: 1.5em;
+                background-image: escape-svg($icon-plus);
+                @include back-image();
+                flex-shrink: 0;
+                transition: transform .3s;
+            }
+
+            &[aria-expanded="true"],
+            &.open {
+                &:after {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        & .course-body {
+            font-weight: $font-weight-light;
+            padding: 0 1.25rem 1.25rem;
+        }
+
+        & ~ .course-collapse {
+            margin-top: .5rem;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        & .section-body {
+            background-color: $white;
+            border-radius: $border-radius;
+            padding: 3rem 2rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .section-body {
+            padding: 3.5rem 3rem;
+        }
+
+        & .course-collapse {
+            & .course-head {
+                padding: 1.25rem 1.5rem;
+            }
+
+            & .course-body {
+                padding: 0 1.5rem 1.25rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .section-body {
+            border-radius: $border-radius-lg;
+            padding: 4.5rem 4rem;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .section-button {
+            margin-top: 3rem;
+
+            & .btn {
+                padding: $btn-padding-y-lg $btn-padding-x-lg;
+                font-size: $btn-font-size-lg;
+            }
+        }
+
+        & .course-collapse {
+            & .course-head {
+                font-size: $h5-font-size;
+                padding: 1.5rem 2rem;
+            }
+
+            & .course-body {
+                padding: 0 2rem 1.25rem;
+            }
+        }
+    }
+}

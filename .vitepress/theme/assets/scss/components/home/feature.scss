@@ -9,7 +9,6 @@
 
     &-card {
         @extend .card;
-        background-color: $white;
         border: 1px solid $gray-500;
         text-align: center;
         line-height: 1.4;
@@ -50,7 +49,7 @@
         }
 
         @include media-breakpoint-down(sm) {
-            max-width: 17rem;
+            max-width: $card-max-width;
         }
     }
 }

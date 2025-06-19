@@ -45,3 +45,10 @@
     mask-repeat: $repeat;
     background-color: $color;
 }
+
+@mixin point($size: 1rem) {
+    font-size: $size;
+    @include circle(1em);
+    background-color: $secondary;
+    border: .23em solid mix($secondary, $white, 40%);
+}

@@ -1,6 +1,21 @@
 <script setup lang="ts">
 import SvgIcon from './SvgIcon.vue'
 import FeedbackForm from './FeedbackForm.vue'
+
+import yamlText from '../../../components/contactus.yml?raw'
+import yaml from 'js-yaml'
+
+const data = yaml.load(yamlText) as {
+    title: string
+    text: string
+    items: string[]
+    footer?: string
+    btn_bot?: string
+    link_bot?: string
+    btn_modal: string
+    btn_cons?: string
+    link_cons?: string
+}
 </script>
 
 <template>
@@ -9,32 +24,30 @@ import FeedbackForm from './FeedbackForm.vue'
             <div class="section-row">
                 <div class="section-col">
                     <div class="feedback__invite">
-                        <h2 class="section-title">
-                            Связь с&nbsp;нами
-                        </h2>
-                        <p class="mb-2">Используйте наш бот ШСМ в Telegram, чтобы:</p>
+                        <h2 class="section-title" v-html="data.title"></h2>
+                        <p class="mb-2" v-html="data.text"></p>
                         <ul>
-                            <li>Узнать дату ближайшего потока;</li>
-                            <li>Войти в чат выбранного курса;</li>
-                            <li>Получить ссылку на оплату и задать вопросы.</li>
+                            <template v-for="item in data.items" :key="JSON.stringify(item)">
+                                <li v-html="item"></li>
+                            </template>
                         </ul>
-                        <div class="lead">
-                            Если остались вопросы — напишите нам в&nbsp;Telegram, и&nbsp;мы ответим лично.
-                        </div>
+                        <div class="lead" v-html="data.footer" v-if="data.footer"></div>
                     </div>
                 </div>
 
                 <div class="section-col">
-                    <a href="https://t.me/SystemsSchool_bot" class="btn" target="_blank">
+                    <a :href="data.link_bot.trim()" class="btn" target="_blank" v-if="data.link_bot && data.btn_bot">
                         <SvgIcon name="tg-outline" />
-                        Телерамм бот ШСМ
+                        {{ data.btn_bot }}
                     </a>
+
                     <button class="btn" data-bs-toggle="modal" data-bs-target="#feedback">
                         <SvgIcon name="tg-outline" />
-                        Свяжитесь со мной
+                        {{ data.btn_modal }}
                     </button>
-                    <a href="/howtostudy" class="btn">
-                        Бесплатная консультация
+
+                    <a :href="data.link_cons?.trim()" class="btn" v-if="data.btn_cons && data.link_cons">
+                        {{ data.btn_cons }}
                     </a>
                 </div>
             </div>

@@ -7,7 +7,7 @@
 @import "other/placeholders";
 
 @import "bootstrap";
-@import "swiper/css";
+@import "swiper/css/bundle";
 
 // include settings for global layouts
 @import "layout/body";
@@ -39,3 +39,17 @@
 @import "components/qualification/checking";
 @import "components/schedule";
 @import "components/calendar";
+@import "components/reviews";
+@import "components/program/intro";
+@import "components/program/result";
+@import "components/program/audience";
+@import "components/program/objectives";
+@import "components/program/content";
+@import "components/program/compare";
+@import "components/program/resources";
+@import "components/program/prerequisites";
+@import "components/program/system";
+@import "components/program/starting";
+@import "components/program/questions";
+@import "components/program/teachers";
+@import "components/program/about";

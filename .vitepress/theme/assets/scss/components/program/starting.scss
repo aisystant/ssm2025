@@ -1,0 +1,258 @@
+.program-starting {
+    @extend .container;
+    @extend %section-padding;
+    @extend %section-margin;
+
+    & .section-row {
+        display: flex;
+        @extend .align-items-xl-center;
+        @extend .pt-xl-3;
+        @extend .mx-auto;
+    }
+
+    & .starting-program {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        @include back-color();
+        text-align: center;
+        border-radius: $border-radius;
+        padding: 2rem 1.25rem;
+        @extend .px-md-4;
+        @extend .px-lg-5;
+
+        & .btn {
+            @extend .btn-secondary;
+        }
+    }
+
+    & .starting-items {
+        $gap: .5rem;
+        flex: 1 0 0%;
+        margin-top: -$gap;
+        margin-bottom: -$gap;
+
+        & .course-item {
+            position: relative;
+            @include padding-y($gap);
+        }
+    }
+
+    & .course-card {
+        position: relative;
+        @extend .bg-light;
+        @extend .rounded;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.4;
+        padding: 2rem 1.25rem;
+        @extend .px-md-4;
+        @extend .px-lg-5;
+
+        & .card-head {
+            display: flex;
+            align-items: flex-start;
+            border-bottom: 1px solid $gray-400;
+            margin-bottom: 1rem;
+        }
+
+        & .course-name {
+            flex: 1 0 0%;
+            @extend h4;
+            margin-bottom: 1rem;
+            @extend .me-sm-3;
+        }
+
+        & .start-date {
+            font-size: $font-size-sm;
+            background-color: $white;
+            border-radius: .25rem;
+            padding: .15rem .75rem;
+            white-space: nowrap;
+            margin-bottom: 1rem;
+            @extend .order-sm-1;
+        }
+
+        & .course-desc {
+            color: $secondary;
+            margin-bottom: 1rem;
+        }
+
+        & .card-body {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        & .course-text {
+            font-weight: $font-weight-light;
+            font-size: $font-size-sm;
+            flex: 1 0 0%;
+
+            & p {
+                margin-bottom: 0;
+
+                & ~ p {
+                    margin-top: .25rem;
+                }
+            }
+        }
+
+        & .course-cart {
+            display: flex;
+            align-items: center;
+            @extend .ms-md-3;
+        }
+
+        & .course-price {
+            flex: 0 0 auto;
+            @extend h3;
+            white-space: nowrap;
+            margin-bottom: 0;
+            margin-right: 1.5rem;
+        }
+
+        & .course-button {
+            & .btn {
+                @extend .btn-dark;
+                width: 100%;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .course-card {
+            & .start-date {
+                padding: .35rem 1.25rem;
+                min-width: 10rem;
+            }
+
+            & .course-button {
+                min-width: 10rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .starting-program {
+            width: 22rem;
+            aspect-ratio: 4 / 3;
+            border-radius: $border-radius-lg;
+            margin-left: 5rem;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 2.5rem;
+                height: 1rem;
+                background-image: url(../img/arrow-long.svg);
+                @include back-image($size: 100% auto);
+                position: absolute;
+                right: 100%;
+                top: 50%;
+                margin-right: .25rem;
+                transform: translateY(-48%);
+            }
+        }
+
+        & .course-item {
+            $width: 1px;
+
+            &:not(:last-child):before {
+                content: '';
+                display: block;
+                width: 2.5rem;
+                height: 50%;
+                border-width: $width $width 0 0;
+                border-style: solid;
+                border-color: $gray-500;
+                position: absolute;
+                left: 100%;
+                bottom: 0;
+            }
+
+            &:not(:first-child):after {
+                content: '';
+                display: block;
+                width: 2.5rem;
+                height: 50%;
+                border-width: 0 $width 0 0;
+                border-style: solid;
+                border-color: $gray-500;
+                position: absolute;
+                left: 100%;
+                top: 0;
+            }
+
+            &:first-child:before {
+                border-top-right-radius: $border-radius;
+            }
+
+            &:last-child:after {
+                border-bottom-right-radius: $border-radius;
+                border-width: 0 $width $width 0;
+                top: 0;
+            }
+        }
+
+        & .course-card {
+            & .card-head {
+                margin-bottom: 1.25rem;
+            }
+
+            &:after {
+                content: '';
+                @include point();
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        & .section-row {
+            flex-direction: column;
+            max-width: 46rem;
+        }
+
+        & .starting-program {
+            margin-top: 1rem;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        & .course-card {
+            & .card-body {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            & .course-cart {
+                margin-top: 1rem;
+            }
+
+            & .course-button {
+                flex: 1 0 0%;
+                max-width: 12rem;
+                margin-left: auto;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        & .course-card {
+            & .card-head {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            & .course-cart {
+                margin-top: 1.25rem;
+            }
+        }
+    }
+}

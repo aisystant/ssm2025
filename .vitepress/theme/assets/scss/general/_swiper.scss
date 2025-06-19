@@ -1,4 +1,6 @@
 .swiper {
+    --swiper-theme-color: #{$secondary};
+
     &-slide {
         height: initial;
     }
@@ -22,6 +24,48 @@
             &.swiper-button-lock {
                 display: none;
             }
+        }
+    }
+
+    &-pagination {
+        position: static;
+        margin-top: .5rem;
+    }
+
+    &-control-line {
+        @include flex();
+        margin-top: 1rem;
+
+        & .swiper-pagination {
+            @include flex();
+            width: auto;
+            position: static;
+            @extend .my-0;
+            @extend .mx-2;
+        }
+
+        & [class^="button-"] {
+            width: 1.5rem;
+            height: 1.5rem;
+            @include back-image();
+            outline: none !important;
+
+            &.swiper-button-disabled {
+                opacity: .3;
+                pointer-events: none;
+            }
+
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+
+        & .button-prev {
+            background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='#{$body-color}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='15 18 9 12 15 6'></polyline></svg>"));
+        }
+
+        & .button-next {
+            background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='#{$body-color}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 18 15 12 9 6'></polyline></svg>"));
         }
     }
 }

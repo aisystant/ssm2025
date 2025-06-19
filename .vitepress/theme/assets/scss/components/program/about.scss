@@ -1,0 +1,102 @@
+.about-project {
+    @extend .container;
+    @extend %section-margin;
+
+    & .section-row {
+        @extend .slim-body;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    & .section-col {
+        flex: 0 0 100%;
+    }
+
+    & .about-body {
+        position: relative;
+        width: 100%;
+        max-width: 40rem;
+        display: flex;
+        flex-direction: column;
+        @include back-color();
+        font-weight: $font-weight-light;
+        border-radius: $border-radius;
+        padding: 2rem 1.25rem;
+        overflow: hidden;
+        @extend .mx-auto;
+
+        &:before {
+            content: '';
+            display: block;
+            aspect-ratio: 1 / 1;
+            width: 50%;
+            @include mask(url(../img/decor.svg));
+            color: $white;
+            opacity: .1;
+            position: absolute;
+            top: 50%;
+            left: 66%;
+        }
+
+        & p {
+            max-width: 25rem;
+        }
+    }
+
+    & .about-title {
+        @extend h1;
+        flex-grow: 1;
+    }
+
+    & .section-form {
+        max-width: 30rem;
+        @extend .px-lg-4;
+        @extend .m-auto;
+
+        & .form-title {
+            @extend .h4;
+            @extend .mb-4;
+            @extend .mb-md-5;
+            text-align: center;
+        }
+
+        & .form-submit {
+            text-align: center;
+            margin-top: 1.5rem;
+
+            & .btn {
+                @extend .btn-dark;
+                min-width: 16rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        & .about-body {
+            padding: 2.5rem 2rem;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .section-row {
+            display: flex;
+        }
+
+        & .section-col {
+            flex: 0 0 50%;
+            display: flex;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .about-body {
+            border-radius: $border-radius-lg;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        & .about-body {
+            margin-bottom: 2.5rem;
+        }
+    }
+}

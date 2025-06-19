@@ -2,6 +2,7 @@
 import { useData } from '../../composables/data'
 import SMHome from '../pages/SMHome.vue'
 import SMPrograms from '../pages/SMPrograms.vue'
+import SMProgramPage from '../pages/SMProgramPage.vue'
 import SMSchedule from '../pages/SMSchedule.vue'
 import SMTeam from '../pages/SMTeam.vue'
 import SMQualification from '../pages/SMQualification.vue'
@@ -18,6 +19,7 @@ const { page, frontmatter } = useData()
         <NotFound v-if="page.isNotFound" />
         <SMHome v-else-if="frontmatter.layout === 'home'" />
         <SMPrograms v-else-if="frontmatter.layout === 'programs'" />
+        <SMProgramPage v-else-if="frontmatter.layout === 'program'" />
         <SMSchedule v-else-if="frontmatter.layout === 'schedule'" />
         <SMTeam v-else-if="frontmatter.layout === 'team'" />
         <SMQualification v-else-if="frontmatter.layout === 'qualification'" />

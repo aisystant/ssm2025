@@ -1,0 +1,54 @@
+.program-result {
+    @extend .section-light;
+    text-align: left;
+    font-weight: $font-weight-light;
+
+    & .result-body {
+        @extend .slim-body;
+    }
+
+    & .result-title {
+        border-bottom: 1px solid $gray-500;
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+    }
+
+    & .section-row {
+        @extend .row;
+        @extend .gy-5;
+        @extend .gx-lg-5;
+        @extend .g-xl-6;
+    }
+
+    & .section-col {
+        @extend .col-lg-6;
+        display: flex;
+
+        & ul {
+            margin-bottom: 0;
+        }
+    }
+
+    & .after-block {
+        @extend .card;
+        padding: 1.5rem 1.25rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+        & .after-block {
+            padding: 2rem 1.5rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .before-block {
+            padding-top: 2rem;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .after-block {
+            @include padding-x(2rem);
+        }
+    }
+}

@@ -14,9 +14,7 @@
     }
 
     &__body {
-        width: 72.5rem;
-        max-width: 100%;
-        @extend .mx-auto;
+        @extend .slim-body;
     }
 
     &__invite {

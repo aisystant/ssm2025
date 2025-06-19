@@ -1,11 +1,6 @@
 .education-section {
     @extend .section-light;
 
-    & .section-title {
-        @extend .mb-4;
-        @extend .mb-lg-5;
-    }
-
     & .section-row {
         @extend .row;
         @extend .g-3;

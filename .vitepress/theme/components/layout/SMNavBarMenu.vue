@@ -13,7 +13,7 @@ const navMenu = ref<HTMLElement | null>(null)
 const offcanvasInstance = ref<Offcanvas | null>(null)
 
 onMounted(() => {
-     if (typeof window !== 'undefined' && navMenu.value) {
+    if (typeof window !== 'undefined' && navMenu.value) {
         import('bootstrap/js/dist/offcanvas').then((bootstrap) => {
             const Offcanvas = bootstrap.default || bootstrap
             offcanvasInstance.value = new Offcanvas(navMenu.value)
