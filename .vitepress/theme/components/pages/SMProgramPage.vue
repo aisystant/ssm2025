@@ -3,6 +3,7 @@ import ProgramIntro from './../program/ProgramIntro.vue'
 import ProgramResult from './../program/ProgramResult.vue'
 import ProgramAudience from './../program/ProgramAudience.vue'
 import ProgramObjectives from './../program/ProgramObjectives.vue'
+import ProgramContent from './../program/ProgramContent.vue'
 import FormatsComparing from './../program/FormatsComparing.vue'
 import ProgramResources from './../program/ProgramResources.vue'
 import ProgramPrerequisites from './../program/ProgramPrerequisites.vue'
@@ -46,6 +47,14 @@ const { frontmatter } = useData()
     v-if="frontmatter.objectives" />
 
     <FormatsComparing />
+
+    <ProgramContent
+    :title="frontmatter.content.title"
+    :subtitle="frontmatter.content.subtitle"
+    :button="frontmatter.content.button"
+    :link="frontmatter.content.link"
+    :courses="frontmatter.content.courses"
+    v-if="frontmatter.content" />
 
     <ProgramResources
     :title="frontmatter.resources.title"
