@@ -19,6 +19,7 @@
         @include padding-y(1rem);
         @extend %unstyled;
         line-height: 1.4;
+        user-select: none;
 
         & .question-name {
             flex-grow: 1;
