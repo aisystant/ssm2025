@@ -10,20 +10,10 @@ export const initCardSwiper = (swiperElement: HTMLElement | null) => {
         },
         breakpoints: {
             0: {
-                loop: true,
-                centeredSlides: false,
                 slidesPerView: 1,
                 spaceBetween: 16,
             },
-            460: {
-                loop: true,
-                centeredSlides: true,
-                slidesPerView: 2,
-                spaceBetween: 16,
-            },
-            576: {
-                loop: false,
-                centeredSlides: false,
+            540: {
                 slidesPerView: 2,
                 spaceBetween: 16,
             },

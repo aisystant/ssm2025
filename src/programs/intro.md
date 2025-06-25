@@ -228,6 +228,4 @@ mentors:
     - 'metelkin'
     - 'rukavishnikov'
     - 'soloboev'
-
-
 ---

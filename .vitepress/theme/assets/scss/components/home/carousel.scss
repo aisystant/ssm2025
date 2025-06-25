@@ -33,14 +33,6 @@
             }
         }
     }
-
-    @include media-breakpoint-down(sm) {
-        @include padding-x(0);
-
-        & .swiper-header {
-            @include padding-x($grid-gutter-width * .5);
-        }
-    }
 }
 
 .carousel-card {

@@ -51,7 +51,7 @@ $purple:  #6f42c1;
 $pink:    #d63384;
 $red:     #D61E1E;
 $orange:  #fd7e14;
-$yellow:  #ffc107;
+$yellow:  #FFD900;
 $green:   #389D2D;
 $teal:    #20c997;
 $cyan:    #0dcaf0;
@@ -217,3 +217,8 @@ $blockquote-font-size: $font-size-lg;
 $blockquote-footer-color: $body-color;
 $blockquote-footer-font-size: $font-size-sm;
 $blockquote-margin-y: 1.25rem;
+
+// Badges
+
+$badge-font-weight: $font-weight-normal;
+$badge-border-radius: .25rem;

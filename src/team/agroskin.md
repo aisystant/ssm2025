@@ -1,4 +1,5 @@
 ---
+layout: mentor
 title: 'Агроскин Виктор'
 description: 'Член INCOSE, участник Ontology Summit, входит в международные рабочие группы POSC Caesar Association, FIATECH, ISO.'
 

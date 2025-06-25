@@ -34,7 +34,7 @@
 }
 
 %section-margin {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 
     @include media-breakpoint-up(md) {
         margin-bottom: 3.5rem;
@@ -70,6 +70,12 @@
     }
 }
 
+.section-h2 {
+    @extend h3;
+    text-align: left;
+    @extend .mb-lg-4;
+}
+
 .section-light {
     background-color: $light;
     text-align: center;
@@ -82,6 +88,23 @@
 
     @include media-breakpoint-up(xl) {
         @include padding-y(4.5rem);
+    }
+}
+
+.section-white {
+    background-color: $white;
+    @include padding-y(2.5rem);
+
+    @include media-breakpoint-up(md) {
+        @include padding-y(3.5rem);
+    }
+
+    @include media-breakpoint-up(lg) {
+        @include padding-y(4.5rem);
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include padding-y(5.5rem);
     }
 }
 

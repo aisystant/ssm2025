@@ -78,10 +78,6 @@
     }
 
     @include media-breakpoint-up(lg) {
-        & .section-row {
-            display: flex;
-        }
-
         & .section-col {
             flex: 0 0 50%;
             display: flex;
