@@ -20,6 +20,7 @@ const initSwiper = () => {
     new Swiper(swiper.value!, {
         pagination: {
             el: '.swiper-pagination',
+            clickable: true,
         },
         navigation: {
             nextEl: '.button-next',

@@ -4,6 +4,7 @@ import MentorIntro from './../mentor/MentorIntro.vue'
 import MentorActivity from './../mentor/MentorActivity.vue'
 import MentorPractice from './../mentor/MentorPractice.vue'
 import MentorContacts from './../mentor/MentorContacts.vue'
+import MentorReviews from './../mentor/MentorReviews.vue'
 import CardSwiper from './../CardSwiper.vue'
 import { useData } from '../../composables/data'
 
@@ -48,4 +49,9 @@ const name = computed(() => {
     <div class="show-more">
         <a href="/team/" class="btn">Другие мастера</a>
     </div>
+
+    <MentorReviews
+    :title="frontmatter.reviews.title"
+    :items="frontmatter.reviews.items"
+    v-if="frontmatter.reviews" />
 </template>

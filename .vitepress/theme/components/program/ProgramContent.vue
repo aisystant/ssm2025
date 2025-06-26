@@ -39,7 +39,7 @@ onMounted(() => {
                 <div class="section-subtitle" v-html="subtitle" v-if="subtitle"></div>
 
                 <CourseCollapse
-                v-for="course in courses" :key="JSON.stringify(course)"
+                v-for="course in courses" :key="course.path"
                 :name="course.name"
                 :path="course.path"
                 :open="course.path === activeTab" />

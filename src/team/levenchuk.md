@@ -105,4 +105,19 @@ contacts:
       -
         name: 'Вконтакте'
         link: 'https://vk.com/ailev'
+
+reviews:
+    title: 'Отзывы о наставнике'
+    items:
+      - 'temkin'
+      - 'kalistratov'
+      - 'mikhalev'
+      - 'nikolaev'
+      - 'boronkinov'
+      - 'beliovskaya'
+      - 'sersobolev'
+      - 'ponomarev'
+      - 'muzyka'
+      - 'sultanova'
+
 ---

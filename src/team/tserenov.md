@@ -120,4 +120,13 @@ contacts:
       -
         name: 'Telegram-канал'
         link: 'https://t.me/systemsthinkinglife'
+
+reviews:
+    title: 'Отзывы о наставнике'
+    items:
+      - 'dorofeev'
+      - 'kan'
+      - 'temkin'
+      - 'nikolaev'
+
 ---

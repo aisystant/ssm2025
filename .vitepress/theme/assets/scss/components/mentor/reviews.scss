@@ -1,0 +1,98 @@
+.mentor-reviews {
+    @extend .section-white;
+
+    & .reviews-title {
+        text-align: center;
+        @extend .mb-md-5;
+    }
+
+    & .swiper-control-line,
+    & .swiper-slide {
+        background-color: $white;
+    }
+
+    & .mentor-review {
+        max-width: 48rem;
+        @extend .mx-auto;
+
+        & .review-body {
+            & a {
+                @extend .text-decoration-none;
+            }
+        }
+
+        & .review-footer {
+            position: relative;
+            display: flex;
+            align-items: center;
+            @include padding-y(1rem);
+            margin-top: 1.5rem;
+
+            &:before {
+                content: '';
+                width: 50%;
+                border-top: 1px solid $body-color;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        & .review-image {
+            @include circle(5rem);
+            flex-shrink: 0;
+            align-self: flex-start;
+            margin-right: 1.25rem;
+            overflow: hidden;
+
+            & img {
+                @include img-cover();
+            }
+        }
+
+        & .revirew-author {
+            line-height: 1.4;
+        }
+
+        & .author-name {
+            font-weight: $font-weight-semibold;
+            margin-bottom: .5rem;
+
+            & a {
+                display: inline-flex;
+                align-items: center;
+                @extend .text-decoration-none;
+
+                &:after {
+                    content: '';
+                    width: 1.15rem;
+                    height: 1.15rem;
+                    @include mask(url(../img/arrow-right-up.svg));
+                    flex-shrink: 0;
+                    margin-left: .25rem;
+                }
+            }
+        }
+
+        & .autror-post {
+            font-weight: $font-weight-light;
+            font-size: $font-size-sm;
+
+            & a {
+                @extend .text-reset;
+
+                &:hover {
+                    @extend .text-secondary;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            & .review-image {
+                width: 4.5rem;
+                height: 4.5rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+}

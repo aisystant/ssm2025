@@ -33,8 +33,10 @@
     }
 
     &-control-line {
+        position: relative;
         @include flex();
-        margin-top: 1rem;
+        padding-top: 1rem;
+        z-index: 1;
 
         & .swiper-pagination {
             @include flex();
