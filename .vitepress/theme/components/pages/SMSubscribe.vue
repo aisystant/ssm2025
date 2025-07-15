@@ -18,18 +18,21 @@ const { frontmatter } = useData()
     </div>
 
     <section class="benefits-subscribe">
-        <div class="benefits-container">
-            <h3 v-html="frontmatter.section.title"></h3>
+        <div class="container">
+            <div class="benefits-body">
+                <h3 v-html="frontmatter.section.title"></h3>
 
-            <div class="section-row" v-if="frontmatter.section.cards">
-                <div class="section-col" v-for="item in frontmatter.section.cards" :key="JSON.stringify(item)">
-                    <div class="simple-card">
-                        <div class="card-body" v-html="item"></div>
+                <div class="section-row" v-if="frontmatter.section.cards">
+                    <div class="section-col" v-for="item in frontmatter.section.cards" :key="JSON.stringify(item)">
+                        <div class="simple-card">
+                            <img :src="`/images/${item.image}`">
+                            <div class="card-body" v-html="item.text"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="benefits-footer" v-html="frontmatter.section.footer" v-if="frontmatter.section.footer"></div>
+                <div class="benefits-footer" v-html="frontmatter.section.footer" v-if="frontmatter.section.footer"></div>
+            </div>
         </div>
     </section>
 

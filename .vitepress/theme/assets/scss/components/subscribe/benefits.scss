@@ -1,31 +1,39 @@
 .benefits-subscribe {
     @extend .section-light;
 
-    & .benefits-container {
-        @extend .container;
-        max-width: 57rem;
+    & .benefits-body {
+        @extend .slim-body;
     }
 
     & .section-row {
         @extend .row;
         @extend .g-3;
         @extend .g-lg-4;
+        @extend .g-xl-5;
         justify-content: center;
     }
 
     & .section-col {
-        @extend .col-md-4;
+        @extend .col-lg-4;
         display: flex;
     }
 
     & .simple-card {
-        @extend .py-md-3;
-        @extend .py-lg-4;
+        @extend .py-3;
+        @extend .mx-auto;
+
+        & img {
+            display: block;
+            margin-top: 1rem;
+            @extend .mx-3;
+        }
     }
 
     & .benefits-footer {
+        max-width: 42rem;
         font-weight: $font-weight-light;
         margin-top: 1.5rem;
+        @extend .mx-auto;
     }
 
     @include media-breakpoint-up(md) {
@@ -35,6 +43,28 @@
 
         & .benefits-footer {
             margin-top: 2.5rem;
+        }
+    }
+
+    @include media-breakpoint-between(sm, lg) {
+        & .simple-card {
+            flex-direction: row;
+
+            & img {
+                width: 30%;
+                margin-top: 0;
+            }
+
+            & .card-body {
+                text-align: left;
+                padding: 1.25rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        & .simple-card {
+            max-width: 22rem;
         }
     }
 }
