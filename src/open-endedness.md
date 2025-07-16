@@ -68,7 +68,7 @@ benefits:
         style: 'btn-dark'
       -
         name: 'Купить в подарок'
-        link: '#'
+        link: '/open-endedness-as-a-gift'
         icon: 'gift'
         style: 'btn-gift'
 ---
