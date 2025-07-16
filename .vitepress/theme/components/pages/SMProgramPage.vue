@@ -54,7 +54,8 @@ const { frontmatter } = useData()
     :courses="frontmatter.content.courses"
     v-if="frontmatter.content" />
 
-    <FormatsComparing />
+    <FormatsComparing
+    v-if="frontmatter.comparing" />
 
     <ProgramResources
     :title="frontmatter.resources.title"

@@ -21,7 +21,7 @@
     }
 
     & .section-col {
-        @extend .col-lg-6;
+        @extend .col-lg;
         display: flex;
 
         & ul {
@@ -47,6 +47,10 @@
     }
 
     @include media-breakpoint-up(lg) {
+        & .section-col {
+            min-width: 50%;
+        }
+
         & .after-block {
             @include padding-x(2rem);
         }

@@ -12,6 +12,7 @@ const swiper = ref<HTMLElement | null>(null)
 
 const initSwiper = () => {
     new Swiper(swiper.value!, {
+        centerInsufficientSlides: true,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,

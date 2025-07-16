@@ -26,10 +26,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     & .card-image {
         @include flex();
         aspect-ratio: 8 / 6;
+        width: 100%;
         max-width: 25rem;
         align-self: center;
         @extend .mt-lg-3;

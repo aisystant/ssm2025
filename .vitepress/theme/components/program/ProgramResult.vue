@@ -7,8 +7,8 @@ interface List {
 defineProps<{
     title: string,
     text?: string,
-    before: List,
-    after: List,
+    before?: List,
+    after?: List,
 }>()
 </script>
 
@@ -24,7 +24,7 @@ defineProps<{
                         <div v-html="text" v-if="text"></div>
                     </div>
 
-                    <div class="section-col">
+                    <div class="section-col" v-if="before">
                         <div class="before-block">
                             <p class="lead" v-html="before.name"></p>
                             <ul class="list-point">
@@ -35,7 +35,7 @@ defineProps<{
                         </div>
                     </div>
 
-                    <div class="section-col">
+                    <div class="section-col" v-if="after">
                         <div class="after-block">
                             <p class="lead" v-html="after.name"></p>
                             <ul class="list-point">

@@ -5,11 +5,11 @@
         @extend .row;
         @extend .gy-5;
         @extend .gx-xl-6;
+        align-items: center;
     }
 
     & .section-body {
         @extend .col-md;
-        @extend .pt-xl-3;
     }
 
     & .section-image {
