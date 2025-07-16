@@ -1,0 +1,88 @@
+.openendedness-intro {
+    @extend %section-grid;
+    @include padding-y(2rem);
+
+    & .section-container {
+        @extend .container-xl;
+    }
+
+    & .section-row {
+        @extend .row;
+        align-items: center;
+    }
+
+    & .intro-body {
+        @extend .col-md-7;
+    }
+
+    & .intro-image {
+        @extend .col-md-5;
+        @extend .px-sm-0;
+
+        & img {
+            display: block;
+            @extend .mx-auto;
+        }
+    }
+
+    & .openendedness-title {
+        @extend .mb-md-4;
+
+        & small {
+            display: block;
+            font-size: .6em;
+            margin-bottom: .5rem;
+        }
+    }
+
+    & .openendedness-text {
+        font-weight: $font-weight-light;
+        max-width: 34em;
+    }
+
+    & .openendedness-buttons {
+        margin-top: 2.5rem;
+
+        & .btn {
+            min-width: 16rem;
+            margin-bottom: 1rem;
+            @extend .me-sm-2;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        @include padding-y(2.5rem);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        padding-top: 3rem;
+
+        & .openendedness-title {
+            font-size: 2.75rem;
+        }
+
+        & .openendedness-text {
+            font-size: $font-size-lg;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        & .openendedness-buttons {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        & .intro-image {
+            & img {
+                width: 30rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        & .openendedness-buttons {
+            margin-bottom: 2rem;
+        }
+    }
+}

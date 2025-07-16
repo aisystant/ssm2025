@@ -17,7 +17,7 @@ tbody:
     program: 'Подписка'
     prerequisite: 'Нет'
     name: 'Подписка "Бесконечное развитие"'
-    link: '#'
+    link: '/open-endedness'
     format: 'самостоятельная'
     price: '700 ₽/ месяц	'
   -
