@@ -5,7 +5,9 @@
     & .compare-table {
         @extend .slim-body;
     }
+}
 
+.compare-table {
     & .compare-header {
         background-color: $light;
         border-radius: $border-radius $border-radius 0 0;

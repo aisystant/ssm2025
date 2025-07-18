@@ -89,9 +89,9 @@
 
     @include media-breakpoint-up(sm) {
         &__body {
-           background-color: $light;
-           border-radius: $border-radius;
-           padding: 2.5rem 2rem;
+            background-color: $light;
+            border-radius: $border-radius;
+            padding: 2.5rem 2rem;
         }
     }
 

@@ -38,3 +38,30 @@
         }
     }
 }
+
+.check-list {
+    @extend .list-unstyled;
+
+    & li {
+        position: relative;
+        line-height: 1.4;
+        font-weight: $font-weight-light;
+        padding-left: 2em;
+
+        & ~ li {
+            margin-top: .5rem;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            width: 1.25em;
+            height: 1.25em;
+            @include mask(url(../img/check.svg));
+            color: $secondary;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}

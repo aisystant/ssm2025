@@ -25,7 +25,7 @@ export default defineConfig({
                 items: [
                     { text: "Программы", link: "/programs/", activeMatch: "^/programs" },
                     { text: "Расписание", link: "/list" },
-                    { text: "Подписка", link: "#" },
+                    { text: "Подписка", link: "/open-endedness" },
                     { text: "Литература", link: "#" },
                 ],
             },

@@ -47,6 +47,18 @@
     & .answer-body {
         font-weight: $font-weight-light;
         padding-bottom: 1rem;
+
+        & p {
+            margin-bottom: .5rem;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        & b {
+            font-weight: $font-weight-normal;
+        }
     }
 
     @include media-breakpoint-up(sm) {
