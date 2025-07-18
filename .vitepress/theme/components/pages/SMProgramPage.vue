@@ -95,6 +95,6 @@ const { frontmatter } = useData()
     :items="frontmatter.mentors.items"
     v-if="frontmatter.mentors" />
 
-    <AboutProject />
+    <AboutProject v-if="false" />
     <ContactUs />
 </template>

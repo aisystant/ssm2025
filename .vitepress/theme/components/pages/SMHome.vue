@@ -51,7 +51,7 @@ const { frontmatter } = useData()
     :data="frontmatter.swiper4"
     v-if="frontmatter.swiper4" />
 
-    <SubscribeForm />
+    <SubscribeForm v-if="false" />
 
     <section class="team-section">
         <h2 class="section-title" v-html="frontmatter.team.title"></h2>
