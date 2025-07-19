@@ -1,0 +1,120 @@
+name: Deploy to Nomad
+
+on:
+  # Automatic deployment after successful build on main
+  workflow_run:
+    workflows: ["Build and Publish Docker Image"]
+    branches: [main]
+    types: [completed]
+  
+  # Manual deployment with custom image tag
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        description: 'Docker image tag to deploy'
+        required: true
+        default: 'main'
+        type: string
+      environment:
+        description: 'Target environment'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+        - production
+        - staging
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+  # Environment-specific configuration
+  NOMAD_HOST: ${{ vars.NOMAD_HOST }}
+  NOMAD_USER: ${{ vars.NOMAD_USER }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment || 'production' }}
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Determine image tag
+      id: image
+      run: |
+        if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+          IMAGE_TAG="${{ inputs.image_tag }}"
+        else
+          # For automatic deployment, use main tag
+          IMAGE_TAG="main"
+        fi
+        
+        FULL_IMAGE="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${IMAGE_TAG}"
+        echo "tag=${IMAGE_TAG}" >> $GITHUB_OUTPUT
+        echo "full_image=${FULL_IMAGE}" >> $GITHUB_OUTPUT
+        echo "Using image: ${FULL_IMAGE}"
+
+    - name: Setup SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.NOMAD_SSH_PRIVATE_KEY }}" > ~/.ssh/nomad_key
+        chmod 600 ~/.ssh/nomad_key
+        ssh-keyscan -H ${{ env.NOMAD_HOST }} >> ~/.ssh/known_hosts
+
+    - name: Update Nomad job file with image
+      run: |
+        echo "Updating job file with image: ${{ steps.image.outputs.full_image }}"
+        
+        # Update the job file
+        sed -i "s|image = \".*\"|image = \"${{ steps.image.outputs.full_image }}\"|g" nomad-job.hcl
+        
+        # Show the updated job file for verification
+        echo "Updated job file:"
+        grep -A 2 -B 2 "image = " nomad-job.hcl
+
+    - name: Validate Nomad job
+      run: |
+        # Copy job file to Nomad server for validation
+        scp -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no nomad-job.hcl ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }}:/tmp/ssm2025-job.hcl
+        
+        # Validate the job
+        ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job validate /tmp/ssm2025-job.hcl"
+
+    - name: Plan deployment
+      run: |
+        echo "Planning deployment..."
+        ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job plan /tmp/ssm2025-job.hcl"
+
+    - name: Deploy to Nomad
+      run: |
+        echo "Deploying to Nomad..."
+        ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job run /tmp/ssm2025-job.hcl"
+
+    - name: Wait for deployment
+      run: |
+        echo "Waiting for deployment to stabilize..."
+        sleep 15
+
+    - name: Check deployment status
+      run: |
+        echo "Checking deployment status..."
+        ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job status ssm2025"
+
+    - name: Verify service health
+      run: |
+        echo "Checking service registration..."
+        ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad service list" || echo "Service discovery not available"
+
+    - name: Cleanup SSH key
+      if: always()
+      run: |
+        rm -f ~/.ssh/nomad_key
+
+    - name: Deployment summary
+      run: |
+        echo "✅ Deployment completed successfully!"
+        echo "📦 Image: ${{ steps.image.outputs.full_image }}"
+        echo "🎯 Environment: ${{ inputs.environment || 'production' }}"
+        echo "🔗 Tag: ${{ steps.image.outputs.tag }}"
