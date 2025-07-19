@@ -1,0 +1,71 @@
+.btn {
+    &-outline {
+        --bs-btn-bg: #{$white};
+        @extend .btn-outline-dark;
+    }
+
+    &.btn-dark,
+    &.btn-outline {
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: shade-color($dark, $btn-hover-bg-shade-amount);
+            border-color: shade-color($dark, $btn-hover-bg-shade-amount);
+            color: $white;
+        }
+    }
+
+    &-secondary {
+        @extend .text-white;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: saturate($secondary, 10%);
+            border-color: saturate($secondary, 10%);
+        }
+    }
+
+    &-loading {
+        &:before {
+            content: '';
+            @extend .spinner-border;
+            @extend .spinner-border-sm;
+            margin-right: .5rem;
+        }
+    }
+}
+
+.btn-expand {
+    @extend .btn-outline;
+    display: inline-flex;
+    align-items: center;
+    font-size: $font-size-sm;
+    padding: .425rem;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 2.6em;
+    transition: all .4s ease;
+
+    & .svg-icon {
+        width: 1.5em;
+        height: 1.5em;
+        flex-shrink: 0;
+    }
+
+    & .label {
+        @extend .px-1;
+        @extend .ms-1;
+        opacity: 0;
+        transition: opacity .4s ease;
+    }
+
+    &:hover {
+        max-width: 1000px;
+        @include padding-x(.75rem);
+
+        .label {
+            opacity: 1;
+        }
+    }
+}

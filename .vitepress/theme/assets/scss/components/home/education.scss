@@ -1,0 +1,63 @@
+.education-section {
+    @extend .section-light;
+
+    & .section-row {
+        @extend .row;
+        @extend .g-3;
+        @extend .gx-lg-4;
+        @extend .gx-xl-5;
+    }
+
+    & .section-col {
+        @extend .col-md-6;
+    }
+
+    & .education-item {
+        @include flex();
+        flex-direction: column;
+        background-color: $white;
+        background-image: url(../img/grid.svg);
+        @include back-image($size: auto 50%, $position: bottom center);
+        border: 1px solid $secondary;
+        border-radius: $border-radius;
+        @include padding-y(2.5rem);
+
+        & img {
+            width: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        & .btn {
+            @extend .btn-dark;
+            min-width: 18em;
+        }
+
+        & .card-text {
+            font-weight: $font-weight-light;
+            text-align: center;
+            width: 17em;
+            margin-bottom: 1rem;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .education-item {
+            aspect-ratio: 7 / 4;
+
+            & img {
+                width: 7rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .education-item {
+            border-radius: $border-radius-lg;
+
+            & .card-text {
+                margin-bottom: 1.25rem;
+            }
+        }
+    }
+}

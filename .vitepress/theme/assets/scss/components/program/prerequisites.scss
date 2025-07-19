@@ -1,0 +1,129 @@
+.program-prerequisites {
+    @extend .section-light;
+    @extend .mb-0;
+
+    & .section-row {
+        @extend .slim-body;
+    }
+
+    & .prerequisites-head {
+        position: relative;
+        @extend .text-lg-start;
+    }
+
+    & .prerequisites-body {
+        $gap: .375rem;
+        margin-top: -$gap;
+        margin-bottom: -$gap;
+
+        & .prerequisites-item {
+            position: relative;
+            @include padding-y($gap);
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .prerequisites-item {
+            padding-left: 2rem;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 1.15em;
+                height: 1.15em;
+                background-image: url(../img/arrow.svg);
+                @include back-image($size: 100% auto);
+                position: absolute;
+                top: 50%;
+                left: .375rem;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .section-row {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        & .prerequisites-head {
+            flex: 0 0 0%;
+            padding-right: 4rem;
+            margin-top: 2.5rem;
+
+            & h2 {
+                margin-bottom: 0;
+            }
+
+            &:before {
+                content: '';
+                @include point(.75rem);
+                position: absolute;
+                top: 50%;
+                right: 2rem;
+                transform: translateY(-50%);
+                z-index: 2;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                width: 2rem;
+                border-top: 1px solid $secondary;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+        }
+
+        & .prerequisites-body {
+            flex: 1 0 0%;
+        }
+
+        & .prerequisites-item {
+            padding-left: 3rem;
+
+            &:before {
+                width: 2rem;
+                height: 1rem;
+                background-image: url(../img/arrow-long.svg);
+                left: -.15rem;
+                z-index: 2;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                border-left: 1px solid $gray-500;
+                position: absolute;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+
+            &:first-child:after {
+                height: 50%;
+                top: 50%;
+            }
+
+            &:last-child:after {
+                height: 50%;
+            }
+        }
+    }
+}
+
+.prerequisite-card {
+    @extend .bg-white;
+    @extend .rounded;
+    line-height: 1.4;
+    text-align: left;
+    font-weight: $font-weight-light;
+    padding: 1rem 1.25rem;
+
+    @include media-breakpoint-up(xl) {
+        @include padding-x(2rem);
+    }
+}

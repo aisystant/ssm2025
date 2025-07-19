@@ -1,0 +1,125 @@
+.openendedness-whatis {
+    @extend .section-light;
+    text-align: left;
+
+    & .section-row {
+        @extend .slim-body;
+        display: flex;
+    }
+
+    & .whatis-head {
+        display: flex;
+        flex-direction: column;
+        @include back-color();
+        font-weight: $font-weight-light;
+        border-radius: $border-radius;
+        padding: 1.5rem 1.25rem;
+    }
+
+    & .whatis-title {
+        flex-grow: 1;
+    }
+
+    & .whatis-item {
+        position: relative;
+        @extend .bg-white;
+        @extend .rounded;
+        line-height: 1.4;
+        padding: 1rem 1.25rem;
+
+        & ~ .whatis-item {
+            margin-top: .75rem;
+        }
+
+        & .item-name {
+            font-weight: $font-weight-semibold;
+        }
+
+        & .item-text {
+            font-weight: $font-weight-light;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        & .whatis-item {
+            display: flex;
+            align-items: center;
+        }
+
+        & .item-name {
+            flex: 0 0 auto;
+            width: 35%;
+            margin-right: 1.25rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .whatis-body {
+            padding-left: 2rem;
+        }
+
+        & .whatis-item {
+            &:before {
+                content: '';
+                display: block;
+                width: 1.15em;
+                height: 1.15em;
+                background-image: url(../img/arrow.svg);
+                @include back-image($size: 100% auto);
+                position: absolute;
+                top: 50%;
+                right: 100%;
+                margin-right: 1rem;
+                transform: translate(50%, -50%);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .whatis-head {
+            flex: 0 0 auto;
+            width: 20rem;
+            padding: 1.5rem;
+        }
+
+        & .whatis-body {
+            flex: 1 0 0%;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .whatis-head {
+            width: 26rem;
+            border-radius: $border-radius-lg;
+            padding: 2rem;
+        }
+
+        & .whatis-body {
+            padding-left: 3rem;
+        }
+
+        & .whatis-item {
+            @include padding-x(2rem);
+
+            &:before {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        & .section-row {
+            flex-direction: column;
+        }
+
+        & .whatis-head {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        & .item-name {
+            margin-bottom: .25rem;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.openendedness-courses {
+    @extend .container;
+    @extend %section-padding;
+    @extend %section-margin;
+
+    & .section-row {
+        @extend .slim-body;
+        display: flex;
+    }
+
+    & .courses-list {
+        @extend .list-unstyled;
+        column-width: 300px;
+        margin-bottom: 0;
+
+        & li {
+            display: block;
+            background-color: $white;
+            padding: .75rem 1.25rem;
+            @extend .rounded;
+            border-bottom: 1px solid $secondary;
+            margin-bottom: .5rem;
+        }
+    }
+
+    & .section-image {
+        flex: 0 0 20%;
+        display: none;
+        @extend .d-lg-block;
+        padding-left: 2rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .courses-list {
+            & li {
+                font-size: $font-size-lg;
+                padding: 1rem 1.25rem;
+            }
+        }
+
+        & .section-image {
+            padding-left: 3rem;
+        }
+    }
+}

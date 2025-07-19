@@ -1,0 +1,130 @@
+.feedback {
+    @extend .container;
+    @extend %section-margin;
+
+    & .section-row {
+        @extend .row;
+        @extend .g-4;
+    }
+
+    & .section-col {
+        @extend .col-lg-6;
+        @include flex();
+        flex-direction: column;
+    }
+
+    &__body {
+        @extend .slim-body;
+    }
+
+    &__invite {
+        font-weight: $font-weight-light;
+        line-height: 1.4;
+    }
+
+    & .section-title {
+        margin-bottom: $headings-margin-bottom;
+        @extend .text-lg-start;
+    }
+
+    & .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        @extend .btn-dark;
+        min-width: 20em;
+
+        & .svg-icon {
+            width: 1.5em;
+            height: 1.5em;
+            flex-shrink: 0;
+            margin-right: .5em;
+        }
+
+        & ~ .btn {
+            margin-top: 1rem;
+        }
+    }
+
+    & ul {
+        & li {
+            margin-bottom: .25rem;
+        }
+    }
+
+    &-modal {
+        @extend .modal-dialog-centered;
+        text-align: center;
+
+        & .modal-title {
+            @extend .lead;
+            margin-bottom: 1.5rem;
+        }
+
+        & .modal-body {
+            @extend .py-xl-6;
+        }
+    }
+
+    &__form {
+        width: 23rem;
+        max-width: 100%;
+        @extend .mx-auto;
+
+        & .form-submit {
+            margin-top: 1.5rem;
+
+            & .btn {
+                @extend .btn-dark;
+                min-width: 14rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-between(md, xl) {
+        & .section-title {
+            font-size: 2rem;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        &__body {
+            background-color: $light;
+            border-radius: $border-radius;
+            padding: 2.5rem 2rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        &__body {
+            padding: 3rem 4rem;
+            border-radius: $border-radius-lg;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        &__body {
+            padding: 4rem 6rem;
+        }
+
+        & .btn {
+            padding: $btn-padding-y-lg $btn-padding-x-lg;
+            font-size: $btn-font-size-lg;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__body {
+            width: 40rem;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        background-color: $light;
+        @include padding-y(2rem);
+
+        & .btn {
+            width: 100%;
+        }
+    }
+}

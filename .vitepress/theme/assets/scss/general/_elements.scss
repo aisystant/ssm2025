@@ -1,0 +1,67 @@
+.dropdown-menu {
+    box-shadow: 0 .2rem .5rem rgba($black, .1);
+}
+
+.btn-close {
+    background-size: 65%;
+}
+
+.form-agreement {
+    text-align: center;
+    font-size: .7rem;
+    line-height: 1.4;
+    margin-top: 1.25rem;
+
+    & a {
+        @extend .text-reset;
+    }
+}
+
+.list-point {
+    @extend .list-unstyled;
+
+    & li {
+        position: relative;
+        line-height: 1.4;
+        padding-left: 1.75rem;
+
+        & ~ li {
+            margin-top: .75rem;
+        }
+
+        &:before {
+            content: '';
+            @include point();
+            position: absolute;
+            top: .2em;
+            left: 0;
+        }
+    }
+}
+
+.check-list {
+    @extend .list-unstyled;
+
+    & li {
+        position: relative;
+        line-height: 1.4;
+        font-weight: $font-weight-light;
+        padding-left: 2em;
+
+        & ~ li {
+            margin-top: .5rem;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            width: 1.25em;
+            height: 1.25em;
+            @include mask(url(../img/check.svg));
+            color: $secondary;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}

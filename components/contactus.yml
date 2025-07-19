@@ -1,0 +1,19 @@
+title: 'Связь с&nbsp;нами'
+text: 'Используйте наш бот ШСМ в Telegram, чтобы:'
+items:
+  - 'Узнать дату ближайшего потока;'
+  - 'Войти в чат выбранного курса;'
+  - 'Получить ссылку на оплату и задать вопросы.'
+
+footer: 'Если остались вопросы — напишите нам в&nbsp;Telegram, и&nbsp;мы ответим лично.'
+
+btn_bot: 'Телерамм бот ШСМ'
+link_bot: 'https://t.me/SystemsSchool_bot'
+
+btn_modal: 'Свяжитесь со мной'
+
+btn_cons: 'Бесплатная консультация'
+link_cons: '/howtostudy'
+
+btn_support: 'Чат с поддержкой'
+link_support: 'https://t.me/ssm_tg'

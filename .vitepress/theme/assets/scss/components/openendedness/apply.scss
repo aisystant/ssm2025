@@ -1,0 +1,180 @@
+.openendedness-apply {
+    @extend .container;
+    @extend %section-padding;
+    @extend %section-margin;
+
+    & .section-row {
+        position: relative;
+        @include back-color();
+        border-radius: $border-radius;
+        padding: 3rem 1.25rem;
+        overflow: hidden;
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            aspect-ratio: 1 / 1;
+            width: 240px;
+            background-image: url(../img/openendedness-apply.svg);
+            @include back-image();
+            position: absolute;
+        }
+
+        &:before {
+            top: 0;
+            left: 0;
+            transform: translate(-30%, -60%);
+        }
+
+        &:after {
+            bottom: 0;
+            right: 0;
+            transform: translate(45%, 35%);
+        }
+    }
+
+    & .section-body {
+        @include flex();
+        flex-direction: column;
+        max-width: 42rem;
+        @extend .mx-auto;
+    }
+
+    & .pricing-plan {
+        @extend .rounded;
+        @include flex();
+        background-color: $gray-100;
+        color: $body-color;
+        padding: 1.25rem 1rem;
+        margin-bottom: 1.5rem;
+        @extend .mb-lg-5;
+
+        & ul {
+            display: inline-flex;
+            flex-direction: column;
+            @extend .list-unstyled;
+            margin-left: 1rem;
+            margin-bottom: 0;
+
+            & li {
+                position: relative;
+                display: inline-block;
+                line-height: 1.2;
+                padding-left: 1.25rem;
+                @include padding-y(.5rem);
+
+                &:before {
+                    content: '';
+                    @include point(1em);
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(-50%, -50%);
+                    z-index: 2;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    border-left: 1px solid $secondary;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+
+                & span {
+                    display: inline-block;
+                    @extend .my-1;
+                    @extend .px-1;
+                }
+
+                & .name {
+                    font-weight: $font-weight-semibold;
+                    width: 12rem;
+                }
+
+                & .price {
+                    color: $secondary;
+                    font-size: $font-size-lg;
+                    width: 12rem;
+
+                    & small {
+                        color: $body-color;
+                        margin-left: .5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    & .check-list {
+        font-size: $small-font-size;
+        margin-bottom: 0;
+    }
+
+    & .section-footer {
+        text-align: center;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-light;
+        margin-top: 2rem;
+
+        & .btn {
+            @extend .btn-secondary;
+            min-width: 16em;
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        & .pricing-plan {
+            padding: 2rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .section-row {
+            border-radius: $border-radius-lg;
+            padding: 4rem 2rem;
+
+        }
+
+        & .pricing-plan {
+            @include padding-x(2.5rem);
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .section-row {
+            @include padding-y(5rem);
+
+            &:before {
+                transform: translate(-10%, -40%);
+            }
+
+            &:after {
+                transform: translate(40%, 0%);
+            }
+        }
+
+        & .section-footer {
+            & .btn {
+                padding: $btn-padding-y-lg $btn-padding-x-lg;
+                font-size: $btn-font-size-lg;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .section-row {
+            @include padding-y(6rem);
+
+            &:before,
+            &:after {
+                width: 365px;
+            }
+        }
+    }
+}

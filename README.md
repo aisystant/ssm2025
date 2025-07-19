@@ -15,7 +15,7 @@ npm run dev
 npm run build
 
 # Preview the production build
-npm run serve
+npm run preview
 ```
 
 For more details, check out the [VitePress documentation](https://vitepress.dev/guide).

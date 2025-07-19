@@ -1,0 +1,105 @@
+.get-started {
+    @extend .container;
+    @extend %section-margin;
+    text-align: center;
+    @extend .text-md-start;
+    font-weight: $font-weight-light;
+
+    & .section-body {
+        @extend .slim-body;
+        position: relative;
+    }
+
+    & .section-row {
+        @extend .row;
+    }
+
+    & .section-col {
+        @extend .col-md-10;
+        @extend .col-lg-8;
+        @extend .col-xl-7;
+    }
+
+    & .section-image {
+        @extend .col-lg-4;
+        @extend .col-xl-5;
+        background-image: url(../img/construct.svg);
+        @include back-image($size: 90% auto);
+    }
+
+    & .section-title {
+        text-align: inherit;
+    }
+
+    & .section-buttons {
+        @extend .row;
+        @extend .gx-2;
+        @extend .gy-3;
+        @extend .gx-lg-3;
+        @extend .pt-lg-3;
+        @extend .pt-xxl-4;
+        margin-bottom: 1.25rem;
+
+        & > div {
+            @extend .col;
+        }
+
+        & .btn {
+            width: 100%;
+            white-space: nowrap;
+        }
+    }
+
+    @include media-breakpoint-only(md) {
+        & .section-image {
+            width: 160px;
+            background-size: 300px auto;
+            background-position: left center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        & .section-body {
+            background-color: $light;
+            border-radius: $border-radius;
+            @include padding-x(2rem);
+        }
+
+        & .section-col {
+            @include padding-y(2.5rem);
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .section-body {
+            @include padding-x(4rem);
+            border-radius: $border-radius-lg;
+        }
+
+        & .section-col {
+            @include padding-y(3rem);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .section-body {
+            @include padding-x(6rem);
+        }
+
+        & .section-col {
+            @include padding-y(4rem);
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        background-color: $light;
+
+        & .section-col {
+            @include padding-y(2rem);
+        }
+    }
+}

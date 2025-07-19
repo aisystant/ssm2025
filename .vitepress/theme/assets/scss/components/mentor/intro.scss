@@ -1,0 +1,128 @@
+.mentor-intro {
+    @extend %section-grid;
+    @include padding-y(2rem);
+
+    & .section-container {
+        @extend .container-lg;
+    }
+
+    & .section-row {
+        @extend .row;
+        @extend .g-4;
+        @extend .gx-lg-5;
+        @extend .gx-xl-6;
+        align-items: flex-start;
+    }
+
+    & .section-body {
+        @extend .col-md-7;
+        @extend .col-xl-8;
+        @extend .order-md-1;
+        align-self: center;
+    }
+
+    & .section-image {
+        @extend .col-md-5;
+        @extend .col-xl-4;
+    }
+
+    & .mentor-image {
+        background-color: $body-bg;
+        border: 1px solid $gray-400;
+        padding: 1rem;
+        @extend .rounded;
+        @extend .mx-auto;
+
+        & img {
+            display: block;
+            aspect-ratio: 4 / 3;
+            @include img-cover(50% 20%);
+            @extend .rounded;
+            width: 100%;
+        }
+
+        @include media-breakpoint-down(md) {
+            max-width: 24rem;
+        }
+    }
+
+    & .mentor-title {
+        @extend .mb-2;
+        @extend .mb-lg-3;
+    }
+
+    & .mentor-description {
+        font-weight: $font-weight-light;
+    }
+
+    & .menthor-roles {
+        @extend .list-unstyled;
+        display: flex;
+        flex-wrap: wrap;
+        @extend .mt-3;
+        @extend .mt-lg-4;
+        @extend .mb-0;
+
+        & li {
+            font-size: $font-size-sm;
+            color: $gray-600;
+            background-color: $light;
+            border-radius: $border-radius-sm;
+            padding: .5rem 1rem;
+            margin-right: .5rem;
+            margin-bottom: .5rem;
+
+            & a {
+                @extend .text-reset;
+            }
+        }
+    }
+
+    & .mentor-thesis {
+        position: relative;
+        display: inline-block;
+        font-style: italic;
+        font-weight: $font-weight-light;
+        line-height: 1.4;
+        background-color: $white;
+        padding: 1.25rem 1.5rem;
+        box-shadow: 0 1px 3px rgba($black, .05);
+        @extend .mt-3;
+        @extend .mt-lg-4;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 1.25em;
+            height: 1.25em;
+            color: $secondary;
+            @include mask(url(../img/quote.svg));
+            position: absolute;
+            top: 0;
+            left: .75rem;
+            transform: translateY(-30%);
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        @include padding-y(2.5rem);
+    }
+
+    @include media-breakpoint-up(lg) {
+        @include padding-y(3.5rem);
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include padding-y(4.5rem);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        & .mentor-title {
+            font-size: 2.75rem;
+        }
+
+        & .mentor-description {
+            font-size: $font-size-lg;
+        }
+    }
+}

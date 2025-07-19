@@ -1,0 +1,115 @@
+.section-title {
+    @extend h1;
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.6rem;
+    }
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 2rem;
+    }
+}
+
+.section-subtitle {
+    text-align: center;
+    font-weight: $font-weight-light;
+    line-height: 1.3;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-up(md) {
+        margin-top: -1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: $lead-font-size;
+    }
+
+    @include media-breakpoint-down(sm) {
+        font-size: .9rem;
+    }
+}
+
+%section-margin {
+    margin-bottom: 2.5rem;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 3.5rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 5rem;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        margin-bottom: 6rem;
+    }
+}
+
+%section-padding {
+    padding-top: 2rem;
+
+    @include media-breakpoint-up(md) {
+        padding-top: 3.5rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-top: 5rem;
+    }
+}
+
+%section-grid {
+    background-image: url(../img/grid.svg);
+    @include back-image($size: auto 500px, $position: bottom center);
+
+    @include media-breakpoint-up(xl) {
+        background-size: 100% auto;
+    }
+}
+
+.section-h2 {
+    @extend h3;
+    text-align: left;
+    @extend .mb-lg-4;
+}
+
+.section-light {
+    background-color: $light;
+    text-align: center;
+    @include padding-y(2.5rem);
+    @extend %section-margin;
+
+    @include media-breakpoint-up(md) {
+        @include padding-y(3.5rem);
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include padding-y(4.5rem);
+    }
+}
+
+.section-white {
+    background-color: $white;
+    @include padding-y(2.5rem);
+
+    @include media-breakpoint-up(md) {
+        @include padding-y(3.5rem);
+    }
+
+    @include media-breakpoint-up(lg) {
+        @include padding-y(4.5rem);
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include padding-y(5.5rem);
+    }
+}
+
+.slim-body {
+    width: 72.5rem;
+    max-width: 100%;
+    @extend .mx-auto;
+}

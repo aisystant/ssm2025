@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+// include custom settings for whore website
+@import "other/variables";
+@import "other/fonts";
+@import "other/mixins";
+@import "other/placeholders";
+
+@import "bootstrap";
+@import "swiper/css/bundle";
+
+// include settings for global layouts
+@import "layout/body";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/page";
+@import "layout/section";
+@import "general/buttons";
+@import "general/forms";
+@import "general/elements";
+@import "general/typography";
+@import "general/card";
+@import "general/swiper";
+@import "general/blockquote";
+
+// Include Core Theme Components
+@import "components/social";
+@import "components/cookies";
+@import "components/feedback";
+@import "components/home/intro";
+@import "components/home/programs";
+@import "components/home/team";
+@import "components/home/education";
+@import "components/home/carousel";
+@import "components/home/feature";
+@import "components/subscribe/subscribe";
+@import "components/subscribe/benefits";
+@import "components/qualification/qualification";
+@import "components/qualification/checking";
+@import "components/schedule";
+@import "components/calendar";
+@import "components/reviews";
+@import "components/started";
+@import "components/program/intro";
+@import "components/program/result";
+@import "components/program/audience";
+@import "components/program/objectives";
+@import "components/program/content";
+@import "components/program/compare";
+@import "components/program/resources";
+@import "components/program/prerequisites";
+@import "components/program/system";
+@import "components/program/starting";
+@import "components/program/questions";
+@import "components/program/teachers";
+@import "components/program/about";
+@import "components/mentor/intro";
+@import "components/mentor/activity";
+@import "components/mentor/practice";
+@import "components/mentor/contacts";
+@import "components/mentor/reviews";
+@import "components/openendedness/intro";
+@import "components/openendedness/whatis";
+@import "components/openendedness/benefits";
+@import "components/openendedness/components";
+@import "components/openendedness/comparing";
+@import "components/openendedness/apply";
+@import "components/openendedness/courses";
+@import "components/openendedness/resources";

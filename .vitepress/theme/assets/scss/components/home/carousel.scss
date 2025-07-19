@@ -1,0 +1,93 @@
+.carousel-section {
+    @extend .container;
+    @extend %section-margin;
+
+    & .swiper-header {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: $headings-margin-bottom;
+    }
+
+    & .swiper-title {
+        @extend h3;
+        text-align: left;
+        flex: 1 0 0%;
+        margin-bottom: 0;
+    }
+
+    & .swiper-control {
+        margin-left: .5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .swiper-header {
+            margin-bottom: 1.5rem;
+        }
+
+        & .swiper-control {
+            & [class^="button-"] {
+                & .svg-icon {
+                    width: 1.75rem;
+                    height: 1.75rem;
+                }
+            }
+        }
+    }
+}
+
+.carousel-card {
+    position: relative;
+    @extend .card;
+    aspect-ratio: 3 / 4;
+    background-color: $light;
+    @include back-image();
+    overflow: hidden;
+    user-select: none;
+    @extend .mx-auto;
+
+    & .card-body {
+        display: flex;
+        flex-direction: column;
+        color: $gray-800;
+        @include gradient-y(rgba($white, .7), transparent);
+        @include padding-y(1.75rem);
+
+        &:after {
+            content: '';
+            width: 100%;
+            border-top: 1px solid rgba($white, .5);
+            margin-top: 1rem;
+        }
+
+        &.inverse {
+            @include gradient-y(rgba($black, .7), transparent);
+            color: $white;
+        }
+    }
+
+    & .card-head {
+        font-size: .95rem;
+        flex-grow: 1;
+        margin-bottom: 1rem;
+    }
+
+    & .card-title {
+        margin-bottom: .5rem;
+    }
+
+    & .card-text {
+        font-weight: $font-weight-light;
+        font-size: $font-size-sm;
+        line-height: 1.4;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        & .card-body {
+            padding: 2rem 1.75rem;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        max-width: $card-max-width;
+    }
+}

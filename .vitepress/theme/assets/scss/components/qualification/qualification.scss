@@ -1,0 +1,108 @@
+.qualification {
+    @extend .container;
+    @extend %section-margin;
+
+    &-title {
+        text-align: center;
+        @extend .mb-5;
+    }
+
+    &__head,
+    &__row {
+        @extend .row;
+        @extend .gx-2;
+        @extend .gx-lg-3;
+        flex-wrap: nowrap;
+
+        & .table-col {
+            @extend .col;
+
+            &:first-child {
+                @extend .col-auto;
+                width: 14rem;
+            }
+        }
+    }
+
+    & .table-col {
+        display: flex;
+
+        & span {
+            width: 100%;
+            border-radius: $border-radius-sm;
+            padding: 1.25rem;
+        }
+    }
+
+    &__head {
+        & .table-col {
+            & span {
+                @include flex();
+                background-color: $light;
+                text-align: center;
+                @include padding-y(.75rem);
+            }
+        }
+    }
+
+    &__row {
+        @extend .mt-2;
+        @extend .mt-lg-3;
+    }
+
+    & .level-name {
+        font-weight: $font-weight-semibold;
+    }
+
+    & .level-cell {
+        background-color: $white;
+        font-weight: $font-weight-light;
+    }
+
+    & .swiper-slide {
+        background-color: $body-bg;
+        padding-bottom: 1px;
+
+        & .label {
+            font-size: $small-font-size;
+            color: $gray-500;
+            margin-bottom: .25rem;
+        }
+
+        & .level-name {
+            font-size: $h5-font-size;
+            padding-right: 3.5rem;
+        }
+
+        & .level-cell {
+            border-radius: $border-radius-sm;
+            padding: 1.25rem;
+        }
+    }
+
+    & .swiper-control {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+    @include media-breakpoint-only(md) {
+        max-width: 100%;
+    }
+
+    @include media-breakpoint-up(lg) {
+        &__head,
+        &__row {
+            & .table-col:first-child {
+                width: 16rem;
+            }
+        }
+
+        &__row {
+            & .table-col span {
+                padding: $card-spacer-y $card-spacer-x;
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.intro {
+    @extend %section-grid;
+    @include padding-y(2rem);
+
+    &__body {
+        @extend .row;
+    }
+
+    &__col {
+        @extend .col-lg-6;
+    }
+
+    &-title {
+        @extend .mb-4;
+        @extend .mb-lg-5;
+    }
+
+    &-image {
+        display: block;
+        max-width: 90%;
+        @extend .mx-auto;
+    }
+
+    &-buttons {
+        margin-top: 2.5rem;
+
+        & .btn {
+            min-width: 16rem;
+            margin-bottom: 1rem;
+            @extend .me-sm-2;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        @include padding-y(2.5rem);
+    }
+
+    @include media-breakpoint-up(lg) {
+        @include padding-y(3.5rem);
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include padding-y(4.5rem);
+
+        &-text {
+            max-width: 30rem;
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        &-title {
+            font-size: 2.75rem;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        &-buttons {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        &-buttons {
+            margin-bottom: 2rem;
+        }
+    }
+}

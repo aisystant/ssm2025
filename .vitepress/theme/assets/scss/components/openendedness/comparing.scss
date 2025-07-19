@@ -1,0 +1,8 @@
+.openendedness-comparing {
+    @extend .container;
+
+    & .compare-table {
+        max-width: 56rem;
+        @extend .mx-auto;
+    }
+}

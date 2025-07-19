@@ -1,0 +1,63 @@
+.program-system {
+    @extend .section-white;
+
+    & .section-row {
+        @extend .row;
+        @extend .gy-5;
+        @extend .gx-xl-6;
+        align-items: center;
+    }
+
+    & .section-body {
+        @extend .col-md;
+    }
+
+    & .section-image {
+        @extend .col-md-3;
+        align-self: flex-end;
+
+        & img {
+            display: block;
+            @extend .mx-auto;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        & .section-image {
+            & img {
+                width: 10rem;
+            }
+        }
+    }
+}
+
+.system-card {
+    background-color: $gray-100;
+    @extend .rounded;
+    line-height: 1.4;
+    padding: 1.5rem 1.25rem;
+
+    & .card-title {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-semibold;
+        margin-bottom: .5rem;
+    }
+
+    & .card-text {
+        font-weight: $font-weight-light;
+    }
+
+    & ~ & {
+        margin-top: 1rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .card-title {
+            font-size: $font-size-lg;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 2rem;
+    }
+}

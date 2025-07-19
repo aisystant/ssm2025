@@ -1,0 +1,148 @@
+.mentor-practice {
+    @extend .section-white;
+    @extend %section-margin;
+
+    & .section-row {
+        @extend .row;
+        @extend .g-3;
+        @extend .g-xxl-4;
+    }
+
+    & .section-col {
+        @extend .col-lg;
+        display: flex;
+    }
+
+    & .section-image {
+        @extend .col-auto;
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.practice-card {
+    @extend .card;
+    background-color: $gray-100;
+
+    & .card-title {
+        font-weight: $font-weight-semibold;
+        margin-bottom: 1rem;
+    }
+
+    & .practice-list {
+        @extend .list-unstyled;
+        margin-bottom: 0;
+
+        & li {
+            position: relative;
+            @include padding-y(.5rem);
+
+            &:before {
+                content: '';
+                @include point(1em);
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                height: 100%;
+                border-left: 1px solid $secondary;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+        }
+
+        & .practice-item {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            @extend .align-items-sm-center;
+            justify-content: space-between;
+            font-weight: $font-weight-light;
+            line-height: 1.4;
+            background-color: $white;
+            padding: .5rem 1.25rem;
+            border-radius: $border-radius-sm;
+            border: 1px solid $gray-300;
+
+            & .status {
+                @extend .badge;
+                background-color: $light;
+                color: $gray-600;
+                @extend .order-sm-1;
+                @extend .ms-sm-3;
+
+                &.completed {
+                    background-color: $success;
+                    color: $white;
+                }
+
+                &.testing {
+                    background-color: $yellow;
+                    color: $body-color;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        & .card-body {
+            @include padding-x(1.25rem);
+        }
+
+        & .card-title {
+            text-align: center;
+        }
+
+        & .practice-list {
+            & li {
+                @include padding-y(.375rem);
+            }
+
+            & .practice-item {
+                flex-direction: column;
+                @include padding-y(.75rem);
+
+                & .status {
+                    margin-bottom: .25rem;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        padding: .5rem;
+    }
+}
+
+.practice-picture {
+    width: 110px;
+    height: 100%;
+    max-height: 570px;
+    display: flex;
+    flex-direction: column;
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        height: 50%;
+        background-image: url(../img/growth.svg);
+        background-repeat: no-repeat;
+    }
+
+    &:before {
+        background-position: top center;
+    }
+
+    &:after {
+        background-position: bottom center;
+    }
+}

@@ -1,0 +1,45 @@
+.blockquote {
+    &-figure {
+        position: relative;
+        @extend .rounded;
+        background-color: $white;
+        text-align: center;
+        padding: 3rem;
+        margin-bottom: 2rem;
+        box-shadow: $box-shadow-sm;
+    }
+
+    &-footer {
+        font-weight: $font-weight-medium;
+        margin: 0;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        width: 1.8em;
+        height: 1.8em;
+        @include mask(url(../img/quote.svg));
+        position: absolute;
+        top: 0;
+        left: 2rem;
+        transform: translateY(-40%);
+    }
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+
+        &-figure {
+            padding: 2rem 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &-footer {
+            font-size: $small-font-size;
+        }
+
+        &:before {
+            left: 1rem;
+        }
+    }
+}

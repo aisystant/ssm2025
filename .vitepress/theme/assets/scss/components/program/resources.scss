@@ -1,0 +1,82 @@
+.program-resources {
+    @extend %section-margin;
+    @extend %section-grid;
+    background-position: bottom 6.5rem center;
+
+    & .swiper-slide {
+        display: flex;
+        padding-bottom: 4rem;
+
+        & ~ .swiper-slide:before {
+            content: '';
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            background-image: url(../img/arrows.svg);
+            @include back-image();
+            position: absolute;
+            top: 30%;
+            right: 100%;
+            @extend .me-lg-1;
+        }
+    }
+}
+
+.resource-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & .card-image {
+        @include flex();
+        aspect-ratio: 8 / 6;
+        width: 100%;
+        max-width: 25rem;
+        align-self: center;
+        @extend .mt-lg-3;
+        @extend .mb-3;
+
+        & img {
+            max-height: 100%;
+        }
+    }
+
+    & .card-body {
+        @extend .rounded;
+        @extend .bg-light;
+        padding: 1.25rem;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-light;
+        flex-grow: 1;
+
+        & p {
+            margin-bottom: 0;
+
+            & ~ p {
+                margin-top: .5rem;
+            }
+        }
+
+        & b {
+            display: inline-block;
+        }
+    }
+
+    & .card-footer {
+        font-size: .75rem;
+        line-height: 1.4;
+        color: $gray-600;
+        padding: .75rem 1rem;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        right: 0;
+    }
+
+    @include media-breakpoint-down(xl) {
+        & .card-image {
+            max-width: 22rem;
+        }
+    }
+}
