@@ -10,8 +10,8 @@ job "ssm2025" {
   update {
     max_parallel      = 1
     min_healthy_time  = "10s"
-    healthy_deadline  = "3m"
-    progress_deadline = "10m"
+    healthy_deadline  = "2m"    # Reduced from 3m for faster failure detection
+    progress_deadline = "5m"    # Reduced from 10m to prevent long waits
     auto_revert       = false
     canary            = 0
   }
@@ -83,8 +83,8 @@ job "ssm2025" {
         # Force pull latest image
         force_pull = true
         
-        # Optional: specify image pull timeout
-        # image_pull_timeout = "10m"
+        # Image pull timeout - prevent hanging on slow/failed pulls
+        image_pull_timeout = "5m"
       }
       
       # Environment variables

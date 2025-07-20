@@ -41,6 +41,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Start deployment timer
+      run: |
+        echo "DEPLOY_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
     - name: Determine image tag
       id: image
       run: |
@@ -75,12 +79,35 @@ jobs:
         grep -A 2 -B 2 "image = " nomad-job.hcl
 
     - name: Validate Nomad job
+      timeout-minutes: 1
       run: |
         # Copy job file to Nomad server for validation
         scp -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no nomad-job.hcl ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }}:/tmp/ssm2025-job.hcl
         
         # Validate the job
         ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job validate /tmp/ssm2025-job.hcl"
+
+    - name: Pre-flight image check
+      timeout-minutes: 1
+      run: |
+        echo "Verifying Docker image accessibility from Nomad cluster..."
+        
+        # Test if the image can be pulled on the Nomad cluster (30 second timeout for tiny image)
+        IMAGE_CHECK=$(ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "timeout 30s docker pull ${{ steps.image.outputs.full_image }} && echo 'SUCCESS' || echo 'FAILED'")
+        
+        if echo "$IMAGE_CHECK" | grep -q "SUCCESS"; then
+          echo "✅ Image is accessible from Nomad cluster"
+          # Clean up the test image to save space
+          ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "docker rmi ${{ steps.image.outputs.full_image }} || true" &
+        else
+          echo "❌ Image cannot be pulled from Nomad cluster"
+          echo "This will cause deployment to fail or timeout"
+          echo "Check:"
+          echo "1. Image exists: ${{ steps.image.outputs.full_image }}"
+          echo "2. Image is public"
+          echo "3. Network connectivity from Nomad cluster"
+          exit 1
+        fi
 
     - name: Plan deployment
       run: |
@@ -108,21 +135,65 @@ jobs:
         fi
 
     - name: Deploy to Nomad
+      timeout-minutes: 3
       run: |
-        echo "Deploying to Nomad..."
-        ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job run /tmp/ssm2025-job.hcl"
+        echo "Deploying to Nomad with timeout protection..."
+        
+        # Start deployment with timeout (90 seconds for tiny static site)
+        if timeout 90s ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job run /tmp/ssm2025-job.hcl"; then
+          echo "✅ Deployment command completed successfully"
+        else
+          echo "❌ Deployment command failed or timed out after 90 seconds"
+          echo "This could indicate:"
+          echo "- Image pull timeout"
+          echo "- Network connectivity issues"
+          echo "- Resource allocation problems"
+          exit 1
+        fi
 
     - name: Wait for deployment
+      timeout-minutes: 2
       run: |
         echo "Waiting for deployment to stabilize..."
-        sleep 15
+        
+        # Monitor deployment progress with timeout (shorter checks for fast static site)
+        for i in {1..8}; do
+          echo "Check $i/8: Monitoring deployment progress..."
+          
+          # Get job status
+          JOB_STATUS=$(ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job status -short ssm2025" || echo "failed")
+          
+          if echo "$JOB_STATUS" | grep -q "running"; then
+            echo "✅ Deployment is running successfully"
+            break
+          elif echo "$JOB_STATUS" | grep -q "failed\|dead"; then
+            echo "❌ Deployment failed"
+            echo "Getting detailed status..."
+            ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job status ssm2025" || true
+            exit 1
+          else
+            echo "⏳ Deployment still in progress... (status: pending/starting)"
+            sleep 10
+          fi
+        done
 
     - name: Check deployment status
+      timeout-minutes: 1
       run: |
-        echo "Checking deployment status..."
-        ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job status ssm2025"
+        echo "Checking final deployment status..."
+        
+        # Get detailed job status
+        if ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job status ssm2025"; then
+          echo ""
+          echo "Getting allocation details..."
+          ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job allocs ssm2025" || true
+        else
+          echo "❌ Failed to get job status"
+          exit 1
+        fi
 
     - name: Verify service health
+      timeout-minutes: 1
       run: |
         echo "Checking service registration..."
         ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad service list" || echo "Service discovery not available"
