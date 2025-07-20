@@ -85,7 +85,27 @@ jobs:
     - name: Plan deployment
       run: |
         echo "Planning deployment..."
-        ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job plan /tmp/ssm2025-job.hcl"
+        # Nomad job plan returns different exit codes:
+        # 0: No changes needed
+        # 1: Changes planned
+        # 255: Error occurred
+        set +e
+        PLAN_OUTPUT=$(ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job plan /tmp/ssm2025-job.hcl" 2>&1)
+        PLAN_EXIT_CODE=$?
+        set -e
+        
+        echo "$PLAN_OUTPUT"
+        
+        if [ $PLAN_EXIT_CODE -eq 255 ]; then
+          echo "❌ Planning failed with error"
+          exit 1
+        elif [ $PLAN_EXIT_CODE -eq 1 ]; then
+          echo "✅ Changes detected and planned successfully"
+        elif [ $PLAN_EXIT_CODE -eq 0 ]; then
+          echo "ℹ️ No changes needed"
+        else
+          echo "⚠️ Unexpected exit code: $PLAN_EXIT_CODE"
+        fi
 
     - name: Deploy to Nomad
       run: |
