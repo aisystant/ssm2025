@@ -26,7 +26,7 @@ job "ssm2025" {
   
   group "web" {
     # Number of instances
-    count = 2
+    count = 1
     
     # Network configuration
     network {
