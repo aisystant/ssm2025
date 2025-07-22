@@ -1,0 +1,134 @@
+.products {
+    @extend .text-wrap;
+
+    &__item {
+        @extend .rounded;
+        background-color: $white;
+        @include padding-x(1.25rem);
+        @extend .py-md-2;
+        @extend .px-md-5;
+        margin-bottom: 1.25rem;
+    }
+}
+
+.product {
+    &-head {
+        display: flex;
+        align-items: center;
+        @include padding-y(1.25rem);
+
+        &:after {
+            content: '';
+            display: block;
+            width: 1em;
+            height: 1em;
+            background-image: escape-svg($form-select-indicator);
+            @include back-image();
+            flex-shrink: 0;
+            margin-left: 1rem;
+            transition: transform .3s;
+        }
+
+        &[aria-expanded="true"] {
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &-name {
+        flex: 1 0 0%;
+        margin-bottom: 0;
+    }
+
+    &-body {
+        @include padding-y(.5rem, 1rem);
+    }
+
+    &-card {
+        @extend .rounded;
+        background-color: $gray-100;
+        display: flex;
+        align-items: center;
+        padding: 1.25rem;
+        @extend .px-md-4;
+        margin-bottom: 1rem;
+
+        & .card-body {
+            flex: 1 0 0%;
+        }
+
+        & .card-name {
+            font-size: 1.15rem;
+            line-height: 1.3;
+        }
+
+        & .card-text {
+            font-size: $font-size-sm;
+            font-weight: $font-weight-light;
+            margin-top: .25rem;
+        }
+
+        & .card-buy {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        & .card-price {
+            width: 6.5rem;
+            color: $secondary;
+            font-size: 1.35rem;
+            white-space: nowrap;
+            flex-grow: 1;
+            @extend .text-md-center;
+            @extend .ms-md-4;
+        }
+
+        & .card-button {
+            width: 10rem;
+            max-width: 100%;
+            margin-left: 1.5rem;
+
+            & .btn {
+                @extend .btn-secondary;
+                width: 100%;
+            }
+        }
+    }
+
+    &-footer {
+        font-size: $font-size-sm;
+        border-top: 1px solid $gray-400;
+        @include padding-y(.75rem, 1rem);
+    }
+
+    @include media-breakpoint-down(md) {
+        &-card {
+            flex-direction: column;
+            align-items: stretch;
+
+            & .card-body {
+                margin-bottom: 1rem;
+            }
+
+            & .card-name {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        &-head {
+            &:after {
+                font-size: $font-size-sm;
+                align-self: flex-start;
+                margin-top: .3rem;
+            }
+        }
+
+        &-name {
+            font-size: 1.15rem;
+        }
+    }
+}
