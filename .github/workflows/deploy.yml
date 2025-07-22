@@ -51,8 +51,8 @@ jobs:
         if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
           IMAGE_TAG="${{ inputs.image_tag }}"
         else
-          # For automatic deployment, use main tag
-          IMAGE_TAG="main"
+          # For automatic deployment, use sha-prefixed tag to match docker metadata action
+          IMAGE_TAG="sha-${GITHUB_SHA:0:7}"
         fi
         
         FULL_IMAGE="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${IMAGE_TAG}"
@@ -129,8 +129,7 @@ jobs:
         elif [ $PLAN_EXIT_CODE -eq 1 ]; then
           echo "✅ Changes detected and planned successfully"
         elif [ $PLAN_EXIT_CODE -eq 0 ]; then
-          echo "ℹ️ No job changes detected, but forcing deployment to ensure latest image"
-          echo "This ensures the latest Docker image content is deployed even with same tag"
+          echo "ℹ️ No changes detected"
         else
           echo "⚠️ Unexpected exit code: $PLAN_EXIT_CODE"
         fi
@@ -138,12 +137,11 @@ jobs:
     - name: Deploy to Nomad
       timeout-minutes: 3
       run: |
-        echo "Deploying to Nomad with timeout protection..."
+        echo "Deploying to Nomad..."
         
-        # Use -force-deploy to ensure deployment even when Nomad sees no changes
-        # This is crucial when Docker image content changes but tag stays the same
-        if timeout 90s ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job run -force-deploy /tmp/ssm2025-job.hcl"; then
-          echo "✅ Deployment command completed successfully"
+        # Simple deployment with standard nomad job run
+        if timeout 90s ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job run /tmp/ssm2025-job.hcl"; then
+          echo "✅ Deployment completed successfully"
         else
           echo "❌ Deployment command failed or timed out after 90 seconds"
           echo "This could indicate:"
@@ -207,10 +205,13 @@ jobs:
 
     - name: Deployment summary
       run: |
-        echo "✅ Deployment process completed!"
+        echo "✅ Deployment completed successfully!"
         echo "📦 Image: ${{ steps.image.outputs.full_image }}"
         echo "🎯 Environment: ${{ inputs.environment || 'production' }}"
         echo "🔗 Tag: ${{ steps.image.outputs.tag }}"
         echo ""
-        echo "Note: Deployment was forced to ensure latest image content is deployed,"
-        echo "      even if Nomad detected no job specification changes."
+        if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+          echo "ℹ️ Manual deployment with custom tag"
+        else
+          echo "ℹ️ Automatic deployment using commit SHA for unique tagging"
+        fi
