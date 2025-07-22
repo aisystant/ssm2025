@@ -48,7 +48,7 @@ export default defineConfig({
         ],
         expandButtons: [
             { icon: "magic", text: "ИТ-платформа Aisystant", link: "https://aisystant.system-school.ru/", target: "_blank" },
-            { icon: "ruble", text: "Купить", link: "#" },
+            { icon: "ruble", text: "Купить", link: "/quick-purchase" },
             { icon: "global", text: "Соцсети", link: "#footer" },
             { icon: "club", text: "Клуб", link: "https://systemsworld.club/", target: "_blank" },
             { icon: "contacts", text: "Контакты", link: "#" },
