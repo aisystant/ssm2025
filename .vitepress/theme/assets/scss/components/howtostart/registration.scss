@@ -1,0 +1,45 @@
+.step-registration {
+    @extend .row;
+
+    & .section-body {
+        @extend .col-md-7;
+        @extend .col-lg-6;
+    }
+
+    & .section-image {
+        @extend .col-md-5;
+        @extend .col-lg-6;
+        align-self: flex-end;
+
+        & img {
+            display: block;
+            width: 320px;
+            margin-bottom: -1.25rem;
+            @extend .mx-auto;
+        }
+    }
+
+    & .step-title {
+        @extend .text-md-start;
+    }
+
+    @include media-breakpoint-up(sm) {
+        & .section-image {
+            & img {
+                margin-bottom: -2rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        & .section-body {
+            text-align: center;
+        }
+
+        & .section-image {
+            & img {
+                width: 65%;
+            }
+        }
+    }
+}

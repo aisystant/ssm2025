@@ -1,5 +1,5 @@
 title: 'Связь с&nbsp;нами'
-text: 'Используйте наш бот ШСМ в Telegram, чтобы:'
+text: 'Используйте наш бот МИМ в Telegram, чтобы:'
 items:
   - 'Узнать дату ближайшего потока;'
   - 'Войти в чат выбранного курса;'
@@ -7,7 +7,7 @@ items:
 
 footer: 'Если остались вопросы — напишите нам в&nbsp;Telegram, и&nbsp;мы ответим лично.'
 
-btn_bot: 'Телерамм бот ШСМ'
+btn_bot: 'Телерам-бот МИМ'
 link_bot: 'https://t.me/SystemsSchool_bot'
 
 btn_modal: 'Свяжитесь со мной'
@@ -15,5 +15,5 @@ btn_modal: 'Свяжитесь со мной'
 btn_cons: 'Бесплатная консультация'
 link_cons: '/howtostudy'
 
-btn_support: 'Чат с поддержкой'
+btn_support: 'Чат с оператором'
 link_support: 'https://t.me/ssm_tg'

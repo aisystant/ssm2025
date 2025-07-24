@@ -35,10 +35,12 @@
     }
 
     & .section-body {
+        position: relative;
         @include flex();
         flex-direction: column;
         max-width: 42rem;
         @extend .mx-auto;
+        z-index: 2;
     }
 
     & .pricing-plan {

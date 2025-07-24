@@ -2,7 +2,7 @@
 defineProps<{
     title: string,
     image: string,
-    description: string,
+    description?: string,
     buttons?: {
         name: string
         link: string
@@ -13,14 +13,14 @@ defineProps<{
 </script>
 
 <template>
-    <section class="openendedness-intro">
+    <section class="howtostart-intro">
         <div class="section-container">
             <div class="section-row">
                 <div class="intro-body">
-                    <h1 class="openendedness-title" v-html="title"></h1>
-                    <div class="openendedness-text" v-html="description"></div>
+                    <h1 class="howtostart-title" v-html="title"></h1>
+                    <div class="howtostart-text" v-html="description" v-if="description"></div>
 
-                    <div class="openendedness-buttons" v-if="buttons">
+                    <div class="howtostart-buttons" v-if="buttons">
                         <template v-for="button in buttons" :key="button.name">
                             <a
                                 :href="button.link.trim()"
