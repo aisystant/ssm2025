@@ -1,0 +1,18 @@
+.step-information {
+    & .info-text {
+        font-weight: $font-weight-light;
+        margin-bottom: 1rem;
+    }
+
+    & .info-item {
+        & ~ .info-item {
+            margin-top: 1.5rem;
+        }
+    }
+
+    & .list-item {
+        & ~ .list-item {
+            margin-top: .75rem;
+        }
+    }
+}

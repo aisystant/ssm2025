@@ -1,0 +1,20 @@
+title: 'Остались вопросы?'
+text:
+  - 'Напишите в чат поддержки или задайте вопрос боту.'
+  - 'Запишитесь на консультацию через Телеграм.'
+buttons:
+  -
+    name: 'Телерам-бот МИМ'
+    link: 'https://t.me/SystemsSchool_bot'
+    style: 'btn-white'
+    target: '_blank'
+  -
+    name: 'Чат с поддержкой'
+    link: 'https://t.me/welcomeSSM'
+    style: 'btn-white'
+    target: '_blank'
+  -
+    name: 'Получить консультацию'
+    link: 'https://t.me/ssm_tg'
+    style: 'btn-secondary'
+    target: '_blank'

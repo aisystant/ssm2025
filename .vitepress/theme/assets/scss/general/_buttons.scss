@@ -34,6 +34,19 @@
             margin-right: .5rem;
         }
     }
+
+    &-white {
+        border-color:$white;
+        background-color: $white;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: saturate($secondary, 10%);
+            border-color: saturate($secondary, 10%);
+            color: $white;
+        }
+    }
 }
 
 .btn-expand {

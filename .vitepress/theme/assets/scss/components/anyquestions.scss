@@ -1,0 +1,107 @@
+.anyquestions {
+    @extend .container;
+    @extend %section-margin;
+
+    & .section-body {
+        position: relative;
+        @extend .slim-body;
+        @include back-color();
+        font-weight: $font-weight-light;
+        border-radius: $border-radius;
+        padding: 2.5rem 1.25rem;
+        overflow: hidden;
+
+        & p {
+            margin-bottom: .75rem;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            aspect-ratio: 1 / 1;
+            width: 200px;
+            @include mask(url(../img/decor.svg));
+            color: $white;
+            opacity: .1;
+            position: absolute;
+            bottom: -70px;
+            right: -60px;
+        }
+    }
+
+    & .section-row {
+        position: relative;
+        @extend .row;
+        @extend .g-4;
+    }
+
+    & .anyquestions-body {
+        @extend .col-lg;
+    }
+
+    & .anyquestions-buttons {
+        @extend .col-lg-auto;
+        @include flex();
+        flex-direction: column;
+    }
+
+    & .anyquestions-title {
+        @extend h1;
+    }
+
+    & .btn {
+        min-width: 18em;
+
+        & ~ .btn {
+            margin-top: 1rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .section-body {
+            padding: 3rem 4rem;
+            border-radius: $border-radius-lg;
+
+            &:before {
+                width: 260px;
+                bottom: -60px;
+                right: -80px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .anyquestions-buttons {
+            width: 45%;
+        }
+
+        & .section-body {
+            &:before {
+                left: -60px;
+                top: 50%;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .section-body {
+            padding: 4rem 6rem;
+            font-size: $btn-font-size-lg;
+        }
+
+        & .btn {
+            padding: $btn-padding-y-lg $btn-padding-x-lg;
+            font-size: $btn-font-size-lg;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        & .section-body {
+            text-align: center;
+
+            & p {
+                margin: 0 0 .5rem;
+            }
+        }
+    }
+}

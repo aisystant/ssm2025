@@ -14,7 +14,7 @@ intro:
       style: 'btn-dark'
     -
       name: 'Узнать, с чего начать'
-      link: '#'
+      link: '/howtostart'
       style: 'btn-outline'
 
 features:
@@ -79,7 +79,7 @@ swiper2:
       title: 'С чего начать учиться?'
       text: 'Пройдите через процесс знакомства с нашей образовательной программой'
       image: 'slide5.jpg'
-      link: '#'
+      link: '/howtostart'
     -
       head: 'Для всех'
       title: 'Программа «Личное развитие»'
@@ -133,9 +133,9 @@ swiper3:
       image: 'slide14.jpg'
       link: '#'
     -
-      head: 'С чего начать обучение в ШСМ'
+      head: 'С чего начать обучение в МИМ'
       image: 'slide15.jpg'
-      link: '#'
+      link: '/howtostart'
 
 swiper4:
   title: 'Что нового'

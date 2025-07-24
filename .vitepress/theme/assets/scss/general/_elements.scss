@@ -65,3 +65,43 @@
         }
     }
 }
+
+.list-item {
+    display: flex;
+    align-items: center;
+    background-color: $gray-100;
+    border-radius: $border-radius-sm;
+    line-height: 1.4;
+    padding: .75rem 1.25rem;
+
+    & .svg-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        flex-shrink: 0;
+        align-self: flex-start;
+        margin-right: 1rem;
+    }
+}
+
+a.list-item {
+    position: relative;
+    color: $body-color;
+    padding-right: 2rem;
+    @extend .text-decoration-none;
+    @include transition($btn-transition);
+
+    &:after {
+        content: '';
+        width: 1.5rem;
+        height: 1.5rem;
+        @include mask(escape-svg($chevron-right));
+        position: absolute;
+        top: 50%;
+        right: .5rem;
+        transform: translateY(-50%);
+    }
+
+    &:hover {
+        @include back-color();
+    }
+}
