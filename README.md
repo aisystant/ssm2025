@@ -4,6 +4,8 @@ A modern [VitePress](https://vitepress.dev/) website with automated Docker deplo
 
 ## 🚀 Quick Start
 
+GitHub Guide: https://github.com/aisystant/github-guide.
+
 ### Local Development
 
 ```bash
