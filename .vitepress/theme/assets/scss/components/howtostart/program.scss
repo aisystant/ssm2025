@@ -1,0 +1,38 @@
+.step-program {
+    & .program-item {
+        line-height: 1.4;
+        border-top: 1px solid $gray-500;
+        padding-top: 1rem;
+
+        & ~ .program-item {
+            @extend .mt-4;
+            @extend .mt-md-5;
+        }
+    }
+
+    & .card-head {
+        display: flex;
+        align-items: flex-start;
+        font-weight: $font-weight-semibold;
+        font-size: $font-size-lg;
+        margin-bottom: .5rem;
+
+        & .svg-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            flex-shrink: 0;
+            margin-right: 1rem;
+        }
+    }
+
+    & .card-text {
+        font-weight: $font-weight-light;
+        margin-bottom: 1.25rem;
+    }
+
+    @include media-breakpoint-down(md) {
+        & .card-button {
+            text-align: center;
+        }
+    }
+}

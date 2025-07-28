@@ -17,7 +17,7 @@ export default defineConfig({
                     { text: "Коротко о нас", link: "#" },
                     { text: "Квалификации", link: "/qualification" },
                     { text: "Команда", link: "/team/", activeMatch: "^/team" },
-                    { text: "Контакты", link: "#" },
+                    { text: "Контакты", link: "/contacts" },
                 ],
             },
             {
@@ -26,14 +26,11 @@ export default defineConfig({
                     { text: "Программы", link: "/programs/", activeMatch: "^/programs" },
                     { text: "Расписание", link: "/list" },
                     { text: "Подписка", link: "/open-endedness" },
-                    { text: "Литература", link: "#" },
                 ],
             },
             {
                 text: "Исследования",
                 items: [
-                    { text: "Обзор исследований", link: "#" },
-                    { text: "Интеллект-стек и стек практик саморазвития", link: "#" },
                     { text: "Новости исследований", link: "https://systemsworld.club/c/issledovaniya/1020", target: "_blank" },
                 ],
             },
@@ -41,8 +38,9 @@ export default defineConfig({
                 text: "Сообщество",
                 items: [
                     { text: "Клуб", link: "https://systemsworld.club/", target: "_blank" },
-                    { text: "Амбассадоры", link: "#" },
-                    { text: "Волонтёры", link: "#" },
+                    { text: "Канал «Личного развития»", link: "https://t.me/self_development_guides", target: "_blank" },
+                    { text: "Канал «Рабочего развития»", link: "https://t.me/work_development_guides", target: "_blank" },
+                    { text: "Канал «Исследовательского развития»", link: "https://t.me/research_development_guides", target: "_blank" },
                 ],
             },
         ],
@@ -51,7 +49,7 @@ export default defineConfig({
             { icon: "ruble", text: "Купить", link: "/quick-purchase" },
             { icon: "global", text: "Соцсети", link: "#footer" },
             { icon: "club", text: "Клуб", link: "https://systemsworld.club/", target: "_blank" },
-            { icon: "contacts", text: "Контакты", link: "#" },
+            { icon: "contacts", text: "Контакты", link: "/contacts" },
         ],
         socialLinks: [
             { icon: "youtube", link: "https://www.youtube.com/channel/UCJ0Uq_WB7GLmY-NTz2oFoUQ" },

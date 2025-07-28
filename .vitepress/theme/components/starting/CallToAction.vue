@@ -1,7 +1,4 @@
-<script lang="ts" setup>
-import yamlText from '../../../components/get-started.yml?raw'
-import yaml from 'js-yaml'
-
+<script setup lang="ts">
 interface Button {
     name: string
     link: string
@@ -9,11 +6,11 @@ interface Button {
     target?: string
 }
 
-const data = yaml.load(yamlText) as {
+defineProps<{
     title: string
     buttons: Button[]
     text?: string
-}
+}>()
 </script>
 
 <template>
@@ -21,10 +18,10 @@ const data = yaml.load(yamlText) as {
         <div class="section-body">
             <div class="section-row">
                 <div class="section-col">
-                    <h2 class="section-title" v-html="data.title"></h2>
+                    <h2 class="section-title" v-html="title"></h2>
 
                     <div class="section-buttons">
-                        <div v-for="button in data.buttons" :key="button.name">
+                        <div v-for="button in buttons" :key="button.name">
                             <a
                                 :href="button.link.trim()"
                                 :class="`btn ${button.style || 'btn-outline'}`"
@@ -34,7 +31,7 @@ const data = yaml.load(yamlText) as {
                         </div>
                     </div>
 
-                    <div class="small" v-html="data.text" v-if="data.text"></div>
+                    <div class="small" v-html="text" v-if="text"></div>
                 </div>
 
                 <div class="section-image"></div>

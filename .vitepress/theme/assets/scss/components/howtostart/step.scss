@@ -1,0 +1,109 @@
+.howtostart-steps {
+    @extend .container;
+    counter-reset: step;
+    @extend %section-margin;
+
+    & .step-section {
+        counter-increment: step;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 4rem;
+
+        &:before {
+            content: counter(step);
+            position: relative;
+            @include flex();
+            @include back-color();
+            font-size: 2rem;
+            line-height: 1;
+            width: 2em;
+            aspect-ratio: 1 / 1;
+            border-radius: $border-radius-sm;
+            flex-shrink: 0;
+            @extend .me-lg-6;
+            z-index: 2;
+        }
+    }
+
+    & .step-body {
+        position: relative;
+        flex: 1 0 0%;
+        max-width: 52rem;
+        border-radius: $border-radius;
+        background-color: $white;
+        padding: 1.5rem 1.25rem;
+    }
+
+    & .step-title {
+        @extend h5;
+        font-weight: $font-weight-semibold;
+    }
+
+    & .btn-accent {
+        @extend .btn-secondary;
+        min-width: 12rem;
+    }
+
+    & .step-text {
+        font-weight: $font-weight-light;
+    }
+
+    @include media-breakpoint-up(sm) {
+        & .step-body {
+            padding: 2rem 2.5rem;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .step-body {
+            &:before {
+                content: '';
+                display: block;
+                width: 1.15em;
+                height: 1.15em;
+                background-image: url(../img/arrow.svg);
+                @include back-image($size: 100% auto);
+                position: absolute;
+                top: 1.5rem;
+                right: 100%;
+                margin-right: 1.5rem;
+                transform: translateX(50%);
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        & .step-section {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 1.5rem;
+
+            &:before {
+                font-size: 1.5rem;
+                transform: translateY(50%);
+            }
+        }
+
+        & .step-body {
+            width: 100%;
+            padding-top: 2.5rem;
+        }
+
+        & .step-title {
+            text-align: center;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        @include padding-x(0);
+
+        & .step-section {
+            padding-top: .5rem;
+        }
+
+        & .step-body {
+            border-radius: 0;
+        }
+    }
+}

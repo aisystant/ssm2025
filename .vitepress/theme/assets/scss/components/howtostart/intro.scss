@@ -1,0 +1,84 @@
+.howtostart-intro {
+    @extend %section-grid;
+    @include padding-y(2rem);
+
+    & .section-container {
+        @extend .container-xl;
+    }
+
+    & .section-row {
+        @extend .row;
+        @extend .gy-4;
+        @extend .gy-sm-5;
+        align-items: center;
+    }
+
+    & .intro-body {
+        @extend .col-md-7;
+    }
+
+    & .intro-image {
+        @extend .col-md-5;
+        @extend .px-sm-0;
+
+        & img {
+            display: block;
+            @extend .mx-auto;
+        }
+    }
+
+    & .howtostart-title {
+        @extend .mb-md-4;
+
+        & small {
+            display: block;
+            font-size: .6em;
+            margin-top: .5rem;
+        }
+    }
+
+    & .howtostart-text {
+        font-weight: $font-weight-light;
+        max-width: 38em;
+    }
+
+    & .howtostart-buttons {
+        margin-top: 2rem;
+
+        & .btn {
+            min-width: 16rem;
+            margin-bottom: 1rem;
+            @extend .me-sm-2;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        @include padding-y(2.5rem);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        padding-top: 3rem;
+
+        & .howtostart-title {
+            font-size: 2.75rem;
+        }
+
+        & .howtostart-text {
+            font-size: $font-size-lg;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        & .intro-image {
+            & img {
+                width: 24rem;
+            }
+        }
+    }
+
+     @include media-breakpoint-down(sm) {
+        & .howtostart-buttons {
+            text-align: center;
+        }
+    }
+}

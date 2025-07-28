@@ -6,7 +6,7 @@ intro:
   title: 'Развивай. Созидай. Проектируй будущее.'
   image: 'programs.svg'
   text:
-    - '<b>Строим новое мышление,</b> новые системы и новую основу для мира, который становится всё менее предсказуемым.'
+    - '<b>Строим новое мышление и системы </b> для нового мира с искусственным интеллектом.'
     - '<b>Вместо страха перед хаосом</b> — инженерный подход, интеллект и осознанное развитие.'
   buttons:
     -
@@ -15,7 +15,7 @@ intro:
       style: 'btn-dark'
     -
       name: 'Узнать, с чего начать'
-      link: '#'
+      link: '/howtostart'
       style: 'btn-outline'
 
 features:
@@ -24,15 +24,15 @@ features:
     -
       head: 'ИИ-платформа для персонального развития'
       image: 'feature1.png'
-      text: 'экзокортекс и ассистент по&nbsp;вашему маршруту обучения'
+      text: 'экзокортекс и ИИ-ассистент по&nbsp;вашему маршруту обучения'
     -
       head: 'Живое сообщество'
       image: 'feature2.png'
-      text: 'люди, которые создают, а&nbsp;не&nbsp;ждут'
+      text: 'люди, которые создают, а&nbsp;не&nbsp;только учатся'
     -
       head: 'Фундаментальное образование'
       image: 'feature3.png'
-      text: 'то, чему не учат в&nbsp;университетах — системно мыслить и строить любые системы'
+      text: 'то, чему не учат в&nbsp;университетах — системно мыслить и строить успешные системы'
     -
       head: 'Инженерния личности,<br>команд и мира'
       image: 'feature4.png'
@@ -64,12 +64,12 @@ education:
     -
       button: 'Самостоятельное обучение'
       link: '/open-endedness'
-      text: 'Можно полистать онлайн-курсы бесплатно после регистрации'
+      text: 'Можно полистать руководства бесплатно после регистрации'
       image: 'self-study.svg'
     -
       button: 'Групповое обучение'
       link: '/list'
-      text: 'Узнать расписание потоков курсов с&nbsp;преподавателем'
+      text: 'Узнать расписание стажировок с&nbsp;наставником'
       image: 'group-study.svg'
 
 swiper2:
@@ -80,7 +80,7 @@ swiper2:
       title: 'С чего начать учиться?'
       text: 'Пройдите через процесс знакомства с нашей образовательной программой'
       image: 'slide5.jpg'
-      link: '#'
+      link: '/howtostart'
     -
       head: 'Для всех'
       title: 'Программа «Личное развитие»'
@@ -126,7 +126,7 @@ swiper3:
       image: 'slide12.jpg'
       link: '#'
     -
-      head: 'Чем помогает обучение в Школе системного менеджмента'
+      head: 'Чем вам поможет наше сообщество инженеров-менеджеров'
       image: 'slide13.jpg'
       link: '#'
     -
@@ -134,15 +134,15 @@ swiper3:
       image: 'slide14.jpg'
       link: '#'
     -
-      head: 'С чего начать обучение в ШСМ'
+      head: 'С чего начать свое развитие в МИМ'
       image: 'slide15.jpg'
-      link: '#'
+      link: '/howtostart'
 
 swiper4:
   title: 'Что нового'
   slides:
     -
-      head: 'Новости МИМ'
+      head: 'Новости'
       image: 'slide16.jpg'
       link: 'https://systemsworld.club/c/novosti/14'
       target: '_blank'
@@ -152,7 +152,7 @@ swiper4:
       link: 'https://systemsworld.club/c/issledovaniya/1020'
       target: '_blank'
     -
-      head: 'Новое на Youtube-канале МИМ'
+      head: 'Новое на Youtube-канале'
       image: 'slide18.jpg'
       link: 'https://www.youtube.com/@system_school'
       target: '_blank'
