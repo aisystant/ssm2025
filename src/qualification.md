@@ -36,7 +36,7 @@ levels:
             required: 'Использует знания четвёртого-шестого семестров основной программы МИМ. Публичной деятельностью влияет на изменение поведения сообществ и обществ (до десятков тысяч человек), сфера его реформ выходит за рамки одной организации.'
             eqf: '<b>Level 7.</b> Manage and transform work or study contexts that are complex, unpredictable and require new strategic approaches, take responsibility for contributing to professional knowledge and practice and/or for reviewing the strategic performance of teams.'
         -
-            name: 'Общественый деятель (революционер)'
+            name: 'Общественный деятель (революционер)'
             required: 'Инициирует и проводит существенное изменение в культуре, меняющее жизнь к лучшему для миллионов людей.'
             eqf: '<b>Level 8.</b> Demonstrate substantial authority, innovation, autonomy, scholarly and professional integrity and sustained commitment to the development of new ideas or processes at the forefront of work or study contexts including research.'
 
