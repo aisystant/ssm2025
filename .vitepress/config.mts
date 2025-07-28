@@ -17,7 +17,7 @@ export default defineConfig({
                     { text: "Коротко о нас", link: "#" },
                     { text: "Квалификации", link: "/qualification" },
                     { text: "Команда", link: "/team/", activeMatch: "^/team" },
-                    { text: "Контакты", link: "#" },
+                    { text: "Контакты", link: "/contacts" },
                 ],
             },
             {
@@ -51,7 +51,7 @@ export default defineConfig({
             { icon: "ruble", text: "Купить", link: "/quick-purchase" },
             { icon: "global", text: "Соцсети", link: "#footer" },
             { icon: "club", text: "Клуб", link: "https://systemsworld.club/", target: "_blank" },
-            { icon: "contacts", text: "Контакты", link: "#" },
+            { icon: "contacts", text: "Контакты", link: "/contacts" },
         ],
         socialLinks: [
             { icon: "youtube", link: "https://www.youtube.com/channel/UCJ0Uq_WB7GLmY-NTz2oFoUQ" },

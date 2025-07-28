@@ -27,6 +27,12 @@
 
     &-title {
         margin-bottom: 0;
+
+        & small {
+            display: block;
+            font-size: .6em;
+            margin-top: .5rem;
+        }
     }
 
     &-subtitle {
