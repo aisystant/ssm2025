@@ -1,5 +1,6 @@
 ---
 layout: home
+description: 'Мастерская инженеров-менеджеров — новое образование для развития системного мышления. Личное развитие, инженерия систем, работа с ИИ. Строим новое мышление для непредсказуемого мира.'
 
 intro:
   title: 'Развивай. Созидай. Проектируй будущее.'
@@ -141,7 +142,7 @@ swiper4:
   title: 'Что нового'
   slides:
     -
-      head: 'Новости ШСМ'
+      head: 'Новости МИМ'
       image: 'slide16.jpg'
       link: 'https://systemsworld.club/c/novosti/14'
       target: '_blank'
@@ -151,7 +152,7 @@ swiper4:
       link: 'https://systemsworld.club/c/issledovaniya/1020'
       target: '_blank'
     -
-      head: 'Новое на Youtube-канале ШСМ'
+      head: 'Новое на Youtube-канале МИМ'
       image: 'slide18.jpg'
       link: 'https://www.youtube.com/@system_school'
       target: '_blank'
