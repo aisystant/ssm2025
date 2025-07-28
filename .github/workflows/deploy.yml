@@ -1,0 +1,217 @@
+name: Deploy to Nomad
+
+on:
+  # Automatic deployment after successful build on main
+  workflow_run:
+    workflows: ["Build and Publish Docker Image"]
+    branches: [main]
+    types: [completed]
+  
+  # Manual deployment with custom image tag
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        description: 'Docker image tag to deploy'
+        required: true
+        default: 'main'
+        type: string
+      environment:
+        description: 'Target environment'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+        - production
+        - staging
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+  # Environment-specific configuration
+  NOMAD_HOST: ${{ vars.NOMAD_HOST }}
+  NOMAD_USER: ${{ vars.NOMAD_USER }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment || 'production' }}
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Start deployment timer
+      run: |
+        echo "DEPLOY_START_TIME=$(date +%s)" >> $GITHUB_ENV
+
+    - name: Determine image tag
+      id: image
+      run: |
+        if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+          IMAGE_TAG="${{ inputs.image_tag }}"
+        else
+          # For automatic deployment, use sha-prefixed tag to match docker metadata action
+          IMAGE_TAG="sha-${GITHUB_SHA:0:7}"
+        fi
+        
+        FULL_IMAGE="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${IMAGE_TAG}"
+        echo "tag=${IMAGE_TAG}" >> $GITHUB_OUTPUT
+        echo "full_image=${FULL_IMAGE}" >> $GITHUB_OUTPUT
+        echo "Using image: ${FULL_IMAGE}"
+
+    - name: Setup SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.NOMAD_SSH_PRIVATE_KEY }}" > ~/.ssh/nomad_key
+        chmod 600 ~/.ssh/nomad_key
+        ssh-keyscan -H ${{ env.NOMAD_HOST }} >> ~/.ssh/known_hosts
+
+    - name: Update Nomad job file with image
+      run: |
+        echo "Updating job file with image: ${{ steps.image.outputs.full_image }}"
+        
+        # Update the job file
+        sed -i "s|image = \".*\"|image = \"${{ steps.image.outputs.full_image }}\"|g" nomad-job.hcl
+        
+        # Show the updated job file for verification
+        echo "Updated job file:"
+        grep -A 2 -B 2 "image = " nomad-job.hcl
+
+    - name: Validate Nomad job
+      timeout-minutes: 1
+      run: |
+        # Copy job file to Nomad server for validation
+        scp -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no nomad-job.hcl ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }}:/tmp/ssm2025-job.hcl
+        
+        # Validate the job
+        ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job validate /tmp/ssm2025-job.hcl"
+
+    - name: Pre-flight image check
+      timeout-minutes: 1
+      run: |
+        echo "Verifying Docker image accessibility from Nomad cluster..."
+        
+        # Test if the image can be pulled on the Nomad cluster (30 second timeout for tiny image)
+        IMAGE_CHECK=$(ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "timeout 30s docker pull ${{ steps.image.outputs.full_image }} && echo 'SUCCESS' || echo 'FAILED'")
+        
+        if echo "$IMAGE_CHECK" | grep -q "SUCCESS"; then
+          echo "✅ Image is accessible from Nomad cluster"
+          # Clean up the test image to save space
+          ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "docker rmi ${{ steps.image.outputs.full_image }} || true" &
+        else
+          echo "❌ Image cannot be pulled from Nomad cluster"
+          echo "This will cause deployment to fail or timeout"
+          echo "Check:"
+          echo "1. Image exists: ${{ steps.image.outputs.full_image }}"
+          echo "2. Image is public"
+          echo "3. Network connectivity from Nomad cluster"
+          exit 1
+        fi
+
+    - name: Plan deployment
+      run: |
+        echo "Planning deployment..."
+        # Nomad job plan returns different exit codes:
+        # 0: No changes needed
+        # 1: Changes planned
+        # 255: Error occurred
+        set +e
+        PLAN_OUTPUT=$(ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job plan /tmp/ssm2025-job.hcl" 2>&1)
+        PLAN_EXIT_CODE=$?
+        set -e
+        
+        echo "$PLAN_OUTPUT"
+        
+        if [ $PLAN_EXIT_CODE -eq 255 ]; then
+          echo "❌ Planning failed with error"
+          exit 1
+        elif [ $PLAN_EXIT_CODE -eq 1 ]; then
+          echo "✅ Changes detected and planned successfully"
+        elif [ $PLAN_EXIT_CODE -eq 0 ]; then
+          echo "ℹ️ No changes detected"
+        else
+          echo "⚠️ Unexpected exit code: $PLAN_EXIT_CODE"
+        fi
+
+    - name: Deploy to Nomad
+      timeout-minutes: 3
+      run: |
+        echo "Deploying to Nomad..."
+        
+        # Simple deployment with standard nomad job run
+        if timeout 90s ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job run /tmp/ssm2025-job.hcl"; then
+          echo "✅ Deployment completed successfully"
+        else
+          echo "❌ Deployment command failed or timed out after 90 seconds"
+          echo "This could indicate:"
+          echo "- Image pull timeout"
+          echo "- Network connectivity issues"
+          echo "- Resource allocation problems"
+          exit 1
+        fi
+
+    - name: Wait for deployment
+      timeout-minutes: 2
+      run: |
+        echo "Waiting for deployment to stabilize..."
+        
+        # Monitor deployment progress with timeout (shorter checks for fast static site)
+        for i in {1..8}; do
+          echo "Check $i/8: Monitoring deployment progress..."
+          
+          # Get job status
+          JOB_STATUS=$(ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job status -short ssm2025" || echo "failed")
+          
+          if echo "$JOB_STATUS" | grep -q "running"; then
+            echo "✅ Deployment is running successfully"
+            break
+          elif echo "$JOB_STATUS" | grep -q "failed\|dead"; then
+            echo "❌ Deployment failed"
+            echo "Getting detailed status..."
+            ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job status ssm2025" || true
+            exit 1
+          else
+            echo "⏳ Deployment still in progress... (status: pending/starting)"
+            sleep 10
+          fi
+        done
+
+    - name: Check deployment status
+      timeout-minutes: 1
+      run: |
+        echo "Checking final deployment status..."
+        
+        # Get detailed job status
+        if ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job status ssm2025"; then
+          echo ""
+          echo "Getting allocation details..."
+          ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad job allocs ssm2025" || true
+        else
+          echo "❌ Failed to get job status"
+          exit 1
+        fi
+
+    - name: Verify service health
+      timeout-minutes: 1
+      run: |
+        echo "Checking service registration..."
+        ssh -i ~/.ssh/nomad_key -o StrictHostKeyChecking=no ${{ env.NOMAD_USER }}@${{ env.NOMAD_HOST }} "nomad service list" || echo "Service discovery not available"
+
+    - name: Cleanup SSH key
+      if: always()
+      run: |
+        rm -f ~/.ssh/nomad_key
+
+    - name: Deployment summary
+      run: |
+        echo "✅ Deployment completed successfully!"
+        echo "📦 Image: ${{ steps.image.outputs.full_image }}"
+        echo "🎯 Environment: ${{ inputs.environment || 'production' }}"
+        echo "🔗 Tag: ${{ steps.image.outputs.tag }}"
+        echo ""
+        if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+          echo "ℹ️ Manual deployment with custom tag"
+        else
+          echo "ℹ️ Automatic deployment using commit SHA for unique tagging"
+        fi

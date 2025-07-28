@@ -1,21 +1,81 @@
-# ssm2025
+# SSM 2025
 
-This is a [VitePress](https://vitepress.dev/) site.
+A modern [VitePress](https://vitepress.dev/) website with automated Docker deployment to Nomad clusters.
 
-## Getting Started
+## 🚀 Quick Start
+
+### Local Development
 
 ```bash
 # Install dependencies
 npm install
 
-# Start the development server
+# Start development server
 npm run dev
 
-# Build the site for production
+# Build for production
 npm run build
 
-# Preview the production build
+# Preview production build
 npm run preview
 ```
 
-For more details, check out the [VitePress documentation](https://vitepress.dev/guide).
+### Docker Development
+
+```bash
+# Quick start with Docker
+./docker.sh build && ./docker.sh run
+
+# Or use Docker Compose
+docker-compose up -d
+
+# Visit http://localhost:8080
+```
+
+## 📦 Deployment
+
+This project features automated CI/CD with Docker and Nomad:
+
+- **🔄 Automatic**: Push to `main` → Build → Deploy to production
+- **🎯 Manual**: Deploy any version to any environment via GitHub Actions
+- **🏗️ Multi-platform**: Supports AMD64 and ARM64 architectures
+- **🔒 Secure**: SSH-based deployment with environment separation
+
+### Quick Deploy Setup
+
+1. **Configure GitHub Repository**:
+   - Variables: `NOMAD_HOST`, `NOMAD_USER`
+   - Secret: `NOMAD_SSH_PRIVATE_KEY`
+
+2. **Deploy**:
+   - Push to `main` for automatic deployment
+   - Use Actions → "Deploy to Nomad" for manual deployment
+
+📋 **Detailed setup guide**: [DEPLOYMENT.md](./DEPLOYMENT.md)
+
+## 🛠️ Architecture
+
+### Frontend Stack
+- **Framework**: [VitePress](https://vitepress.dev/) - Vue-powered static site generator
+- **Styling**: [Bootstrap 5.3.6](https://getbootstrap.com/) - Responsive CSS framework
+- **Components**: [Swiper 11.2.8](https://swiperjs.com/) - Touch slider component
+- **Build Tool**: [Vite](https://vitejs.dev/) - Fast build tool and dev server
+- **Preprocessing**: [Sass](https://sass-lang.com/) - CSS extension language
+
+### Development Tools
+- **Package Manager**: npm
+- **Vue Composition**: [@vueuse/core](https://vueuse.org/) - Vue composition utilities
+- **YAML Processing**: js-yaml - YAML parsing for content
+- **SVG Sprites**: vite-plugin-svg-sprite - SVG optimization
+
+### Content Structure
+- **Pages**: Markdown files in `src/` directory
+- **Components**: Reusable content in `components/` directory
+- **Assets**: Images and static files in `src/public/`
+- **Styling**: Custom SCSS with Bootstrap integration
+
+## 📚 Resources
+
+- [VitePress Documentation](https://vitepress.dev/guide)
+- [Deployment Guide](./DEPLOYMENT.md)
+- [Docker Hub](https://ghcr.io/aisystant/ssm2025)
