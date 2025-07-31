@@ -2,7 +2,7 @@
 name: 'Александр Турханов'
 link: 'https://www.facebook.com/alex.turkhanov'
 post: 'Former Head of PMO в «Перекресток экспресс»'
-image: 'reviews/truhanov.jpg'
+image: 'reviews/turkhanov.jpg'
 ---
 
 Осмыслил тренинг <a href="https://www.facebook.com/prapion.me" target="_blank">Пион Медведевой</a> по онтологике. Основная польза в нем от того, что он дает фреймворк по тому, какие вопросы задавать при общении с командой проекта и бизнесом и как обрабатывать их ответы.
