@@ -66,7 +66,7 @@ contacts:
 reviews:
     title: 'Отзывы о наставнике'
     items:
-      - 'truhanov'
+      - 'turkhanov'
       - 'nemceva'
       - 'cherkasov'
       - 'yacishin'
