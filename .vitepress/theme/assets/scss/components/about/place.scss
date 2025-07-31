@@ -1,0 +1,85 @@
+.about-place {
+    position: relative;
+    background-color: $white;
+    overflow: hidden;
+
+    & .section-row {
+        @extend .row;
+    }
+
+    & .section-body {
+        @extend .col-md-9;
+        @extend .col-lg-8;
+        @extend .col-xl-7;
+        @include padding-y(2.5rem, 1rem);
+
+        & ul {
+            & li {
+                font-weight: $font-weight-light;
+                line-height: 1.4;
+                margin-bottom: .75rem;
+            }
+        }
+    }
+
+    & .section-image {
+        position: relative;
+        @extend .col-md-3;
+        @extend .col-lg-4;
+        @extend .col-xl-5;
+
+        & img {
+            position: absolute;
+            width: 65%;
+            top: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .section-body {
+            @include padding-y(3.5rem);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .section-body {
+            font-size: $font-size-lg;
+            @include padding-y(4.5rem);
+        }
+
+        & h2 {
+            font-size: 2.25rem;
+        }
+    }
+
+    @include media-breakpoint-only(md) {
+        & .section-image {
+            position: static;
+
+            & img {
+                width: 18%;
+                top: 35%;
+                left: 76%;
+                transform: none;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        & .section-image {
+            aspect-ratio: 5 / 2;
+
+            & img {
+                width: 38%;
+                left: 50%;
+                top: 0;
+            }
+        }
+
+        & h2 {
+            text-align: center;
+        }
+    }
+}

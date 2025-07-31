@@ -1,0 +1,99 @@
+.about-contacts {
+    @extend .container;
+    @extend %section-margin;
+
+    & .section-row {
+        @extend .slim-body;
+        display: flex;
+    }
+
+    & .contacts-item {
+        position: relative;
+        flex: 1 0 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: $light;
+        @extend .rounded;
+        padding: 2rem 1.5rem;
+        @extend .px-lg-5;
+
+        & .contact-name {
+            @extend h3;
+            flex-grow: 1;
+            margin-bottom: 2rem;
+        }
+
+        & .btn {
+            min-width: 16em;
+        }
+    }
+
+    & .section-footer {
+        font-size: $h4-font-size;
+        text-align: center;
+        @extend .mt-3;
+        @extend .mt-md-5;
+        @extend .mt-lg-6;
+    }
+
+    @include media-breakpoint-up(md) {
+        & .contacts-item {
+            & ~ .contacts-item {
+                margin-left: 1.25rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .contacts-item {
+            aspect-ratio: 7 / 3;
+
+            & ~ .contacts-item {
+                margin-left: 3rem;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 2rem;
+                    height: 1rem;
+                    background-image: url(../img/arrow-long.svg);
+                    @include back-image($size: 100% auto);
+                    position: absolute;
+                    top: 50%;
+                    right: 100%;
+                    margin-right: 1.5rem;
+                    transform: translate(50%, -50%);
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .contacts-item {
+            & .btn {
+                padding: $btn-padding-y-lg $btn-padding-x-lg;
+                font-size: $btn-font-size-lg;
+            }
+        }
+
+        & .section-footer {
+            font-size: $h3-font-size;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        & .section-row {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        & .contacts-item {
+            align-items: center;
+            text-align: center;
+            width: 26rem;
+            max-width: 100%;
+            margin-bottom: 1.25rem;
+        }
+    }
+}

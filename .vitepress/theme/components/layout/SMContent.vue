@@ -13,6 +13,7 @@ import SMStarting from '../pages/SMStarting.vue'
 import SMProducts from '../pages/SMProducts.vue'
 import SMSubscribe from '../pages/SMSubscribe.vue'
 import SMContacts from '../pages/SMContacts.vue'
+import SMAboutUs from '../pages/SMAboutUs.vue'
 import NotFound from '../pages/NotFound.vue'
 import SMSimplePage from '../pages/SMSimplePage.vue'
 
@@ -35,6 +36,7 @@ const { page, frontmatter } = useData()
         <SMProducts v-else-if="frontmatter.layout === 'products'" />
         <SMSubscribe v-else-if="frontmatter.layout === 'subscribe'" />
         <SMContacts v-else-if="frontmatter.layout === 'contacts'" />
+        <SMAboutUs v-else-if="frontmatter.layout === 'about'" />
         <SMSimplePage v-else />
     </main>
 </template>

@@ -8,7 +8,7 @@ image: 'vision.svg'
 buttons:
   -
     name: 'О мастерской'
-    link: '#'
+    link: '/about'
     style: 'btn-dark'
 
 registration:

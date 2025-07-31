@@ -1,0 +1,99 @@
+.about-stability {
+    @extend .container;
+    @extend %section-margin;
+
+    & .section-row {
+        @extend .slim-body;
+        display: flex;
+    }
+
+    & .stability-head {
+        display: flex;
+        flex-direction: column;
+        @include back-color();
+        font-weight: $font-weight-light;
+        border-radius: $border-radius;
+        padding: 1.5rem 1.25rem;
+    }
+
+    & .stability-title {
+        flex-grow: 1;
+    }
+
+    & .stability-item {
+        position: relative;
+        @extend .bg-white;
+        @extend .rounded;
+        line-height: 1.4;
+        padding: 1rem 1.25rem;
+
+        & ~ .stability-item {
+            margin-top: .75rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .stability-body {
+            padding-left: 2rem;
+        }
+
+        & .stability-item {
+            &:before {
+                content: '';
+                display: block;
+                width: 1.15em;
+                height: 1.15em;
+                background-image: url(../img/arrow.svg);
+                @include back-image($size: 100% auto);
+                position: absolute;
+                top: 50%;
+                right: 100%;
+                margin-right: 1rem;
+                transform: translate(50%, -50%);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .stability-head {
+            flex: 0 0 auto;
+            width: 22rem;
+            padding: 1.5rem;
+        }
+
+        & .stability-body {
+            flex: 1 0 0%;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .stability-head {
+            width: 24rem;
+            border-radius: $border-radius-lg;
+            padding: 2rem;
+        }
+
+        & .stability-body {
+            padding-left: 3rem;
+        }
+
+        & .stability-item {
+            font-size: $font-size-lg;
+            @include padding-x(2rem);
+
+            &:before {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        & .section-row {
+            flex-direction: column;
+        }
+
+        & .stability-head {
+            margin-bottom: 1.5rem;
+        }
+    }
+}

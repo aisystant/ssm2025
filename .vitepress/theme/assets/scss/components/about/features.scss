@@ -1,0 +1,103 @@
+.about-features {
+    @extend .section-white;
+    @extend %section-margin;
+
+    & .features-title {
+        text-align: center;
+        @extend .mb-md-5;
+    }
+
+    & .features-body {
+        max-width: 46rem;
+        padding-top: 1rem;
+        @extend .mx-auto;
+    }
+
+    & .features-row {
+        position: relative;
+        display: flex;
+
+        &:not(:last-child) {
+            & .feature-item {
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
+    & .feature-item {
+        line-height: 1.4;
+        padding-left: 1rem;
+
+        & .card-title {
+            font-weight: $font-weight-semibold;
+            font-size: $font-size-lg;
+            margin-bottom: .5rem;
+        }
+
+        & .card-text {
+            font-weight: $font-weight-light;
+        }
+    }
+
+    & .feature-road {
+        position: relative;
+        width: 1rem;
+        flex-shrink: 0;
+
+        &:before {
+            content: '';
+            display: block;
+            border-left: 1px solid $gray-500;
+            position: absolute;
+            height: 100%;
+            top: .25rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &:after {
+            content: '';
+            @include point();
+            position: absolute;
+            top: .25rem;
+            left: 0;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .features-row {
+            & .feature-item {
+                width: 50%;
+            }
+
+            &:nth-child(even) {
+                justify-content: flex-end;
+
+                & .feature-item {
+                    @include padding-x(1.5rem, 0);
+                }
+            }
+
+            &:nth-child(odd) {
+                & .feature-item {
+                    text-align: right;
+                    @include padding-x(0, 1.5rem);
+                }
+            }
+
+            & .feature-road {
+                position: absolute;
+                height: 100%;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .features-title {
+            font-size: 2.25rem;
+        }
+    }
+}

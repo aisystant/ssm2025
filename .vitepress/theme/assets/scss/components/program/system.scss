@@ -1,5 +1,6 @@
 .program-system {
     @extend .section-white;
+    overflow: hidden;
 
     & .section-row {
         @extend .row;
@@ -13,6 +14,7 @@
     }
 
     & .section-image {
+        position: relative;
         @extend .col-md-3;
         align-self: flex-end;
 
@@ -24,8 +26,14 @@
 
     @include media-breakpoint-down(md) {
         & .section-image {
+            aspect-ratio: 6 / 2;
+
             & img {
-                width: 10rem;
+                position: absolute;
+                width: 38%;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
             }
         }
     }

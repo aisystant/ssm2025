@@ -14,11 +14,11 @@ levels:
         -
             name: 'Ученик'
             required: 'Начал обучение, выполнил первых десять домашних заданий основной или подготовительной программы.'
-            eqf: '<b>Level 1.</b> Work or study under supervision with some autonomy.'
+            eqf: '<b>Level 1.</b> Work or study under direct supervision in a structured context.'
         -
             name: 'Начинающий'
             required: 'Прошёл полностью первый семестр «Моделирование и собранность», демонстрирует знание материала семестра и умение рассуждать с использованием освоенных методов работы.'
-            eqf: '<b>Level 2.</b> Work or study under direct supervision in a structured context.'
+            eqf: '<b>Level 2.</b> Work or study under supervision with some autonomy.'
         -
             name: 'Стажёр'
             required: 'Прошёл полностью второй семестр «Системное мышление и методология», демонстрирует знание материала семестра и умение рассуждать с использованием освоенных методов работы.'

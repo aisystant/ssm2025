@@ -14,7 +14,7 @@ export default defineConfig({
             {
                 text: "О нас",
                 items: [
-                    { text: "Коротко о нас", link: "#" },
+                    { text: "Коротко о нас", link: "/about" },
                     { text: "Квалификации", link: "/qualification" },
                     { text: "Команда", link: "/team/", activeMatch: "^/team" },
                     { text: "Контакты", link: "/contacts" },

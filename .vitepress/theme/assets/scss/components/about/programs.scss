@@ -1,0 +1,64 @@
+.about-programs {
+    @extend .container;
+    @extend %section-padding;
+    @extend %section-margin;
+
+    & .swiper-slide {
+        display: flex;
+    }
+
+    & .about-program {
+        @extend .card;
+        border: 1px solid $gray-500;
+        line-height: 1.4;
+        text-align: center;
+        user-select: none;
+        @extend .mx-auto;
+
+        & .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        & .card-image {
+            @include flex();
+            aspect-ratio: 6 / 3;
+            margin-bottom: 1.5rem;
+
+            & img {
+                max-height: 100%;
+            }
+        }
+
+        & .card-title {
+            font-weight: $font-weight-semibold;
+            font-size: $font-size-lg;
+        }
+
+        & .card-text {
+            flex-grow: 1;
+            font-weight: $font-weight-light;
+            margin-bottom: 1.5rem;
+        }
+
+        & .btn {
+            @extend .btn-dark;
+            width: 100%;
+            margin-bottom: .5rem;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            & .card-body {
+                padding: 2rem 1.75rem;
+            }
+
+            & .card-title {
+                font-size: $h5-font-size;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            max-width: 22rem;
+        }
+    }
+}
