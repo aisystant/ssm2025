@@ -41,7 +41,8 @@
         margin-bottom: 1.25rem;
 
         & > div {
-            @extend .col;
+            @extend .col-auto;
+            @extend .col-md;
         }
 
         & .btn {
@@ -92,6 +93,16 @@
 
         & .section-col {
             @include padding-y(4rem);
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        & .section-buttons {
+            justify-content: center;
+
+            & .btn {
+                min-width: 18rem;
+            }
         }
     }
 

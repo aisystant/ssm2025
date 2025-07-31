@@ -90,15 +90,17 @@
         }
     }
 
-    @include media-breakpoint-down(sm) {
-        & .program-subtitle {
-            font-size: $h5-font-size;
-        }
-
+    @include media-breakpoint-down(md) {
         & .program-image-mob,
         & .education-card {
             margin-left: auto;
             margin-right: auto;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        & .program-subtitle {
+            font-size: $h5-font-size;
         }
     }
 }

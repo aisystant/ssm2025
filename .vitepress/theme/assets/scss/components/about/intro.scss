@@ -1,4 +1,4 @@
-.openendedness-intro {
+.about-intro {
     @extend %section-grid;
     @include padding-y(2rem);
 
@@ -8,6 +8,8 @@
 
     & .section-row {
         @extend .row;
+        @extend .gy-4;
+        @extend .gy-sm-5;
         align-items: center;
     }
 
@@ -17,7 +19,6 @@
 
     & .intro-image {
         @extend .col-md-5;
-        @extend .px-sm-0;
 
         & img {
             display: block;
@@ -25,29 +26,19 @@
         }
     }
 
-    & .openendedness-title {
+    & .about-title {
         @extend .mb-md-4;
 
         & small {
             display: block;
             font-size: .6em;
-            margin-bottom: .5rem;
+            margin-top: .5rem;
         }
     }
 
-    & .openendedness-text {
+    & .about-text {
         font-weight: $font-weight-light;
         max-width: 34em;
-    }
-
-    & .openendedness-buttons {
-        margin-top: 2.5rem;
-
-        & .btn {
-            min-width: 18rem;
-            margin-bottom: 1rem;
-            @extend .me-sm-2;
-        }
     }
 
     @include media-breakpoint-up(md) {
@@ -57,32 +48,20 @@
     @include media-breakpoint-up(xxl) {
         padding-top: 3rem;
 
-        & .openendedness-title {
+        & .about-title {
             font-size: 2.75rem;
         }
 
-        & .openendedness-text {
+        & .about-text {
             font-size: $font-size-lg;
         }
     }
 
     @include media-breakpoint-down(md) {
-        & .openendedness-buttons {
-            text-align: center;
-            margin-top: 2rem;
-            margin-bottom: 3rem;
-        }
-
         & .intro-image {
             & img {
-                width: 30rem;
+                width: 20rem;
             }
-        }
-    }
-
-    @include media-breakpoint-down(sm) {
-        & .openendedness-buttons {
-            margin-bottom: 2rem;
         }
     }
 }

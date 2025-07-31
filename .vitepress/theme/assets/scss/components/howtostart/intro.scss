@@ -3,7 +3,7 @@
     @include padding-y(2rem);
 
     & .section-container {
-        @extend .container-xl;
+        @extend .container;
     }
 
     & .section-row {
@@ -74,9 +74,7 @@
                 width: 24rem;
             }
         }
-    }
 
-     @include media-breakpoint-down(sm) {
         & .howtostart-buttons {
             text-align: center;
         }

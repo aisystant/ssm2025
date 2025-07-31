@@ -1,0 +1,49 @@
+.about-whowe {
+    @extend .section-light;
+    text-align: left;
+    @extend .mb-0;
+
+
+    & .section-body {
+        @extend .slim-body;
+    }
+
+    & .section-row {
+        @extend .row;
+        @extend .gy-3;
+        @extend .gx-lg-5;
+        @extend .gx-xl-6;
+    }
+
+    & .section-col {
+        @extend .col-lg;
+    }
+
+    & .whowe-text {
+        font-weight: $font-weight-light;
+    }
+
+    & .whowe-row {
+        @extend .g-2;
+    }
+
+    & .whowe-item {
+        position: relative;
+        @extend .rounded;
+        line-height: 1.4;
+        background-color: $white;
+        padding: 1rem 1.25rem;
+        min-width: 16rem;
+
+        &.dark-item {
+            @include back-color();
+            text-align: center;
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        & .whowe-text {
+            font-size: $font-size-lg;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.about-internships {
+    @extend .container;
+    @extend %section-margin;
+
+    & .section-row {
+        @extend .row;
+        @extend .g-2;
+        @extend .g-md-3;
+    }
+
+    & .internships-item {
+        @extend .col-md-6;
+        @extend .col-lg-3;
+        display: flex;
+    }
+
+    & .internships-title {
+        text-align: center;
+        line-height: 1.4;
+        @extend .mb-lg-5;
+
+        & span {
+            display: inline-block;
+        }
+    }
+
+    & .internship-card {
+        @extend .card;
+        justify-content: space-around;
+        line-height: 1.4;
+        background-color: $light;
+        padding: 1.5rem 1.25rem;
+
+        & .card-title {
+            font-weight: $font-weight-semibold;
+            @extend .mb-lg-3;
+        }
+
+        & .card-text {
+            font-weight: $font-weight-light;
+            font-size: $font-size-sm;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .internships-title {
+            font-size: 2.25rem;
+        }
+    }
+}
