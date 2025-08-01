@@ -29,10 +29,10 @@ activity:
         items:
           -
             name: 'Системное мышление и методология'
-            link:
+            link: '/programs/orgdev?tab=2-org-dev'
           -
-            name: 'Системная инженерия и менеджмент'
-            link:
+            name: 'Системный менеджмент и инженерия'
+            link: '/programs/orgdev?tab=3-org-dev'
 
 contacts:
     club: 'https://systemsworld.club/u/ylika_chaikovskaya'
