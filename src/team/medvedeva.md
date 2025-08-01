@@ -32,7 +32,7 @@ activity:
         items:
           -
             name: 'Рациональная работа'
-            link:
+            link: '/programs/orgdev?tab=1-org-dev'
 
 practice:
     title: 'Научные основы и созданные системы'

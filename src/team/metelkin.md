@@ -33,7 +33,7 @@ activity:
         items:
           -
             name: 'Введение в системное мышление'
-            link:
+            link: '/programs/intro?tab=systems-thinking-intro'
           -
             name: 'Ролевые модели для управления рабочими и личными проектами'
             link:

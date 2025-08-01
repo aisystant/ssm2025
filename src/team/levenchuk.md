@@ -47,7 +47,7 @@ activity:
         items:
           -
             name: 'Cистемное мышление'
-            link:
+            link: '/programs/orgdev?tab=2-org-dev'
 
 practice:
     title: 'Научные основы и созданные системы'
