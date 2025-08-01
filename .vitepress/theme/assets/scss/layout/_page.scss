@@ -17,6 +17,12 @@
         }
     }
 
+    &__error {
+        @extend .container;
+        @include padding-y(2rem);
+        @extend .my-auto;
+    }
+
     &-header {
         text-align: center;
         margin-bottom: $headings-margin-bottom;
@@ -42,7 +48,8 @@
     }
 
     @include media-breakpoint-up(xl) {
-        &__content {
+        &__content,
+        &__error {
             @include padding-y(3rem);
         }
 
