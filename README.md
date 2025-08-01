@@ -75,13 +75,13 @@ This project features automated CI/CD with Docker and Nomad:
 - **Styling**: Custom SCSS with Bootstrap integration
 
 ### URL Redirects
-- **Configuration**: Stored in `nginx/conf.d/redirects.conf`, auto-generated from CSV files
+- **Configuration**: Stored in `nginx/includes.d/redirects.conf`, auto-generated from CSV files
 - **CSV Types**:
   - `nginx/internal-redirects.csv`: Old paths to new paths on the new site (`/old-path,/new-path`)
   - `nginx/external-redirects.csv`: Paths to redirect to old.system-school (`/path-not-implemented`)
 - **Generate Redirects**:
   ```bash
-  cd nginx && python3 csv-to-nginx-redirects.py internal-redirects.csv external-redirects.csv conf.d/redirects.conf
+  cd nginx && python3 csv-to-nginx-redirects.py internal-redirects.csv external-redirects.csv includes.d/redirects.conf
   ```
 
 ## 📚 Resources

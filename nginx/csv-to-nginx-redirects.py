@@ -8,7 +8,7 @@ Format of input CSV:
     - external-redirects.csv: path (for pages redirecting to old.system-school)
 
 Usage:
-    ./csv-to-nginx-redirects.py internal-redirects.csv external-redirects.csv output.conf
+    ./csv-to-nginx-redirects.py internal-redirects.csv external-redirects.csv includes.d/redirects.conf
 
 Requirements:
     - Python 3
