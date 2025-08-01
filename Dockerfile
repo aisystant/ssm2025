@@ -27,7 +27,10 @@ RUN addgroup -g 1001 -S nginx-user && \
 COPY --from=builder --chown=nginx-user:nginx-user /app/.vitepress/dist /usr/share/nginx/html
 
 # Copy nginx configuration
-COPY --chown=nginx-user:nginx-user nginx.conf /etc/nginx/nginx.conf
+COPY --chown=nginx-user:nginx-user nginx/nginx.conf /etc/nginx/nginx.conf
+
+# Copy redirect configurations
+COPY --chown=nginx-user:nginx-user nginx/conf.d/ /etc/nginx/conf.d/
 
 # Create necessary directories and set permissions
 RUN mkdir -p /var/cache/nginx /var/log/nginx /tmp && \
