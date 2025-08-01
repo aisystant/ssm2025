@@ -29,8 +29,9 @@ COPY --from=builder --chown=nginx-user:nginx-user /app/.vitepress/dist /usr/shar
 # Copy nginx configuration
 COPY --chown=nginx-user:nginx-user nginx/nginx.conf /etc/nginx/nginx.conf
 
-# Copy redirect configurations
+# Copy include configurations
 COPY --chown=nginx-user:nginx-user nginx/conf.d/ /etc/nginx/conf.d/
+COPY --chown=nginx-user:nginx-user nginx/includes.d/ /etc/nginx/includes.d/
 
 # Create necessary directories and set permissions
 RUN mkdir -p /var/cache/nginx /var/log/nginx /tmp && \
