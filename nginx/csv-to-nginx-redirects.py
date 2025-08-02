@@ -44,7 +44,7 @@ def main():
                         continue
                     old_path, new_path = row
                     output.write(f"location = {old_path} {{\n")
-                    output.write(f"    return 302 https://new.system-school.ru{new_path};\n")
+                    output.write(f"    return 302 https://system-school.ru{new_path};\n")
                     output.write("}\n\n")
         except FileNotFoundError:
             output.write("# No internal redirects specified\n\n")
