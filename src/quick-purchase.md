@@ -39,17 +39,17 @@ products:
         name: 'Системное саморазвитие'
         text: '7 сентября'
         price: '35 000 ₽'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI2_IE46EPrz/l'
       -
         name: 'Практики саморазвития'
         text: '8 сентября'
         price: '35 000 ₽'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI2_TcKUpXvD/l'
       -
         name: 'Введение в системное мышление'
         text: '29 ноября'
         price: '80 000 ₽'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI2_iX5TUKqv/l'
       -
         name: 'Мастерская по практикам саморазвития'
         text: ''
@@ -71,17 +71,17 @@ products:
         name: 'Рациональная работа'
         text: '6 сентября'
         price: '200 000 ₽'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI2_qsjX5nxT/l'
       -
         name: 'Системное мышление и&nbsp;методология'
         text: '10 сентября'
         price: '150 000 ₽'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI2_zUaRs8wP/l'
       -
         name: 'Системный менеджмент и&nbsp;инженерия'
         text: '9 сентября'
         price: '150 000 ₽'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI2_7yc2-Dfc/l'
       -
         name: 'Разбор /review выявления систем по&nbsp;первому шагу системного промпта'
         text: ''

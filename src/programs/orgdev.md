@@ -118,7 +118,7 @@ schedule:
     program:
         head: 'Полная программа развития'
         button: 'Приобрести всю программу'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI29m4hXC3sX/l'
 
     courses:
       -
@@ -129,7 +129,7 @@ schedule:
         text:
           - 'Первое занятие — 6 сентября'
           - 'Двадцать первое занятие — 15 ноября'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI2_qsjX5nxT/l'
       -
         name: 'Системное мышление и методология'
         lessons: 'Занятия по средам с 18:00 до 20:00'
@@ -138,7 +138,7 @@ schedule:
         text:
           - 'Первое занятие — 10 сентября'
           - 'Девятнадцатое занятие — 21 января'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI2_zUaRs8wP/l'
       -
         name: 'Системный менеджмент и инженерия'
         lessons: 'Занятия по вторникам с 18:00 до 20:00'
@@ -147,7 +147,7 @@ schedule:
         text:
           - 'Первое занятие — 9 сентября'
           - 'Девятнадцатое занятие — 20 января'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI2_7yc2-Dfc/l'
 
 faq:
     title: 'FAQ'
