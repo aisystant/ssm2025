@@ -144,7 +144,7 @@ schedule:
     program:
         head: 'Полная программа развития (без СФ)'
         button: 'Приобрести всю программу'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI29EyybYYpZ/l'
 
     courses:
       -
@@ -155,7 +155,7 @@ schedule:
         text:
           - 'Первое занятие — 14 сентября'
           - 'Одиннадцатое занятие — 9 ноября'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI2_IE46EPrz/l'
       -
         name: 'Практики саморазвития'
         lessons: 'Занятия по понедельникам с 18:00 до 19:30'
@@ -164,7 +164,7 @@ schedule:
         text:
           - 'Первое занятие — 15 сентября'
           - 'Одиннадцатое занятие — 10 ноября'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI2_TcKUpXvD/l'
       -
         name: 'Введение в системное мышление'
         lessons: 'Занятия по субботам с 09:00 до 12:00'
@@ -173,7 +173,7 @@ schedule:
         text:
           - 'Первое занятие — 6 декабря'
           - 'Девятое занятие — 24 января'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI2_iX5TUKqv/l'
 
 reviews:
     title: 'Отзывы участников'
