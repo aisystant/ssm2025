@@ -7,6 +7,11 @@ export default defineConfig({
     lang: "ru-RU",
     title: "Мастерская инженеров-менеджеров",
     description: "Готовим директоров по развитию, меняющих мир к лучшему",
+    
+    // Sitemap configuration
+    sitemap: {
+        hostname: 'https://system-school.ru'
+    },
 
     themeConfig: {
         siteTitle: "Мастерская инженеров-менеджеров",
