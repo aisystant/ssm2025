@@ -10,24 +10,24 @@ products:
     items:
       -
         name: 'Подписка 1 месяц'
-        price: '1 000 ₽'
+        price: '1 100 ₽'
         text: ''
-        link: '#'
+        link: 'https://aisystant.system-school.ru/lk/#/buy/email'
       -
         name: 'Подписка 3 месяца'
-        price: '2 700 ₽'
-        text: '(900 руб / мес)'
-        link: '#'
+        price: '3 000 ₽'
+        text: '(1000 руб / мес)'
+        link: 'https://aisystant.system-school.ru/lk/#/buy/email'
       -
         name: 'Подписка 6 месяцев'
-        price: '4 800 ₽'
-        text: '(800 руб / мес)'
-        link: '#'
+        price: '5 400 ₽'
+        text: '(900 руб / мес)'
+        link: 'https://aisystant.system-school.ru/lk/#/buy/email'
       -
         name: 'Подписка 12 месяцев'
-        price: '8 400 ₽'
-        text: '(700 руб / мес)'
-        link: '#'
+        price: '9 600 ₽'
+        text: '(800 руб / мес)'
+        link: 'https://aisystant.system-school.ru/lk/#/buy/email'
     more:
       name: 'Подробнее о подписке'
       link: '/open-endedness'
@@ -83,7 +83,7 @@ products:
         price: '150 000 ₽'
         link: 'https://yookassa.ru/my/i/aI2_7yc2-Dfc/l'
       -
-        name: 'Разбор /review выявления систем по&nbsp;первому шагу системного промпта'
+        name: 'Разбор/review выявления систем по&nbsp;первому шагу системного промпта'
         text: ''
         price: '10 000 ₽'
         link: '#'
