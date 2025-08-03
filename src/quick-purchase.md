@@ -10,24 +10,24 @@ products:
     items:
       -
         name: 'Подписка 1 месяц'
-        price: '1 000 ₽'
+        price: '1 100 ₽'
         text: ''
-        link: '#'
+        link: 'https://aisystant.system-school.ru/lk/#/buy/email'
       -
         name: 'Подписка 3 месяца'
-        price: '2 700 ₽'
-        text: '(900 руб / мес)'
-        link: '#'
+        price: '3 000 ₽'
+        text: '(1000 руб / мес)'
+        link: 'https://aisystant.system-school.ru/lk/#/buy/email'
       -
         name: 'Подписка 6 месяцев'
-        price: '4 800 ₽'
-        text: '(800 руб / мес)'
-        link: '#'
+        price: '5 400 ₽'
+        text: '(900 руб / мес)'
+        link: 'https://aisystant.system-school.ru/lk/#/buy/email'
       -
         name: 'Подписка 12 месяцев'
-        price: '8 400 ₽'
-        text: '(700 руб / мес)'
-        link: '#'
+        price: '9 600 ₽'
+        text: '(800 руб / мес)'
+        link: 'https://aisystant.system-school.ru/lk/#/buy/email'
     more:
       name: 'Подробнее о подписке'
       link: '/open-endedness'
@@ -54,12 +54,12 @@ products:
         name: 'Мастерская по практикам саморазвития'
         text: ''
         price: '5 000 ₽'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI75LbjLWIYS/l'
       -
         name: 'Системный фитнес'
         text: ''
         price: '60 000 ₽'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI74_aGzBwWO/l'
     more:
       name: 'Подробнее о программе'
       link: '/programs/intro'
@@ -83,15 +83,15 @@ products:
         price: '150 000 ₽'
         link: 'https://yookassa.ru/my/i/aI2_7yc2-Dfc/l'
       -
-        name: 'Разбор /review выявления систем по&nbsp;первому шагу системного промпта'
+        name: 'Разбор/review выявления систем по&nbsp;первому шагу системного промпта'
         text: ''
         price: '10 000 ₽'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI75cHMCgy2U/l'
       -
         name: 'Тренировка — работа с&nbsp;типами «Абсурдная аналогия»'
         text: ''
         price: '10 000 ₽'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI75k7ARv-4k/l'
     more:
       name: 'Подробнее о программе'
       link: '/programs/orgdev'
@@ -101,8 +101,8 @@ products:
     items:
       -
         name: 'Интеллект-стек'
-        price: '35 000 ₽'
-        link: '#'
+        price: '200 000 ₽'
+        link: 'https://yookassa.ru/my/i/aI758qITNL4O/l'
     more:
       name: 'Подробнее о программе'
       link: '/programs/research'
