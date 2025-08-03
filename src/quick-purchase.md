@@ -54,12 +54,12 @@ products:
         name: 'Мастерская по практикам саморазвития'
         text: ''
         price: '5 000 ₽'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI75LbjLWIYS/l'
       -
         name: 'Системный фитнес'
         text: ''
         price: '60 000 ₽'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI74_aGzBwWO/l'
     more:
       name: 'Подробнее о программе'
       link: '/programs/intro'
@@ -86,12 +86,12 @@ products:
         name: 'Разбор/review выявления систем по&nbsp;первому шагу системного промпта'
         text: ''
         price: '10 000 ₽'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI75cHMCgy2U/l'
       -
         name: 'Тренировка — работа с&nbsp;типами «Абсурдная аналогия»'
         text: ''
         price: '10 000 ₽'
-        link: '#'
+        link: 'https://yookassa.ru/my/i/aI75k7ARv-4k/l'
     more:
       name: 'Подробнее о программе'
       link: '/programs/orgdev'
@@ -101,8 +101,8 @@ products:
     items:
       -
         name: 'Интеллект-стек'
-        price: '35 000 ₽'
-        link: '#'
+        price: '200 000 ₽'
+        link: 'https://yookassa.ru/my/i/aI758qITNL4O/l'
     more:
       name: 'Подробнее о программе'
       link: '/programs/research'
