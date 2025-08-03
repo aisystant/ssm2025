@@ -102,7 +102,7 @@ products:
       -
         name: 'Интеллект-стек'
         price: '200 000 ₽'
-        link: 'https://yookassa.ru/my/i/aI758qITNL4O/l'
+        link: 'https://yookassa.ru/my/i/aI7_0-7A2vEm/l'
     more:
       name: 'Подробнее о программе'
       link: '/programs/research'

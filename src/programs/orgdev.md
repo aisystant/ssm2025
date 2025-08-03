@@ -118,7 +118,7 @@ schedule:
     program:
         head: 'Полная программа развития'
         button: 'Приобрести всю программу'
-        link: 'https://yookassa.ru/my/i/aI29m4hXC3sX/l'
+        link: 'https://yookassa.ru/my/i/aI7_uQ5m4s7W/l'
 
     courses:
       -
