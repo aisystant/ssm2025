@@ -7,6 +7,14 @@ export default defineConfig({
     lang: "ru-RU",
     title: "Мастерская инженеров-менеджеров",
     description: "Готовим директоров по развитию, меняющих мир к лучшему",
+    
+    // Clean URLs - removes .html suffixes from URLs
+    cleanUrls: true,
+    
+    // Sitemap configuration
+    sitemap: {
+        hostname: 'https://system-school.ru'
+    },
 
     themeConfig: {
         siteTitle: "Мастерская инженеров-менеджеров",

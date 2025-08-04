@@ -4,6 +4,8 @@ A modern [VitePress](https://vitepress.dev/) website with automated Docker deplo
 
 ## 🚀 Quick Start
 
+GitHub Guide: https://github.com/aisystant/github-guide.
+
 ### Local Development
 
 ```bash
@@ -73,6 +75,18 @@ This project features automated CI/CD with Docker and Nomad:
 - **Components**: Reusable content in `components/` directory
 - **Assets**: Images and static files in `src/public/`
 - **Styling**: Custom SCSS with Bootstrap integration
+
+### URL Features
+- **Clean URLs**: Site uses clean URLs without `.html` suffixes (configured in `.vitepress/config.mts`)
+- **Nginx Support**: Configured to serve `/page.html` when `/page` is requested
+- **Redirects Configuration**: Stored in `nginx/includes.d/redirects.conf`, auto-generated from CSV files
+- **CSV Types**:
+  - `nginx/internal-redirects.csv`: Old paths to new paths on the new site (`/old-path,/new-path`)
+  - `nginx/external-redirects.csv`: Paths to redirect to old.system-school (`/path-not-implemented`)
+- **Generate Redirects**:
+  ```bash
+  cd nginx && python3 csv-to-nginx-redirects.py internal-redirects.csv external-redirects.csv includes.d/redirects.conf
+  ```
 
 ## 📚 Resources
 
