@@ -10,6 +10,10 @@ defineProps<{
         onlyDesktop?: boolean
     }[]
 }>()
+
+const emit = defineEmits<{
+    (e: 'close'): void
+}>()
 </script>
 
 <template>
@@ -18,7 +22,8 @@ defineProps<{
             <li v-if="!item.onlyDesktop">
                 <a
                     :href="item.link.trim()"
-                    :target="item.target ?? undefined">
+                    :target="item.target ?? undefined"
+                    @click="emit('close')">
                     <SvgIcon :name="item.icon" />
                 </a>
             </li>
