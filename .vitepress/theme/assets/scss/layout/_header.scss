@@ -58,6 +58,32 @@
         margin-left: 1rem;
     }
 
+    & .nav-icons {
+        @extend .list-unstyled;
+        @extend .row;
+        @extend .g-2;
+        margin-bottom: 1.5rem;
+
+        & li {
+            @extend .col-auto;
+
+            & a {
+                @include back-color();
+                @include flex();
+                border-radius: 50%;
+                line-height: 1;
+                padding: .5rem;
+                @extend .text-decoration-none;
+            }
+
+            & .svg-icon {
+                width: 1.2rem;
+                height: 1.2rem;
+                flex-shrink: 0;
+            }
+        }
+    }
+
     @include media-breakpoint-only(xl) {
         & .dropdown-item,
         & .nav-link {
@@ -97,6 +123,14 @@
     }
 
     @include media-breakpoint-down(xl) {
+        & .nav-item {
+            margin-bottom: .25rem;
+        }
+
+        & .nav-link {
+            font-size: 1.1rem;
+        }
+
         & .dropdown-menu {
             box-shadow: none;
             @include padding-y(.25rem);
@@ -116,10 +150,5 @@
 
     @include media-breakpoint-down(sm) {
         padding: .25rem 1rem;
-
-        & .offcanvas-title img,
-        & .navbar-brand img {
-            width: 5rem;
-        }
     }
 }

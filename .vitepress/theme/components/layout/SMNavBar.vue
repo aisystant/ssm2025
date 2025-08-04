@@ -4,7 +4,7 @@ import SMNavBarButtons from './SMNavBarButtons.vue'
 import SMNavBarMenu from './SMNavBarMenu.vue'
 import { useDisplay } from '../../composables/media'
 
-const { isDekstop } = useDisplay()
+const { isDesktop } = useDisplay()
 </script>
 
 <template>
@@ -14,7 +14,7 @@ const { isDekstop } = useDisplay()
                 <SMLogo />
             </a>
 
-            <div class="navbar-actions" v-if="isDekstop">
+            <div class="navbar-actions" v-if="isDesktop">
                 <SMNavBarButtons />
             </div>
 
