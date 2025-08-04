@@ -47,6 +47,7 @@ const closeMenu = () => {
         <div class="offcanvas-body">
             <SMNavBarIcons
                 :items="theme.expandButtons"
+                @close="closeMenu"
                 v-if="!isDesktop" />
 
             <ul class="navbar-nav">
