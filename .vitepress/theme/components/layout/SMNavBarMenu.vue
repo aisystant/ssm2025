@@ -2,13 +2,14 @@
 import { ref, onMounted } from 'vue'
 import SMLogo from './SMLogo.vue'
 import SMSocial from './SMSocial.vue'
+import SMNavBarIcons from './SMNavBarIcons.vue'
 import SMNavBarMenuLink from './SMNavBarMenuLink.vue'
 import SMNavBarMenuGroup from './SMNavBarMenuGroup.vue'
 import { useData } from '../../composables/data'
 import { useDisplay } from '../../composables/media'
 
 const { theme } = useData()
-const { isDekstop } = useDisplay()
+const { isDesktop } = useDisplay()
 const navMenu = ref<HTMLElement | null>(null)
 const offcanvasInstance = ref<Offcanvas | null>(null)
 
@@ -36,7 +37,7 @@ const closeMenu = () => {
     </button>
 
     <div class="navbar-menu offcanvas-xl" ref="navMenu" tabindex="-1">
-        <div class="offcanvas-header" v-if="!isDekstop">
+        <div class="offcanvas-header" v-if="!isDesktop">
             <a href="/" class="offcanvas-title" @click="closeMenu">
                 <SMLogo />
             </a>
@@ -44,9 +45,13 @@ const closeMenu = () => {
         </div>
 
         <div class="offcanvas-body">
+            <SMNavBarIcons
+                :items="theme.expandButtons"
+                v-if="!isDesktop" />
+
             <ul class="navbar-nav">
                 <template v-for="item in theme.nav" :key="JSON.stringify(item)">
-                    <li class="nav-item" v-if="isDekstop || !item.onlyDekstop">
+                    <li class="nav-item" v-if="isDesktop || !item.onlyDesktop">
                         <SMNavBarMenuLink
                             :item="item"
                             @close="closeMenu"
@@ -62,7 +67,7 @@ const closeMenu = () => {
             </ul>
         </div>
 
-        <div class="offcanvas-footer" v-if="!isDekstop">
+        <div class="offcanvas-footer" v-if="!isDesktop">
             <SMSocial />
         </div>
     </div>

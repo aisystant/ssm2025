@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { useDisplay } from '../../composables/media'
 
-const { isDekstop } = useDisplay()
+const { isDesktop } = useDisplay()
 
 interface Card {
     head: string
@@ -20,7 +20,7 @@ const props = defineProps<{
 
 const showImage = computed(() => {
     return (idx: number) => {
-        if (!isDekstop.value) return false
+        if (!isDesktop.value) return false
         if (props.cards.length === 1 || idx % 2 === 1) return true
         return false
     }

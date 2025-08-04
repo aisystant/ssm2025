@@ -3,7 +3,7 @@ import { isActive } from '../../shared'
 import { useData } from '../../composables/data'
 import { useDisplay } from '../../composables/media'
 
-const { isDekstop } = useDisplay()
+const { isDesktop } = useDisplay()
 
 defineProps<{
     text: string
@@ -36,7 +36,7 @@ const { page } = useData()
                 :href="item.link.trim()"
                 :target="item.target ?? undefined"
                 @click="emit('close')"
-                v-if="isDekstop || !item.onlyDekstop">
+                v-if="isDesktop || !item.onlyDesktop">
                 {{ item.text }}
             </a>
         </template>
