@@ -223,3 +223,11 @@ $blockquote-margin-y: 1.25rem;
 
 $badge-font-weight: $font-weight-normal;
 $badge-border-radius: .25rem;
+
+// Tooltips
+
+$tooltip-font-size: $small-font-size;
+$tooltip-color: $white;
+$tooltip-bg: mix($black, $dark, $btn-hover-bg-shade-amount);
+$tooltip-border-radius: .25rem;
+$tooltip-opacity: 1;

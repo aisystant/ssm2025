@@ -45,11 +45,18 @@
     }
 
     &-actions {
-        position: relative;
         margin-left: auto;
 
         & .btn {
-            @extend .ms-1;
+            @extend .btn-outline;
+            @extend .ms-2;
+            line-height: 1;
+            padding: .425rem;
+
+            & .svg-icon {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
         }
     }
 
@@ -110,15 +117,6 @@
 
         &-actions {
             order: 1;
-            padding-right: 8rem;
-            padding-bottom: 2.275rem;
-
-            & .button-wrapper {
-                display: flex;
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
         }
     }
 
