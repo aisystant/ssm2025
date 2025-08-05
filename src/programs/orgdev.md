@@ -179,4 +179,8 @@ mentors:
   items:
     - 'levenchuk'
     - 'chaikovskaya'
+    - 'agroskin'
+    - 'lubenchenko'
+    - 'medvedeva'
+    - 'kunev'
 ---
