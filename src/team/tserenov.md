@@ -69,7 +69,6 @@ practice:
           -
             name: 'ИИ-проводник по персональному маршруту'
             status: 'Развивается'
-            style: 'completed'
           -
             name: 'Новая ИТ-архитектура'
             status: 'Тестируется'
@@ -77,6 +76,7 @@ practice:
           -
             name: 'Мастерская по практикам саморазвития'
             status: 'Запущено'
+            style: 'completed'
 
 publications:
     title: 'Важные посты и статьи'
