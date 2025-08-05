@@ -7,7 +7,7 @@ order: 110
 image: 'metelkin.jpg'
 name: 'Иван'
 surname: 'Метёлкин'
-post: 'Наставник'
+post: 'Наставник, мастер МИМ'
 
 roles:
   - 'Инструктор и амбассадор МИМ'

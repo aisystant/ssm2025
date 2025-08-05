@@ -228,6 +228,7 @@ mentors:
     - 'tserenov'
     - 'lubenchenko'
     - 'metelkin'
+    - 'kunev'
     - 'rukavishnikov'
     - 'soloboev'
 ---
