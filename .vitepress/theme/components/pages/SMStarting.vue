@@ -4,7 +4,7 @@ import StepRegistration from './../starting/StepRegistration.vue'
 import StepProgram from './../starting/StepProgram.vue'
 import StepFormat from './../starting/StepFormat.vue'
 import StepInformation from './../starting/StepInformation.vue'
-import CallToAction from './../starting/CallToAction.vue'
+import CallToAction from './../CallToAction.vue'
 import AnyQuestions from './../AnyQuestions.vue'
 import { useData } from '../../composables/data'
 

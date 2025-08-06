@@ -238,4 +238,20 @@ faq:
     -
       question: 'Можно ли отменить подписку?'
       answer: 'Да, в любой момент. Если вы не начали обучение и передумали — возможен возврат в течение 7 дней после оплаты.'
+
+action:
+  title: 'Начни создавать свою систему уже сегодня'
+  buttons:
+    -
+      name: 'Оформить подписку'
+      link: 'https://aisystant.system-school.ru/lk/#/buy/email'
+      target: '_blank'
+      style: 'btn-dark'
+    -
+      name: 'Начать бесплатно'
+      link: 'https://aisystant.system-school.ru/lk/#/auth/signup'
+      target: '_blank'
+      style: 'btn-outline'
+
+  text: 'Подписку можно отменить в любой момент. Бесплатный доступ остаётся.'
 ---

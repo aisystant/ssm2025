@@ -47,11 +47,16 @@
     &-actions {
         margin-left: auto;
 
+        & .button-wrapper {
+            display: flex;
+        }
+
         & .btn {
             @extend .btn-outline;
             @extend .ms-2;
             line-height: 1;
             padding: .425rem;
+            flex-shrink: 0;
 
             & .svg-icon {
                 width: 1.25rem;

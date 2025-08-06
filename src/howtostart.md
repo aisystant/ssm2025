@@ -103,11 +103,11 @@ information:
 action:
     title: 'Первый шаг – важнейший. Сделай его прямо сейчас.'
     buttons:
-    -
+      -
         name: 'Присоединиться к группе'
         link: '/list'
         style: 'btn-dark'
-    -
+      -
         name: 'Начать бесплатно'
         link: '/open-endedness'
         style: 'btn-outline'

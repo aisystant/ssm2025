@@ -7,10 +7,10 @@ export default defineConfig({
     lang: "ru-RU",
     title: "Мастерская инженеров-менеджеров",
     description: "Готовим директоров по развитию, меняющих мир к лучшему",
-    
+
     // Clean URLs - removes .html suffixes from URLs
     cleanUrls: true,
-    
+
     // Sitemap configuration
     sitemap: {
         hostname: 'https://system-school.ru'
@@ -39,6 +39,7 @@ export default defineConfig({
             {
                 text: "Исследования",
                 items: [
+                    { text: "Интеллект-стек и стек практик саморазвития", link: "/stack" },
                     { text: "Новости исследований", link: "https://systemsworld.club/c/issledovaniya/1020", target: "_blank" },
                 ],
             },
