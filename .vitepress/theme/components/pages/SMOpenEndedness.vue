@@ -8,7 +8,7 @@ import OpenEndednessApply from './../openendedness/OpenEndednessApply.vue'
 import OpenEndednessCourses from './../openendedness/OpenEndednessCourses.vue'
 import OpenEndednessResources from './../openendedness/OpenEndednessResources.vue'
 import ReviewSwiper from './../ReviewSwiper.vue'
-import GetStarted from './../GetStarted.vue'
+import CallToAction from './../CallToAction.vue'
 import FAQ from './../FAQ.vue'
 import { useData } from '../../composables/data'
 
@@ -75,5 +75,9 @@ const { frontmatter } = useData()
     :items="frontmatter.faq.items"
     v-if="frontmatter.faq" />
 
-    <GetStarted />
+    <CallToAction
+    :title="frontmatter.action.title"
+    :buttons="frontmatter.action.buttons"
+    :text="frontmatter.action.text"
+    v-if="frontmatter.action" />
 </template>

@@ -1,0 +1,72 @@
+.stack-practices {
+    @extend .container;
+    @extend %section-margin;
+
+    & .section-row {
+        @extend .slim-body;
+        display: flex;
+    }
+
+    & .practices-head {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        @include back-color();
+        font-weight: $font-weight-light;
+        border-radius: $border-radius;
+        padding: 1.25rem 1rem;
+    }
+
+    & .practices-title {
+        flex-grow: 1;
+    }
+
+    & .practices-list {
+        $gap: .5rem;
+        @extend .list-unstyled;
+        column-width: 170px;
+        column-gap: $gap;
+        margin-bottom: -$gap;
+
+        &.two-column {
+            column-width: 360px;
+        }
+
+        & li {
+            width: 100%;
+            display: inline-block;
+            background-color: $light;
+            line-height: 1.4;
+            padding: .7rem 1.25rem;
+            border-radius: $border-radius-sm;
+            margin-bottom: $gap;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .practices-head {
+            flex: 0 0 auto;
+            width: 24rem;
+            border-radius: $border-radius-lg;
+            padding: 2rem;
+            margin-right: 2.5rem;
+        }
+
+        & .practices-body {
+            flex: 1 0 0%;
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        & .section-row {
+            flex-direction: column;
+            width: 50rem;
+        }
+
+        & .practices-head {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    }
+}
