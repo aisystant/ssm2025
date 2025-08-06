@@ -120,6 +120,13 @@ contacts:
       -
         name: 'Telegram-канал'
         link: 'https://t.me/systemsthinkinglife'
+      -
+        name: 'Youtube'
+        link: 'https://www.youtube.com/@tserentserenov77'
+      -
+        name: 'Tenchat'
+        link: 'https://tenchat.ru/tserenov'
+        
 
 reviews:
     title: 'Отзывы о наставнике'
