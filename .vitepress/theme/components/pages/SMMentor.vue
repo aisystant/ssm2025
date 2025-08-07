@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import MentorIntro from './../mentor/MentorIntro.vue'
+import MentorAbout from './../mentor/MentorAbout.vue'
 import MentorActivity from './../mentor/MentorActivity.vue'
 import MentorPractice from './../mentor/MentorPractice.vue'
 import MentorContacts from './../mentor/MentorContacts.vue'
@@ -22,6 +23,11 @@ const name = computed(() => {
     :image="frontmatter.image"
     :roles="frontmatter.roles"
     :thesis="frontmatter.thesis" />
+
+    <MentorAbout
+    :title="frontmatter.about.title"
+    :text="frontmatter.about.text"
+    v-if="frontmatter.about" />
 
     <MentorActivity
     :title="frontmatter.activity.title"

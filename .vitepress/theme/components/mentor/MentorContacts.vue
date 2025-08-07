@@ -44,7 +44,7 @@ defineProps<{
             </div>
 
             <div class="section-col">
-                <div class="contacts-card" v-if="social">
+                <div class="contact-card" v-if="social">
                     <div class="card-title">
                         Ссылки на активные пространства
                     </div>
