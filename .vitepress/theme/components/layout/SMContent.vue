@@ -16,6 +16,7 @@ import SMContacts from '../pages/SMContacts.vue'
 import SMAboutUs from '../pages/SMAboutUs.vue'
 import SMStack from '../pages/SMStack.vue'
 import SMOffer from '../pages/SMOffer.vue'
+import SMBenefit from '../pages/SMBenefit.vue'
 import NotFound from '../pages/NotFound.vue'
 import SMSimplePage from '../pages/SMSimplePage.vue'
 
@@ -41,6 +42,7 @@ const { page, frontmatter } = useData()
         <SMAboutUs v-else-if="frontmatter.layout === 'about'" />
         <SMStack v-else-if="frontmatter.layout === 'stack'" />
         <SMOffer v-else-if="frontmatter.layout === 'offer'" />
+        <SMBenefit v-else-if="frontmatter.layout === 'yougetit'" />
         <SMSimplePage v-else />
     </main>
 </template>
