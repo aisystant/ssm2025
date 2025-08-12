@@ -90,4 +90,11 @@ reviews:
     items:
       - 'miroshina'
       - 'arnatsky'
+      - 'seleznev'
+      - 'melnikov'
+      - 'dubenko'
+      - 'pahotin'
+      - 'leontyev'
+      - 'zagirov'
+      - 'maksimenko'
 ---
