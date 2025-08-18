@@ -22,7 +22,7 @@ author:
 
 <div class="my-4">
     <div class="bg-white p-4 text-center">
-        <img src="../images/articles/peter-principle.png" width="400">
+        <img src="../public/images/articles/peter-principle.png" width="400">
     </div>
     <div class="image-caption">
         Автор: Алексей Гоманков. <a href="https://ru.wikipedia.org/wiki/Принцип_Питера" target="_blank">Википедия</a>
