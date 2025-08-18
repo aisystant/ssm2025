@@ -8,5 +8,39 @@
 
     & .card-body {
         @include flex();
+        flex-direction: column;
+    }
+}
+
+.light-card {
+    --bs-card-bg: #{$light};
+    @extend .card;
+
+    & .card-body {
+        @include flex();
+        flex-direction: column;
+        text-align: center;
+    }
+
+    & .card-count {
+        @include back-color($secondary);
+        @include circle(3.5rem);
+        @include flex();
+        font-size: 2rem;
+        line-height: 1;
+        border: .25rem solid $light;
+        box-shadow: 0 0 0 1px mix($white, $secondary, 20%);
+        margin-bottom: .5rem;
+    }
+
+    & .card-title {
+        font-weight: $font-weight-semibold;
+        font-size: $font-size-lg;
+        margin-bottom: .5rem;
+    }
+
+    & .card-text {
+        font-weight: $font-weight-light;
+        font-size: $font-size-sm;
     }
 }

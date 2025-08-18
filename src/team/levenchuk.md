@@ -88,15 +88,15 @@ publications:
       -
         head: 'Ролевые сообщества вокруг компании: в балансе между капитализмом и социализмом'
         image: 'slide1.jpg'
-        link: '#'
+        link: '/articles/role-communities-balance'
       -
         head: 'Трудности цифровой трансформации реального сектора'
         image: 'slide2.jpg'
-        link: '#'
+        link: '/articles/real-sector-digital-transformation'
       -
         head: 'Многоуровневый кадровый резерв: образование и обучение'
         image: 'slide3.jpg'
-        link: '#'
+        link: '/articles/multi-level-talent-pool'
 
 contacts:
     club: 'https://systemsworld.club/u/ailev/'

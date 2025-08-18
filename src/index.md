@@ -48,11 +48,11 @@ swiper1:
     -
       head: 'Современное фундаментальное образование, основанное на&nbsp;связи научно-технических и гуманитарных знаний'
       image: 'slide2.jpg'
-      link: '#'
+      link: '/articles/modern-fundamental-education'
     -
       head: 'Читай «Ролевые сообщества вокруг компании: в&nbsp;балансе между капитализмом и социализмом»'
       image: 'slide3.jpg'
-      link: '#'
+      link: '/articles/role-communities-balance'
     -
       head: 'Читай «Обзор исследований»'
       image: 'slide4.jpg'
@@ -98,13 +98,13 @@ swiper2:
       title: 'Обучение команд топ-менеджеров'
       text: 'Переопределения ролей топ-менеджмента с текущих ролей «траблшутеров» на роли организаторов новых процессов и метод работ'
       image: 'slide8.jpg'
-      link: '#'
+      link: '/articles/real-sector-digital-transformation'
     -
       head: 'Для компаний и&nbsp;их&nbsp;собственников'
       title: 'Формирование многоуровневого кадрового резерва'
       text: 'Развиваем корпоративную культуру, основанную на системном мировоззрении, и не тратим время на поиски новых сотрудников'
       image: 'slide9.jpg'
-      link: '#'
+      link: '/articles/multi-level-talent-pool'
     -
       head: 'Для вузов'
       title: 'Предложение для вузов и наших мастеров'
@@ -132,7 +132,7 @@ swiper3:
     -
       head: 'Читай «Не учите меня жить, лучше дайте алгоритм»'
       image: 'slide14.jpg'
-      link: '#'
+      link: '/articles/give-me-algorithm'
     -
       head: 'С чего начать свое развитие в МИМ'
       image: 'slide15.jpg'

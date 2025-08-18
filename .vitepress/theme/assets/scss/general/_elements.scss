@@ -105,3 +105,22 @@ a.list-item {
         @include back-color();
     }
 }
+
+.image-caption {
+    position: relative;
+    padding-left: 1.25rem;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-light;
+    margin-top: 1rem;
+
+    &:before {
+        content: '';
+        display: block;
+        border-style: solid;
+        border-width: 10px 6px;
+        border-color: transparent transparent $secondary transparent;
+        position: absolute;
+        left: 0;
+        top: -5px;
+    }
+}

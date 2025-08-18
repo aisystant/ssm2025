@@ -39,6 +39,7 @@ export default defineConfig({
             {
                 text: "Исследования",
                 items: [
+                    { text: "О системном мышлении", link: "/articles/what-is-systems-thinking" },
                     { text: "Интеллект-стек и стек практик саморазвития", link: "/stack" },
                     { text: "Новости исследований", link: "https://systemsworld.club/c/issledovaniya/1020", target: "_blank" },
                 ],
@@ -76,6 +77,11 @@ export default defineConfig({
         },
         extLinks: {
             aisystant: "https://aisystant.system-school.ru/",
+        },
+        share: {
+            title: 'Поделиться:',
+            services: 'telegram,vkontakte,whatsapp,linkedin,lj,blogger',
+            hostname: 'https://system-school.ru',
         },
     },
 

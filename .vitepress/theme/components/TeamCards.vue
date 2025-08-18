@@ -7,7 +7,7 @@ const members = teamPages
 <template>
     <div class="team" v-if="members.length">
         <div class="team__item" v-for="member in members" :key="member.id">
-            <a :href="`/team/${member.id}/`" class="team-card">
+            <a :href="`/team/${member.id}`" class="team-card">
                 <div class="card-image">
                     <img
                         :src="`/images/team/${member.image}`"
