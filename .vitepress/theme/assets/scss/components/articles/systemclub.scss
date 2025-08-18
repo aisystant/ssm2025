@@ -1,0 +1,97 @@
+.systemclub {
+    @extend .container;
+    @extend %section-margin;
+
+    & .section-body {
+        @extend .slim-body;
+    }
+
+    & .section-row {
+        @extend .row;
+        @extend .g-5;
+        align-items: center;
+    }
+
+    & .section-col {
+        @extend .col-lg-7;
+    }
+
+    & .section-image {
+        @extend .col-lg-5;
+
+        & img {
+            display: block;
+            @extend .mx-auto;
+        }
+    }
+
+    & .systemclub-title {
+        @extend .mb-lg-4;
+        @extend .mb-xl-5;
+    }
+
+    & .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        @extend .btn-dark;
+        min-width: 18em;
+
+        & .svg-icon {
+            width: 1.5em;
+            height: 1.5em;
+            flex-shrink: 0;
+            margin-right: .75rem;
+            margin-left: -.75rem;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        & .section-body {
+            background-color: $light;
+            border-radius: $border-radius;
+            padding: 2.5rem 2rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .section-body {
+            padding: 3rem 4rem;
+            border-radius: $border-radius-lg;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .section-body {
+            @include padding-x(6rem);
+        }
+
+        & .systemclub-title {
+            font-size: $h1-font-size;
+        }
+
+        & .btn {
+            padding: $btn-padding-y-lg $btn-padding-x-lg;
+            font-size: $btn-font-size-lg;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        text-align: center;
+
+        & .section-image {
+            & img {
+                width: 80%;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        background-color: $light;
+        @include padding-y(2rem);
+
+        & .systemclub-title {
+            font-size: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.share {
+    display: flex;
+    align-items: center;
+
+    & .ya-share2 {
+        & .ya-share2__item {
+            & .ya-share2__badge {
+                background-color: $body-bg !important;
+
+                & .ya-share2__icon {
+                    opacity: .65;
+                }
+            }
+
+            &:hover {
+                opacity: 1;
+
+                & .ya-share2__badge {
+                    @extend .bg-light;
+                }
+            }
+        }
+    }
+}

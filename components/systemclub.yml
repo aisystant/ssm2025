@@ -1,0 +1,7 @@
+title: 'Больше материалов в&nbsp;клубе инженеров-менеджеров'
+image: 'systemclub.png'
+button:
+  icon: 'club'
+  name: 'Перейти в клуб'
+  link: 'https://systemsworld.club/'
+  target: '_blank'

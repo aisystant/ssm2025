@@ -3,11 +3,6 @@
         @extend .container;
         @include padding-y(1.5rem);
 
-        & .text-wrap {
-            max-width: 50rem;
-            @extend .mx-auto;
-        }
-
         & .text-content {
             @extend .text-wrap;
 
@@ -67,4 +62,9 @@
             font-size: $font-size-sm;
         }
     }
+}
+
+.text-wrap {
+    max-width: 50rem;
+    @extend .mx-auto;
 }

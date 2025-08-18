@@ -10,7 +10,7 @@ const { frontmatter } = useData()
 <template>
     <div class="page__content">
         <div class="page-header">
-            <h1 class="page-title" v-html="frontmatter.title"></h1>
+            <h1 class="page-title">{{ frontmatter.title }}</h1>
             <div class="page-subtitle" v-html="frontmatter.subtitle" v-if="frontmatter.subtitle"></div>
         </div>
 
