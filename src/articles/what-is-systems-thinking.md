@@ -44,7 +44,7 @@ questions:
 
 <div class="my-4">
     <div class="bg-white p-4 text-center">
-        <img src="../images/articles/system-split.jpg" width="600">
+        <img src="../public/images/articles/system-split.jpg" width="600">
     </div>
     <div class="image-caption">
         Рис. 1. Схема системного разбиения, IEC 81346-1:2022
@@ -71,7 +71,7 @@ questions:
 
 <div class="my-4">
     <div class="bg-white p-4 text-center">
-        <img src="../images/articles/psychology-and-systems-thinking.jpg" width="500">
+        <img src="../public/images/articles/psychology-and-systems-thinking.jpg" width="500">
     </div>
     <div class="image-caption">
         Рис. 2. Схема связи психологии и системного мышления
@@ -85,7 +85,7 @@ questions:
 Ещё в руководстве системного мышления тренируются приёмы мышления. **Приёмы мышления** — это способность увязать разные понятия между собой и найти физические объекты в реальных проектах, которые связаны с этими понятиями. Например, найти целевую систему и создателя, выделить связку "роль-практика-рабочий продукт", разделить систему на функциональные и модульные части. Применяя понятия и приёмы системного мышления к рабочему проекту, **команда экономит время и ресурсы на создание успешной системы** и быстрее договаривается между собой по существу.
 
 <div class="my-4">
-    <img src="../images/articles/work-table.png">
+    <img src="../public/images/articles/work-table.png">
     <div class="image-caption">Рис. 3. Пример рабочей таблицы</div>
 </div>
 
@@ -93,7 +93,7 @@ questions:
 
 <div class="my-4">
     <div class="bg-white p-4 text-center">
-        <img src="../images/articles/position-role.jpg" width="450">
+        <img src="../public/images/articles/position-role.jpg" width="450">
     </div>
     <div class="image-caption">
         Рис. 4. Схема отношения исполнителя, должности и роли
