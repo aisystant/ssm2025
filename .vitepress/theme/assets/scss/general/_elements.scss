@@ -124,3 +124,11 @@ a.list-item {
         top: -5px;
     }
 }
+
+ul, ol {
+    &.divided {
+        & li {
+            margin-bottom: .75rem;
+        }
+    }
+}
