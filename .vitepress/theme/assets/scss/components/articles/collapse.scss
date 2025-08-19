@@ -1,0 +1,41 @@
+.article-collapse {
+    background-color: $light;
+    @extend .rounded;
+
+    & .collapse-head {
+        position: relative;
+        font-size: $lead-font-size;
+        font-weight: $font-weight-semibold;
+        line-height: 1.4;
+        padding: 1.25rem;
+        @extend .pe-6;
+        @extend .ps-md-4;
+        @extend .py-md-4;
+
+        &:before {
+            $width: 1.5rem;
+            content: '';
+            width: $width;
+            height: $width;
+            background-image: escape-svg($form-select-indicator);
+            @include back-image($size: 70%);
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            margin-top: -$width * .5;
+            transition: transform .3s;
+        }
+
+        &[aria-expanded="true"] {
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    & .collapse-body {
+        border-top: 1px solid $body-bg;
+        padding: 1.25rem;
+        @extend .px-md-4;
+    }
+}
