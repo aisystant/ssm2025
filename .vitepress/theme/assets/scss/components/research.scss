@@ -1,0 +1,72 @@
+.research-participate {
+    background-color: $light;
+    @include padding-y(2.5rem);
+
+    & .section-body {
+        @extend .slim-body;
+    }
+
+    & .section-row {
+        @extend .row;
+        @extend .g-4;
+        @extend .gx-lg-6;
+        align-items: center;
+    }
+
+    & .section-col {
+        @extend .col-lg;
+        @extend .col-xl-8;
+        @extend .order-lg-1;
+    }
+
+    & .section-image {
+        @extend .col-lg-auto;
+        @extend .col-xl-4;
+        @include flex();
+    }
+
+    & .section-text {
+        font-weight: $font-weight-light;
+    }
+
+    & .research-program {
+        @extend .card;
+        width: auto;
+        align-items: center;
+        padding: 1.5rem;
+        background-color: $gray-100;
+        border: 1px solid $gray-500;
+        @extend .mx-auto;
+
+        & .card-image {
+            width: 9rem;
+            margin-bottom: 1rem;
+        }
+
+        & .card-button {
+            text-align: center;
+
+            & .btn {
+                @extend .btn-dark;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include padding-y(3.5rem);
+
+        & .section-text {
+            font-size: $btn-font-size-lg;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        & h2 {
+            text-align: center;
+        }
+
+        & .section-body {
+            width: 40rem;
+        }
+    }
+}

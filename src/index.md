@@ -56,7 +56,7 @@ swiper1:
     -
       head: 'Читай «Обзор исследований»'
       image: 'slide4.jpg'
-      link: '#'
+      link: '/research'
 
 education:
   title: 'Начни прямо сейчас'

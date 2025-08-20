@@ -43,9 +43,6 @@
     }
 
     & .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
         @extend .btn-dark;
         min-width: 18em;
     }
