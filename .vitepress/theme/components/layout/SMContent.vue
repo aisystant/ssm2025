@@ -19,6 +19,7 @@ import SMOffer from '../pages/SMOffer.vue'
 import SMBenefit from '../pages/SMBenefit.vue'
 import SMArticles from '../pages/SMArticles.vue'
 import SMArticlePage from '../pages/SMArticlePage.vue'
+import SMResearch from '../pages/SMResearch.vue'
 import NotFound from '../pages/NotFound.vue'
 import SMSimplePage from '../pages/SMSimplePage.vue'
 
@@ -47,6 +48,7 @@ const { page, frontmatter } = useData()
         <SMBenefit v-else-if="frontmatter.layout === 'yougetit'" />
         <SMArticles v-else-if="frontmatter.layout === 'articles'" />
         <SMArticlePage v-else-if="frontmatter.layout === 'article'" />
+        <SMResearch v-else-if="frontmatter.layout === 'research'" />
         <SMSimplePage v-else />
     </main>
 </template>

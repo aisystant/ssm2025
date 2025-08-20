@@ -39,6 +39,7 @@ export default defineConfig({
             {
                 text: "Исследования",
                 items: [
+                    { text: "Обзор исследований", link: "/research" },
                     { text: "О системном мышлении", link: "/articles/what-is-systems-thinking" },
                     { text: "Интеллект-стек и стек практик саморазвития", link: "/stack" },
                     { text: "Новости исследований", link: "https://systemsworld.club/c/issledovaniya/1020", target: "_blank" },
