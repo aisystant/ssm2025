@@ -34,6 +34,7 @@ export default defineConfig({
                     { text: "Программы", link: "/programs/", activeMatch: "^/programs" },
                     { text: "Расписание", link: "/list" },
                     { text: "Подписка", link: "/open-endedness" },
+                    { text: "Руководства", link: "https://docs.system-school.ru/ru/", target: "_blank" },
                 ],
             },
             {
@@ -60,6 +61,7 @@ export default defineConfig({
             { icon: "ruble", text: "Купить", link: "/quick-purchase" },
             { icon: "global", text: "Соцсети", link: "#footer", onlyDesktop: true },
             { icon: "club", text: "Клуб", link: "https://systemsworld.club/", target: "_blank" },
+            { icon: "book", text: "Руководства", link: "https://docs.system-school.ru/ru/", target: "_blank"},
             { icon: "contacts", text: "Контакты", link: "/contacts" },
         ],
         socialLinks: [
