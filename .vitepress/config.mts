@@ -50,6 +50,7 @@ export default defineConfig({
                 text: "Сообщество",
                 items: [
                     { text: "Клуб", link: "https://systemsworld.club/", target: "_blank" },
+                    { text: "Амбассадоры", link: "/ambassador" },
                     { text: "Канал «Личного развития»", link: "https://t.me/self_development_guides", target: "_blank" },
                     { text: "Канал «Рабочего развития»", link: "https://t.me/work_development_guides", target: "_blank" },
                     { text: "Канал «Исследовательского развития»", link: "https://t.me/research_development_guides", target: "_blank" },
