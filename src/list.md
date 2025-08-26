@@ -22,7 +22,7 @@ tbody:
     format: 'самостоятельная'
     price: 'от 800 ₽/ месяц	'
   -
-    date: '26 июля'
+    date: '29 ноября'
     program: 'Личное развитие'
     prerequisite: 'Нет'
     name: 'Введение в системное мышление'
@@ -54,7 +54,7 @@ tbody:
     format: 'стажировка с&nbsp;мастером'
     price: '35.000&nbsp;₽'
   -
-    date: '9 сентября'
+    date: '24 сентября'
     program: 'Оргразвитие, III&nbsp;этап'
     prerequisite: 'Завершенный II&nbsp;этап'
     name: 'Системный менеджмент и&nbsp;инженерия'
@@ -62,7 +62,7 @@ tbody:
     format: 'стажировка с&nbsp;мастером'
     price: '150.000&nbsp;₽'
   -
-    date: '10 сентября'
+    date: '9 сентября'
     program: 'Оргразвитие, II&nbsp;этап'
     prerequisite: 'Завершенный I&nbsp;этап'
     name: 'Системное мышление и&nbsp;методология'
