@@ -74,12 +74,12 @@ products:
         link: 'https://yookassa.ru/my/i/aI2_qsjX5nxT/l'
       -
         name: 'Системное мышление и&nbsp;методология'
-        text: '10 сентября'
+        text: '9 сентября'
         price: '150 000 ₽'
         link: 'https://yookassa.ru/my/i/aI2_zUaRs8wP/l'
       -
         name: 'Системный менеджмент и&nbsp;инженерия'
-        text: '9 сентября'
+        text: '24 сентября'
         price: '150 000 ₽'
         link: 'https://yookassa.ru/my/i/aI2_7yc2-Dfc/l'
       -
