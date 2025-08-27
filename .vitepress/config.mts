@@ -35,6 +35,7 @@ export default defineConfig({
                     { text: "Расписание", link: "/list" },
                     { text: "Подписка", link: "/open-endedness" },
                     { text: "Руководства", link: "https://docs.system-school.ru/ru/", target: "_blank" },
+                    { text: "Литература", link: "/books" },
                 ],
             },
             {

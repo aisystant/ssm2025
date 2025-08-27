@@ -59,15 +59,10 @@
         margin-top: auto;
 
         & .btn {
+            flex-shrink: 0;
             @extend .btn-dark;
-            @include circle(1.5rem);
-            @include flex();
-            padding: 0;
-
-            & .svg-icon {
-                width: .85rem;
-                height: .85rem;
-            }
+            @extend .btn-icon;
+            font-size: .85rem;
 
             & ~ .btn {
                 margin-left: .5rem;

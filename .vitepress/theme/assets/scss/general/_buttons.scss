@@ -47,6 +47,17 @@
             color: $white;
         }
     }
+
+    &-icon {
+        @include circle(1.765em);
+        @include flex();
+        padding: 0;
+
+        & .svg-icon {
+            width: 1em;
+            height: 1em;
+        }
+    }
 }
 
 .btn-expand {

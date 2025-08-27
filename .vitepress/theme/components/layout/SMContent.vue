@@ -21,6 +21,7 @@ import SMArticles from '../pages/SMArticles.vue'
 import SMArticlePage from '../pages/SMArticlePage.vue'
 import SMResearch from '../pages/SMResearch.vue'
 import SMAmbassador from '../pages/SMAmbassador.vue'
+import SMBooks from '../pages/SMBooks.vue'
 import NotFound from '../pages/NotFound.vue'
 import SMSimplePage from '../pages/SMSimplePage.vue'
 
@@ -51,6 +52,7 @@ const { page, frontmatter } = useData()
         <SMArticlePage v-else-if="frontmatter.layout === 'article'" />
         <SMResearch v-else-if="frontmatter.layout === 'research'" />
         <SMAmbassador v-else-if="frontmatter.layout === 'ambassador'" />
+        <SMBooks v-else-if="frontmatter.layout === 'books'" />
         <SMSimplePage v-else />
     </main>
 </template>
