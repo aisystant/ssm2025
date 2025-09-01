@@ -30,7 +30,7 @@ tbody:
     format: 'стажировка с&nbsp;мастером'
     price: '80.000&nbsp;₽'
   -
-    date: '6 сентября'
+    date: '4 октября'
     program: 'Рабочее развитие, I&nbsp;этап'
     prerequisite: 'Нет'
     name: 'Рациональная работа'
