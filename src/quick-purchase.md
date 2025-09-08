@@ -69,7 +69,7 @@ products:
     items:
       -
         name: 'Рациональная работа'
-        text: '6 сентября'
+        text: '4 октября'
         price: '200 000 ₽'
         link: 'https://yookassa.ru/my/i/aI2_qsjX5nxT/l'
       -
