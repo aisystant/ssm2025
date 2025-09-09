@@ -1,20 +1,12 @@
 <script setup lang="ts">
-import IconLink from '../ambassador/IconLink.vue'
+import IconLink from '../IconLink.vue'
+import CloseModal from '../CloseModal.vue'
+import { Book } from '../../interfaces'
 import { ref, shallowRef, onMounted } from 'vue'
-
-interface Button {
-    icon: string
-    name: string
-    link: string
-}
 
 const props = defineProps<{
     path: string,
-    title: string,
-    text?: string,
-    image: string,
-    author?: string,
-    buttons?: Button[],
+    book: Book,
 }>()
 
 const emit = defineEmits<{
@@ -51,24 +43,24 @@ onMounted(async () => {
         <div class="modal-dialog book-modal">
             <div class="modal-content">
                 <div class="modal-body">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <CloseModal />
 
                     <div class="book-cover">
-                        <img :src="`/images/${image}`" :alt="title">
+                        <img :src="`/images/${book.image}`" :alt="book.title">
                     </div>
 
                     <div class="book-text">
                         <div class="book-header">
-                            <h3 class="modal-title">{{ title }}</h3>
-                            <div class="modal-subtitle" v-html="text" v-if="text"></div>
-                            <div class="book-author" v-html="author" v-if="author"></div>
+                            <h3 class="modal-title">{{ book.title }}</h3>
+                            <div class="modal-subtitle" v-html="book.text" v-if="book.text"></div>
+                            <div class="book-author" v-html="book.author" v-if="book.author"></div>
                         </div>
 
                         <component :is="content" v-if="content" />
 
-                        <div class="book-footer" v-if="buttons">
+                        <div class="book-footer" v-if="book.buttons">
                             <IconLink
-                            v-for="item in buttons"
+                            v-for="item in book.buttons"
                             :key="item.name"
                             :name="item.name"
                             :icon="item.icon"

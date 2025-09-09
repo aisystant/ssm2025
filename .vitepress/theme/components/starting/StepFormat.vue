@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Button } from '../../interfaces'
+
 interface Card {
     style?: string
     head?: string
@@ -9,12 +11,6 @@ interface Card {
         cost: string
         text?: string
     }[]
-}
-
-interface Button {
-    name: string
-    link: string
-    style?: string
 }
 
 defineProps<{
@@ -51,7 +47,8 @@ defineProps<{
                             <div class="card-button">
                                 <a
                                     :href="card.button.link.trim()"
-                                    :class="`btn ${card.button.style || 'btn-outline'}`">
+                                    :class="`btn ${card.button.style || 'btn-outline'}`"
+                                    :target="card.button.target ?? undefined">
                                     {{ card.button.name }}
                                 </a>
                             </div>

@@ -6,6 +6,7 @@ import QuizAside from './QuizAside.vue'
 import TestResult from './TestResult.vue'
 import QuizSubscribe from './QuizSubscribe.vue'
 import QuizCompleted from './QuizCompleted.vue'
+import CloseModal from '../CloseModal.vue'
 
 const props = defineProps<{
     name: string,
@@ -64,7 +65,7 @@ function reset() {
         <div class="modal-dialog quiz-modal">
             <div class="modal-content">
                 <div class="modal-body">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <CloseModal />
 
                     <template v-if="layout == 'testing'">
                         <QuizStep

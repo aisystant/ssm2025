@@ -1,10 +1,5 @@
 <script setup lang="ts">
-interface Button {
-    name: string
-    link: string
-    style?: string
-    target?: string
-}
+import { Button } from '../../interfaces'
 
 defineProps<{
     title: string,
