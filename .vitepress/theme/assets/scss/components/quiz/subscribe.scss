@@ -1,0 +1,98 @@
+.quiz-subscribe {
+    @extend .quiz-body;
+
+    & .subscribe-head {
+        @extend h3;
+        font-weight: $font-weight-semibold;
+    }
+
+    & .subscribe-body {
+        font-weight: $font-weight-light;
+        flex-grow: 1;
+        margin-bottom: 1rem;
+
+        & ul {
+            @extend .list-unstyled;
+
+            & li {
+                position: relative;
+                padding-left: 1.25em;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 1em;
+                    height: 1em;
+                    color: $secondary;
+                    @include mask(url(../img/play.svg), contain);
+                    position: absolute;
+                    top: .25em;
+                    left: 0;
+                }
+
+                & ~ li {
+                    margin-top: .5rem;
+                }
+            }
+        }
+    }
+
+    & .subscribe-form {
+        max-width: 32rem;
+
+        & .form-fields {
+            & input ~ input {
+                margin-top: 1rem;
+            }
+        }
+
+        & .form-submit {
+            @extend .subscribe-footer;
+            margin-top: 1.5rem;
+        }
+
+        & .form-help {
+            color: $secondary;
+            font-size: $font-size-sm;
+            margin-top: 1rem;
+        }
+    }
+
+    & .subscribe-footer {
+        & .btn {
+            @extend .btn-dark;
+            min-width: 16rem;
+
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        & .subscribe-body {
+            margin-bottom: 1.5rem;
+        }
+
+        & .subscribe-footer {
+            margin-bottom: .5rem;
+        }
+
+        & .subscribe-form {
+            & .form-fields {
+                background-color: $gray-100;
+                border-radius: $border-radius;
+                border: 1px solid $border-color;
+                padding: 2rem 1.25rem;
+            }
+
+            & .form-help {
+                margin-top: 1.5rem;
+            }
+
+            & .form-submit {
+                margin-top: 2rem;
+            }
+        }
+    }
+}

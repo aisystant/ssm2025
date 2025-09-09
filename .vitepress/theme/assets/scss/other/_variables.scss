@@ -125,6 +125,8 @@ $hr-opacity:                  .2;
 $icon-plus: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='#{$secondary}' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><line x1='12' y1='4' x2='12' y2='20'></line><line x1='4' y1='12' x2='20' y2='12'></line></svg>");
 $chevron-right: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 18 15 12 9 6'></polyline></svg>");
 $chevron-down: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+$arrow-right: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' ><path d='M4 12H20M20 12L14 6M20 12L14 18' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /></svg>");
+$arrow-left: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' ><path d='M20 12H4M4 12L10 6M4 12L10 18' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /></svg>");
 
 // Buttons + Forms
 
@@ -151,6 +153,16 @@ $input-border-radius: $border-radius-sm;
 $input-placeholder-color: $gray-500;
 $input-padding-x: 1rem;
 $input-padding-y: .777rem;
+
+$form-check-input-width: 1.25em;
+$form-check-padding-start: $form-check-input-width + .75em;
+$form-check-label-cursor: pointer;
+$form-check-input-border: 1px solid $gray-500;
+$form-check-input-focus-box-shadow: 0;
+$form-check-input-border-radius: .15rem;
+$form-check-input-checked-bg-color: $secondary;
+$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='#{$white}' d='M18.71,7.21a1,1,0,0,0-1.42,0L9.84,14.67,6.71,11.53A1,1,0,1,0,5.29,13l3.84,3.84a1,1,0,0,0,1.42,0l8.16-8.16A1,1,0,0,0,18.71,7.21Z'/></svg>");
+$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2.5' fill='#{$form-check-input-checked-bg-color}'/></svg>");
 
 // Navbar
 
@@ -233,3 +245,15 @@ $tooltip-color: $white;
 $tooltip-bg: mix($black, $dark, $btn-hover-bg-shade-amount);
 $tooltip-border-radius: .25rem;
 $tooltip-opacity: 1;
+
+// Progress bars
+
+$progress-bg: mix($secondary, $white, 15%);
+$progress-bar-bg: $secondary;
+
+// Popovers
+
+$popover-bg: $light;
+$popover-border-width: 0;
+$popover-border-radius: $border-radius-sm;
+$popover-arrow-height: .625rem;
