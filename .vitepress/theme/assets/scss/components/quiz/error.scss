@@ -1,0 +1,27 @@
+.quiz-error {
+    @extend .quiz-body;
+    justify-content: center;
+
+    & .error-head {
+        @extend h3;
+        font-weight: $font-weight-semibold;
+    }
+
+    & .error-body {
+        font-weight: $font-weight-light;
+    }
+
+    & .error-footer {
+        @extend .mt-4;
+        @extend .mt-sm-5;
+
+        & .btn {
+            @extend .btn-dark;
+            min-width: 16rem;
+
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -9,3 +9,11 @@
         }
     }
 }
+
+.form-check-input {
+    &[type=radio] {
+        &:checked {
+            background-color: $form-check-input-bg;
+        }
+    }
+}
