@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import SvgIcon from '../SvgIcon.vue'
+import { Button } from '../../interfaces'
+
+interface IconButton extends Button {
+    onlyDesktop?: boolean
+}
 
 defineProps<{
-    items: {
-        icon: string
-        text: string
-        link: string
-        target?: string
-        onlyDesktop?: boolean
-    }[]
+    buttons: IconButton[]
 }>()
 
 const emit = defineEmits<{
@@ -18,13 +17,13 @@ const emit = defineEmits<{
 
 <template>
     <ul class="nav-icons">
-        <template v-for="item in items" :key="item.text">
-            <li v-if="!item.onlyDesktop">
+        <template v-for="button in buttons" :key="button.name">
+            <li v-if="!button.onlyDesktop && button.icon">
                 <a
-                    :href="item.link.trim()"
-                    :target="item.target ?? undefined"
+                    :href="button.link.trim()"
+                    :target="button.target ?? undefined"
                     @click="emit('close')">
-                    <SvgIcon :name="item.icon" />
+                    <SvgIcon :name="button.icon" />
                 </a>
             </li>
         </template>

@@ -1,5 +1,6 @@
 
 <script setup lang="ts">
+import { Button } from '../interfaces'
 import SvgIcon from './SvgIcon.vue'
 
 import yamlText from '../../../components/systemclub.yml?raw'
@@ -8,12 +9,7 @@ import yaml from 'js-yaml'
 const data = yaml.load(yamlText) as {
     title: string
     image: string
-    button: {
-        icon?: string
-        name: string
-        link: string
-        target?: string
-    }
+    button: Button
 }
 </script>
 

@@ -59,12 +59,12 @@ export default defineConfig({
             },
         ],
         expandButtons: [
-            { icon: "magic", text: "ИТ-платформа Aisystant", link: "https://aisystant.system-school.ru/", target: "_blank" },
-            { icon: "ruble", text: "Купить", link: "/quick-purchase" },
-            { icon: "global", text: "Соцсети", link: "#footer", onlyDesktop: true },
-            { icon: "club", text: "Клуб", link: "https://systemsworld.club/", target: "_blank" },
-            { icon: "book", text: "Руководства", link: "https://docs.system-school.ru/ru/", target: "_blank"},
-            { icon: "contacts", text: "Контакты", link: "/contacts" },
+            { icon: "magic", name: "ИТ-платформа Aisystant", link: "https://aisystant.system-school.ru/", target: "_blank" },
+            { icon: "ruble", name: "Купить", link: "/quick-purchase" },
+            { icon: "global", name: "Соцсети", link: "#footer", onlyDesktop: true },
+            { icon: "club", name: "Клуб", link: "https://systemsworld.club/", target: "_blank" },
+            { icon: "book", name: "Руководства", link: "https://docs.system-school.ru/ru/", target: "_blank"},
+            { icon: "contacts", name: "Контакты", link: "/contacts" },
         ],
         socialLinks: [
             { icon: "youtube", link: "https://www.youtube.com/channel/UCJ0Uq_WB7GLmY-NTz2oFoUQ" },

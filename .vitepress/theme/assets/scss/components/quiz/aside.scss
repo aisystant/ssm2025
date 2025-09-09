@@ -1,0 +1,99 @@
+.quiz-aside {
+    & .aside-body {
+        display: flex;
+        flex-grow: 1;
+
+        & .ai-avatar {
+            width: 5rem;
+            flex-shrink: 0;
+        }
+
+        & .popover {
+            --bs-popover-max-width: inherit;
+            position: relative;
+
+            & .popover-arrow {
+                position: absolute;
+            }
+
+            & .ai-name {
+                font-size: 1rem;
+                margin-bottom: .25rem;
+            }
+
+            & .ai-message {
+                font-weight: $font-weight-light;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            flex-direction: column;
+
+            & .ai-popover {
+                order: 1;
+                padding-top: $popover-arrow-height;
+                margin-top: .5rem;
+
+                & .popover-arrow {
+                    width: $popover-arrow-width;
+                    height: $popover-arrow-height;
+                    left: 1rem;
+                    bottom: 100%;
+                    margin-bottom: -1px;
+
+                    &:before {
+                        border-width: 0 $popover-arrow-width * .5 $popover-arrow-height;
+                        border-bottom-color: $popover-bg;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            justify-content: flex-end;
+
+            & .ai-popover {
+                padding-right: $popover-arrow-height;
+                margin-right: .25rem;
+
+                & .popover-arrow {
+                    width: $popover-arrow-height;
+                    height: $popover-arrow-width;
+                    left: 100%;
+                    top: 1rem;
+
+                    &:before {
+                        border-width: $popover-arrow-width * .5 0 $popover-arrow-width * .5 $popover-arrow-height;
+                        border-left-color: $popover-bg;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            & .ai-avatar {
+                max-width: 18%;
+            }
+
+            & .popover {
+                & .ai-name {
+                    font-size: $font-size-sm;
+                }
+
+                & .ai-message {
+                    font-size: $small-font-size;
+                }
+            }
+        }
+    }
+
+    & .aside-footer {
+        color: $gray-500;
+        font-size: $font-size-sm;
+        padding-top: 1.5rem;
+
+        & a {
+            display: inline-block;
+        }
+    }
+}

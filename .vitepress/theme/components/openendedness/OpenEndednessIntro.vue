@@ -1,14 +1,11 @@
 <script setup lang="ts">
+import { Button } from '../../interfaces'
+
 defineProps<{
     title: string,
     image: string,
     description: string,
-    buttons?: {
-        name: string
-        link: string
-        target?: string
-        style?: string
-    }[]
+    buttons?: Button[]
 }>()
 </script>
 

@@ -2,6 +2,7 @@
 import { useData } from '../../composables/data'
 import SMLogo from './SMLogo.vue'
 import SMSocial from './SMSocial.vue'
+import SMFooterContacts from './SMFooterContacts.vue'
 
 const { theme } = useData()
 const year = new Date().getFullYear()
@@ -18,20 +19,16 @@ const year = new Date().getFullYear()
                 </div>
 
                 <div class="footer__contacts">
-                    <div class="mb-3">
-                        <p class="fw-semibold mb-1">Адрес:</p>
-                        <span v-html="theme.contacts.address"></span>
-                    </div>
-                    <div class="mt-2">
-                        <a :href="theme.contacts.telegram" class="fw-semibold" target="_blank">Telegram</a> — менеджер
-                    </div>
-                    <div class="mt-2">
-                        <a :href="`mailto:${theme.contacts.email}`" class="fw-semibold">{{ theme.contacts.email }}</a>
-                    </div>
+                    <SMFooterContacts
+                    :contacts="theme.contacts"
+                    v-if="theme.contacts" />
                 </div>
 
                 <div class="footer__media">
-                    <SMSocial />
+                    <SMSocial
+                    :items="theme.socialLinks"
+                    v-if="theme.socialLinks" />
+
                     <div class="footer-copyright">
                         &copy; {{ theme.siteTitle }}, {{ year }}
                     </div>

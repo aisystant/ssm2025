@@ -18,12 +18,8 @@ const books = bookCards
         <div class="books-row" v-if="books.length">
             <div class="books-item" v-for="book in books" :key="book.id">
                 <BookCard
-                :id="book.id"
-                :title="book.title"
-                :text="book.text"
-                :image="book.image"
-                :author="book.author"
-                :buttons="book.buttons" />
+                :path="book.id"
+                :book="book" />
             </div>
         </div>
     </div>

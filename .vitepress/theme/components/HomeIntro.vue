@@ -1,13 +1,11 @@
 <script setup lang="ts">
+import { Button } from '../interfaces'
+
 defineProps<{
     title: string,
     image: string,
     text?: string[],
-    buttons?: {
-        name: string
-        link: string
-        style?: string
-    }[]
+    buttons?: Button[]
 }>()
 </script>
 
@@ -29,7 +27,8 @@ defineProps<{
                         <template v-for="button in buttons" :key="JSON.stringify(button)">
                             <a
                                 :href="button.link.trim()"
-                                :class="`btn ${button.style || 'btn-outline'}`">
+                                :class="`btn ${button.style || 'btn-outline'}`"
+                                :target="button.target ?? undefined">
                                 {{ button.name }}
                             </a>
                         </template>
