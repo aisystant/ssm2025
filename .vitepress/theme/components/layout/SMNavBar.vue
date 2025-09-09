@@ -2,8 +2,10 @@
 import SMLogo from './SMLogo.vue'
 import SMNavBarButtons from './SMNavBarButtons.vue'
 import SMNavBarMenu from './SMNavBarMenu.vue'
+import { useData } from '../../composables/data'
 import { useDisplay } from '../../composables/media'
 
+const { theme } = useData()
 const { isDesktop } = useDisplay()
 </script>
 
@@ -15,7 +17,9 @@ const { isDesktop } = useDisplay()
             </a>
 
             <div class="navbar-actions" v-if="isDesktop">
-                <SMNavBarButtons />
+                <SMNavBarButtons
+                :buttons="theme.expandButtons"
+                v-if="theme.expandButtons" />
             </div>
 
             <SMNavBarMenu />

@@ -1,13 +1,7 @@
 <script setup lang="ts">
+import { Button } from '../interfaces'
 import yamlText from '../../../components/anyquestions.yml?raw'
 import yaml from 'js-yaml'
-
-interface Button {
-    name: string
-    link: string
-    style?: string
-    target?: string
-}
 
 const data = yaml.load(yamlText) as {
     title: string

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, watch, nextTick, onMounted } from 'vue'
 import { useDisplay } from './../../composables/media'
+import { Button } from '../../interfaces'
 import SvgIcon from '../SvgIcon.vue'
 import Swiper from 'swiper/bundle'
 
@@ -13,12 +14,7 @@ interface Card {
 defineProps<{
     title: string,
     items: Card[],
-    buttons?: {
-        name: string
-        link: string
-        icon?: string
-        style?: string
-    }[]
+    buttons?: Button[]
 }>()
 
 const { isDevice } = useDisplay()

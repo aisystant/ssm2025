@@ -1,18 +1,21 @@
 <script setup lang="ts">
 import SvgIcon from '../SvgIcon.vue'
 import { ref, onMounted } from 'vue'
-import { useData } from '../../composables/data'
+import { Button } from '../../interfaces'
 
-const { theme } = useData()
-const buttons = ref<(HTMLElement | null)[]>([])
+defineProps<{
+    buttons: Button[]
+}>()
+
+const tooltips = ref<(HTMLElement | null)[]>([])
 
 onMounted(() => {
-    if (typeof window !== 'undefined' && buttons.value) {
+    if (typeof window !== 'undefined' && tooltips.value) {
         import('bootstrap/js/dist/tooltip').then((bootstrap) => {
             const Tooltip = bootstrap.default || bootstrap
 
-            buttons.value.forEach((button) => {
-                if (button) new Tooltip(button, { placement: 'bottom' })
+            tooltips.value.forEach((tooltip) => {
+                if (tooltip) new Tooltip(tooltip, { placement: 'bottom' })
             })
         })
     }
@@ -20,15 +23,16 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="button-wrapper" v-if="theme.expandButtons">
-        <template v-for="item in theme.expandButtons" :key="JSON.stringify(item)">
+    <div class="button-wrapper">
+        <template v-for="button in buttons" :key="button.name">
             <a
                 class="btn"
-                ref="buttons"
-                :href="item.link.trim()"
-                :data-bs-title="item.text"
-                :target="item.target ?? undefined">
-                <SvgIcon :name="item.icon" />
+                ref="tooltips"
+                :href="button.link.trim()"
+                :data-bs-title="button.name"
+                :target="button.target ?? undefined"
+                v-if="button.icon">
+                <SvgIcon :name="button.icon" />
             </a>
         </template>
     </div>

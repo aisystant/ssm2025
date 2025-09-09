@@ -1,17 +1,12 @@
 <script setup lang="ts">
 import SvgIcon from './../SvgIcon.vue'
-
-interface Source {
-    icon: string
-    name: string
-    link: string
-}
+import { ButtonIcon } from '../../interfaces'
 
 defineProps<{
     title: string,
     items: {
         text: string
-        sources: Source[]
+        sources: ButtonIcon[]
     }[]
 }>()
 </script>

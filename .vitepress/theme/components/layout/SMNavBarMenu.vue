@@ -46,30 +46,32 @@ const closeMenu = () => {
 
         <div class="offcanvas-body">
             <SMNavBarIcons
-                :items="theme.expandButtons"
-                @close="closeMenu"
-                v-if="!isDesktop" />
+            :buttons="theme.expandButtons"
+            @close="closeMenu"
+            v-if="!isDesktop" />
 
             <ul class="navbar-nav">
                 <template v-for="item in theme.nav" :key="JSON.stringify(item)">
                     <li class="nav-item" v-if="isDesktop || !item.onlyDesktop">
                         <SMNavBarMenuLink
-                            :item="item"
-                            @close="closeMenu"
-                            v-if="'link' in item" />
+                        :item="item"
+                        @close="closeMenu"
+                        v-if="'link' in item" />
 
                         <SMNavBarMenuGroup
-                            :text="item.text"
-                            :items="item.items"
-                            @close="closeMenu"
-                            v-else />
+                        :text="item.text"
+                        :items="item.items"
+                        @close="closeMenu"
+                        v-else />
                     </li>
                 </template>
             </ul>
         </div>
 
         <div class="offcanvas-footer" v-if="!isDesktop">
-            <SMSocial />
+            <SMSocial
+            :items="theme.socialLinks"
+            v-if="theme.socialLinks" />
         </div>
     </div>
 </template>

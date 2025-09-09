@@ -1,17 +1,8 @@
 <script setup lang="ts">
-import IconLink from './IconLink.vue'
+import IconLink from '../IconLink.vue'
+import CloseModal from '../CloseModal.vue'
+import { Ambassador } from '../../interfaces'
 import { ref, shallowRef, onMounted } from 'vue'
-
-interface Ambassador {
-    name: string
-    post?: string
-    image: string
-    social?: {
-        icon: string
-        name: string
-        link: string
-    }[]
-}
 
 const props = defineProps<{
     path: string,
@@ -52,7 +43,7 @@ onMounted(async () => {
         <div class="modal-dialog ambassador-modal">
             <div class="modal-content">
                 <div class="modal-body">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <CloseModal />
 
                     <div class="ambassador-image">
                         <img :src="`/images/${ambassador.image}`" :alt="ambassador.name">

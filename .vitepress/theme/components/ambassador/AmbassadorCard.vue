@@ -1,18 +1,8 @@
 <script setup lang="ts">
-import IconLink from './IconLink.vue'
+import IconLink from '../IconLink.vue'
 import AmbassadorModal from './AmbassadorModal.vue'
+import { Ambassador } from '../../interfaces'
 import { ref, onMounted } from 'vue'
-
-interface Ambassador {
-    name: string
-    post?: string
-    image: string
-    social?: {
-        icon: string
-        name: string
-        link: string
-    }[]
-}
 
 const props = defineProps<{
     path: string,
