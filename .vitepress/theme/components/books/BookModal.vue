@@ -2,17 +2,17 @@
 import IconLink from '../IconLink.vue'
 import CloseModal from '../CloseModal.vue'
 import { Book } from '../../interfaces'
-import { ref, shallowRef, onMounted } from 'vue'
+import { ref, shallowRef, watch, nextTick, onMounted } from 'vue'
 
 const props = defineProps<{
     path: string,
-    book: Book,
 }>()
 
 const emit = defineEmits<{
     (e: 'close'): void
 }>()
 
+const book = ref<Book>()
 const content = shallowRef(null)
 const modal = ref<HTMLElement | null>(null)
 
@@ -26,10 +26,14 @@ function initModal() {
     }
 }
 
+watch(book, val => {
+    if (val) nextTick(initModal)
+})
+
 onMounted(async () => {
-    initModal()
     try {
         const page = await import(`../../../../components/books/${props.path}.md`)
+        book.value = page.__pageData.frontmatter
         content.value = page.default
 
     } catch (error) {
@@ -39,7 +43,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div class="modal fade" ref="modal" tabindex="-1">
+    <div class="modal fade" ref="modal" tabindex="-1" v-if="book">
         <div class="modal-dialog book-modal">
             <div class="modal-content">
                 <div class="modal-body">

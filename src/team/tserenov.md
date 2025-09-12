@@ -118,6 +118,15 @@ publications:
         link: 'https://systemsworld.club/t/manifest-sozidatelya-korotkaya-versiya/25747'
         target: '_blank'
 
+books:
+    title: 'Авторство'
+    items:
+      - 'thoughts-systematically'
+      - 'self-development-t1'
+      - 'self-development-t2'
+      - 'practices'
+      - 'systems-thinking-intro'
+
 contacts:
     club: 'https://systemsworld.club/u/tseren-tserenov/'
     telegram: 'https://t.me/TserenTserenov'
