@@ -68,6 +68,13 @@ practice:
             name: 'Трекер задач'
             status: 'Развивается'
 
+books:
+    title: 'Авторство'
+    items:
+      - 'thoughts-systematically'
+      - 'self-development-t1'
+      - 'self-development-t2'
+
 contacts:
     club: 'https://systemsworld.club/u/annlub902gmail-com/'
     telegram: 'https://t.me/selfdiscipline'
