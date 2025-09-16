@@ -37,12 +37,12 @@ products:
     items:
       -
         name: 'Системное саморазвитие'
-        text: '7 сентября'
+        text: '30 ноября'
         price: '35 000 ₽'
         link: 'https://yookassa.ru/my/i/aI2_IE46EPrz/l'
       -
         name: 'Практики саморазвития'
-        text: '8 сентября'
+        text: '1 декабря'
         price: '35 000 ₽'
         link: 'https://yookassa.ru/my/i/aI2_TcKUpXvD/l'
       -
@@ -74,7 +74,7 @@ products:
         link: 'https://yookassa.ru/my/i/aI2_qsjX5nxT/l'
       -
         name: 'Системное мышление и&nbsp;методология'
-        text: '9 сентября'
+        text: '3 февраля'
         price: '150 000 ₽'
         link: 'https://yookassa.ru/my/i/aI2_zUaRs8wP/l'
       -
