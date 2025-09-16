@@ -24,7 +24,8 @@
         margin-bottom: 0;
 
         & li {
-            display: flex;
+            display: inline-flex;
+            width: 100%;
             align-items: center;
             font-weight: $font-weight-light;
             line-height: 1.4;

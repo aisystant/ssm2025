@@ -14,7 +14,8 @@
         margin-bottom: 0;
 
         & li {
-            display: block;
+            display: inline-block;
+            width: 100%;
             background-color: $white;
             padding: .75rem 1.25rem;
             @extend .rounded;
