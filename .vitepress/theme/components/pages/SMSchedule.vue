@@ -31,7 +31,10 @@ const { frontmatter } = useData()
                         <td v-html="item.program"></td>
                         <td v-html="item.prerequisite"></td>
                         <td v-if="item.link">
-                            <a :href="item.link.trim()" v-html="item.name"></a>
+                            <a :href="item.link.trim()" 
+                                v-html="item.name" 
+                                :target="item.target ?? undefined">
+                            </a>
                         </td>
                         <td v-html="item.name" v-else></td>
                         <td v-html="item.format"></td>
