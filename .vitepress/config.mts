@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import createSvgSpritePlugin from 'vite-plugin-svg-sprite'
+import { replaceFrontmatterVariables } from './theme/utils'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -63,7 +64,7 @@ export default defineConfig({
             { icon: "ruble", name: "Купить", link: "/quick-purchase" },
             { icon: "global", name: "Соцсети", link: "#footer", onlyDesktop: true },
             { icon: "club", name: "Клуб", link: "https://systemsworld.club/", target: "_blank" },
-            { icon: "book", name: "Руководства", link: "https://docs.system-school.ru/ru/", target: "_blank"},
+            { icon: "book", name: "Руководства", link: "https://docs.system-school.ru/ru/", target: "_blank" },
             { icon: "contacts", name: "Контакты", link: "/contacts" },
         ],
         socialLinks: [
@@ -97,5 +98,19 @@ export default defineConfig({
                 include: ['**/sprite/**.svg']
             }),
         ],
-    }
+    },
+
+    markdown: {
+        config: (md) => {
+            md.core.ruler.after('normalize', 'replace-variables', (state) => {
+                const frontmatter = state.env.frontmatter;
+
+                if (frontmatter) {
+                    replaceFrontmatterVariables(frontmatter);
+                    state.env.frontmatter = frontmatter;
+                }
+                return;
+            });
+        },
+    },
 })

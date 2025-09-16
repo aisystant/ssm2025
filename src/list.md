@@ -20,7 +20,7 @@ tbody:
     name: 'Подписка "Бесконечное развитие"'
     link: '/open-endedness'
     format: 'самостоятельная'
-    price: 'от 800 ₽/ месяц	'
+    price: 'от {{ data.subscription.12m.month }} ₽/ месяц'
   -
     date: '7 сентября'
     program: 'Личное развитие'

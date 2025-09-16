@@ -10,23 +10,23 @@ products:
     items:
       -
         name: 'Подписка 1 месяц'
-        price: '1 100 ₽'
+        price: '{{ data.subscription.1m.price }}'
         text: ''
         link: 'https://aisystant.system-school.ru/lk/#/buy/email'
       -
         name: 'Подписка 3 месяца'
-        price: '3 000 ₽'
-        text: '(1000 руб / мес)'
+        price: '{{ data.subscription.3m.price }}'
+        text: '({{ data.subscription.3m.month }} руб / мес)'
         link: 'https://aisystant.system-school.ru/lk/#/buy/email'
       -
         name: 'Подписка 6 месяцев'
-        price: '5 400 ₽'
-        text: '(900 руб / мес)'
+        price: '{{ data.subscription.6m.price }}'
+        text: '({{ data.subscription.6m.month }} руб / мес)'
         link: 'https://aisystant.system-school.ru/lk/#/buy/email'
       -
         name: 'Подписка 12 месяцев'
-        price: '9 600 ₽'
-        text: '(800 руб / мес)'
+        price: '{{ data.subscription.12m.price }}'
+        text: '({{ data.subscription.12m.month }} руб / мес)'
         link: 'https://aisystant.system-school.ru/lk/#/buy/email'
     more:
       name: 'Подробнее о подписке'

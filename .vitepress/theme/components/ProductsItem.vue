@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { formatPrice } from '../composables/format'
+
 interface Card {
     name: string
     price: string
@@ -33,7 +35,7 @@ defineProps<{
 
                     <div class="card-buy">
                         <div class="card-price">
-                            {{ item.price }}
+                            {{ formatPrice(item.price) }}
                         </div>
                         <div class="card-button">
                             <a :href="item.link.trim()" class="btn" target="_blank">
