@@ -35,7 +35,7 @@ tbody:
     prerequisite: 'Нет'
     name: 'Семинар "First Principles Framework"'
     link: 'https://systemsworld.club/t/ceminar-first-principles-framework-v-programme-issledovatelskogo-razvitiya-inzhenerov-menedzherov/30624'
-    target: '_blank
+    target: '_blank'
     format: 'стажировка с&nbsp;мастером'
     price: '10.000&nbsp;₽'
   -
