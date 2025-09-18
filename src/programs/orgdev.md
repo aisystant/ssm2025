@@ -122,32 +122,32 @@ schedule:
 
     courses:
       -
-        name: 'Рациональная работа'
-        lessons: 'Занятия по вторникам с 18:00, по субботам с 11:30'
-        date: '4 октября'
-        price: '200 000 ₽'
+        name: '{{ data.workdev1.name }}'
+        date: '{{ data.workdev1.date }}'
+        price: '{{ data.workdev1.price }}'
+        link: '{{ data.workdev1.paylink }}'
+        schedule: '{{ data.workdev1.schedule }}'
         text:
-          - 'Первый разбор — 7 октября'
-          - 'Двадцать первый разбор — 13 декабря'
-        link: 'https://yookassa.ru/my/i/aI2_qsjX5nxT/l'
+          - '{{ data.workdev1.start }}'
+          - '{{ data.workdev1.finish }}'
       -
-        name: 'Системное мышление и методология'
-        lessons: 'Разборы по вторникам с 18:00 до 20:00'
-        date: '3 февраля'
-        price: '150 000 ₽'
+        name: '{{ data.workdev2.name }}'
+        date: '{{ data.workdev2.date }}'
+        price: '{{ data.workdev2.price }}'
+        link: '{{ data.workdev2.paylink }}'
+        schedule: '{{ data.workdev2.schedule }}'
         text:
-          - 'Первый разбор — 10 февраля'
-          - 'Девятнадцатый разбор — 9 июня'
-        link: 'https://yookassa.ru/my/i/aI2_zUaRs8wP/l'
+          - '{{ data.workdev2.start }}'
+          - '{{ data.workdev2.finish }}'
       -
-        name: 'Системный менеджмент и инженерия'
-        lessons: 'Разборы по средам с 18:00 до 20:00'
-        date: '24 сентября'
-        price: '150 000 ₽'
+        name: '{{ data.workdev3.name }}'
+        date: '{{ data.workdev3.date }}'
+        price: '{{ data.workdev3.price }}'
+        link: '{{ data.workdev3.paylink }}'
+        schedule: '{{ data.workdev3.schedule }}'
         text:
-          - 'Первый разбор — 1 октября'
-          - 'Девятнадцатый разбор — 4 февраля'
-        link: 'https://yookassa.ru/my/i/aI2_7yc2-Dfc/l'
+          - '{{ data.workdev3.start }}'
+          - '{{ data.workdev3.finish }}'
 
 faq:
     title: 'FAQ'

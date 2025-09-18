@@ -17,4 +17,72 @@ export const data = {
             month: '800',
         },
     },
+    // Программа «Личное развитие»
+    selfdev1: {
+        name: 'Системное саморазвитие',
+        date: '2025-11-30',
+        price: '35000',
+        paylink: 'https://yookassa.ru/my/i/aI2_IE46EPrz/l',
+        schedule: 'Занятия по воскресеньям с 11:00 до 13:30',
+        start: 'Первое занятие — 7 декабря',
+        finish: 'Защита — 8 февраля',
+    },
+    selfdev2: {
+        name: 'Практики саморазвития',
+        date: '2025-12-01',
+        price: '35000',
+        paylink: 'https://yookassa.ru/my/i/aI2_TcKUpXvD/l',
+        schedule: 'Занятия по понедельникам с 18:00 до 19:30',
+        start: 'Первое занятие — 8 декабря',
+        finish: 'Защита — 9 февраля',
+    },
+    selfdev3: {
+        name: 'Введение в системное мышление',
+        date: '2025-11-29',
+        price: '80000',
+        paylink: 'https://yookassa.ru/my/i/aI2_iX5TUKqv/l',
+        schedule: 'Занятия по субботам с 09:00 до 12:00',
+        start: 'Первое занятие — 6 декабря',
+        finish: 'Девятое занятие — 24 января',
+    },
+    selfdev4: {
+        name: 'Системный фитнес',
+        date: 'октябрь',
+        price: '60000',
+        paylink: 'https://yookassa.ru/my/i/aI74_aGzBwWO/l'
+    },
+    // Программа «Рабочее развитие»
+    workdev1: {
+        name: 'Рациональная работа',
+        date: '2025-10-04',
+        price: '200000',
+        paylink: 'https://yookassa.ru/my/i/aI2_qsjX5nxT/l',
+        schedule: 'Разборы по вторникам с 18:00, по субботам с 11:30',
+        start: 'Первый разбор — 7 октября',
+        finish: 'Двадцать первый разбор — 13 декабря',
+    },
+    workdev2: {
+        name: 'Системное мышление и методология',
+        date: '2026-02-03',
+        price: '150000',
+        paylink: 'https://yookassa.ru/my/i/aI2_zUaRs8wP/l',
+        schedule: 'Разборы по вторникам с 18:00 до 20:00',
+        start: 'Первый разбор — 10 февраля',
+        finish: 'Девятнадцатый разбор — 9 июня',
+    },
+    workdev3: {
+        name: 'Системный менеджмент и инженерия',
+        date: '2025-09-25',
+        price: '150000',
+        paylink: 'https://yookassa.ru/my/i/aI2_7yc2-Dfc/l',
+        schedule: 'Разборы по средам с 18:00 до 20:00',
+        start: 'Первый разбор — 1 октября',
+        finish: 'Девятнадцатый разбор — 4 февраля',
+    },
+    // Программа «Исследовательское развитие»
+    research1: {
+        name: 'Интеллект-стек',
+        price: '200000',
+        paylink: 'https://yookassa.ru/my/i/aI7_0-7A2vEm/l',
+    },
 }

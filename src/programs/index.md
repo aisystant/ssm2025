@@ -13,17 +13,17 @@ programs:
       - 'Как учиться быстрее, действовать яснее, формировать свой&nbsp;стиль&nbsp;жизни?'
     courses:
       -
-        name: 'Системное саморазвитие'
-        date: '30.11.2025'
+        name: '{{ data.selfdev1.name }}'
+        date: '{{ data.selfdev1.date }}'
       -
-        name: 'Практики саморазвития'
-        date: '01.12.2025'
+        name: '{{ data.selfdev2.name }}'
+        date: '{{ data.selfdev2.date }}'
       -
-        name: 'Введение в системное мышление'
-        date: '29.11.2025'
+        name: '{{ data.selfdev3.name }}'
+        date: '{{ data.selfdev3.date }}'
       -
-        name: 'Системный фитнес'
-        date: 'октябрь'
+        name: '{{ data.selfdev4.name }}'
+        date: '{{ data.selfdev4.date }}'
 
   -
     head: 'Внимание на окружение'
@@ -34,14 +34,14 @@ programs:
       - 'Как работать с различными агентами, включая ИИ, для создания разных видов систем?'
     courses:
       -
-        name: 'Рациональная работа'
-        date: '04.10.2025'
+        name: '{{ data.workdev1.name }}'
+        date: '{{ data.workdev1.date }}'
       -
-        name: 'Системное мышление и&nbsp;методология'
-        date: '03.02.2026'
+        name: '{{ data.workdev2.name }}'
+        date: '{{ data.workdev2.date }}'
       -
-        name: 'Системный менеджмент и&nbsp;инженерия'
-        date: '24.09.2025'
+        name: '{{ data.workdev3.name }}'
+        date: '{{ data.workdev3.date }}'
 
   -
     head: 'Внимание на мышление'
@@ -52,7 +52,7 @@ programs:
       - 'Как разрабатывать мета-мета-модели, создавать методы и проектировать новые объяснения об&nbsp;устройстве мира?'
     courses:
       -
-        name: 'Интеллект-стек'
+        name: '{{ data.research1.name }}'
         date: 'самостоятельно'
 
 ---
