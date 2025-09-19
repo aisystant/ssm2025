@@ -1,8 +1,49 @@
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
 import ContactUs from './../ContactUs.vue'
+import { data } from '../../../../data/variables'
 import { useData } from '../../composables/data'
+import { formatPrice, formatMonthDay } from '../../composables/format'
 
 const { frontmatter } = useData()
+
+interface ScheduleRow {
+    date: string
+    program?: string
+    prerequisite?: string
+    name: string
+    sitelink?: string
+    target?: string
+    format: string
+    price: string
+}
+
+const rows = ref<ScheduleRow[]>([])
+
+const formatting = (row: ScheduleRow) => {
+    row.date = formatMonthDay(row.date)
+    row.price = formatPrice(row.price)
+    return row
+}
+
+onMounted(() => {
+    let scheduleRows: ScheduleRow[] = []
+
+    if (data && data.schedule) {
+        scheduleRows = data.schedule
+                      .sort((a, b) => a.date.localeCompare(b.date))
+                      .map(formatting)
+    }
+
+    if (frontmatter.value && frontmatter.value.tbody) {
+        rows.value = [
+            ...frontmatter.value.tbody,
+            ...scheduleRows
+        ]
+    } else {
+        rows.value = scheduleRows
+    }
+})
 </script>
 
 <template>
@@ -25,20 +66,20 @@ const { frontmatter } = useData()
                     </tr>
                 </thead>
 
-                <tbody>
-                    <tr v-for="item in frontmatter.tbody" :key="JSON.stringify(item)">
-                        <td v-html="item.date"></td>
-                        <td v-html="item.program"></td>
-                        <td v-html="item.prerequisite"></td>
-                        <td v-if="item.link">
-                            <a :href="item.link.trim()" 
-                                v-html="item.name" 
-                                :target="item.target ?? undefined">
+                <tbody v-if="rows.length">
+                    <tr v-for="row in rows" :key="JSON.stringify(row)">
+                        <td v-html="row.date"></td>
+                        <td v-html="row.program"></td>
+                        <td v-html="row.prerequisite"></td>
+                        <td v-if="row.sitelink">
+                            <a :href="row.sitelink.trim()"
+                                v-html="row.name"
+                                :target="row.target ?? undefined">
                             </a>
                         </td>
-                        <td v-html="item.name" v-else></td>
-                        <td v-html="item.format"></td>
-                        <td v-html="item.price"></td>
+                        <td v-html="row.name" v-else></td>
+                        <td v-html="row.format"></td>
+                        <td v-html="row.price"></td>
                     </tr>
                 </tbody>
             </table>
