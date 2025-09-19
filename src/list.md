@@ -23,7 +23,7 @@ tbody:
     price: 'от {{ data.subscription.12m.month }} ₽/ месяц'
   -
     date: '24 сентября'
-    program: 'Оргразвитие, III&nbsp;этап'
+    program: 'Рабочее развитие, III&nbsp;этап'
     prerequisite: 'Завершенный II&nbsp;этап'
     name: 'Системный менеджмент и&nbsp;инженерия'
     link: '/programs/orgdev?tab=3-org-dev'
@@ -46,22 +46,6 @@ tbody:
     link: '/programs/orgdev?tab=1-org-dev'
     format: 'стажировка с&nbsp;мастером'
     price: '200.000&nbsp;₽'
-  -
-    date: '23 ноября'
-    program: 'Личное развитие'
-    prerequisite: 'Нет'
-    name: 'Системное саморазвитие'
-    link: '/programs/intro?tab=intro-online'
-    format: 'стажировка с&nbsp;мастером'
-    price: '35.000&nbsp;₽'
-  -
-    date: '24 ноября'
-    program: 'Личное развитие'
-    prerequisite: 'Нет'
-    name: 'Практики саморазвития'
-    link: '/programs/intro?tab=selfdev'
-    format: 'стажировка с&nbsp;мастером'
-    price: '35.000&nbsp;₽'
   -
     date: '29 ноября'
     program: 'Личное развитие'
@@ -88,7 +72,7 @@ tbody:
     price: '35.000&nbsp;₽'
   -
     date: '3 февраля'
-    program: 'Оргразвитие, II&nbsp;этап'
+    program: 'Рабочее развитие, II&nbsp;этап'
     prerequisite: 'Завершенный I&nbsp;этап'
     name: 'Системное мышление и&nbsp;методология'
     link: '/programs/orgdev?tab=2-org-dev'
