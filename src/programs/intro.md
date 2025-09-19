@@ -148,32 +148,32 @@ schedule:
 
     courses:
       -
-        name: 'Системное саморазвитие'
-        lessons: 'Занятия по воскресеньям с 11:00 до 13:30'
-        date: '30 ноября'
-        price: '35 000 ₽'
+        name: '{{ data.selfdev1.name }}'
+        date: '{{ data.selfdev1.date }}'
+        price: '{{ data.selfdev1.price }}'
+        link: '{{ data.selfdev1.paylink }}'
+        schedule: '{{ data.selfdev1.schedule }}'
         text:
-          - 'Первое занятие — 7 декабря'
-          - 'Защита — 8 февраля'
-        link: 'https://yookassa.ru/my/i/aI2_IE46EPrz/l'
+          - '{{ data.selfdev1.start }}'
+          - '{{ data.selfdev1.finish }}'
       -
-        name: 'Практики саморазвития'
-        lessons: 'Занятия по понедельникам с 18:00 до 19:30'
-        date: '1 декабря'
-        price: '35 000 ₽'
+        name: '{{ data.selfdev2.name }}'
+        date: '{{ data.selfdev2.date }}'
+        price: '{{ data.selfdev2.price }}'
+        link: '{{ data.selfdev2.paylink }}'
+        schedule: '{{ data.selfdev2.schedule }}'
         text:
-          - 'Первое занятие — 8 декабря'
-          - 'Защита — 9 февраля'
-        link: 'https://yookassa.ru/my/i/aI2_TcKUpXvD/l'
+          - '{{ data.selfdev2.start }}'
+          - '{{ data.selfdev2.finish }}'
       -
-        name: 'Введение в системное мышление'
-        lessons: 'Занятия по субботам с 09:00 до 12:00'
-        date: '29 ноября'
-        price: '80 000 ₽'
+        name: '{{ data.selfdev3.name }}'
+        date: '{{ data.selfdev3.date }}'
+        price: '{{ data.selfdev3.price }}'
+        link: '{{ data.selfdev3.paylink }}'
+        schedule: '{{ data.selfdev3.schedule }}'
         text:
-          - 'Первое занятие — 6 декабря'
-          - 'Девятое занятие — 24 января'
-        link: 'https://yookassa.ru/my/i/aI2_iX5TUKqv/l'
+          - '{{ data.selfdev3.start }}'
+          - '{{ data.selfdev3.finish }}'
 
 reviews:
     title: 'Отзывы участников'
