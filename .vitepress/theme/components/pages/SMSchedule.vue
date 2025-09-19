@@ -21,9 +21,11 @@ interface ScheduleRow {
 const rows = ref<ScheduleRow[]>([])
 
 const formatting = (row: ScheduleRow) => {
-    row.date = formatMonthDay(row.date)
-    row.price = formatPrice(row.price)
-    return row
+    return {
+        ...row,
+        date: formatMonthDay(row.date),
+        price: formatPrice(row.price)
+    }
 }
 
 onMounted(() => {
