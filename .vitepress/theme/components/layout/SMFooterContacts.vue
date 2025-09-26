@@ -2,6 +2,7 @@
 defineProps<{
     contacts: {
         address?: string
+        workhours?: string
         telegram?: string
         email?: string
     }
@@ -15,7 +16,8 @@ defineProps<{
     </div>
 
     <div class="mt-2" v-if="contacts.telegram">
-        <a :href="contacts.telegram" class="fw-semibold" target="_blank">Telegram</a> — менеджер
+        <a :href="contacts.telegram" class="fw-semibold" target="_blank" rel="nofollow noopener">Telegram</a> — менеджер
+        <span class="d-inline-block" v-html="contacts.workhours" v-if="contacts.workhours"></span>
     </div>
 
     <div class="mt-2" v-if="contacts.email">

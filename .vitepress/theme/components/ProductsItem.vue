@@ -40,7 +40,11 @@ defineProps<{
                             {{ formatPrice(item.price) }}
                         </div>
                         <div class="card-button">
-                            <a :href="item.link.trim()" class="btn" target="_blank">
+                            <a
+                                :href="item.link.trim()"
+                                class="btn"
+                                target="_blank"
+                                rel="nofollow noopener">
                                 Купить
                             </a>
                         </div>

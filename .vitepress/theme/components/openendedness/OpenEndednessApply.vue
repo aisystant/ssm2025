@@ -44,7 +44,11 @@ defineProps<{
                 </ul>
 
                 <div class="section-footer">
-                    <a :href="footer.link.trim()" class="btn" target="_blank">
+                    <a
+                        :href="footer.link.trim()"
+                        class="btn"
+                        target="_blank"
+                        rel="nofollow">
                         {{ footer.button }}
                     </a>
 

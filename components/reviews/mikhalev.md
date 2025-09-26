@@ -1,7 +1,7 @@
 ---
 name: 'Александр Михалёв'
 link: 'https://www.facebook.com/alex.mikhalev'
-post: 'Tech Lead (Lead Technical Architect)/ <a href="https://www.nationwide.co.uk/" target="_blank_">Nationwide Building Society</a>, London'
+post: 'Tech Lead (Lead Technical Architect)/ <a href="https://www.nationwide.co.uk/" target="_blank_" rel="nofollow noopener">Nationwide Building Society</a>, London'
 image: 'reviews/mikhalev.jpg'
 ---
 

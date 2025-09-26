@@ -22,7 +22,8 @@ defineProps<{
                             <a
                                 :href="button.link.trim()"
                                 :class="`btn ${button.style || 'btn-outline'}`"
-                                :target="button.target ?? undefined">
+                                :target="button.target ?? undefined"
+                                :rel="button.rel ?? undefined">
                                 {{ button.name }}
                             </a>
                         </template>
@@ -30,7 +31,7 @@ defineProps<{
                 </div>
 
                 <div class="intro-image">
-                    <img :src="`/images/${image}`">
+                    <img :src="`/images/${image}`" fetchpriority="high">
                 </div>
             </div>
         </div>

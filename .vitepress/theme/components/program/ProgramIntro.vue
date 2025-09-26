@@ -32,8 +32,19 @@ defineProps<{
                     <div class="program-text" v-html="description" v-if="description"></div>
                 </div>
 
-                <img :src="`/images/${image_pc}`" class="program-image" :alt="title" v-if="!isDevice">
-                <img :src="`/images/${image_mob}`" class="program-image-mob" :alt="title" v-if="isDevice && image_mob">
+                <img
+                    :src="`/images/${image_pc}`"
+                    class="program-image"
+                    :alt="title"
+                    fetchpriority="high"
+                    v-if="!isDevice">
+
+                <img
+                    :src="`/images/${image_mob}`"
+                    class="program-image-mob"
+                    :alt="title"
+                    fetchpriority="high"
+                    v-if="isDevice && image_mob">
 
                 <div class="section-items" v-if="education">
                     <div class="program-education">

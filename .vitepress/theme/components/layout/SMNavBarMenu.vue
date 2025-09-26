@@ -32,7 +32,7 @@ const closeMenu = () => {
 </script>
 
 <template>
-    <button class="navbar-toggler" type="button" @click="openMenu">
+    <button class="navbar-toggler" type="button" @click="openMenu" aria-label="Меню">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -41,7 +41,7 @@ const closeMenu = () => {
             <a href="/" class="offcanvas-title" @click="closeMenu">
                 <SMLogo />
             </a>
-            <button type="button" class="btn-close" @click="closeMenu"></button>
+            <button type="button" class="btn-close" @click="closeMenu" aria-label="Закрыть"></button>
         </div>
 
         <div class="offcanvas-body">

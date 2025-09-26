@@ -10,6 +10,7 @@ buttons:
     name: 'Получить бесплатный доступ'
     link: 'https://aisystant.system-school.ru/lk/#/auth/signup'
     target: '_blank'
+    rel: 'nofollow'
     style: 'btn-dark'
   -
     name: 'Оформить подписку'
@@ -246,11 +247,13 @@ action:
       name: 'Оформить подписку'
       link: 'https://aisystant.system-school.ru/lk/#/buy/email'
       target: '_blank'
+      rel: 'nofollow'
       style: 'btn-dark'
     -
       name: 'Начать бесплатно'
       link: 'https://aisystant.system-school.ru/lk/#/auth/signup'
       target: '_blank'
+      rel: 'nofollow'
       style: 'btn-outline'
 
   text: 'Подписку можно отменить в любой момент. Бесплатный доступ остаётся.'

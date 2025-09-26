@@ -20,7 +20,8 @@ defineProps<{
                             <a
                                 :href="button.link.trim()"
                                 :class="`btn ${button.style || 'btn-outline'}`"
-                                :target="button.target ?? undefined">
+                                :target="button.target ?? undefined"
+                                :rel="button.rel ?? undefined">
                                 {{ button.name }}
                             </a>
                         </div>

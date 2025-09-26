@@ -1,7 +1,7 @@
 ---
 name: 'Павел Музыка'
 link: 'https://www.facebook.com/pavel.muzyka.7'
-post: 'Ведущий бизнес-аналитик компании <a href="http://www.custis.ru/" target="_blank">CUSTIS</a>'
+post: 'Ведущий бизнес-аналитик компании <a href="http://www.custis.ru/" target="_blank" rel="nofollow noopener">CUSTIS</a>'
 image: 'reviews/muzyka.png'
 ---
 

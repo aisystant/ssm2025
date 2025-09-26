@@ -22,6 +22,7 @@ const emit = defineEmits<{
                 <a
                     :href="button.link.trim()"
                     :target="button.target ?? undefined"
+                    :rel="button.rel ?? undefined"
                     @click="emit('close')">
                     <SvgIcon :name="button.icon" />
                 </a>

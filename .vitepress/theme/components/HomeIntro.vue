@@ -39,7 +39,8 @@ defineProps<{
                     <img
                         :src="`/images/${image}`"
                         class="intro-image"
-                        alt="Программы обучения">
+                        alt="Программы обучения"
+                        fetchpriority="high">
                 </div>
             </div>
         </div>

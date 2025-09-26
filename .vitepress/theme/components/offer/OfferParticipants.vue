@@ -66,7 +66,8 @@ onMounted(() => {
                         <a
                             :href="slide.link.trim()"
                             :title="slide.name"
-                            target="_blank">
+                            target="_blank"
+                            rel="nofollow noopener">
                             <img
                                 :src="`/images/${slide.image}`"
                                 :alt="slide.name">

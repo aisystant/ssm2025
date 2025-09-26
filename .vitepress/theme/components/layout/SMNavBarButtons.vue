@@ -31,6 +31,7 @@ onMounted(() => {
                 :href="button.link.trim()"
                 :data-bs-title="button.name"
                 :target="button.target ?? undefined"
+                :rel="button.rel ?? undefined"
                 v-if="button.icon">
                 <SvgIcon :name="button.icon" />
             </a>

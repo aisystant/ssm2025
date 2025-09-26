@@ -49,6 +49,7 @@ action:
       name: 'Начать бесплатно'
       link: 'https://aisystant.system-school.ru/lk/#/auth/signup'
       target: '_blank'
+      rel: 'nofollow'
       style: 'btn-outline'
 
   text: 'Подписку можно отменить в любой момент. Бесплатный доступ остаётся.'

@@ -24,7 +24,8 @@ defineProps<{
                     <a
                         :href="item.button.link.trim()"
                         :class="`btn ${item.button.style || 'btn-dark'}`"
-                        :target="item.button.target ?? undefined">
+                        :target="item.button.target ?? undefined"
+                        :rel="item.button.rel ?? undefined">
                         {{ item.button.name }}
                     </a>
                 </div>
