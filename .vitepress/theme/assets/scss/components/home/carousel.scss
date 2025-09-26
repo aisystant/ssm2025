@@ -72,6 +72,7 @@
     }
 
     & .card-title {
+        @extend h6;
         margin-bottom: .5rem;
     }
 

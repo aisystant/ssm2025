@@ -42,7 +42,7 @@ onMounted(async () => {
                 <div class="revirew-author">
                     <template v-if="user.name">
                         <div class="author-name" v-if="user.link">
-                            <a :href="user.link.trim()" target="_blank">
+                            <a :href="user.link.trim()" target="_blank" rel="nofollow noopener">
                                 {{ user.name }}
                             </a>
                         </div>

@@ -50,8 +50,13 @@ defineProps<{
                                 <div class="course-price" v-if="course.price">
                                     {{ formatPrice(course.price) }}
                                 </div>
+
                                 <div class="course-button" v-if="course.link">
-                                    <a :href="course.link.trim()" class="btn" target="_blank">
+                                    <a
+                                        :href="course.link.trim()"
+                                        class="btn"
+                                        target="_blank"
+                                        rel="nofollow noopener">
                                         {{ buy || 'Купить' }}
                                     </a>
                                 </div>
@@ -63,7 +68,11 @@ defineProps<{
 
             <div class="starting-program">
                 <div class="h3" v-html="program.head"></div>
-                <a :href="program.link.trim()" class="btn" target="_blank">
+                <a
+                    :href="program.link.trim()"
+                    class="btn"
+                    target="_blank"
+                    rel="nofollow noopener">
                     {{ program.button }}
                 </a>
             </div>

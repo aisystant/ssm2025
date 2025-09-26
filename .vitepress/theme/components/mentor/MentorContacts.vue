@@ -35,7 +35,7 @@ defineProps<{
                         </p>
                     </div>
                     <div class="card-footer" v-if="telegram">
-                        <a :href="telegram.trim()" class="btn" target="_blank">
+                        <a :href="telegram.trim()" class="btn" target="_blank" rel="nofollow noopener">
                             <SvgIcon name="tg-outline" />
                             Написать в Телеграм
                         </a>
@@ -51,7 +51,7 @@ defineProps<{
                     <div class="card-text">
                         <ul class="contacts-list">
                             <li v-for="item in social" :key="JSON.stringify(item)">
-                                <a :href="item.link.trim()" target="_blank" rel="nofollow">
+                                <a :href="item.link.trim()" target="_blank" rel="nofollow noopener">
                                     {{ item.name }}
                                 </a>
                             </li>

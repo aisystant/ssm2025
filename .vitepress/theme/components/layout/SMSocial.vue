@@ -10,7 +10,11 @@ defineProps<{
 <template>
     <div class="media-links">
         <div class="media-item" v-for="item in items" :key="item.icon">
-            <a :href="item.link.trim()" target="_blank" rel="nofollow">
+            <a
+                :href="item.link.trim()"
+                target="_blank"
+                rel="nofollow noopener"
+                :aria-label="item.name">
                 <SvgIcon :name="item.icon" />
             </a>
         </div>

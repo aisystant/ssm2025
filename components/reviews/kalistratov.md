@@ -1,7 +1,7 @@
 ---
 name: 'Алексей Калистратов'
 link: 'https://www.facebook.com/alexey.kalistratov.1'
-post: 'Руководитель проектов в <a href="http://www.icl.ru/" target="_blank">Группе компаний ICL</a>'
+post: 'Руководитель проектов в <a href="http://www.icl.ru/" target="_blank" rel="nofollow noopener">Группе компаний ICL</a>'
 image: 'reviews/kalistratov.jpg'
 ---
 

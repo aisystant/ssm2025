@@ -25,7 +25,7 @@ author:
         <img src="../public/images/articles/peter-principle.png" width="400">
     </div>
     <div class="image-caption">
-        Автор: Алексей Гоманков. <a href="https://ru.wikipedia.org/wiki/Принцип_Питера" target="_blank">Википедия</a>
+        Автор: Алексей Гоманков. <a href="https://ru.wikipedia.org/wiki/Принцип_Питера" target="_blank" rel="nofollow noopener">Википедия</a>
     </div>
 </div>
 

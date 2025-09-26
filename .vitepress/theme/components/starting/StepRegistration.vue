@@ -17,7 +17,10 @@ defineProps<{
                     <h2 class="step-title" v-html="title"></h2>
 
                     <div class="my-4">
-                        <a :href="button.link.trim()" class="btn btn-accent" target="_blank">
+                        <a :href="button.link.trim()"
+                            class="btn btn-accent"
+                            target="_blank"
+                            rel="nofollow">
                             {{ button.name }}
                         </a>
                     </div>

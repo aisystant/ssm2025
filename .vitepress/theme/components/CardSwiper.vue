@@ -54,7 +54,7 @@ onMounted(() => {
                     >
                         <div :class="['card-body', {'inverse': dark}]">
                             <div v-html="slide.head" class="card-head" v-if="slide.head"></div>
-                            <h6 v-html="slide.title" class="card-title" v-if="slide.title"></h6>
+                            <div v-html="slide.title" class="card-title" v-if="slide.title"></div>
                             <div v-html="slide.text" class="card-text" v-if="slide.text"></div>
                         </div>
                     </a>
