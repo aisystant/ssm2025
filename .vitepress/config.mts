@@ -1,13 +1,13 @@
 import { defineConfig } from 'vitepress'
 import createSvgSpritePlugin from 'vite-plugin-svg-sprite'
-import { replaceFrontmatterVariables } from './theme/utils'
+import { replaceFrontmatterVariables, prepareFrontmatterHead } from './theme/utils'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     srcDir: "src",
     lang: "ru-RU",
     title: "Мастерская инженеров-менеджеров",
-    description: "Готовим директоров по развитию, меняющих мир к лучшему",
+    description: "Мастерская инженеров-менеджеров — новое образование для развития системного мышления. Личное развитие, инженерия систем, работа с ИИ. Строим новое мышление для непредсказуемого мира.",
 
     // Clean URLs - removes .html suffixes from URLs
     cleanUrls: true,
@@ -113,5 +113,28 @@ export default defineConfig({
                 return;
             });
         },
+    },
+
+    head: [
+        [
+            'script',
+            {},
+            `!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Ce Ds js Te Os As capture Ye calculateEventProperties Us register register_once register_for_session unregister unregister_for_session Hs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty qs Ns createPersonProfile Bs Cs Ws opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Ls debug L zs getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+            posthog.init('phc_um8ibWF5AIbKSlEk3NdwhlCvXGTqmyg1xi1eeFMFMRC', {
+                api_host: 'https://posthog.system-school.ru',
+                defaults: '2025-05-24',
+                person_profiles: 'identified_only',
+            })`
+        ]
+    ],
+
+    transformPageData(pageData, { siteConfig }) {
+        const hostname = siteConfig.site.themeConfig.share.hostname ?? 'https://system-school.ru';
+
+        pageData.frontmatter.head ??= [];
+        pageData.frontmatter.head = [
+            ...pageData.frontmatter.head,
+            ...prepareFrontmatterHead(pageData, siteConfig, hostname)
+        ];
     },
 })

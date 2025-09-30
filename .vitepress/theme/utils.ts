@@ -1,4 +1,5 @@
 import { data } from '../../data/variables';
+import { PageData, SiteConfig, HeadConfig } from 'vitepress';
 
 export function replaceFrontmatterVariables(obj: any) {
     for (const key in obj) {
@@ -32,4 +33,51 @@ function getNestedValue(obj: any, path: string) {
         if (result === undefined) return undefined;
     }
     return result;
+}
+
+export function prepareFrontmatterHead(pageData: PageData, siteConfig: SiteConfig, hostname: string) {
+    let head = <HeadConfig[]>[];
+
+    const canonicalUrl = `${hostname}/${pageData.relativePath}`
+        .replace(/index\.md$/, '')
+        .replace(/\.md$/, '');
+
+    let title = pageData.title;
+    if (!title.length) title = siteConfig.site.title;
+
+    let description = pageData.description;
+    if (!description.length) description = siteConfig.site.description;
+
+    let type = 'website';
+    if (pageData.frontmatter.layout == 'article') type = 'article';
+    if (pageData.frontmatter.layout == 'mentor') type = 'profile';
+
+    head.push(
+        [
+            'link',
+            { rel: 'canonical', href: canonicalUrl }
+        ],
+        [
+            'meta',
+            { name: 'og:title', content: title }
+        ],
+        [
+            'meta',
+            { name: 'og:description', content: description }
+        ],
+        [
+            'meta',
+            { name: 'og:type', content: type }
+        ],
+        [
+            'meta',
+            { name: 'og:url', content: canonicalUrl }
+        ],
+        [
+            'meta',
+            { name: 'og:site_name', content: siteConfig.site.title }
+        ]
+    );
+
+    return head;
 }
