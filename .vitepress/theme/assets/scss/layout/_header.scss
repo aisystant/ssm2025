@@ -35,7 +35,6 @@
     }
 
     & .offcanvas-footer {
-        @extend .d-xl-none;
         padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
         font-size: .8rem;
     }
@@ -122,6 +121,11 @@
 
         &-actions {
             order: 1;
+        }
+
+        & .offcanvas-footer,
+        & .nav-icons {
+            display: none;
         }
     }
 
