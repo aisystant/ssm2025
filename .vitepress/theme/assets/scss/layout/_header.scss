@@ -44,10 +44,17 @@
     }
 
     &-actions {
+        position: relative;
+        $size: 2.15rem;
+        width: 8rem;
+        height: $size;
         margin-left: auto;
 
         & .button-wrapper {
             display: flex;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
 
         & .btn {
@@ -55,8 +62,8 @@
             @extend .ms-2;
             @include flex();
             line-height: 1;
-            width: 2.15rem;
-            height: 2.15rem;
+            width: $size;
+            height: $size;
             padding: 0;
             flex-shrink: 0;
 
@@ -156,6 +163,10 @@
         & .offcanvas-title img,
         & .navbar-brand img {
             width: 6rem;
+        }
+
+        &-actions {
+            display: none;
         }
     }
 

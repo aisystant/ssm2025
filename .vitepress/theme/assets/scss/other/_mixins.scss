@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @mixin padding-x($left, $right: $left) {
     padding-left: $left;
     padding-right: $right;
@@ -62,7 +64,7 @@
 }
 
 @function calc-width($count, $offset) {
-    $percent: ( 100% / $count );
-    $gap: ($offset * ($count - 1)) / $count;
+    $percent: math.div(100%, $count);
+    $gap: math.div(($offset * ($count - 1)), $count);
     @return calc(#{$percent} - #{$gap});
 }
