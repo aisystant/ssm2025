@@ -123,7 +123,7 @@ export default defineConfig({
             posthog.init('phc_um8ibWF5AIbKSlEk3NdwhlCvXGTqmyg1xi1eeFMFMRC', {
                 api_host: 'https://posthog.system-school.ru',
                 defaults: '2025-05-24',
-                person_profiles: 'identified_only',
+                person_profiles: 'always',
             })`
         ]
     ],
