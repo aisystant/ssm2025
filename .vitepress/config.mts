@@ -1,13 +1,13 @@
 import { defineConfig } from 'vitepress'
 import createSvgSpritePlugin from 'vite-plugin-svg-sprite'
-import { replaceFrontmatterVariables } from './theme/utils'
+import { replaceFrontmatterVariables, prepareFrontmatterHead } from './theme/utils'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     srcDir: "src",
     lang: "ru-RU",
     title: "Мастерская инженеров-менеджеров",
-    description: "Готовим директоров по развитию, меняющих мир к лучшему",
+    description: "Мастерская инженеров-менеджеров — новое образование для развития системного мышления. Личное развитие, инженерия систем, работа с ИИ. Строим новое мышление для непредсказуемого мира.",
 
     // Clean URLs - removes .html suffixes from URLs
     cleanUrls: true,
@@ -113,5 +113,15 @@ export default defineConfig({
                 return;
             });
         },
+    },
+
+    transformPageData(pageData, { siteConfig }) {
+        const hostname = siteConfig.site.themeConfig.share.hostname ?? 'https://system-school.ru';
+
+        pageData.frontmatter.head ??= [];
+        pageData.frontmatter.head = [
+            ...pageData.frontmatter.head,
+            ...prepareFrontmatterHead(pageData, siteConfig, hostname)
+        ];
     },
 })
