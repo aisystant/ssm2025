@@ -36,3 +36,40 @@ export const initCardSwiper = (swiperElement: HTMLElement | null) => {
         }
     });
 }
+
+export const initProgramSwiper = (swiperElement: HTMLElement | null) => {
+    if (!swiperElement) return;
+
+    new Swiper(swiperElement, {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.button-next',
+            prevEl: '.button-prev',
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 16,
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1400: {
+                slidesPerView: 3,
+                spaceBetween: 32,
+            },
+        }
+    });
+}

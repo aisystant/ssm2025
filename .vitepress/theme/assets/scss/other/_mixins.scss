@@ -52,3 +52,17 @@
     background-color: $secondary;
     border: .23em solid mix($secondary, $white, 40%);
 }
+
+@mixin slide-size($count, $offset) {
+    width: calc-width($count, $offset);
+
+    &:not(:last-child) {
+        margin-right: $offset;
+    }
+}
+
+@function calc-width($count, $offset) {
+    $percent: ( 100% / $count );
+    $gap: ($offset * ($count - 1)) / $count;
+    @return calc(#{$percent} - #{$gap});
+}
