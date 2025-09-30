@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import Swiper from 'swiper/bundle';
+import { initProgramSwiper } from '../../support/swiper'
 
 interface Slide {
     image: string
@@ -18,43 +18,8 @@ defineProps<{
 
 const swiper = ref<HTMLElement | null>(null)
 
-const initSwiper = () => {
-    new Swiper(swiper.value!, {
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.button-next',
-            prevEl: '.button-prev',
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-                spaceBetween: 16,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 24,
-            },
-            992: {
-                slidesPerView: 3,
-                spaceBetween: 16,
-            },
-            1200: {
-                slidesPerView: 3,
-                spaceBetween: 24,
-            },
-            1400: {
-                slidesPerView: 3,
-                spaceBetween: 32,
-            },
-        }
-    });
-}
-
 onMounted(() => {
-    if (swiper.value) initSwiper()
+    if (swiper.value) initProgramSwiper(swiper.value)
 })
 </script>
 
@@ -66,7 +31,7 @@ onMounted(() => {
         <div class="swiper" ref="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" v-for="slide in items" :key="JSON.stringify(slide)">
-                    <div class="about-program">
+                    <div class="slide-card">
                         <div class="card-body">
                             <div class="card-image">
                                 <img :src="`/images/${slide.image}`" :alt="slide.name">
