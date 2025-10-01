@@ -95,6 +95,10 @@ const { frontmatter } = useData()
     :items="frontmatter.mentors.items"
     v-if="frontmatter.mentors" />
 
+    <div class="show-more mt-0">
+        <a href="/programs/" class="btn">Другие программы</a>
+    </div>
+
     <AboutProject v-if="false" />
     <ContactUs />
 </template>
