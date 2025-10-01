@@ -93,3 +93,32 @@
         }
     }
 }
+
+.btn-up {
+    @include flex();
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    padding: 0;
+    border: 0;
+    @extend .bg-white;
+    box-shadow: $box-shadow;
+    opacity: .8;
+    position: fixed;
+    z-index: $zindex-fixed;
+    bottom: 2rem;
+    right: 5%;
+    transition: all 0.15s ease-in-out;
+
+    & .svg-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $secondary;
+        opacity: 1;
+    }
+}
