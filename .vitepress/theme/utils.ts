@@ -48,6 +48,16 @@ export function prepareFrontmatterHead(pageData: PageData, siteConfig: SiteConfi
     let description = pageData.description;
     if (!description.length) description = siteConfig.site.description;
 
+    let image = pageData.frontmatter.og_image;
+
+    if (pageData.frontmatter.layout == 'article' && !image) {
+        image = `${hostname}/images/${pageData.frontmatter.image}`;
+    }
+    if (pageData.frontmatter.layout == 'mentor' && !image) {
+        image = `${hostname}/images/team/${pageData.frontmatter.image}`;
+    }
+    if (!image) image = `${hostname}/images/open-graph-image-system-school.png`;
+
     let type = 'website';
     if (pageData.frontmatter.layout == 'article') type = 'article';
     if (pageData.frontmatter.layout == 'mentor') type = 'profile';
@@ -64,6 +74,10 @@ export function prepareFrontmatterHead(pageData: PageData, siteConfig: SiteConfi
         [
             'meta',
             { name: 'og:description', content: description }
+        ],
+        [
+            'meta',
+            { name: 'og:image', content: image }
         ],
         [
             'meta',
