@@ -47,19 +47,19 @@ export const data = {
     },
     selfdev4: {
         name: 'Системный фитнес',
-        date: 'октябрь',
+        date: 'зима',
         price: '60000',
         paylink: 'https://yookassa.ru/my/i/aI74_aGzBwWO/l'
     },
     // Программа «Рабочее развитие»
     workdev1: {
         name: 'Рациональная работа',
-        date: '2025-10-04',
+        date: '2025-10-11',
         price: '200000',
         paylink: 'https://yookassa.ru/my/i/aI2_qsjX5nxT/l',
         schedule: 'Разборы по вторникам с 18:00, по субботам с 11:30',
-        start: 'Первый разбор — 7 октября',
-        finish: 'Двадцать первый разбор — 13 декабря',
+        start: 'Первый разбор — 14 октября',
+        finish: 'Двадцать первый разбор — 20 декабря',
     },
     workdev2: {
         name: 'Системное мышление и методология',
@@ -115,7 +115,7 @@ export const data = {
             price: '80000',
         },
         {
-            date: '2025-10-04',
+            date: '2025-10-11',
             program: 'Рабочее развитие, I&nbsp;этап',
             prerequisite: 'Нет',
             name: 'Рациональная работа',
