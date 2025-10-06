@@ -44,9 +44,7 @@ onMounted(() => {
 
 <template>
     <div class="quiz-image">
-        <img :src="conclude.image
-            ? `/images/${conclude.image}`
-            : '/images/quiz/quiz-result.svg'">
+        <img :src="`/images/${conclude.image}`">
     </div>
 
     <div class="quiz-result" v-if="result">

@@ -1,6 +1,7 @@
 invites:
   title: 'Где вы застряли в&nbsp;развитии?'
   text: 'Пройдите быструю диагностику и получите PDF-гайд по&nbsp;обновлению вашей личной системы.'
+  image: 'quiz/whereyoustuck-quiz.svg'
 
 questions:
   -
@@ -77,6 +78,7 @@ questions:
 footer: 'Получи индивидуальный разбор → <a href="https://t.me/ssm_tg" target="_blank">напиши в Телеграм</a>'
 
 conclude:
+  image: 'quiz/whereyoustuck-result.svg'
   results:
     -
       score: 4
@@ -113,5 +115,6 @@ conclude:
     text: 'Произошла непредвиденная ошибка при подсчёте результатов. Начните квиз заново или напишите нам на <a href="mailto:support@system-school.ru">support@system-school.ru</a>.'
     button: 'Начать квиз заново'
 
+intro: 'whereyoustuck-intro'
 form: 'whereyoustuck-form'
 final: 'whereyoustuck-final'

@@ -5,6 +5,7 @@ import QuizSubscribeForm from './QuizSubscribeForm.vue'
 
 const props = defineProps<{
     path: string,
+    name: string,
     score: number,
 }>()
 
@@ -30,9 +31,7 @@ onMounted(async () => {
 <template>
     <template v-if="form">
         <div class="quiz-image">
-            <img :src="form.image
-                ? `/images/${form.image}`
-                : '/images/quiz/quiz-subscribe.svg'">
+            <img :src="`/images/${form.image}`">
         </div>
 
         <div class="quiz-subscribe">
@@ -51,6 +50,7 @@ onMounted(async () => {
                 :emailInput="form.email"
                 :submitButton="form.submit"
                 :note="form.note"
+                :code="name"
                 :score="score"
                 @next="emit('next')" />
             </div>

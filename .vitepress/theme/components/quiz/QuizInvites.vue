@@ -32,9 +32,7 @@ defineProps<{
                 </div>
 
                 <div class="section-image">
-                    <img :src="data.image
-                        ? `/images/${data.image}`
-                        : '/images/quiz/quiz.svg'">
+                    <img :src="`/images/${data.image}`">
                 </div>
             </div>
         </div>

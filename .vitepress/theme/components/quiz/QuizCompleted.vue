@@ -28,9 +28,7 @@ onMounted(async () => {
 <template>
     <template v-if="final">
         <div class="quiz-image">
-            <img :src="final.image
-                ? `/images/${final.image}`
-                : '/images/quiz/quiz-subscribe.svg'">
+            <img :src="`/images/${final.image}`">
         </div>
 
         <div class="quiz-subscribe">

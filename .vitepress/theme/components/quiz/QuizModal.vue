@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { QuizQuestion, QuizConclude } from '../../interfaces'
+import QuizIntro from './QuizIntro.vue'
 import QuizStep from './QuizStep.vue'
 import QuizAside from './QuizAside.vue'
 import TestResult from './TestResult.vue'
@@ -13,11 +14,12 @@ const props = defineProps<{
     questions: QuizQuestion[],
     footer?: string,
     conclude: QuizConclude,
+    intro: string,
     form: string
     final: string
 }>()
 
-const layout = ref('testing')
+const layout = ref('intro')
 const num = ref(0)
 const score = ref(0)
 
@@ -54,7 +56,7 @@ function reset() {
         return question
     })
 
-    layout.value = 'testing'
+    layout.value = 'intro'
     num.value = 0
     score.value = 0
 }
@@ -67,7 +69,12 @@ function reset() {
                 <div class="modal-body">
                     <CloseModal />
 
-                    <template v-if="layout == 'testing'">
+                    <QuizIntro
+                    v-if="layout == 'intro'"
+                    :path="intro"
+                    @next="layout = 'testing'" />
+
+                    <template v-else-if="layout == 'testing'">
                         <QuizStep
                         :num="num"
                         :length="questions.length"
@@ -93,6 +100,7 @@ function reset() {
                     <QuizSubscribe
                     v-else-if="layout == 'subscribe'"
                     :path="form"
+                    :name="name"
                     :score="score"
                     @next="layout = 'completion'" />
 

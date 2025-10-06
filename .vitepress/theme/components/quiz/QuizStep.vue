@@ -37,6 +37,12 @@ const emit = defineEmits<{
             v-html="question.title">
         </div>
 
+        <div
+            class="question-help"
+            v-html="question.help"
+            v-if="question.help">
+        </div>
+
         <div class="question-body">
             <QuizQuestionItem
             v-for="(answer, i) in question.answers"

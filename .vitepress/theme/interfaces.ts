@@ -34,6 +34,7 @@ export interface Quiz {
     questions: QuizQuestion[]
     footer?: string
     conclude: QuizConclude
+    intro: string
     form: string
     final: string
 }
@@ -41,13 +42,20 @@ export interface Quiz {
 export interface QuizInvites {
     title: string
     text?: string
-    image?: string
+    image: string
     button?: string
+}
+
+export interface QuizIntro {
+    title: string
+    image: string
+    button: string
 }
 
 export interface QuizQuestion {
     title: string
     type: string
+    help?: string
     required?: boolean
     message?: string
     answers: QuizAnswer[]
@@ -60,7 +68,7 @@ export interface QuizAnswer {
 }
 
 export interface QuizConclude {
-    image?: string
+    image: string
     results: QuizResult[]
     action?: QuizAction
     subscribe?: QuizAction
@@ -88,7 +96,7 @@ export interface QuizAction {
 
 export interface QuizForm {
     title: string
-    image?: string
+    image: string
     name: string
     email: string
     submit: string
@@ -97,6 +105,6 @@ export interface QuizForm {
 
 export interface QuizFinal {
     title: string
-    image?: string
+    image: string
     button?: string
 }

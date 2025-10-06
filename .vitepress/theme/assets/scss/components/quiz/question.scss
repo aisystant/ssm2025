@@ -7,6 +7,13 @@
         margin-bottom: 1.5rem;
     }
 
+    & .question-help {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-light;
+        margin-top: -1rem;
+        margin-bottom: 2rem;
+    }
+
     & .question-body {
         flex-grow: 1;
     }

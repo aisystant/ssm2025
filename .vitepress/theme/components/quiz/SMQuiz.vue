@@ -33,6 +33,7 @@ onMounted(async () => {
         :questions="data.questions"
         :footer="data.footer"
         :conclude="data.conclude"
+        :intro="data.intro"
         :form="data.form"
         :final="data.final" />
     </template>

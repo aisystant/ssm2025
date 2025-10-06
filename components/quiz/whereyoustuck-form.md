@@ -1,5 +1,6 @@
 ---
 title: 'Начни перепрошивку своей системы мышления'
+image: 'quiz/whereyoustuck.svg'
 name: 'Ваше Имя'
 email: 'Email'
 submit: 'Начать перепрошивку'

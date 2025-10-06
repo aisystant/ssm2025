@@ -1,5 +1,6 @@
 ---
 title: 'Письма уже в пути'
+image: 'quiz/whereyoustuck.svg'
 button: 'Завершить квиз'
 ---
 
