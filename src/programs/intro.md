@@ -231,4 +231,7 @@ mentors:
     - 'kunev'
     - 'rukavishnikov'
     - 'soloboev'
+
+quiz:
+    - 'whereyoustuck'
 ---

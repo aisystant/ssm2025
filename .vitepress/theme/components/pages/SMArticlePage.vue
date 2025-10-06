@@ -38,6 +38,12 @@ const { frontmatter } = useData()
         <ArticleFooter />
     </article>
 
-    <SMQuiz name="whereyoustuck" />
+    <template v-if="frontmatter.quiz">
+        <SMQuiz
+        v-for="name in frontmatter.quiz"
+        :key="name"
+        :name="name" />
+    </template>
+
     <MoreInClub />
 </template>

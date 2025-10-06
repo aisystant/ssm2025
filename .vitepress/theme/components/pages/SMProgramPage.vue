@@ -13,6 +13,7 @@ import ReviewSwiper from './../ReviewSwiper.vue'
 import MentorSwiper from './../MentorSwiper.vue'
 import AboutProject from './../AboutProject.vue'
 import ContactUs from './../ContactUs.vue'
+import SMQuiz from '../quiz/SMQuiz.vue'
 import FAQ from './../FAQ.vue'
 import { useData } from '../../composables/data'
 
@@ -98,6 +99,13 @@ const { frontmatter } = useData()
     <div class="show-more mt-0">
         <a href="/programs/" class="btn">Другие программы</a>
     </div>
+
+    <template v-if="frontmatter.quiz">
+        <SMQuiz
+        v-for="name in frontmatter.quiz"
+        :key="name"
+        :name="name" />
+    </template>
 
     <AboutProject v-if="false" />
     <ContactUs />

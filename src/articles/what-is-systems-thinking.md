@@ -26,6 +26,9 @@ questions:
       -
         name: 'Как освоить системное&nbsp;мышление?'
         selector: '#howSystemsThinking'
+
+quiz:
+    - 'whereyoustuck'
 ---
 
 ## Зачем необходимо системное мышление? {#whySystemsThinking}
