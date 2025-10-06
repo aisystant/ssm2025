@@ -10,23 +10,23 @@ products:
     items:
       -
         name: 'Подписка 1 месяц'
-        price: '1 100 ₽'
+        price: '{{ data.subscription.1m.price }}'
         text: ''
         link: 'https://aisystant.system-school.ru/lk/#/buy/email'
       -
         name: 'Подписка 3 месяца'
-        price: '3 000 ₽'
-        text: '(1000 руб / мес)'
+        price: '{{ data.subscription.3m.price }}'
+        text: '({{ data.subscription.3m.month }} руб / мес)'
         link: 'https://aisystant.system-school.ru/lk/#/buy/email'
       -
         name: 'Подписка 6 месяцев'
-        price: '5 400 ₽'
-        text: '(900 руб / мес)'
+        price: '{{ data.subscription.6m.price }}'
+        text: '({{ data.subscription.6m.month }} руб / мес)'
         link: 'https://aisystant.system-school.ru/lk/#/buy/email'
       -
         name: 'Подписка 12 месяцев'
-        price: '9 600 ₽'
-        text: '(800 руб / мес)'
+        price: '{{ data.subscription.12m.price }}'
+        text: '({{ data.subscription.12m.month }} руб / мес)'
         link: 'https://aisystant.system-school.ru/lk/#/buy/email'
     more:
       name: 'Подробнее о подписке'
@@ -36,30 +36,30 @@ products:
     title: 'Программа «Личное развитие»'
     items:
       -
-        name: 'Системное саморазвитие'
-        text: '7 сентября'
-        price: '35 000 ₽'
-        link: 'https://yookassa.ru/my/i/aI2_IE46EPrz/l'
+        name: '{{ data.selfdev1.name }}'
+        text: '{{ data.selfdev1.date }}'
+        price: '{{ data.selfdev1.price }}'
+        link: '{{ data.selfdev1.paylink }}'
       -
-        name: 'Практики саморазвития'
-        text: '8 сентября'
-        price: '35 000 ₽'
-        link: 'https://yookassa.ru/my/i/aI2_TcKUpXvD/l'
+        name: '{{ data.selfdev2.name }}'
+        text: '{{ data.selfdev2.date }}'
+        price: '{{ data.selfdev2.price }}'
+        link: '{{ data.selfdev2.paylink }}'
       -
-        name: 'Введение в системное мышление'
-        text: '29 ноября'
-        price: '80 000 ₽'
-        link: 'https://yookassa.ru/my/i/aI2_iX5TUKqv/l'
+        name: '{{ data.selfdev3.name }}'
+        text: '{{ data.selfdev3.date }}'
+        price: '{{ data.selfdev3.price }}'
+        link: '{{ data.selfdev3.paylink }}'
       -
         name: 'Мастерская по практикам саморазвития'
         text: ''
-        price: '5 000 ₽'
+        price: '5000'
         link: 'https://yookassa.ru/my/i/aI75LbjLWIYS/l'
       -
-        name: 'Системный фитнес'
-        text: ''
-        price: '60 000 ₽'
-        link: 'https://yookassa.ru/my/i/aI74_aGzBwWO/l'
+        name: '{{ data.selfdev4.name }}'
+        text: '{{ data.selfdev4.date }}'
+        price: '{{ data.selfdev4.price }}'
+        link: '{{ data.selfdev4.paylink }}'
     more:
       name: 'Подробнее о программе'
       link: '/programs/intro'
@@ -68,30 +68,35 @@ products:
     title: 'Программа «Рабочее развитие»'
     items:
       -
-        name: 'Рациональная работа'
-        text: '4 октября'
-        price: '200 000 ₽'
-        link: 'https://yookassa.ru/my/i/aI2_qsjX5nxT/l'
+        name: '{{ data.workdev1.name }}'
+        text: '{{ data.workdev1.date }}'
+        price: '{{ data.workdev1.price }}'
+        link: '{{ data.workdev1.paylink }}'
       -
-        name: 'Системное мышление и&nbsp;методология'
-        text: '9 сентября'
-        price: '150 000 ₽'
-        link: 'https://yookassa.ru/my/i/aI2_zUaRs8wP/l'
+        name: '{{ data.workdev2.name }}'
+        text: '{{ data.workdev2.date }}'
+        price: '{{ data.workdev2.price }}'
+        link: '{{ data.workdev2.paylink }}'
       -
-        name: 'Системный менеджмент и&nbsp;инженерия'
-        text: '24 сентября'
-        price: '150 000 ₽'
-        link: 'https://yookassa.ru/my/i/aI2_7yc2-Dfc/l'
+        name: '{{ data.workdev3.name }}'
+        text: '{{ data.workdev3.date }}'
+        price: '{{ data.workdev3.price }}'
+        link: '{{ data.workdev3.paylink }}'
       -
         name: 'Разбор/review выявления систем по&nbsp;первому шагу системного промпта'
         text: ''
-        price: '10 000 ₽'
+        price: '10000'
         link: 'https://yookassa.ru/my/i/aI75cHMCgy2U/l'
       -
         name: 'Тренировка — работа с&nbsp;типами «Абсурдная аналогия»'
         text: ''
-        price: '10 000 ₽'
+        price: '10000'
         link: 'https://yookassa.ru/my/i/aI75k7ARv-4k/l'
+      -
+        name: 'Семинар «First Principles Framework»'
+        text: '4 октября'
+        price: '10000'
+        link: 'https://yookassa.ru/my/i/aMZV6u24_bFV/l'
     more:
       name: 'Подробнее о программе'
       link: '/programs/orgdev'
@@ -100,9 +105,9 @@ products:
     title: 'Программа «Исследовательское развитие»'
     items:
       -
-        name: 'Интеллект-стек'
-        price: '200 000 ₽'
-        link: 'https://yookassa.ru/my/i/aI7_0-7A2vEm/l'
+        name: '{{ data.research1.name }}'
+        price: '{{ data.research1.price }}'
+        link: '{{ data.research1.paylink }}'
     more:
       name: 'Подробнее о программе'
       link: '/programs/research'

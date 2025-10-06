@@ -26,10 +26,15 @@ const { frontmatter } = useData()
             <div class="section-row">
                 <div class="section-col">
                     <h3 class="calendar-title" v-html="frontmatter.calendar.title"></h3>
-                    <a class="btn" :href="frontmatter.calendar.link.trim()" target="_blank">
+                    <a
+                        :href="frontmatter.calendar.link.trim()"
+                        class="btn"
+                        target="_blank"
+                        rel="nofollow noopener">
                         {{ frontmatter.calendar.button }}
                     </a>
                 </div>
+
                 <div class="section-col py-0">
                     <div class="calendar-image">
                         <img :src="`/images/${frontmatter.calendar.image}`">

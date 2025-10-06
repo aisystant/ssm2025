@@ -11,6 +11,7 @@
     &-brand {
         & img {
             width: 7rem;
+            aspect-ratio: 28 / 9;
         }
     }
 
@@ -35,7 +36,6 @@
     }
 
     & .offcanvas-footer {
-        @extend .d-xl-none;
         padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
         font-size: .8rem;
     }
@@ -45,17 +45,27 @@
     }
 
     &-actions {
+        position: relative;
+        $size: 2.15rem;
+        width: 8rem;
+        height: $size;
         margin-left: auto;
 
         & .button-wrapper {
             display: flex;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
 
         & .btn {
             @extend .btn-outline;
             @extend .ms-2;
+            @include flex();
             line-height: 1;
-            padding: .425rem;
+            width: $size;
+            height: $size;
+            padding: 0;
             flex-shrink: 0;
 
             & .svg-icon {
@@ -84,7 +94,8 @@
                 @include flex();
                 border-radius: 50%;
                 line-height: 1;
-                padding: .5rem;
+                width: 2.2rem;
+                height: 2.2rem;
                 @extend .text-decoration-none;
             }
 
@@ -123,6 +134,11 @@
         &-actions {
             order: 1;
         }
+
+        & .offcanvas-footer,
+        & .nav-icons {
+            display: none;
+        }
     }
 
     @include media-breakpoint-down(xl) {
@@ -148,6 +164,10 @@
         & .offcanvas-title img,
         & .navbar-brand img {
             width: 6rem;
+        }
+
+        &-actions {
+            display: none;
         }
     }
 

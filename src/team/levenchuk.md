@@ -98,6 +98,19 @@ publications:
         image: 'slide3.jpg'
         link: '/articles/multi-level-talent-pool'
 
+books:
+    title: 'Авторство'
+    items:
+      - 'education-2021'
+      - 'visual-thinking'
+      - 'system-engineering-2022'
+      - 'system-management-2023'
+      - 'intelligence-stack-2023'
+      - 'engineering-2023'
+      - 'systems-thinking-2024-t1'
+      - 'systems-thinking-2024-t2'
+      - 'methodology-2025'
+
 contacts:
     club: 'https://systemsworld.club/u/ailev/'
     telegram: 'https://t.me/ailevenchuk'

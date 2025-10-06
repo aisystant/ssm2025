@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { formatPrice } from '../../composables/format'
+
 defineProps<{
     title: string,
     subtitle?: string,
@@ -28,7 +30,7 @@ defineProps<{
                         <li v-for="item in items" :v-key="item.name">
                             <span class="name" v-html="item.name"></span>
                             <span class="price">
-                                {{ item.price }}
+                                {{ formatPrice(item.price) }}
                                 <small>{{ item.text }}</small>
                             </span>
                         </li>
@@ -42,7 +44,11 @@ defineProps<{
                 </ul>
 
                 <div class="section-footer">
-                    <a :href="footer.link.trim()" class="btn" target="_blank">
+                    <a
+                        :href="footer.link.trim()"
+                        class="btn"
+                        target="_blank"
+                        rel="nofollow">
                         {{ footer.button }}
                     </a>
 

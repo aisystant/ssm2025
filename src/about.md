@@ -149,6 +149,7 @@ contacts:
             link: 'https://aisystant.system-school.ru/'
             style: 'btn-secondary'
             target: '_blank'
+            rel: 'nofollow'
       -
         head: 'Клуб единомышленников'
         button:

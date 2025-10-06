@@ -4,12 +4,14 @@ export interface Button {
     icon?: string
     style?: string
     target?: string
+    rel?: string
 }
 
 export interface ButtonIcon {
     icon: string
     name: string
     link: string
+    rel?: string
 }
 
 export interface Ambassador {

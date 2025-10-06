@@ -17,6 +17,14 @@
 
     & .swiper-slide {
         display: flex;
+
+        @include media-breakpoint-up(md) {
+            @include slide-size(2, 1.5rem);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include slide-size(3, 1.5rem);
+        }
     }
 }
 

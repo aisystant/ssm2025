@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { formatPrice, formatMonthDay } from '../composables/format'
+
 interface Card {
     name: string
     price: string
@@ -28,15 +30,21 @@ defineProps<{
                 <div class="product-card" v-for="item in items" :key="item.name">
                     <div class="card-body">
                         <div class="card-name" v-html="item.name"></div>
-                        <div class="card-text" v-html="item.text" v-if="item.text"></div>
+                        <div class="card-text" v-if="item.text">
+                            {{ formatMonthDay(item.text) }}
+                        </div>
                     </div>
 
                     <div class="card-buy">
                         <div class="card-price">
-                            {{ item.price }}
+                            {{ formatPrice(item.price) }}
                         </div>
                         <div class="card-button">
-                            <a :href="item.link.trim()" class="btn" target="_blank">
+                            <a
+                                :href="item.link.trim()"
+                                class="btn"
+                                target="_blank"
+                                rel="nofollow noopener">
                                 Купить
                             </a>
                         </div>

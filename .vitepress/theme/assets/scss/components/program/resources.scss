@@ -19,6 +19,14 @@
             right: 100%;
             @extend .me-lg-1;
         }
+
+        @include media-breakpoint-up(md) {
+            @include slide-size(2, 1.5rem);
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include slide-size(3, 2rem);
+        }
     }
 }
 

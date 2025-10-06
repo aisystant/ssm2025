@@ -19,6 +19,28 @@
         margin-left: .5rem;
     }
 
+    & .swiper-slide {
+        @include media-breakpoint-up(sm) {
+            @include slide-size(2, 1rem);
+        }
+
+        @include media-breakpoint-up(md) {
+            @include slide-size(3, 1rem);
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include slide-size(3, 1.5rem);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include slide-size(4, 1rem);
+        }
+
+        @include media-breakpoint-up(xxl) {
+            @include slide-size(4, 1.5rem);
+        }
+    }
+
     @include media-breakpoint-up(lg) {
         & .swiper-header {
             margin-bottom: 1.5rem;
@@ -72,6 +94,7 @@
     }
 
     & .card-title {
+        @extend h6;
         margin-bottom: .5rem;
     }
 

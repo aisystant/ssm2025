@@ -1,7 +1,7 @@
 ---
 name: 'Дмитрий Боронкинов'
 link: 'https://www.facebook.com/boronkinov'
-post: 'Заместитель генерального директора по проектно-изыскательским работам <a href="http://www.uez.ru/" target="_blank">ОАО «Управление экспериментальной застройки микрорайонов»</a>'
+post: 'Заместитель генерального директора по проектно-изыскательским работам <a href="http://www.uez.ru/" target="_blank" rel="nofollow noopener">ОАО «Управление экспериментальной застройки микрорайонов»</a>'
 image: 'reviews/boronkinov.jpg'
 ---
 

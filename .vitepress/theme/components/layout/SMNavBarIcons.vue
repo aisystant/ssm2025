@@ -21,7 +21,9 @@ const emit = defineEmits<{
             <li v-if="!button.onlyDesktop && button.icon">
                 <a
                     :href="button.link.trim()"
+                    :aria-label="button.name"
                     :target="button.target ?? undefined"
+                    :rel="button.rel ?? undefined"
                     @click="emit('close')">
                     <SvgIcon :name="button.icon" />
                 </a>

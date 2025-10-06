@@ -10,6 +10,7 @@ buttons:
     name: 'Получить бесплатный доступ'
     link: 'https://aisystant.system-school.ru/lk/#/auth/signup'
     target: '_blank'
+    rel: 'nofollow'
     style: 'btn-dark'
   -
     name: 'Оформить подписку'
@@ -38,7 +39,7 @@ benefits:
   items:
     -
       name: 'Доступ сразу ко всем руководствам'
-      text: 'за 1100 ₽ в месяц<br> (от 800&nbsp;₽ при оплате за&nbsp;несколько  месяцев)'
+      text: 'за {{ data.subscription.1m.price }} ₽ в месяц<br> (от {{ data.subscription.12m.month }}&nbsp;₽ при оплате за&nbsp;несколько  месяцев)'
       image: 'benefit1.svg'
     -
       name: 'Гибкий темп обучения'
@@ -142,25 +143,25 @@ comparing:
       paid: true
 
 apply:
-  title: 'Доступ ко всем руководствам — от&nbsp;800&nbsp;рублей в&nbsp;месяц'
+  title: 'Доступ ко всем руководствам — от&nbsp;{{ data.subscription.12m.month }}&nbsp;рублей в&nbsp;месяц'
   subtitle: 'Цена фиксируется и не меняется пока вы оплачиваете подписку непрерывно'
   items:
     -
       name: 'Подписка 1 месяц'
-      price: '1 100 ₽'
+      price: '{{ data.subscription.1m.price }}'
       text: ''
     -
       name: 'Подписка 3 месяца'
-      price: '3 000 ₽'
-      text: '(1000 ₽ / мес)'
+      price: '{{ data.subscription.3m.price }}'
+      text: '({{ data.subscription.3m.month }} ₽ / мес)'
     -
       name: 'Подписка 6 месяцев'
-      price: '5 400 ₽'
-      text: '(900 ₽ / мес)'
+      price: '{{ data.subscription.6m.price }}'
+      text: '({{ data.subscription.6m.month }} ₽ / мес)'
     -
       name: 'Подписка 12 месяцев'
-      price: '9 600 ₽'
-      text: '(800 ₽ / мес)'
+      price: '{{ data.subscription.12m.price }}'
+      text: '({{ data.subscription.12m.month }} ₽ / мес)'
 
   checks:
     - 'Включите автопродление, чтобы защититься от&nbsp;повышения цены'
@@ -246,11 +247,13 @@ action:
       name: 'Оформить подписку'
       link: 'https://aisystant.system-school.ru/lk/#/buy/email'
       target: '_blank'
+      rel: 'nofollow'
       style: 'btn-dark'
     -
       name: 'Начать бесплатно'
       link: 'https://aisystant.system-school.ru/lk/#/auth/signup'
       target: '_blank'
+      rel: 'nofollow'
       style: 'btn-outline'
 
   text: 'Подписку можно отменить в любой момент. Бесплатный доступ остаётся.'

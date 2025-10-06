@@ -4,6 +4,7 @@ import MentorIntro from './../mentor/MentorIntro.vue'
 import MentorAbout from './../mentor/MentorAbout.vue'
 import MentorActivity from './../mentor/MentorActivity.vue'
 import MentorPractice from './../mentor/MentorPractice.vue'
+import MentorBooks from './../mentor/MentorBooks.vue'
 import MentorContacts from './../mentor/MentorContacts.vue'
 import MentorReviews from './../mentor/MentorReviews.vue'
 import CardSwiper from './../CardSwiper.vue'
@@ -43,6 +44,11 @@ const name = computed(() => {
     :data="frontmatter.publications"
     :dark="true"
     v-if="frontmatter.publications" />
+
+    <MentorBooks
+    :title="frontmatter.books.title"
+    :items="frontmatter.books.items"
+    v-if="frontmatter.books" />
 
     <MentorContacts
     :name="name"

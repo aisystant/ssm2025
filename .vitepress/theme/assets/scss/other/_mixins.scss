@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @mixin padding-x($left, $right: $left) {
     padding-left: $left;
     padding-right: $right;
@@ -51,4 +53,18 @@
     @include circle(1em);
     background-color: $secondary;
     border: .23em solid mix($secondary, $white, 40%);
+}
+
+@mixin slide-size($count, $offset) {
+    width: calc-width($count, $offset);
+
+    &:not(:last-child) {
+        margin-right: $offset;
+    }
+}
+
+@function calc-width($count, $offset) {
+    $percent: math.div(100%, $count);
+    $gap: math.div(($offset * ($count - 1)), $count);
+    @return calc(#{$percent} - #{$gap});
 }

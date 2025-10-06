@@ -1,7 +1,7 @@
 ---
 name: 'Сергей Солобоев'
 link: 'https://www.facebook.com/profile.php?id=537521493'
-post: 'Директор <a href="http://uniscan.biz/" target="_blank">ООО «Унискан»</a>'
+post: 'Директор <a href="http://uniscan.biz/" target="_blank" rel="nofollow noopener">ООО «Унискан»</a>'
 image: 'reviews/sersobolev.jpg'
 ---
 

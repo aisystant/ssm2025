@@ -28,7 +28,10 @@ defineProps<{
 
                 <div class="section-image">
                     <div class="mentor-image">
-                        <img :src="`/images/team/${image}`" :alt="name">
+                        <img
+                            :src="`/images/team/${image}`"
+                            :alt="name"
+                            fetchpriority="high">
                     </div>
                 </div>
             </div>

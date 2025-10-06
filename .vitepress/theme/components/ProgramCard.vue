@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { formatDate } from '../composables/format'
+
 interface Course {
     name: string
     date: string
@@ -33,16 +35,18 @@ defineProps<{
             </div>
 
             <div class="card-text" v-if="program.text">
-                <p v-for="item in program.text" :key="JSON.stringify(item)" v-html="item"></p>
+                <template v-for="item in program.text" :key="item">
+                    <p v-html="item"></p>
+                </template>
             </div>
         </div>
     </div>
 
     <div class="program-courses">
-        <div class="course-item" v-for="course in program.courses" :key="JSON.stringify(course)">
+        <div class="course-item" v-for="course in program.courses" :key="course.name">
             <div class="course-name" v-html="course.name"></div>
             <div class="start-date">
-                Старт — {{ course.date }}
+                Старт — {{ formatDate(course.date) }}
             </div>
         </div>
     </div>
