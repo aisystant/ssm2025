@@ -40,7 +40,7 @@ function send() {
     loading.value = true
 
     axios
-        .post('https://n8n.system-school.ru/webhook/188791a4-509d-4717-ae64-85bc38f5e0ef', data.value)
+        .post('https://n8n.system-school.ru/webhook/a32a5e27-93e7-4245-bf31-ea6af46324aa', data.value)
         .then(() => {
             emit('next')
         })
