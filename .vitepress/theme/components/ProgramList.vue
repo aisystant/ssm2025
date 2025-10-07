@@ -9,15 +9,17 @@ const isPrograms = computed(() => {
     return isActive(page.value.relativePath, '/programs/')
 })
 
-const data = import.meta.glob('/programs/index.md', { eager: true })
-const fm = data['/programs/index.md'].__pageData?.frontmatter ?? {}
+const data = await import('/programs/index.md')
+const fm = data.__pageData?.frontmatter ?? {}
 </script>
 
 <template>
     <h2 class="programs-title" v-html="fm.title" v-if="fm.title && !isPrograms"></h2>
 
     <div class="programs" v-if="fm.programs">
-        <div class="programs__item" v-for="program in fm.programs" :key="JSON.stringify(program)">
+        <div class="programs__item"
+            v-for="program in fm.programs"
+            :key="JSON.stringify(program)">
             <ProgramCard :program="program" />
         </div>
     </div>
