@@ -1,7 +1,0 @@
-title: 'Где вы застряли в&nbsp;развитии?'
-text: 'Пройдите быструю диагностику и получите PDF-гайд по&nbsp;обновлению вашей личной системы.'
-image: 'quiz.svg'
-button:
-  name: 'Начать квиз'
-  link: 'https://old.system-school.ru/quizform'
-  target: '_blank'

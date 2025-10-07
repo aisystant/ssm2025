@@ -3,7 +3,7 @@ import ArticleHeader from './../article/ArticleHeader.vue'
 import ArticleAuthor from './../article/ArticleAuthor.vue'
 import ArticleQuestions from './../article/ArticleQuestions.vue'
 import ArticleFooter from './../article/ArticleFooter.vue'
-import QuizInvites from '../QuizInvites.vue'
+import SMQuiz from '../quiz/SMQuiz.vue'
 import MoreInClub from '../MoreInClub.vue'
 import { useData } from '../../composables/data'
 
@@ -38,6 +38,12 @@ const { frontmatter } = useData()
         <ArticleFooter />
     </article>
 
-    <QuizInvites />
+    <template v-if="frontmatter.quiz">
+        <SMQuiz
+        v-for="name in frontmatter.quiz"
+        :key="name"
+        :name="name" />
+    </template>
+
     <MoreInClub />
 </template>
