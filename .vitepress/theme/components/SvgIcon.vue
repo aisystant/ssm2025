@@ -7,6 +7,7 @@ const props = defineProps<{
 }>()
 
 const iconId = computed(() => {
+    if (typeof window === 'undefined') return null
     return getIconId(props.name)
 })
 
