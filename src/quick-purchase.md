@@ -92,11 +92,6 @@ products:
         text: ''
         price: '10000'
         link: 'https://yookassa.ru/my/i/aI75k7ARv-4k/l'
-      -
-        name: 'Семинар «First Principles Framework»'
-        text: '4 октября'
-        price: '10000'
-        link: 'https://yookassa.ru/my/i/aMZV6u24_bFV/l'
     more:
       name: 'Подробнее о программе'
       link: '/programs/orgdev'
