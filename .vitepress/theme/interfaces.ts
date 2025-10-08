@@ -69,6 +69,7 @@ export interface QuizAnswer {
 
 export interface QuizConclude {
     image: string
+    mode?: string
     results: QuizResult[]
     action?: QuizAction
     subscribe?: QuizAction

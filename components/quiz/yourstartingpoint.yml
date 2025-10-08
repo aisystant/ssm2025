@@ -136,6 +136,7 @@ footer: 'Получи индивидуальный разбор → <a href="htt
 
 conclude:
   image: 'quiz/yourstartingpoint-result.svg'
+  mode: 'level'
   results:
     -
       score: 1
