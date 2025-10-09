@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useData } from '../composables/data'
 import { isActive } from '../shared'
 import ProgramCard from './ProgramCard.vue'
@@ -9,8 +9,12 @@ const isPrograms = computed(() => {
     return isActive(page.value.relativePath, '/programs/')
 })
 
-const data = await import('/programs/index.md')
-const fm = data.__pageData?.frontmatter ?? {}
+const fm = ref<{ title?: string; programs?: any[] }>({})
+
+onMounted(async () => {
+    const data = await import('/programs/index.md')
+    fm.value = data.__pageData?.frontmatter ?? {}
+})
 </script>
 
 <template>
