@@ -4,6 +4,7 @@ import SMContent from './components/layout/SMContent.vue'
 import SMFooter from './components/layout/SMFooter.vue'
 import SMCookies from './components/layout/SMCookies.vue'
 import SMUpButton from './components/layout/SMUpButton.vue'
+import YandexMetrika from './components/layout/YandexMetrika.vue'
 </script>
 
 <template>
@@ -12,4 +13,5 @@ import SMUpButton from './components/layout/SMUpButton.vue'
   <SMFooter />
   <SMCookies />
   <SMUpButton />
+  <YandexMetrika />
 </template>

@@ -124,16 +124,6 @@ export const data = {
             price: '200000',
         },
         {
-            date: '2025-10-04',
-            program: 'Рабочее развитие, I&nbsp;этап',
-            prerequisite: 'Нет',
-            name: 'Семинар "First Principles Framework"',
-            sitelink: 'https://systemsworld.club/t/ceminar-first-principles-framework-v-programme-issledovatelskogo-razvitiya-inzhenerov-menedzherov/30624',
-            target: '_blank',
-            format: 'стажировка с&nbsp;мастером',
-            price: '10000',
-        },
-        {
             date: '2026-02-03',
             program: 'Рабочее развитие, II&nbsp;этап',
             prerequisite: 'Завершенный I&nbsp;этап',

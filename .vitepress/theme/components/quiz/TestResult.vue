@@ -68,6 +68,8 @@ onMounted(() => {
     </div>
 
     <div class="quiz-result" v-if="result">
+        <div class="result-subtitle">Ваш результат:</div>
+
         <div class="result-header" v-html="result.name"></div>
 
         <div class="result-body">
