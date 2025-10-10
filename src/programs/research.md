@@ -2,6 +2,7 @@
 layout: program
 title: 'Исследовательское развитие'
 description: 'Поднять свою квалификацию в усилении интеллекта, чтобы глубоко разбираться в устройстве мира, строить точные модели сложных ситуаций, менять картину мира.'
+og_image: 'open-graph-image-research.png'
 
 image_pc: 'research-hero.svg'
 image_mob: 'research-hero.svg'

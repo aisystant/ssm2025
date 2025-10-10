@@ -3,6 +3,7 @@ layout: starting
 title: 'Как начать путь'
 pagetitle: 'Как начать путь <small>в Мастерской инженеров‑менеджеров</small>'
 description: 'Выбирайте направление развития, изучайте руководства, проходите стажировки и становитесь частью сообщества инженеров-менеджеров.'
+og_image: 'open-graph-image-howtostart.png'
 
 image: 'vision.svg'
 buttons:

@@ -2,6 +2,7 @@
 layout: program
 title: 'Рабочее развитие'
 description: 'Поднять свою квалификацию в создании и развитии самых разных систем, от классических "железных" и программных до организационных и сообществ.'
+og_image: 'open-graph-image-workdev.png'
 
 image_pc: 'orgdev-hero.svg'
 image_mob: 'orgdev-hero.svg'

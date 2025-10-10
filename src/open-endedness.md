@@ -3,6 +3,7 @@ layout: openendedness
 title: 'Подписка Бесконечное развитие'
 pagetitle: '<small>Подписка</small> Бесконечное развитие'
 description: 'Доступ к живым руководствам по саморазвитию, мышлению и инженерии личности. С ИИ-ассистентом, задачами, трекером прогресса и поддержкой среды.'
+og_image: 'open-graph-image-subscribe.png'
 
 image: 'open-endedness.svg'
 buttons:

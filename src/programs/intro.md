@@ -3,6 +3,7 @@ layout: program
 title: 'Личное развитие'
 subtitle: 'или как собрать себя, как систему'
 description: 'Постройте ясную модель себя. Поймите, из чего вы состоите. Что вас двигает. Что мешает. И как это изменить.'
+og_image: 'open-graph-image-intro.png'
 
 image_pc: 'selfdev-hero.svg'
 image_mob: 'selfdev-hero-mob.svg'
