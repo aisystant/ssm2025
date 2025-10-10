@@ -11,21 +11,26 @@
         position: relative;
         flex: 1 0 0%;
         display: flex;
+        align-items: center;
+        text-align: center;
         flex-direction: column;
-        align-items: flex-start;
         background-color: $light;
         @extend .rounded;
         padding: 2rem 1.5rem;
         @extend .px-lg-5;
 
         & .contact-name {
-            @extend h3;
+            @extend h4;
             flex-grow: 1;
             margin-bottom: 2rem;
         }
 
         & .btn {
             min-width: 16em;
+
+            @include media-breakpoint-only(lg) {
+                min-width: 100%;
+            }
         }
     }
 
@@ -37,7 +42,7 @@
         @extend .mt-lg-6;
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         & .contacts-item {
             & ~ .contacts-item {
                 margin-left: 1.25rem;
@@ -45,7 +50,7 @@
         }
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         & .contacts-item {
             aspect-ratio: 7 / 3;
 
@@ -70,27 +75,18 @@
     }
 
     @include media-breakpoint-up(xl) {
-        & .contacts-item {
-            & .btn {
-                padding: $btn-padding-y-lg $btn-padding-x-lg;
-                font-size: $btn-font-size-lg;
-            }
-        }
-
         & .section-footer {
             font-size: $h3-font-size;
         }
     }
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         & .section-row {
             flex-direction: column;
             align-items: center;
         }
 
         & .contacts-item {
-            align-items: center;
-            text-align: center;
             width: 26rem;
             max-width: 100%;
             margin-bottom: 1.25rem;

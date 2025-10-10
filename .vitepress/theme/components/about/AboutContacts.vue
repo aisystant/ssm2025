@@ -18,7 +18,7 @@ defineProps<{
 
         <div class="section-row">
             <template v-for="item in items" :key="item.head">
-                <div :class="`contacts-item ${item.style ?? undefined}`">
+                <div :class="`contacts-item ${item.style ?? ''}`">
                     <div class="contact-name" v-html="item.head"></div>
 
                     <a

@@ -151,12 +151,18 @@ contacts:
             target: '_blank'
             rel: 'nofollow'
       -
-        head: 'Клуб единомышленников'
+        head: 'Клуб инженеров-менеджеров'
         button:
             name: 'Перейти'
             link: 'https://systemsworld.club/'
             style: 'btn-dark'
             target: '_blank'
+      -
+        head: 'Все наши продукты'
+        button:
+            name: 'Быстрая покупка'
+            link: '/quick-purchase'
+            style: 'btn-dark'
 
     footer: 'До встречи на стажировках, семинарах и&nbsp;разборах!'
 ---
