@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { teamPages } from './../support/members'
+import TeacherCard from './team/TeacherCard.vue'
 import Swiper from 'swiper/bundle';
 
 const props = defineProps<{
@@ -69,29 +70,13 @@ onMounted(() => {
         <div class="swiper" ref="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" v-for="member in members" :key="member.id">
-                    <a :href="`/team/${member.id}/`" class="teacher-card">
-                        <div class="card-image">
-                            <img
-                            :src="`/images/team/${member.image}`"
-                            :alt="`${member.surname} ${member.name}`">
-                        </div>
-
-                        <div class="card-body">
-                            <div class="card-title">
-                                {{ member.surname }} {{ member.name }}
-                            </div>
-                            <div
-                                class="card-small"
-                                v-html="member.post"
-                                v-if="member.post">
-                            </div>
-                            <div
-                                class="card-text"
-                                v-html="member.description"
-                                v-if="member.description">
-                            </div>
-                        </div>
-                    </a>
+                    <TeacherCard
+                    :id="member.id"
+                    :image="member.image"
+                    :name="member.name"
+                    :surname="member.surname"
+                    :post="member.post ?? undefined"
+                    :description="member.description ?? undefined" />
                 </div>
             </div>
 

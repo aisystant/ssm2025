@@ -5,7 +5,7 @@ import CardSwiper from './../CardSwiper.vue'
 import EducationItems from './../EducationItems.vue'
 import ProgramList from './../ProgramList.vue'
 import SubscribeForm from './../SubscribeForm.vue'
-import TeamCards from './../TeamCards.vue'
+import TeamCards from './../team/TeamCards.vue'
 import ContactUs from './../ContactUs.vue'
 import { useData } from '../../composables/data'
 

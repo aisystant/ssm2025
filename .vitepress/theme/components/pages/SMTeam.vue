@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TeamCards from './../TeamCards.vue'
+import TeamCards from './../team/TeamCards.vue'
 import { useData } from '../../composables/data'
 
 const { frontmatter } = useData()
