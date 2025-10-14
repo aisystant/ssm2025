@@ -235,4 +235,5 @@ mentors:
 
 quiz:
     - 'whereyoustuck'
+    - 'yourstartingpoint'
 ---

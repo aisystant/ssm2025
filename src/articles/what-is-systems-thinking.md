@@ -29,6 +29,7 @@ questions:
 
 quiz:
     - 'whereyoustuck'
+    - 'yourstartingpoint'
 ---
 
 ## Зачем необходимо системное мышление? {#whySystemsThinking}

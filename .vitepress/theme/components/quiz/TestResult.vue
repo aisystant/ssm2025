@@ -18,6 +18,25 @@ const score = ref(0)
 const error = ref(false)
 const result = ref<QuizResult | null>(null)
 
+function getLevel() {
+    let level = props.questions[0].answers.find(answer => answer.checked)?.score
+    if (!level) {
+        error.value = true
+        return
+    }
+
+    for (let i = 1; i < props.questions.length; i++) {
+        if (level === 1) break
+
+        const score = props.questions[i].answers.find(answer => answer.checked)?.score
+        if (!score) continue
+
+        if (level > score) level--
+    }
+    score.value = level
+    return getResultByScore()
+}
+
 function calcAmount() {
     let sum = props.questions.reduce((sum, question) => {
         question.answers.forEach(answer => {
@@ -26,6 +45,7 @@ function calcAmount() {
         return sum
     }, 0)
     score.value = sum
+    return getResultByScore()
 }
 
 function getResultByScore() {
@@ -37,8 +57,8 @@ function getResultByScore() {
 watch(score, (value) => emit('update', value))
 
 onMounted(() => {
-    calcAmount()
-    getResultByScore()
+    if (props.conclude.mode === 'level') getLevel()
+    else calcAmount()
 })
 </script>
 
