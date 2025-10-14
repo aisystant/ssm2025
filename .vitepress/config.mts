@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import createSvgSpritePlugin from 'vite-plugin-svg-sprite'
+import { imagetools } from 'vite-imagetools'
 import { replaceFrontmatterVariables, prepareFrontmatterHead } from './theme/utils'
 
 // https://vitepress.dev/reference/site-config
@@ -98,6 +99,7 @@ export default defineConfig({
                 symbolId: 'icon-[name]-[hash]',
                 include: ['**/sprite/**.svg']
             }),
+            imagetools(),
         ],
     },
 

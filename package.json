@@ -15,6 +15,7 @@
     "axios": "^1.12.2",
     "js-yaml": "^4.1.0",
     "sass": "1.77.8",
+    "vite-imagetools": "^9.0.0",
     "vite-plugin-svg-sprite": "^0.6.2",
     "vitepress": "^1.6.3"
   }

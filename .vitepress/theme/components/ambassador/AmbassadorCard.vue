@@ -9,12 +9,18 @@ const props = defineProps<{
 }>()
 
 const ambassador = ref<Ambassador>()
+const imageSrc = ref('')
 const isOpen = ref(false)
+
+async function loadImage() {
+    imageSrc.value = new URL(`/public/images/${ambassador.value?.image}?w=400&withoutEnlargement`, import.meta.url).href
+}
 
 onMounted(async () => {
     try {
         const page = await import(`../../../../components/ambassadors/${props.path}.md`)
         ambassador.value = page.__pageData.frontmatter
+        if (ambassador.value) loadImage()
 
     } catch (error) {
         console.log(error)
@@ -26,7 +32,10 @@ onMounted(async () => {
     <div class="ambassador-card" v-if="ambassador">
         <div @click="isOpen = true" role="button">
             <div class="card-image">
-                <img :src="`/images/${ambassador.image}`" :alt="ambassador.name">
+                <img
+                    :src="imageSrc"
+                    :alt="ambassador.name"
+                    @error="imageSrc = `/images/${ambassador.image}`">
             </div>
 
             <div class="card-body">
