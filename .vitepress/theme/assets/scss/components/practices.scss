@@ -60,7 +60,7 @@
     @include media-breakpoint-down(xl) {
         & .section-row {
             flex-direction: column;
-            width: 50rem;
+            width: $text-width;
         }
 
         & .practices-head {

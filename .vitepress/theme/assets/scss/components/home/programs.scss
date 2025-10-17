@@ -19,6 +19,12 @@
             @extend .mt-lg-5;
         }
 
+        &:nth-of-type(even) {
+            & .program-card {
+                @extend .light-card;
+            }
+        }
+
         & .program-card,
         & .program-courses {
             width: 100%;

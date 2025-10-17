@@ -2,6 +2,7 @@
 import BenefitIntro from './../benefit/BenefitIntro.vue'
 import BenefitItem from './../benefit/BenefitItem.vue'
 import CallToAction from './../CallToAction.vue'
+import QuizInvites from '../quiz/QuizInvites.vue'
 import { useData } from '../../composables/data'
 
 const { frontmatter } = useData()
@@ -26,4 +27,11 @@ const { frontmatter } = useData()
     :buttons="frontmatter.action.buttons"
     :text="frontmatter.action.text"
     v-if="frontmatter.action" />
+
+    <template v-if="frontmatter.quiz">
+        <QuizInvites
+        v-for="name in frontmatter.quiz"
+        :key="name"
+        :name="name" />
+    </template>
 </template>

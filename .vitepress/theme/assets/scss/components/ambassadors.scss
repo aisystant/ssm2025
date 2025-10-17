@@ -19,7 +19,7 @@
 
         & > .ambassador-card {
             @extend .mx-auto;
-            max-width: 24rem;
+            max-width: $card-max-width;
 
             & .card-footer {
                 @include padding-y(0, 1rem);
