@@ -48,8 +48,10 @@ export function prepareFrontmatterHead(pageData: PageData, siteConfig: SiteConfi
     let description = pageData.description;
     if (!description.length) description = siteConfig.site.description;
 
-    let image = `${hostname}/images/${pageData.frontmatter.og_image}`;
-
+    let image = '';
+    if (pageData.frontmatter.og_image) {
+        image = `${hostname}/images/${pageData.frontmatter.og_image}`;
+    } 
     if (pageData.frontmatter.layout == 'article' && !image) {
         image = `${hostname}/images/${pageData.frontmatter.image}`;
     }
