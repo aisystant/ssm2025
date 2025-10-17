@@ -10,7 +10,7 @@ const invites = ref<QuizInvites>()
 
 onMounted(async () => {
     try {
-        const page = await import(`/quiz/${props.name}.md`)
+        const page = await import(`../../../../src/quiz/${props.name}.md`)
         const fm = page.__pageData.frontmatter
         invites.value = {
             title: fm.title,
