@@ -15,8 +15,6 @@ const data = yaml.load(yamlText) as {
     btn_modal: string
     btn_cons?: string
     link_cons?: string
-    btn_support?: string
-    link_support?: string
 }
 </script>
 
@@ -43,12 +41,7 @@ const data = yaml.load(yamlText) as {
                         {{ data.btn_bot }}
                     </a>
 
-                    <a :href="data.link_support.trim()" class="btn" target="_blank" v-if="data.link_support && data.btn_support">
-                        <SvgIcon name="tg-outline" />
-                        {{ data.btn_support }}
-                    </a>
-
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#feedback" v-if="false">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#feedback">
                         <SvgIcon name="tg-outline" />
                         {{ data.btn_modal }}
                     </button>
@@ -60,5 +53,5 @@ const data = yaml.load(yamlText) as {
             </div>
         </div>
     </section>
-    <FeedbackForm v-if="false" />
+    <FeedbackForm />
 </template>
