@@ -121,6 +121,7 @@ $caret-spacing:               .3em;
 $color-transition:            color .15s ease-in-out;
 $toast-background-color:      $white;
 $hr-opacity:                  .2;
+$text-width:                  50rem;
 
 $icon-plus: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='#{$secondary}' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><line x1='12' y1='4' x2='12' y2='20'></line><line x1='4' y1='12' x2='20' y2='12'></line></svg>");
 $chevron-right: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 18 15 12 9 6'></polyline></svg>");
@@ -207,7 +208,7 @@ $card-border-width: 0;
 $card-border-radius: $border-radius;
 $card-bg: $white;
 $card-cap-bg: $card-bg;
-$card-max-width: 17rem;
+$card-max-width: 24rem;
 
 // Modals
 

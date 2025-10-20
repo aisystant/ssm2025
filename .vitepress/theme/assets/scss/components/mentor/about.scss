@@ -5,7 +5,7 @@
 
     & .section-body {
         position: relative;
-        max-width: 50rem;
+        max-width: $text-width;
         @extend .mx-auto;
     }
 

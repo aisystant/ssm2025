@@ -1,4 +1,4 @@
-.quiz {
+.quiz-invites {
     @extend .container;
     @extend %section-margin;
 
@@ -33,18 +33,18 @@
         }
     }
 
-    &-title {
+    & .quiz-title {
         color: $secondary;
     }
 
-    &-text {
+    & .quiz-text {
         font-weight: $font-weight-light;
         margin-bottom: 1.5rem;
     }
 
     & .btn {
         @extend .btn-dark;
-        min-width: 18em;
+        min-width: 16em;
     }
 
     @include media-breakpoint-up(sm) {
@@ -84,11 +84,11 @@
             @include padding-y(4rem);
         }
 
-        &-title {
+        & .quiz-title {
             font-size: $h1-font-size;
         }
 
-        &-text {
+        & .quiz-text {
             font-size: $btn-font-size-lg;
             margin-bottom: 2rem;
         }
