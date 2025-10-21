@@ -13,7 +13,7 @@ import ReviewSwiper from './../ReviewSwiper.vue'
 import MentorSwiper from './../MentorSwiper.vue'
 import AboutProject from './../AboutProject.vue'
 import ContactUs from './../ContactUs.vue'
-import SMQuiz from '../quiz/SMQuiz.vue'
+import QuizInvites from '../quiz/QuizInvites.vue'
 import FAQ from './../FAQ.vue'
 import { useData } from '../../composables/data'
 
@@ -101,7 +101,7 @@ const { frontmatter } = useData()
     </div>
 
     <template v-if="frontmatter.quiz">
-        <SMQuiz
+        <QuizInvites
         v-for="name in frontmatter.quiz"
         :key="name"
         :name="name" />

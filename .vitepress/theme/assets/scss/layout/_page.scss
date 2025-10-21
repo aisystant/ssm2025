@@ -65,6 +65,6 @@
 }
 
 .text-wrap {
-    max-width: 50rem;
+    max-width: $text-width;
     @extend .mx-auto;
 }

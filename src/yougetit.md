@@ -53,4 +53,8 @@ action:
       style: 'btn-outline'
 
   text: 'Подписку можно отменить в любой момент. Бесплатный доступ остаётся.'
+
+quiz:
+  - 'whereyoustuck'
+  - 'yourstartingpoint'
 ---

@@ -1,7 +1,12 @@
-invites:
-  title: 'Где вы застряли в&nbsp;развитии?'
-  text: 'Пройдите быструю диагностику и получите PDF-гайд по&nbsp;обновлению вашей личной системы.'
-  image: 'quiz/whereyoustuck-quiz.svg'
+---
+layout: quiz
+title: 'Где вы застряли в развитии?'
+description: 'Пройдите быструю диагностику и получите PDF-гайд по обновлению вашей личной системы.'
+
+order: 10
+image: 'quiz/whereyoustuck.svg'
+cut_image: 'quiz/whereyoustuck-quiz.svg'
+button: 'Узнать'
 
 questions:
   -
@@ -115,6 +120,8 @@ conclude:
     text: 'Произошла непредвиденная ошибка при подсчёте результатов. Начните квиз заново или напишите нам на <a href="mailto:support@system-school.ru">support@system-school.ru</a>.'
     button: 'Начать квиз заново'
 
-intro: 'whereyoustuck-intro'
 form: 'whereyoustuck-form'
 final: 'whereyoustuck-final'
+---
+
+5 вопросов, чтобы понять, на&nbsp;каком уровне ваша внутренняя система даёт сбой — и как начать её обновление в&nbsp;эпоху ИИ.

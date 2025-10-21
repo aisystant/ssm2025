@@ -1,40 +1,36 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import { Quiz } from '../../interfaces'
-import QuizInvites from './QuizInvites.vue'
 import QuizModal from './QuizModal.vue'
-import yaml from 'js-yaml'
 
-const props = defineProps<{
-    name: string
+import { useData } from '../../composables/data'
+const { page } = useData()
+const name = page.value.relativePath.replace(/^.*\/([^/]+)\.md$/, '$1')
+
+defineProps<{
+    quiz: Quiz
 }>()
 
-const data = ref<Quiz | null>(null)
-
-onMounted(async () => {
-    try {
-        const yamlModule = await import(`../../../../components/quiz/${props.name}.yml?raw`)
-        data.value = yaml.load(yamlModule.default) as Quiz
-
-    } catch (error) {
-        console.log(error)
-    }
-})
+const inProgress = ref(false)
 </script>
 
 <template>
-    <template v-if="data">
-        <QuizInvites
-        :name="name"
-        :data="data.invites" />
+    <div class="quiz-start">
+        <button
+            class="btn"
+            :data-bs-target="`#${name}`"
+            data-bs-toggle="modal">
+            {{ inProgress ? 'Продолжить' : 'Начать' }} квиз
+        </button>
+    </div>
 
-        <QuizModal
-        :name="name"
-        :questions="data.questions"
-        :footer="data.footer"
-        :conclude="data.conclude"
-        :intro="data.intro"
-        :form="data.form"
-        :final="data.final" />
-    </template>
+    <QuizModal
+    :name="name"
+    :questions="quiz.questions"
+    :footer="quiz.footer ?? undefined"
+    :conclude="quiz.conclude"
+    :form="quiz.form"
+    :final="quiz.final"
+    @start="inProgress = true"
+    @finish="inProgress = false" />
 </template>

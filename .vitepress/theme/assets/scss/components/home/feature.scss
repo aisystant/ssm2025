@@ -49,7 +49,7 @@
         }
 
         @include media-breakpoint-down(sm) {
-            max-width: $card-max-width;
+            max-width: 17rem;
         }
     }
 }

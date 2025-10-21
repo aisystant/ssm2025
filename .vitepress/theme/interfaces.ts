@@ -34,7 +34,6 @@ export interface Quiz {
     questions: QuizQuestion[]
     footer?: string
     conclude: QuizConclude
-    intro: string
     form: string
     final: string
 }
@@ -44,12 +43,6 @@ export interface QuizInvites {
     text?: string
     image: string
     button?: string
-}
-
-export interface QuizIntro {
-    title: string
-    image: string
-    button: string
 }
 
 export interface QuizQuestion {

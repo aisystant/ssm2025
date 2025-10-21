@@ -64,7 +64,7 @@
     }
 
     @include media-breakpoint-down(sm) {
-        max-width: 24rem;
+        max-width: $card-max-width;
 
         & .card-image {
             aspect-ratio: 7 / 3;
