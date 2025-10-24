@@ -12,6 +12,7 @@ const form = yaml.load(yamlText) as {
     title: string
     name?: string
     account?: string
+    email?: string
     submit?: string
     success: string
     error: string
@@ -19,6 +20,7 @@ const form = yaml.load(yamlText) as {
 
 const name = ref('')
 const nic = ref('')
+const email = ref('')
 const loading = ref(false)
 const success = ref(false)
 const error = ref(false)
@@ -26,6 +28,8 @@ const error = ref(false)
 const valid = computed(() => {
     return name.value.length > 2
         && nic.value.length > 2
+        && email.value.length > 3
+        && email.value.includes('@')
 })
 
 const data = computed(() => {
@@ -33,6 +37,7 @@ const data = computed(() => {
         'form_type': 'contact_to_me',
         'user_name': name.value,
         'user_tg_name': nic.value,
+        'email': email.value,
     }
 })
 
@@ -116,6 +121,14 @@ onMounted(() => {
                                     class="form-control"
                                     v-model.trim="name"
                                     :placeholder="form.name ?? 'Имя'">
+                            </div>
+
+                            <div class="mb-3">
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    v-model.trim="email"
+                                    :placeholder="form.email ?? 'Email'">
                             </div>
 
                             <div class="mb-3">

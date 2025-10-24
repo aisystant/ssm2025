@@ -63,7 +63,7 @@
 
         & .modal-body {
             @extend .py-xl-6;
-            min-height: 26.5rem;
+            min-height: 30rem;
         }
 
         & .btn-close {
@@ -80,7 +80,7 @@
         @extend .mx-auto;
 
         & img {
-            height: 11.5rem;
+            height: 15rem;
         }
 
         & .form-submit {
