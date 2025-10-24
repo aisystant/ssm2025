@@ -49,7 +49,7 @@ format:
         text: 'Доступ ко всем материалам.<br> Идёшь в своём темпе.'
         price:
           -
-            cost: 'от 700 ₽ в месяц'
+            cost: 'от {{ data.subscription.12m.month }} ₽ в месяц'
             text: 'при подписке на год'
 
         button:
