@@ -2,19 +2,19 @@ export const data = {
     // Подписка «Бесконечное развитие»
     subscription: {
         '1m': {
-            price: '1100',
+            price: '1200',
         },
         '3m': {
-            price: '3000',
-            month: '1000',
+            price: '3300',
+            month: '1100',
         },
         '6m': {
-            price: '5400',
-            month: '900',
+            price: '6000',
+            month: '1000',
         },
         '12m': {
-            price: '9600',
-            month: '800',
+            price: '10800',
+            month: '900',
         },
     },
     // Программа «Личное развитие»
