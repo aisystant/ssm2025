@@ -3,6 +3,7 @@ import { useData } from '../../composables/data'
 import SMLogo from './SMLogo.vue'
 import SMSocial from './SMSocial.vue'
 import SMFooterContacts from './SMFooterContacts.vue'
+import SMFooterLinks from './SMFooterLinks.vue'
 
 const { theme } = useData()
 const year = new Date().getFullYear()
@@ -32,6 +33,10 @@ const year = new Date().getFullYear()
                     <div class="footer-copyright">
                         &copy; {{ theme.siteTitle }}, {{ year }}
                     </div>
+
+                    <SMFooterLinks
+                    :items="theme.footer.links"
+                    v-if="theme.footer && theme.footer.links" />
                 </div>
             </div>
         </div>
