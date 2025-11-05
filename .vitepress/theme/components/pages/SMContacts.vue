@@ -31,6 +31,16 @@ const { frontmatter } = useData()
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-7 col-xl-8">
+                    <ContactsCard
+                    :items="[frontmatter.legal]" />
+                </div>
+
+                <div class="col-lg-5 col-xl-4">
+                    <ContactsCard
+                    :items="[frontmatter.requisites]" />
+                </div>
             </div>
         </div>
     </div>
