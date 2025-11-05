@@ -54,6 +54,22 @@ english:
         name: 'Международный клуб'
         link: 'https://club.aisystant.com'
 
+legal:
+    title: 'Юридический адрес'
+    contacts:
+      -
+        name: 'ИП Церенов Церен Валериевич'
+      -
+        name: '119296, Россия, Москва, Ленинский пр-кт, д.&nbsp;69, стр.&nbsp;2, кв.&nbsp;327'
+
+requisites:
+    title: 'Реквизиты'
+    contacts:
+      -
+        name: 'ИНН 772776471161'
+      -
+        name: 'ОГРНИП 317774600314503'
+
 community:
     title: 'Каналы и сообщества'
 
