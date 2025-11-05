@@ -32,6 +32,12 @@ const year = new Date().getFullYear()
                     <div class="footer-copyright">
                         &copy; {{ theme.siteTitle }}, {{ year }}
                     </div>
+
+                    <div class="footer-oferta" v-if="theme.offer">
+                        <a :href="theme.offer.link.trim()">
+                            {{ theme.offer.text }}
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -91,6 +91,10 @@ export default defineConfig({
             services: 'telegram,vkontakte,whatsapp,linkedin,lj,blogger',
             hostname: 'https://system-school.ru',
         },
+        offer: {
+            text: "Публичный договор оферты",
+            link: "/oferta",
+        },
     },
 
     vite: {
