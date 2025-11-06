@@ -1,12 +1,13 @@
 <script lang="ts" setup>
 import imageSrc from '../assets/img/success.svg'
 import CloseModal from './CloseModal.vue'
-import formAgreement from '../../../components/agreement.md'
+import FormAgreement from './FormAgreement.vue'
+import FormInputError from './FormInputError.vue'
 import yamlText from '../../../components/feedback.yml?raw'
 import yaml from 'js-yaml'
 
 import axios from 'axios'
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 
 const form = yaml.load(yamlText) as {
     title: string
@@ -19,11 +20,13 @@ const form = yaml.load(yamlText) as {
 }
 
 const name = ref('')
-const nic = ref('')
 const email = ref('')
+const nic = ref('')
+const agreement = ref(false)
 const loading = ref(false)
 const success = ref(false)
 const error = ref(false)
+const confirmError = ref(false)
 
 const valid = computed(() => {
     return name.value.length > 2
@@ -41,8 +44,15 @@ const data = computed(() => {
     }
 })
 
+watch(() => agreement.value, (val) => {
+    if (val) confirmError.value = false
+})
+
 function send() {
     error.value = false
+    confirmError.value = !agreement.value
+
+    if (confirmError.value) return
     loading.value = true
 
     axios
@@ -61,8 +71,11 @@ const modal = ref<HTMLElement | null>(null)
 
 function reset() {
     name.value = ''
+    email.value = ''
     nic.value = ''
+    agreement.value = false
     error.value = false
+    confirmError.value = false
 }
 
 onMounted(() => {
@@ -139,6 +152,15 @@ onMounted(() => {
                                     :placeholder="form.account ?? 'Аккаунт Telegram'">
                             </div>
 
+                            <div class="form-agreement">
+                                <FormAgreement
+                                v-model="agreement" />
+
+                                <FormInputError
+                                text="Подтвердите согласие"
+                                :show="confirmError" />
+                            </div>
+
                             <div class="form-submit">
                                 <button
                                     type="submit"
@@ -148,10 +170,6 @@ onMounted(() => {
                                 </button>
                             </div>
                         </form>
-
-                        <div class="form-agreement">
-                            <formAgreement />
-                        </div>
                     </div>
                 </div>
             </div>

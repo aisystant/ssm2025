@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import axios from 'axios'
-import { ref, computed } from 'vue'
+import FormAgreement from './../FormAgreement.vue'
+import FormInputError from './../FormInputError.vue'
+import { ref, computed, watch } from 'vue'
 
 const props = defineProps<{
     nameInput: string,
@@ -13,8 +15,10 @@ const props = defineProps<{
 
 const name = ref('')
 const email = ref('')
+const agreement = ref(false)
 const loading = ref(false)
 const error = ref(false)
+const confirmError = ref(false)
 
 const emit = defineEmits<{
     (e: 'next'): void,
@@ -35,8 +39,15 @@ const data = computed(() => {
     }
 })
 
+watch(() => agreement.value, (val) => {
+    if (val) confirmError.value = false
+})
+
 function send() {
     error.value = false
+    confirmError.value = !agreement.value
+
+    if (confirmError.value) return
     loading.value = true
 
     axios
@@ -66,8 +77,17 @@ function send() {
                 v-model.trim="email"
                 :placeholder="emailInput">
 
+            <div class="form-agreement">
+                <FormAgreement
+                v-model="agreement" />
+
+                <FormInputError
+                text="Подтвердите согласие"
+                :show="confirmError" />
+            </div>
+
             <div
-                class="form-text text-danger"
+                class="form-text text-danger mt-3"
                 v-if="error">
                 Ошибка отправки данных
             </div>

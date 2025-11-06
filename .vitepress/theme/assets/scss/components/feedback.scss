@@ -63,7 +63,7 @@
 
         & .modal-body {
             @extend .py-xl-6;
-            min-height: 30rem;
+            min-height: 30.5rem;
         }
 
         & .btn-close {
@@ -84,7 +84,7 @@
         }
 
         & .form-submit {
-            margin-top: 1.5rem;
+            margin-top: 2rem;
 
             & .btn {
                 @extend .btn-dark;
