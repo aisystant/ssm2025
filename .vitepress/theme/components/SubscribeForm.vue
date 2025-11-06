@@ -9,7 +9,7 @@ const isSubscribe = computed(() => {
     return isActive(page.value.relativePath, '/subscribe')
 })
 
-import formAgreement from '../../../components/agreement.md'
+import FormAgreement from './FormAgreement.vue'
 import yamlText from '../../../components/subscribe.yml?raw'
 import yaml from 'js-yaml'
 
@@ -44,16 +44,15 @@ const data = yaml.load(yamlText) as {
                     <div class="mb-3">
                         <input type="email" class="form-control" :placeholder="data.email ?? 'Email'">
                     </div>
+                    <div class="form-agreement">
+                        <FormAgreement />
+                    </div>
                     <div class="form-submit">
                         <button type="submit" class="btn">
                             {{ data.submit ?? 'Подписаться' }}
                         </button>
                     </div>
                 </form>
-
-                <div class="form-agreement">
-                    <formAgreement />
-                </div>
 
                 <div class="form-footer" v-if="!isSubscribe">
                     <a :href="data.link" v-html="data.whatis"></a>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import formAgreement from '../../../components/agreement.md'
+import FormAgreement from './FormAgreement.vue'
 import yamlText from '../../../components/about.yml?raw'
 import yaml from 'js-yaml'
 
@@ -35,15 +35,15 @@ const data = yaml.load(yamlText) as {
                         <div class="mb-3">
                             <input type="email" class="form-control" :placeholder="data.email ?? 'Email'">
                         </div>
+                        <div class="form-agreement">
+                            <FormAgreement />
+                        </div>
                         <div class="form-submit">
                             <button type="submit" class="btn">
                                 {{ data.submit ?? 'Получить' }}
                             </button>
                         </div>
                     </form>
-                    <div class="form-agreement">
-                        <formAgreement />
-                    </div>
                 </div>
             </div>
         </div>
