@@ -11,8 +11,13 @@ defineProps<{
 
 <template>
     <div class="mb-3" v-if="contacts.address">
-        <p class="fw-semibold mb-1">Адрес:</p>
+        <p class="fw-semibold mb-1">Фактический адрес:</p>
         <span v-html="contacts.address"></span>
+    </div>
+
+    <div class="mb-3">
+        <p class="fw-semibold mb-1">Юридический адрес:</p>
+        119296, Россия, Москва, Ленинский пр-кт, д.&nbsp;69, стр.&nbsp;2, кв.&nbsp;327
     </div>
 
     <div class="mt-2" v-if="contacts.telegram">
