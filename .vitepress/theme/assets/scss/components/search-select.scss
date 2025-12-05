@@ -1,0 +1,69 @@
+.ui.search {
+    &.selection {
+        &.dropdown {
+            font-size: 1rem;
+            padding: .5em 2.1em .5em .75em;
+            color: $body-color;
+            line-height: 1.4;
+            border-radius: $input-border-radius;
+            box-shadow: none !important;
+
+            &>input.search {
+                font-size: 1rem;
+                font-weight: $input-font-weight;
+                color: $body-color;
+                line-height: 1.4;
+                padding: .5em 2.1em .5em .75em;
+            }
+
+            &>.icon {
+                @include flex();
+                height: 100%;
+                padding: .5rem .75rem;
+            }
+
+            &, &:hover {
+                border-color: $input-border-color;
+            }
+
+            & .menu {
+                border-radius: 0 0 $input-border-radius $input-border-radius;
+                box-sizing: inherit !important;
+                @extend %scrollbar;
+                margin: 0;
+
+                &>.item {
+                    color: $body-color;
+                    font-size: $font-size-sm;
+                    line-height: 1.4;
+                    border-top: 0;
+                    padding: .5rem .75rem !important;
+
+                    &.selected {
+                        background-color: $gray-200;
+                    }
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    max-height: 20rem;
+                }
+            }
+        }
+        &.active {
+            &.dropdown {
+                &, & .menu {
+                    border-color: $gray-400 !important;
+                }
+            }
+        }
+    }
+    &.active {
+        &.search {
+            &.dropdown {
+                & input.search:focus+.text {
+                    color: $input-placeholder-color !important;
+                }
+            }
+        }
+    }
+}

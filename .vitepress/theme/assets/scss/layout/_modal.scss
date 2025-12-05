@@ -1,0 +1,55 @@
+.modal {
+    & .modal-header {
+        & .btn-close {
+            font-size: 1.5rem;
+            padding: $btn-close-padding-y $btn-close-padding-x;
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+        }
+    }
+}
+
+.modal-payment {
+    @extend .modal-dialog-centered;
+
+    & .modal-content {
+        @extend .px-sm-2;
+        text-align: left;
+    }
+
+    & .modal-header {
+        padding-bottom: 0;
+    }
+
+    & .modal-footer {
+        justify-content: center;
+        padding-bottom: 2rem;
+
+        & .btn {
+            @extend .btn-secondary;
+        }
+    }
+
+    & .payment-options {
+        & .form-check {
+            & ~ .form-check {
+                margin-top: .75rem;
+            }
+        }
+    }
+
+    & .check-country {
+        font-size: $font-size-sm;
+        margin-top: 2rem;
+
+        & .form-label {
+            font-weight: $font-weight-semibold;
+        }
+
+        & p {
+            font-weight: $font-weight-light;
+            margin: .5rem 0 0;
+        }
+    }
+}

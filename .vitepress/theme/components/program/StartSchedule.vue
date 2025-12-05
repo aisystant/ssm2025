@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import SMPayment from '../payment/SMPayment.vue'
+import { PaymentLinks } from '../../interfaces'
 import { formatPrice, formatMonthDay } from '../../composables/format'
 
 interface Course {
     name: string
     date: string
     price?: string
-    link?: string
+    paylink: PaymentLinks
     schedule?: string
     text?: string[]
 }
@@ -16,7 +18,7 @@ defineProps<{
     program: {
         head: string
         button: string
-        link: string
+        paylink: PaymentLinks
     },
     courses: Course[]
 }>()
@@ -51,14 +53,11 @@ defineProps<{
                                     {{ formatPrice(course.price) }}
                                 </div>
 
-                                <div class="course-button" v-if="course.link">
-                                    <a
-                                        :href="course.link.trim()"
-                                        class="btn"
-                                        target="_blank"
-                                        rel="nofollow noopener">
-                                        {{ buy || 'Купить' }}
-                                    </a>
+                                <div class="course-button" v-if="course.paylink">
+                                    <SMPayment
+                                    :name="buy"
+                                    :rus="course.paylink.rus"
+                                    :foreign="course.paylink.foreign ?? undefined" />
                                 </div>
                             </div>
                         </div>
@@ -68,13 +67,10 @@ defineProps<{
 
             <div class="starting-program">
                 <div class="h3" v-html="program.head"></div>
-                <a
-                    :href="program.link.trim()"
-                    class="btn"
-                    target="_blank"
-                    rel="nofollow noopener">
-                    {{ program.button }}
-                </a>
+                <SMPayment
+                :name="program.button"
+                :rus="program.paylink.rus"
+                :foreign="program.paylink.foreign ?? undefined" />
             </div>
         </div>
     </section>

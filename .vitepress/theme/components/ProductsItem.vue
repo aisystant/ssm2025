@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { formatPrice, formatMonthDay } from '../composables/format'
+import { PaymentLinks } from './../interfaces'
+import SMPayment from './payment/SMPayment.vue'
 
 interface Card {
     name: string
     price: string
     text?: string
-    link: string
+    paylink: PaymentLinks
 }
 
 defineProps<{
@@ -40,13 +42,9 @@ defineProps<{
                             {{ formatPrice(item.price) }}
                         </div>
                         <div class="card-button">
-                            <a
-                                :href="item.link.trim()"
-                                class="btn"
-                                target="_blank"
-                                rel="nofollow noopener">
-                                Купить
-                            </a>
+                            <SMPayment
+                            :rus="item.paylink.rus"
+                            :foreign="item.paylink.foreign ?? undefined" />
                         </div>
                     </div>
                 </div>
