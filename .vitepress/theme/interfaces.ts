@@ -118,4 +118,5 @@ export interface PaymentLinks {
 export interface CountriesList {
     name: string
     items: string[]
+    text?: string[]
 }

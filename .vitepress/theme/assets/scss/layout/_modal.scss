@@ -16,6 +16,10 @@
     & .modal-content {
         @extend .px-sm-2;
         text-align: left;
+
+        & a {
+            @extend .text-decoration-none;
+        }
     }
 
     & .modal-header {
@@ -24,7 +28,17 @@
 
     & .modal-footer {
         justify-content: center;
-        padding-bottom: 2rem;
+        padding: var(--bs-modal-padding);
+        @extend .pt-0;
+
+        & .footer-text {
+            width: 100%;
+            font-size: $font-size-sm;
+            font-weight: $font-weight-light;
+            border-top: 1px solid $gray-400;
+            padding-top: 1.5rem;
+            margin: 0;
+        }
 
         & .btn {
             @extend .btn-secondary;

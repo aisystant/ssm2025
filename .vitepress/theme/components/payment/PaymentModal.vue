@@ -3,7 +3,7 @@ import BuyButton from './BuyButton.vue'
 import CloseModal from '../CloseModal.vue'
 import CountriesSelect from './CountriesSelect.vue'
 import { Payment } from '../../interfaces'
-import { ref, shallowRef, computed, onMounted } from 'vue'
+import { ref, shallowRef, watch, computed, onMounted } from 'vue'
 
 const props = defineProps<{
     rus: string,
@@ -34,6 +34,7 @@ const hideModal = () => modalInstance.value?.hide()
 
 const data = ref<Payment | null>(null)
 const content = shallowRef(null)
+const country = ref('')
 
 onMounted(async () => {
     initModal()
@@ -45,6 +46,10 @@ onMounted(async () => {
     } catch (error) {
         console.log(error)
     }
+})
+
+watch(() => type.value, (val: string) => {
+    if (val === 'rus') country.value = ''
 })
 </script>
 
@@ -100,12 +105,17 @@ onMounted(async () => {
                     </div>
 
                     <div class="check-country" v-if="type === 'foreign'">
-                        <CountriesSelect :list="data.list" />
-                        <component :is="content" v-if="content" />
+                        <CountriesSelect
+                        :list="data.list"
+                        v-model="country" />
                     </div>
                 </div>
 
-                <div class="modal-footer">
+                <div class="modal-footer" v-if="type === 'rus'|| country">
+                    <component :is="content"
+                    class="footer-text"
+                    v-if="content" />
+
                     <BuyButton
                     :name="data.button"
                     :link="link"
