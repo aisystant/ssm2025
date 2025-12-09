@@ -145,14 +145,18 @@ schedule:
     program:
         head: 'Полная программа развития'
         button: 'Приобрести всю программу'
-        link: 'https://yookassa.ru/my/i/aI29EyybYYpZ/l'
+        paylink:
+          rus: 'https://yookassa.ru/my/i/aI29EyybYYpZ/l'
+          foreign: 'https://kassa.payanyway.ru/176477537846270'
 
     courses:
       -
         name: '{{ data.selfdev1.name }}'
         date: '{{ data.selfdev1.date }}'
         price: '{{ data.selfdev1.price }}'
-        link: '{{ data.selfdev1.paylink }}'
+        paylink:
+          rus: '{{ data.selfdev1.pay_rus }}'
+          foreign: '{{ data.selfdev1.pay_foreign }}'
         schedule: '{{ data.selfdev1.schedule }}'
         text:
           - '{{ data.selfdev1.start }}'
@@ -161,7 +165,9 @@ schedule:
         name: '{{ data.selfdev2.name }}'
         date: '{{ data.selfdev2.date }}'
         price: '{{ data.selfdev2.price }}'
-        link: '{{ data.selfdev2.paylink }}'
+        paylink:
+          rus: '{{ data.selfdev2.pay_rus }}'
+          foreign: '{{ data.selfdev2.pay_foreign }}'
         schedule: '{{ data.selfdev2.schedule }}'
         text:
           - '{{ data.selfdev2.start }}'
@@ -170,7 +176,9 @@ schedule:
         name: '{{ data.selfdev3.name }}'
         date: '{{ data.selfdev3.date }}'
         price: '{{ data.selfdev3.price }}'
-        link: '{{ data.selfdev3.paylink }}'
+        paylink:
+          rus: '{{ data.selfdev3.pay_rus }}'
+          foreign: '{{ data.selfdev3.pay_foreign }}'
         schedule: '{{ data.selfdev3.schedule }}'
         text:
           - '{{ data.selfdev3.start }}'

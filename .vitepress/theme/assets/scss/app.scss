@@ -4,10 +4,10 @@
 @import "other/variables";
 @import "other/fonts";
 @import "other/mixins";
-@import "other/placeholders";
 
 @import "bootstrap";
 @import "swiper/css/bundle";
+@import "other/placeholders";
 
 // include settings for global layouts
 @import "layout/body";
@@ -15,6 +15,7 @@
 @import "layout/footer";
 @import "layout/page";
 @import "layout/section";
+@import "layout/modal";
 @import "general/buttons";
 @import "general/forms";
 @import "general/elements";
@@ -112,3 +113,4 @@
 @import "components/quiz/result";
 @import "components/quiz/subscribe";
 @import "components/quiz/error";
+@import "components/search-select";

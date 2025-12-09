@@ -102,3 +102,21 @@ export interface QuizFinal {
     image: string
     button?: string
 }
+
+export interface Payment {
+    title: string
+    payments: PaymentLinks
+    button: string
+    list: CountriesList
+}
+
+export interface PaymentLinks {
+    rus: string
+    foreign: string
+}
+
+export interface CountriesList {
+    name: string
+    items: string[]
+    text?: string[]
+}

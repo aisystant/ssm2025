@@ -119,14 +119,18 @@ schedule:
     program:
         head: 'Полная программа развития'
         button: 'Приобрести всю программу'
-        link: 'https://yookassa.ru/my/i/aI7_uQ5m4s7W/l'
+        paylink:
+          rus: 'https://yookassa.ru/my/i/aI7_uQ5m4s7W/l'
+          foreign: 'https://kassa.payanyway.ru/1764775614925993'
 
     courses:
       -
         name: '{{ data.workdev1.name }}'
         date: '{{ data.workdev1.date }}'
         price: '{{ data.workdev1.price }}'
-        link: '{{ data.workdev1.paylink }}'
+        paylink:
+          rus: '{{ data.workdev1.pay_rus }}'
+          foreign: '{{ data.workdev1.pay_foreign }}'
         schedule: '{{ data.workdev1.schedule }}'
         text:
           - '{{ data.workdev1.start }}'
@@ -135,7 +139,9 @@ schedule:
         name: '{{ data.workdev2.name }}'
         date: '{{ data.workdev2.date }}'
         price: '{{ data.workdev2.price }}'
-        link: '{{ data.workdev2.paylink }}'
+        paylink:
+          rus: '{{ data.workdev2.pay_rus }}'
+          foreign: '{{ data.workdev2.pay_foreign }}'
         schedule: '{{ data.workdev2.schedule }}'
         text:
           - '{{ data.workdev2.start }}'
@@ -144,7 +150,9 @@ schedule:
         name: '{{ data.workdev3.name }}'
         date: '{{ data.workdev3.date }}'
         price: '{{ data.workdev3.price }}'
-        link: '{{ data.workdev3.paylink }}'
+        paylink:
+          rus: '{{ data.workdev3.pay_rus }}'
+          foreign: '{{ data.workdev3.pay_foreign }}'
         schedule: '{{ data.workdev3.schedule }}'
         text:
           - '{{ data.workdev3.start }}'

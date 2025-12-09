@@ -90,7 +90,7 @@
             max-width: 100%;
             margin-left: 1.5rem;
 
-            & .btn {
+            & > .btn {
                 @extend .btn-secondary;
                 width: 100%;
             }
