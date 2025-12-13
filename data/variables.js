@@ -96,7 +96,7 @@ export const data = {
     // Расписание
     schedule: [
         {
-            date: '2025-11-30',
+            date: '2026-02-15',
             program: 'Личное развитие',
             prerequisite: 'Нет',
             name: 'Системное саморазвитие',
@@ -105,7 +105,7 @@ export const data = {
             price: '35000',
         },
         {
-            date: '2025-12-01',
+            date: '2026-02-16',
             program: 'Личное развитие',
             prerequisite: 'Нет',
             name: 'Практики саморазвития',
@@ -114,7 +114,7 @@ export const data = {
             price: '35000',
         },
         {
-            date: '2025-11-29',
+            date: '2026-01-31',
             program: 'Личное развитие',
             prerequisite: 'Нет',
             name: 'Введение в системное мышление',
