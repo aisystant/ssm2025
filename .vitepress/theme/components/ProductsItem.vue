@@ -44,7 +44,8 @@ defineProps<{
                         <div class="card-button">
                             <SMPayment
                             :rus="item.paylink.rus"
-                            :foreign="item.paylink.foreign ?? undefined" />
+                            :foreign="item.paylink.foreign ?? undefined"
+                            v-if="item.paylink.rus" />
                         </div>
                     </div>
                 </div>

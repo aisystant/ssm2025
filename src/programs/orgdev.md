@@ -120,8 +120,8 @@ schedule:
         head: 'Полная программа развития'
         button: 'Приобрести всю программу'
         paylink:
-          rus: 'https://yookassa.ru/my/i/aI7_uQ5m4s7W/l'
-          foreign: 'https://kassa.payanyway.ru/1764775614925993'
+          rus: ''
+          foreign: ''
 
     courses:
       -

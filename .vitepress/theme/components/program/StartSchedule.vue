@@ -53,7 +53,7 @@ defineProps<{
                                     {{ formatPrice(course.price) }}
                                 </div>
 
-                                <div class="course-button" v-if="course.paylink">
+                                <div class="course-button" v-if="course.paylink.rus">
                                     <SMPayment
                                     :name="buy"
                                     :rus="course.paylink.rus"
@@ -70,7 +70,8 @@ defineProps<{
                 <SMPayment
                 :name="program.button"
                 :rus="program.paylink.rus"
-                :foreign="program.paylink.foreign ?? undefined" />
+                :foreign="program.paylink.foreign ?? undefined"
+                v-if="program.paylink.rus" />
             </div>
         </div>
     </section>
