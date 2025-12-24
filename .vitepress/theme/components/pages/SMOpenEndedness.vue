@@ -34,12 +34,6 @@ const { frontmatter } = useData()
     :items="frontmatter.courses.items"
     v-if="frontmatter.courses" />
 
-    <OpenEndednessBenefits
-    :title="frontmatter.benefits.title"
-    :items="frontmatter.benefits.items"
-    :buttons="frontmatter.benefits.buttons"
-    v-if="frontmatter.benefits" />
-
     <OpenEndednessComponents
     :title="frontmatter.components.title"
     :subtitle="frontmatter.components.text"
@@ -64,6 +58,12 @@ const { frontmatter } = useData()
     :title="frontmatter.reviews.title"
     :items="frontmatter.reviews.items"
     v-if="frontmatter.reviews" />
+
+    <OpenEndednessBenefits
+    :title="frontmatter.benefits.title"
+    :items="frontmatter.benefits.items"
+    :buttons="frontmatter.benefits.buttons"
+    v-if="frontmatter.benefits" />
 
     <OpenEndednessResources
     :title="frontmatter.resources.title"
