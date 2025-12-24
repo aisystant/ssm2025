@@ -1,6 +1,5 @@
 .openendedness-courses {
     @extend .container;
-    @extend %section-padding;
     @extend %section-margin;
 
     & .section-row {
