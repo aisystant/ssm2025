@@ -37,11 +37,11 @@ programs:
         name: '{{ data.workdev1.name }}'
         date: '{{ data.workdev1.date }}'
       -
-        name: '{{ data.workdev2.name }}'
-        date: '{{ data.workdev2.date }}'
+        name: '{{ data.workdev5.name }}'
+        date: '{{ data.workdev5.date }}'
       -
-        name: '{{ data.workdev3.name }}'
-        date: '{{ data.workdev3.date }}'
+        name: '{{ data.workdev8.name }}'
+        date: '{{ data.workdev8.date }}'
 
   -
     head: 'Внимание на мышление'

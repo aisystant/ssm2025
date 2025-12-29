@@ -103,19 +103,54 @@ products:
           rus: '{{ data.workdev3.pay_rus }}'
           foreign: '{{ data.workdev3.pay_foreign }}'
       -
-        name: 'Разбор/review выявления систем по&nbsp;первому шагу системного промпта'
-        text: ''
-        price: '10000'
+        name: '{{ data.workdev4.name }}'
+        text: '{{ data.workdev4.date }}'
+        price: '{{ data.workdev4.price }}'
         paylink:
-          rus: 'https://yookassa.ru/my/i/aI75cHMCgy2U/l'
-          foreign: 'https://kassa.payanyway.ru/1764775550864712'
+          rus: '{{ data.workdev4.pay_rus }}'
+          foreign: '{{ data.workdev4.pay_foreign }}'
       -
-        name: 'Тренировка — работа с&nbsp;типами «Абсурдная аналогия»'
-        text: ''
-        price: '10000'
+        name: '{{ data.workdev5.name }}'
+        text: '{{ data.workdev5.date }}'
+        price: '{{ data.workdev5.price }}'
         paylink:
-          rus: 'https://yookassa.ru/my/i/aI75k7ARv-4k/l'
-          foreign: 'https://kassa.payanyway.ru/1764775574073533'
+          rus: '{{ data.workdev5.pay_rus }}'
+          foreign: '{{ data.workdev5.pay_foreign }}'
+      -
+        name: '{{ data.workdev6.name }}'
+        text: '{{ data.workdev6.date }}'
+        price: '{{ data.workdev6.price }}'
+        paylink:
+          rus: '{{ data.workdev6.pay_rus }}'
+          foreign: '{{ data.workdev6.pay_foreign }}'
+      -
+        name: '{{ data.workdev7.name }}'
+        text: '{{ data.workdev7.date }}'
+        price: '{{ data.workdev7.price }}'
+        paylink:
+          rus: '{{ data.workdev7.pay_rus }}'
+          foreign: '{{ data.workdev7.pay_foreign }}'
+      -
+        name: '{{ data.workdev8.name }}'
+        text: '{{ data.workdev8.date }}'
+        price: '{{ data.workdev8.price }}'
+        paylink:
+          rus: '{{ data.workdev8.pay_rus }}'
+          foreign: '{{ data.workdev8.pay_foreign }}'
+      -
+        name: '{{ data.workdev9.name }}'
+        text: '{{ data.workdev9.date }}'
+        price: '{{ data.workdev9.price }}'
+        paylink:
+          rus: '{{ data.workdev9.pay_rus }}'
+          foreign: '{{ data.workdev9.pay_foreign }}'
+      -
+        name: '{{ data.workdev10.name }}'
+        text: '{{ data.workdev10.date }}'
+        price: '{{ data.workdev10.price }}'
+        paylink:
+          rus: '{{ data.workdev10.pay_rus }}'
+          foreign: '{{ data.workdev10.pay_foreign }}'
     more:
       name: 'Подробнее о программе'
       link: '/programs/orgdev'

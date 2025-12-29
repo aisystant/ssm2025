@@ -20,6 +20,7 @@
     & .course-collapse {
         @extend .rounded;
         background-color: $gray-100;
+        scroll-margin-top: 3.5rem;
 
         & .course-head {
             display: flex;
