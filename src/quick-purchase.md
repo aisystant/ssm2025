@@ -65,7 +65,7 @@ products:
         text: ''
         price: '5000'
         paylink:
-          rus: 'https://yookassa.ru/my/i/aI75LbjLWIYS/l'
+          rus: 'https://yookassa.ru/my/i/aVLkSOCQB0Yj/l'
           foreign: 'https://kassa.payanyway.ru/1764775294073991'
       -
         name: '{{ data.selfdev4.name }}'
