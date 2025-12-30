@@ -14,7 +14,6 @@ const props = defineProps<{
     }[],
 }>()
 
-const content = ref<HTMLElement | null>(null)
 const activeTab = ref<string | null>(null)
 
 onMounted(() => {
@@ -24,15 +23,12 @@ onMounted(() => {
 
     if (tabParam && courseExists) {
         activeTab.value = tabParam
-        nextTick(() => {
-            content.value?.scrollIntoView()
-        })
     }
 })
 </script>
 
 <template>
-    <section class="program-content" id="content" ref="content">
+    <section class="program-content" id="content">
         <div class="container">
             <div class="section-body">
                 <h2 class="section-title" v-html="title"></h2>

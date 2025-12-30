@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { shallowRef, onMounted } from 'vue'
+import { ref, shallowRef, watch, nextTick, onMounted } from 'vue'
 
 const props = defineProps<{
     name: string,
@@ -7,7 +7,16 @@ const props = defineProps<{
     open: boolean,
 }>()
 
+const collapse = ref<HTMLElement | null>(null)
 const content = shallowRef(null)
+
+watch(() => props.open, state => {
+    if (!state) return
+
+    nextTick(() => {
+        collapse.value?.scrollIntoView()
+    })
+})
 
 onMounted(async () => {
     try {
@@ -21,7 +30,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div class="course-collapse">
+    <div class="course-collapse" ref="collapse">
         <div
             class="course-head"
             data-bs-toggle="collapse"
