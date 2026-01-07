@@ -184,15 +184,6 @@ export const data = {
             price: '35000',
         },
         {
-            date: '2026-01-31',
-            program: 'Личное развитие',
-            prerequisite: 'Нет',
-            name: 'Введение в системное мышление',
-            sitelink: '/programs/intro?tab=systems-thinking-intro',
-            format: 'стажировка с&nbsp;наставником',
-            price: '80000',
-        },
-        {
             date: '2026-01-27',
             program: 'Рабочее развитие',
             prerequisite: 'Нет',
