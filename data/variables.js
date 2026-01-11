@@ -193,6 +193,15 @@ export const data = {
             price: '60000',
         },
         {
+            date: '2026-02-01',
+            program: 'Рабочее развитие',
+            prerequisite: 'Нет',
+            name: 'Семинар: Развитие для развитых в 2026',
+            link: 'https://t.me/+2eFHxC3uH_pkZDQy',
+            format: 'стажировка с&nbsp;наставником',
+            price: '12000',
+        },
+        {
             date: '2026-03-03',
             program: 'Рабочее развитие',
             prerequisite: 'Завершённая R1 +&nbsp;эссе',
