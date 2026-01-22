@@ -199,7 +199,7 @@ export const data = {
             name: 'Семинар: Развитие для развитых в 2026',
             link: 'https://t.me/+2eFHxC3uH_pkZDQy',
             format: 'стажировка с&nbsp;наставником',
-            price: '12000',
+            price: '14000',
         },
         {
             date: '2026-03-03',
