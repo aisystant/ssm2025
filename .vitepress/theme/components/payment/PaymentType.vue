@@ -21,6 +21,7 @@ defineProps<{
 
     <PaymentModal
     :rus="rus"
+    :cis="rus"
     :foreign="foreign"
     @close="isOpen = false"
     v-if="isOpen" />

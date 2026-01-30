@@ -7,6 +7,7 @@ import { ref, shallowRef, watch, computed, onMounted } from 'vue'
 
 const props = defineProps<{
     rus: string,
+    cis: string,
     foreign: string,
 }>()
 
@@ -14,7 +15,7 @@ const emit = defineEmits<{
     (e: 'close'): void
 }>()
 
-const type = ref<'rus' | 'foreign'>('rus')
+const type = ref<'rus' | 'cis' | 'foreign'>('rus')
 const link = computed(() => props[type.value])
 const modal = ref<HTMLElement | null>(null)
 const modalInstance = ref<Modal | null>(null)
@@ -49,7 +50,7 @@ onMounted(async () => {
 })
 
 watch(() => type.value, (val: string) => {
-    if (val === 'rus') country.value = ''
+    if (val) country.value = ''
 })
 </script>
 
@@ -93,6 +94,21 @@ watch(() => type.value, (val: string) => {
                                 class="form-check-input"
                                 type="radio"
                                 name="pay-type"
+                                id="pay-cis"
+                                v-model="type"
+                                value="cis">
+                            <label
+                                class="form-check-label"
+                                for="pay-cis">
+                                {{ data.payments.cis }}
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="pay-type"
                                 id="pay-foreign"
                                 v-model="type"
                                 value="foreign">
@@ -104,6 +120,12 @@ watch(() => type.value, (val: string) => {
                         </div>
                     </div>
 
+                    <div class="check-country" v-if="type === 'cis'">
+                        <CountriesSelect
+                        :list="data.cis_list"
+                        v-model="country" />
+                    </div>
+
                     <div class="check-country" v-if="type === 'foreign'">
                         <CountriesSelect
                         :list="data.list"
@@ -111,7 +133,7 @@ watch(() => type.value, (val: string) => {
                     </div>
                 </div>
 
-                <div class="modal-footer" v-if="type === 'rus'|| country">
+                <div class="modal-footer" v-if="type === 'rus' || country">
                     <component :is="content"
                     class="footer-text"
                     v-if="content" />
