@@ -108,10 +108,12 @@ export interface Payment {
     payments: PaymentLinks
     button: string
     list: CountriesList
+    cis_list: CountriesList
 }
 
 export interface PaymentLinks {
     rus: string
+    cis: string
     foreign: string
 }
 
