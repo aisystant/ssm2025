@@ -29,7 +29,7 @@ export const data = {
         finish: 'Защита — 26 апреля',
     },
     selfdev2: {
-        name: 'Практики саморазвития',
+        name: 'Практикум по методам саморазвития',
         date: '2026-02-16',
         price: '35000',
         pay_rus: 'https://yookassa.ru/my/i/aVLjP9w0Apo1/l',
