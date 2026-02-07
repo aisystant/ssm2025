@@ -34,14 +34,14 @@ programs:
       - 'Как работать с различными агентами, включая ИИ, для создания разных видов систем?'
     courses:
       -
-        name: '{{ data.workdev1.name }}'
-        date: '{{ data.workdev1.date }}'
+        name: '{{ data.workdev2.name }}'
+        date: '{{ data.workdev2.date }}'
       -
-        name: '{{ data.workdev5.name }}'
-        date: '{{ data.workdev5.date }}'
+        name: '{{ data.workdev6.name }}'
+        date: '{{ data.workdev6.date }}'
       -
-        name: '{{ data.workdev8.name }}'
-        date: '{{ data.workdev8.date }}'
+        name: '{{ data.workdev9.name }}'
+        date: '{{ data.workdev9.date }}'
 
   -
     head: 'Внимание на мышление'

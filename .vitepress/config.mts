@@ -31,7 +31,7 @@ export default defineConfig({
                 ],
             },
             {
-                text: "Стажировки",
+                text: "Программы",
                 items: [
                     { text: "Программы", link: "/programs/", activeMatch: "^/programs" },
                     { text: "Расписание", link: "/list" },
