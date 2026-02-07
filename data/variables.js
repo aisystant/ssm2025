@@ -44,6 +44,9 @@ export const data = {
         price: '80000',
         pay_rus: 'https://yookassa.ru/my/i/aVLjZSRp0Hie/l',
         pay_foreign: 'https://kassa.payanyway.ru/1764775166473645',
+        schedule: ' ',
+        start: ' ',
+        finish: ' ',
     },
     selfdev4: {
         name: 'Системный фитнес',
