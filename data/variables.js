@@ -20,7 +20,7 @@ export const data = {
     // Программа «Личное развитие»
     selfdev1: {
         name: 'Системное саморазвитие',
-        date: '2026-02-15',
+        date: '2026-03-01',
         price: '35000',
         pay_rus: 'https://yookassa.ru/my/i/aVLixBRGvscC/l',
         pay_foreign: 'https://kassa.payanyway.ru/176477452980220',
@@ -30,7 +30,7 @@ export const data = {
     },
     selfdev2: {
         name: 'Практикум по методам саморазвития',
-        date: '2026-02-16',
+        date: '2026-03-02',
         price: '35000',
         pay_rus: 'https://yookassa.ru/my/i/aVLjP9w0Apo1/l',
         pay_foreign: 'https://kassa.payanyway.ru/1764775076332191',
@@ -166,7 +166,7 @@ export const data = {
     // Расписание
     schedule: [
         {
-            date: '2026-02-15',
+            date: '2026-03-01',
             program: 'Личное развитие',
             prerequisite: 'Нет',
             name: 'Системное саморазвитие',
@@ -175,7 +175,7 @@ export const data = {
             price: '35000',
         },
         {
-            date: '2026-02-16',
+            date: '2026-03-02',
             program: 'Личное развитие',
             prerequisite: 'Нет',
             name: 'Практикум по методам саморазвития',
