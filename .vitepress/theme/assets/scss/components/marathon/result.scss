@@ -1,0 +1,132 @@
+.marathon-result {
+    @extend .container;
+    @extend %section-margin;
+    padding-top: 2rem;
+
+    & .section-row {
+        width: 64rem;
+        max-width: 100%;
+        display: flex;
+        @extend .mx-auto;
+    }
+
+    & .result-head {
+        display: flex;
+        flex-direction: column;
+        @include back-color();
+        font-weight: $font-weight-light;
+        border-radius: $border-radius;
+        padding: 1.5rem 1.25rem;
+    }
+
+    & .result-title {
+        flex-grow: 1;
+    }
+
+    & .result-item {
+        position: relative;
+        @extend .bg-light;
+        @extend .rounded;
+        line-height: 1.4;
+        padding: 1rem 1.25rem;
+
+        & ~ .result-item {
+            margin-top: .75rem;
+        }
+
+        & .result-name {
+            font-weight: $font-weight-semibold;
+            margin-bottom: .5rem;
+        }
+
+        & .result-text {
+            font-weight: $font-weight-light;
+            font-size: $font-size-sm;
+
+            & ul {
+                margin: 0;
+
+                & li ~ li {
+                    margin-top: .25em;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        & .result-item {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        & .result-name {
+            flex: 0 0 auto;
+            width: 100px;
+            margin-right: 1.25rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .result-body {
+            padding-left: 2rem;
+        }
+
+        & .result-item {
+            &:before {
+                content: '';
+                display: block;
+                width: 1.15em;
+                height: 1.15em;
+                background-image: url(../img/arrow.svg);
+                @include back-image($size: 100% auto);
+                position: absolute;
+                top: 50%;
+                right: 100%;
+                margin-right: 1rem;
+                transform: translate(50%, -50%);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .result-head {
+            flex: 0 0 auto;
+            width: 22rem;
+            padding: 1.5rem;
+        }
+
+        & .result-body {
+            flex: 1 0 0%;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .result-head {
+            width: 24rem;
+            border-radius: $border-radius-lg;
+            padding: 2rem;
+        }
+
+        & .result-body {
+            padding-left: 3rem;
+        }
+
+        & .result-item {
+            @include padding-x(2rem);
+
+            &:before {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        & .section-row {
+            flex-direction: column;
+        }
+
+        & .result-head {
+            margin-bottom: 1.5rem;
+        }
+    }
+}

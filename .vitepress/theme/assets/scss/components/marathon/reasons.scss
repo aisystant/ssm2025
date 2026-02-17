@@ -1,0 +1,108 @@
+.marathon-reasons {
+    @extend .section-light;
+    margin-bottom: 0;
+
+    & .swiper-slide {
+        display: flex;
+
+        @include media-breakpoint-up(sm) {
+            @include slide-size(2, 1rem);
+        }
+
+        @include media-breakpoint-up(md) {
+            @include slide-size(2, 1.5rem);
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include slide-size(3, 1rem);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include slide-size(3, 1.5rem);
+        }
+
+        @include media-breakpoint-up(xxl) {
+            @include slide-size(3, 2rem);
+        }
+    }
+
+    & .section-footer {
+        @extend h3;
+        color: $secondary;
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+
+        @include media-breakpoint-down(sm) {
+            font-size: $h5-font-size;
+        }
+    }
+
+    & .reason-card {
+        --bs-card-cap-color: #{$white};
+        --bs-card-cap-bg: #{$secondary};
+        @extend .card;
+        line-height: 1.4;
+        user-select: none;
+        @extend .mx-auto;
+
+        & .card-header {
+            font-size: $font-size-lg;
+            font-weight: $font-weight-medium;
+        }
+
+        & .card-image {
+            & img {
+                display: block;
+                max-width: 80%;
+                @extend .mx-auto;
+            }
+        }
+
+        & .card-title {
+            font-size: $font-size-lg;
+            font-weight: $font-weight-medium;
+            margin-bottom: 1em;
+        }
+
+        & .card-list {
+            @extend .list-unstyled;
+            margin-bottom: 0;
+
+            & li {
+                display: block;
+                text-align: left;
+                font-weight: $font-weight-light;
+                background-color: $gray-100;
+                border-radius: .5rem;
+                padding: .5rem 1rem;
+                border-left: 2px solid $secondary;
+                margin-top: .75rem;
+            }
+        }
+
+        @include media-breakpoint-up(xxl) {
+            & .card-header,
+            & .card-title {
+                font-size: $h5-font-size;
+            }
+
+            & .card-body {
+                @include padding-x(1.75rem);
+                padding-bottom: 2rem;
+            }
+        }
+
+        @include media-breakpoint-down(xxl) {
+            & .card-list {
+                & li {
+                    font-size: $font-size-sm;
+                    margin-top: .5rem;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            max-width: $card-max-width;
+        }
+    }
+}

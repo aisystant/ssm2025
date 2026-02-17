@@ -128,6 +128,7 @@ $chevron-right: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' 
 $chevron-down: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
 $arrow-right: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' ><path d='M4 12H20M20 12L14 6M20 12L14 18' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /></svg>");
 $arrow-left: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' ><path d='M20 12H4M4 12L10 6M4 12L10 18' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /></svg>");
+$icon-cancel: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'></line><line x1='6' y1='6' x2='18' y2='18'></line></svg>");
 
 // Buttons + Forms
 
@@ -263,3 +264,8 @@ $popover-arrow-height: .625rem;
 
 $alert-border-radius: $input-border-radius;
 $alert-padding-y: $input-padding-y;
+
+// Figures
+
+$figure-caption-font-size: $font-size-base;
+$figure-caption-color: $body-color;

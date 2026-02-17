@@ -1,0 +1,134 @@
+.marathon-howtoget {
+    background-color: $white;
+
+    & .section-body {
+        @extend .section-white;
+        @extend .container;
+        position: relative;
+        text-align: center;
+    }
+
+    & .howtoget-steps {
+        @extend .list-unstyled;
+        display: inline-flex;
+        flex-direction: column;
+        counter-reset: step;
+        margin-bottom: 0;
+
+        & li {
+            counter-increment: step;
+            display: inline-flex;
+            align-items: center;
+            line-height: 1.4;
+            text-align: left;
+            background-color: $gray-100;
+            border-radius: .5rem;
+
+            &:before {
+                content: counter(step);
+                @include flex();
+                @include back-color;
+                font-size: 1.25em;
+                width: 2em;
+                height: 2em;
+                border-radius: .25rem;
+            }
+
+            & .step-name {
+                padding: .75em 1em;
+            }
+
+            & ~ li {
+                margin-top: 1em;
+            }
+        }
+    }
+
+    & .howtoget-result {
+        color: $secondary;
+        @extend .mt-4;
+        @extend .mt-lg-5;
+    }
+
+    & .howtoget-action {
+        @extend .mt-3;
+        @extend .mt-lg-4;
+
+        & .btn {
+            @extend .btn-secondary;
+            @extend .btn-lg;
+            min-width: 20rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .howtoget-steps {
+            font-size: $font-size-lg;
+
+            & li {
+                &:before {
+                    width: 2.25em;
+                    height: 2.25em;
+                }
+            }
+        }
+
+        & .section-body {
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                width: 7rem;
+                height: 100%;
+                @include back-image($size: 100% auto, $position: center bottom);
+                position: absolute;
+                bottom: 0;
+            }
+
+            &:before {
+                background-image: url(../img/marathon-left.svg);
+                left: 1rem;
+            }
+
+            &:after {
+                background-image: url(../img/marathon-right.svg);
+                right: 1rem;
+            }
+        }
+
+        & .howtoget-result {
+            font-size: $font-size-lg;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .section-body {
+            &:before,
+            &:after {
+                width: 9rem;
+                margin-left: 1.5rem;
+                margin-right: 1.5rem;
+            }
+        }
+
+        & .howtoget-action {
+            & .btn {
+                font-size: 1.25rem;
+                padding: .85rem 3rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        & .howtoget-steps {
+            padding-left: .5rem;
+
+            & li {
+                &:before {
+                    align-self: flex-start;
+                    margin-left: -.5rem;
+                }
+            }
+        }
+    }
+}

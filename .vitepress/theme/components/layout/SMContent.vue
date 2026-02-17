@@ -24,6 +24,7 @@ import SMAmbassador from '../pages/SMAmbassador.vue'
 import SMBooks from '../pages/SMBooks.vue'
 import SMQuizList from '../pages/SMQuizList.vue'
 import SMQuizPage from '../pages/SMQuizPage.vue'
+import SMMarathon from '../pages/SMMarathon.vue'
 import NotFound from '../pages/NotFound.vue'
 import SMSimplePage from '../pages/SMSimplePage.vue'
 
@@ -57,6 +58,7 @@ const { page, frontmatter } = useData()
         <SMBooks v-else-if="frontmatter.layout === 'books'" />
         <SMQuizList v-else-if="frontmatter.layout === 'quizlist'" />
         <SMQuizPage v-else-if="frontmatter.layout === 'quiz'" />
+        <SMMarathon v-else-if="frontmatter.layout === 'marathon'" />
         <SMSimplePage v-else />
     </main>
 </template>

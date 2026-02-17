@@ -1,0 +1,46 @@
+.marathon-receive {
+    @extend .section-light;
+    text-align: left;
+    font-weight: $font-weight-light;
+
+    & .section-row {
+        @extend .row;
+        @extend .g-3;
+        @extend .g-lg-4;
+        @extend .g-xl-5;
+        display: flex;
+    }
+
+    & .section-col {
+        @extend .col-md;
+        display: flex;
+    }
+
+    & .section-block {
+        width: 100%;
+        @extend .rounded;
+        padding: 1.5rem 1.25rem;
+
+        @include media-breakpoint-up(lg) {
+            padding: 2rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include padding-x(2.5rem);
+        }
+
+        & ul {
+            margin-bottom: 0;
+        }
+
+        &.bg-gray {
+            background-color: $gray-400;
+
+            & ul li {
+                &:before {
+                    filter: grayscale(100%);
+                }
+            }
+        }
+    }
+}

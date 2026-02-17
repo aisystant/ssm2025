@@ -1,0 +1,16 @@
+<svg width="105" height="105" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.6" width="49.223" height="49.223" rx="4" transform="matrix(0.866025 -0.5 0.866025 0.5 8.37891 80.2461)" fill="#389D2D"/>
+<rect width="58.183" height="58.183" rx="4" transform="matrix(0.866025 -0.5 0.866025 0.5 0.5 62.6707)" fill="#E7E7E7"/>
+<rect width="58.183" height="58.183" rx="4" transform="matrix(0.866025 0.5 0 1 0.5 4.38721)" fill="url(#paint0_linear_444_5)"/>
+<rect width="58.183" height="58.183" rx="4" transform="matrix(0.866025 -0.5 0 1 54.3193 31.5916)" fill="url(#paint1_linear_444_5)"/>
+<defs>
+<linearGradient id="paint0_linear_444_5" x1="29.0915" y1="0" x2="29.0915" y2="58.183" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E7E7E7" stop-opacity="0"/>
+<stop offset="1" stop-color="#E7E7E7"/>
+</linearGradient>
+<linearGradient id="paint1_linear_444_5" x1="29.0915" y1="0" x2="29.0915" y2="58.183" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E7E7E7" stop-opacity="0"/>
+<stop offset="1" stop-color="#E7E7E7"/>
+</linearGradient>
+</defs>
+</svg>
