@@ -71,15 +71,18 @@ onMounted(() => {
                     <div class="swiper-slide" v-for="slide in items" :key="JSON.stringify(slide)">
                         <div class="reason-card">
                             <div class="card-header" v-html="slide.name"></div>
+
                             <div class="card-image">
                                 <img :src="`/images/${slide.image}`">
                             </div>
+
                             <div class="card-body">
                                 <div class="card-title" v-html="slide.text"></div>
                                 <ul class="card-list">
-                                    <template v-for="item in slide.list" :key="item">
-                                        <li v-html="item"></li>
-                                    </template>
+                                    <li
+                                        v-for="item in slide.list"
+                                        :key="item"
+                                        v-html="item"></li>
                                 </ul>
                             </div>
                         </div>

@@ -25,9 +25,10 @@ defineProps<{
                         </div>
 
                         <ul class="conditions-list">
-                            <template v-for="item in card.list" :key="item">
-                                <li v-html="item"></li>
-                            </template>
+                            <li
+                                v-for="item in card.list"
+                                :key="item"
+                                v-html="item"></li>
                         </ul>
                     </div>
                 </div>

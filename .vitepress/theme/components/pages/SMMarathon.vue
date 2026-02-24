@@ -10,6 +10,7 @@ import MarathonResult from './../marathon/MarathonResult.vue'
 import MarathonApply from './../marathon/MarathonApply.vue'
 import MarathonConditions from './../marathon/MarathonConditions.vue'
 import MarathonRecruitment from './../marathon/MarathonRecruitment.vue'
+import MarathonModal from './../marathon/MarathonModal.vue'
 import FAQ from './../FAQ.vue'
 import { useData } from '../../composables/data'
 
@@ -83,4 +84,6 @@ const { frontmatter } = useData()
     :title="frontmatter.faq.title"
     :items="frontmatter.faq.items"
     v-if="frontmatter.faq" />
+
+    <MarathonModal />
 </template>

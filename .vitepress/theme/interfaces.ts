@@ -122,3 +122,18 @@ export interface CountriesList {
     items: string[]
     text?: string[]
 }
+
+export interface MarathonResult {
+    id: number
+    title: string
+    cards?: MarathonResultCard[]
+    body?: string[]
+    button: string
+}
+
+export interface MarathonResultCard {
+    name: string
+    style?: string
+    items: string[]
+    footer?: string
+}

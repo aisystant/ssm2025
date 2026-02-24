@@ -21,9 +21,10 @@ defineProps<{
                     <div :class="`section-block ${card.style}`">
                         <p class="lead" v-html="card.name"></p>
                         <ul class="list-point">
-                            <template v-for="item in card.list" :key="item">
-                                <li v-html="item"></li>
-                            </template>
+                            <li
+                                v-for="item in card.list"
+                                :key="item"
+                                v-html="item"></li>
                         </ul>
                     </div>
                 </div>

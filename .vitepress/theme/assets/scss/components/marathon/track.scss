@@ -1,0 +1,91 @@
+.marathon-track {
+    @extend .row;
+    @extend .g-4;
+    @extend .gx-xl-5;
+
+    & .track-point {
+        @extend .col-lg-6;
+        display: flex;
+    }
+
+    & .point-card {
+        @extend .card;
+        text-align: left;
+
+        & .card-header {
+            font-weight: $font-weight-light;
+        }
+
+        & ul {
+            @extend .list-unstyled;
+            margin: 0;
+
+            & li {
+                position: relative;
+                padding-left: 1.5em;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 1em;
+                    height: 1em;
+                    @include mask(url(../img/play.svg), contain);
+                    position: absolute;
+                    top: .25em;
+                    left: 0;
+                }
+
+                & ~ li {
+                    margin-top: .5rem;
+                }
+            }
+        }
+
+        & .card-footer {
+            font-size: $font-size-sm;
+            padding: 0 $card-spacer-x $card-spacer-y;
+        }
+
+        &.card-dark {
+            --bs-card-bg: #{$light};
+            --bs-card-cap-bg: #{$light};
+
+            & .card-header {
+                @include back-color();
+            }
+
+            & .card-footer {
+                font-weight: $font-weight-light;
+            }
+        }
+
+        &.card-secondary {
+            & .card-header {
+                @include back-color($secondary);
+            }
+
+            & ul li:before,
+            & .card-footer {
+                color: $secondary;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            & .card-header {
+                font-size: $font-size-lg;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            & .card-header,
+            & .card-body,
+            & .card-footer {
+                @include padding-x(1.25rem);
+            }
+        }
+    }
+
+    & + .text-lead {
+        margin-top: 1.5rem;
+    }
+}

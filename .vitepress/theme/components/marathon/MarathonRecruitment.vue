@@ -19,13 +19,20 @@ defineProps<{
             </ol>
 
             <div class="howtoget-result" v-if="text">
-                <template v-for="item in text" :key="item">
-                    <p v-html="item"></p>
-                </template>
+                <p
+                    v-for="item in text"
+                    :key="item"
+                    v-html="item"></p>
             </div>
 
             <div class="howtoget-action" v-if="button">
-                <button class="btn">{{ button }}</button>
+                <button
+                    type="button"
+                    class="btn"
+                    data-bs-target="#marathonTest"
+                    data-bs-toggle="modal">
+                    {{ button }}
+                </button>
             </div>
         </div>
     </section>

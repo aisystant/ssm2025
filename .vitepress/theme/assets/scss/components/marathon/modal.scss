@@ -1,0 +1,115 @@
+.marathon-modal {
+    --bs-modal-header-padding: 2rem 1.5rem 0;
+    @extend .modal-xl;
+    @extend .modal-dialog-centered;
+
+    & .btn-close {
+        position: absolute;
+        font-size: 1.5rem;
+        top: .5rem;
+        right: .5rem;
+        z-index: 10;
+    }
+
+    & .modal-title {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $gray-400;
+    }
+
+    & .modal-body {
+        text-align: center;
+    }
+
+    & .text-inline {
+        display: inline-block;
+        text-align: left;
+    }
+
+    & .text-lead {
+        font-size: $lead-font-size;
+
+        & p {
+            margin-bottom: 0;
+
+            & ~ p {
+                margin-top: .5em;
+            }
+        }
+    }
+
+    & .text-small {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-light;
+
+        & p {
+            margin-bottom: .5em;
+        }
+
+        & a {
+            @extend .text-decoration-none;
+        }
+    }
+
+    & .modal-footer {
+        justify-content: center;
+        padding: 0 1.5rem 2.5rem;
+
+        & .btn {
+            @extend .btn-secondary;
+            min-width: 18rem;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .modal-footer {
+            & .btn {
+                padding: $btn-padding-y-lg $btn-padding-x-lg;
+                font-size: $btn-font-size-lg;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .modal-title {
+            font-size: $h2-font-size;
+            padding-bottom: 1.25rem;
+        }
+
+        & .modal-content {
+            @include padding-x(1rem);
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        & .modal-footer {
+            & .btn {
+                width: 100%;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        & .modal-header {
+            @include padding-x(1.25rem);
+
+            & .btn-close {
+                top: 0;
+                right: 0;
+            }
+        }
+
+        & .modal-title {
+            padding-bottom: .75rem;
+        }
+
+        & .modal-body {
+            padding: 1.5rem 1.25rem;
+        }
+
+        & .modal-footer {
+            padding: 0 1.25rem 1.5rem;
+        }
+    }
+}

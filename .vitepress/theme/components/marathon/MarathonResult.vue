@@ -22,11 +22,13 @@ defineProps<{
             <div class="result-body">
                 <div class="result-item" v-for="card in items" :key="JSON.stringify(card)">
                     <div class="result-name" v-html="card.name"></div>
+
                     <div class="result-text">
                         <ul>
-                            <template v-for="item in card.list" :key="item">
-                                <li v-html="item"></li>
-                            </template>
+                            <li
+                                v-for="item in card.list"
+                                :key="item"
+                                v-html="item"></li>
                         </ul>
                     </div>
                 </div>

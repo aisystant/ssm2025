@@ -31,14 +31,21 @@ defineProps<{
                 <div class="apply-body" v-if="body">
                     <h3 class="apply-title" v-if="body.name"></h3>
                     <ul class="apply-list">
-                        <template v-for="item in body.list" :key="item">
-                            <li v-html="item"></li>
-                        </template>
+                        <li
+                            v-for="item in body.list"
+                            :key="item"
+                            v-html="item"></li>
                     </ul>
                 </div>
 
                 <div class="apply-action" v-if="button">
-                    <button class="btn">{{ button }}</button>
+                    <button
+                        type="button"
+                        class="btn"
+                        data-bs-target="#marathonTest"
+                        data-bs-toggle="modal">
+                        {{ button }}
+                    </button>
                 </div>
             </div>
         </div>
