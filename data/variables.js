@@ -20,23 +20,23 @@ export const data = {
     // Программа «Личное развитие»
     selfdev1: {
         name: 'Системное саморазвитие',
-        date: '2026-03-01',
+        date: '2026-05-17',
         price: '35000',
         pay_rus: 'https://yookassa.ru/my/i/aVLixBRGvscC/l',
         pay_foreign: 'https://kassa.payanyway.ru/176477452980220',
         schedule: 'Занятия по воскресеньям с 11:00 до 13:30',
-        start: 'Первое занятие — 15 февраля',
-        finish: 'Защита — 26 апреля',
+        start: 'Первое занятие — 24 мая',
+        finish: 'Защита — 26 июля',
     },
     selfdev2: {
         name: 'Практикум по методам саморазвития',
-        date: '2026-03-02',
+        date: '2026-05-18',
         price: '35000',
         pay_rus: 'https://yookassa.ru/my/i/aVLjP9w0Apo1/l',
         pay_foreign: 'https://kassa.payanyway.ru/1764775076332191',
         schedule: 'Занятия по понедельникам с 18:00 до 19:30',
-        start: 'Первое занятие — 16 февраля',
-        finish: 'Защита — 27 апреля',
+        start: 'Первое занятие — 25 мая',
+        finish: 'Защита — 27 июля',
     },
     selfdev3: {
         name: 'Введение в системное мышление',
@@ -68,13 +68,13 @@ export const data = {
     },
     workdev2: {
         name: 'R2. Моделирование как основа коммуникации и лидерства',
-        date: '2026-03-10',
+        date: '2026-03-11',
         price: '60000',
         pay_rus: 'https://yookassa.ru/my/i/aVLpsP9k2Ok5/l',
         pay_foreign: 'https://kassa.payanyway.ru/1767042532460540',
-        schedule: 'Разборы по вторникам с 18:00',
-        start: 'Первый разбор — 17 марта',
-        finish: 'Шестой разбор — 14 апреля',
+        schedule: 'Разборы по средам с 18:30',
+        start: 'Первый разбор — 18 марта',
+        finish: 'Шестой разбор — 22 апреля',
     },
     workdev3: {
         name: 'R3. Рабочее моделирование в инженерии и менеджменте',
@@ -82,7 +82,7 @@ export const data = {
         price: '60000',
         pay_rus: 'https://yookassa.ru/my/i/aVLqNdJL6mIJ/l',
         pay_foreign: 'https://kassa.payanyway.ru/1767042583486448',
-        schedule: 'Разборы по вторникам с 18:00',
+        schedule: 'Разборы по вторникам с 18:30',
         start: 'Первый разбор — 28 апреля',
         finish: 'Шестой разбор — 26 мая',
     },
@@ -92,7 +92,7 @@ export const data = {
         price: '60000',
         pay_rus: 'https://yookassa.ru/my/i/aVLqVkyGAasD/l',
         pay_foreign: 'https://kassa.payanyway.ru/1767042644108370',
-        schedule: 'Разборы по вторникам с 18:00',
+        schedule: 'Разборы по вторникам с 18:30',
         start: 'Первый разбор — 9 июня',
         finish: 'Шестой разбор — 7 июля',
     },
@@ -114,7 +114,7 @@ export const data = {
         pay_foreign: 'https://kassa.payanyway.ru/1767042697589468',
         schedule: 'Разборы по понедельникам с 18:00',
         start: 'Первый разбор — 23 марта',
-        finish: 'Шестой разбор — 20 апреля',
+        finish: 'Шестой разбор — 27 апреля',
     },
     workdev7: {
         name: 'R7. Методология',
@@ -144,7 +144,7 @@ export const data = {
         pay_foreign: 'https://kassa.payanyway.ru/1767042779378950',
         schedule: 'Разборы по вторникам с 18:00',
         start: 'Первый разбор — 17 марта',
-        finish: 'Шестой разбор — 14 апреля',
+        finish: 'Шестой разбор — 21 апреля',
     },
     workdev10: {
         name: 'R10. Системный менеджмент',
@@ -166,7 +166,7 @@ export const data = {
     // Расписание
     schedule: [
         {
-            date: '2026-03-01',
+            date: '2026-05-17',
             program: 'Личное развитие',
             prerequisite: 'Нет',
             name: 'Системное саморазвитие',
@@ -175,7 +175,7 @@ export const data = {
             price: '35000',
         },
         {
-            date: '2026-03-02',
+            date: '2026-05-18',
             program: 'Личное развитие',
             prerequisite: 'Нет',
             name: 'Практикум по методам саморазвития',
@@ -193,7 +193,7 @@ export const data = {
             price: '60000',
         },
         {
-            date: '2026-03-10',
+            date: '2026-03-11',
             program: 'Рабочее развитие',
             prerequisite: 'Завершённая R1 +&nbsp;эссе',
             name: 'R2. Моделирование как основа коммуникации и&nbsp;лидерства',
