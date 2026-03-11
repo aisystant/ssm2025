@@ -19,7 +19,7 @@ export const data = {
     },
     // Программа «Личное развитие»
     selfdev1: {
-        name: 'Системное саморазвитие',
+        name: 'S1. Системное саморазвитие',
         date: '2026-05-17',
         price: '35000',
         pay_rus: 'https://yookassa.ru/my/i/aVLixBRGvscC/l',
@@ -29,7 +29,7 @@ export const data = {
         finish: 'Защита — 26 июля',
     },
     selfdev2: {
-        name: 'Практикум по методам саморазвития',
+        name: 'S2. Методы саморазвития',
         date: '2026-05-18',
         price: '35000',
         pay_rus: 'https://yookassa.ru/my/i/aVLjP9w0Apo1/l',
@@ -39,7 +39,7 @@ export const data = {
         finish: 'Защита — 27 июля',
     },
     selfdev3: {
-        name: 'Введение в системное мышление',
+        name: 'S3. Введение в системное мышление',
         date: 'зима',
         price: '80000',
         pay_rus: 'https://yookassa.ru/my/i/aVLjZSRp0Hie/l',
@@ -169,7 +169,7 @@ export const data = {
             date: '2026-05-17',
             program: 'Личное развитие',
             prerequisite: 'Нет',
-            name: 'Системное саморазвитие',
+            name: 'S1. Системное саморазвитие',
             sitelink: '/programs/intro?tab=intro-online',
             format: 'практикум с&nbsp;наставником',
             price: '35000',
@@ -178,7 +178,7 @@ export const data = {
             date: '2026-05-18',
             program: 'Личное развитие',
             prerequisite: 'Нет',
-            name: 'Практикум по методам саморазвития',
+            name: 'S2. Методы саморазвития',
             sitelink: '/programs/intro?tab=selfdev',
             format: 'практикум с&nbsp;наставником',
             price: '35000',
