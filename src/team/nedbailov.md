@@ -70,7 +70,7 @@ contacts:
         name: 'Блог'
         link: 'https://secondfile.substack.com/'
       -
-        name: 'TenChat'
+        name: 'X/Twitter'
         link: 'https://x.com/modern_literacy'
       -
         name: 'GitHub'
