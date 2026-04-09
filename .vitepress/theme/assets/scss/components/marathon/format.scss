@@ -1,0 +1,196 @@
+.marathon-format {
+    @extend .container;
+    @extend %section-padding;
+    @extend %section-margin;
+
+    & .section-title {
+        @extend .mb-xl-6;
+    }
+
+    & .section-row {
+        @extend .row;
+        @extend .g-3;
+        @extend .g-sm-4;
+        @extend .g-lg-5;
+        @extend .gx-xl-6;
+        @extend .justify-content-md-center;
+    }
+
+    & .format-item {
+        @extend .col-sm-6;
+        @extend .col-md;
+        @extend .col-lg-3;
+        display: flex;
+
+        &.item-first {
+            &:not(:last-of-type) {
+                & .format-card {
+                    @include media-breakpoint-up(sm) {
+                        &:before {
+                            content: '';
+                            display: block;
+                            width: 1.25rem;
+                            height: 1rem;
+                            background-image: url(../img/arrow.svg);
+                            @include back-image($size: 100% auto);
+                            position: absolute;
+                        }
+
+                        &:after {
+                            content: '';
+                            display: block;
+                            width: 1.25rem;
+                            height: 1.25rem;
+                            border-color: $gray-500;
+                            border-style: dashed;
+                            position: absolute;
+                        }
+                    }
+
+                    @include media-breakpoint-only(sm) {
+                        &:before {
+                            transform: rotate(90deg);
+                            top: auto;
+                            left: 50%;
+                            bottom: -1.4rem;
+                            margin-left: -.65rem;
+                        }
+
+                        &:after {
+                            border-width: .1rem 0 0 0;
+                            top: 50%;
+                            left: 100%;
+                            margin-left: .25rem;
+                        }
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        &:before {
+                            top: 50%;
+                            left: 100%;
+                            transform: translateY(-50%);
+                            margin-left: .25rem;
+                        }
+
+                        &:after {
+                            border-width: 0 0 0 .1rem;
+                            top: 100%;
+                            left: 90%;
+                            margin-top: .25rem;
+                        }
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        &:before {
+                            width: 1.5rem;
+                            margin-left: .5rem;
+                        }
+
+                        &:after {
+                            height: 1.5rem;
+                            margin-top: .5rem;
+                        }
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                        &:before {
+                            width: 2.5rem;
+                            background-image: url(../img/arrow-long.svg);
+                        }
+                    }
+                }
+            }
+        }
+
+        &.item-second {
+            @extend .order-md-1;
+
+            & .format-card {
+                background-color: rgba($secondary, .05);
+
+                & .card-text {
+                    &:before {
+                        mask-image: url(../img/schedule.svg);
+                    }
+                }
+            }
+        }
+    }
+
+    & .format-card {
+        --bs-card-border-width: .15rem;
+        --bs-card-border-color: #{$secondary};
+        @extend .card;
+        padding: 1rem;
+        @extend .mx-auto;
+
+        & .card-title {
+            font-weight: $font-weight-semibold;
+            text-align: center;
+        }
+
+        & .card-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: $font-weight-light;
+            line-height: 1.4;
+
+            &:before {
+                content: '';
+                width: 1.5em;
+                height: 1.5em;
+                @include mask(url(../img/clock.svg));
+                color: $secondary;
+                flex-shrink: 0;
+                margin-right: .5rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .format-item {
+            min-width: 25%;
+        }
+    }
+
+    @include media-breakpoint-only(md) {
+        & .format-card {
+            & .card-text {
+                font-size: $font-size-sm;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .format-card {
+            border-width: .2rem;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .format-card {
+            padding: 1.25rem;
+
+            & .card-title {
+                font-size: $h5-font-size;
+            }
+
+            & .card-text {
+                font-size: $font-size-lg;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        & .format-card {
+            max-width: 18rem;
+        }
+
+        & .item-second {
+            & .format-card {
+                border-style: dashed;
+            }
+        }
+    }
+}

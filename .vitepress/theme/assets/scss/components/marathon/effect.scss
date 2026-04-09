@@ -1,0 +1,77 @@
+.marathon-effect {
+    @extend .container;
+    @extend %section-margin;
+
+    & .section-row {
+        @extend .row;
+        @extend .g-3;
+        @extend .g-lg-4;
+        @extend .g-xl-5;
+        justify-content: center;
+    }
+
+    & .section-col {
+        @extend .col-md-4;
+        @extend .col-xxl-auto;
+        display: flex;
+    }
+
+    & .effect-card {
+        @extend .card;
+        border: 1px solid $gray-500;
+        padding: 2rem 1.5rem;
+        width: 380px;
+        max-width: 100%;
+        @extend .mx-auto;
+    }
+
+    & .effect-item {
+        & .item-state {
+            position: relative;
+            width: 10em;
+            background-color: $gray-400;
+            font-size: $font-size-lg;
+            font-weight: $font-weight-semibold;
+            text-align: center;
+            padding: 1rem;
+            border-radius: $border-radius;
+            @extend .mx-auto;
+        }
+
+        & .item-text {
+            text-align: center;
+            padding-top: 1.25rem;
+        }
+
+        &:last-child {
+            & .item-state {
+                @include back-color($secondary);
+            }
+        }
+
+        &:first-child {
+            margin-bottom: 2.5rem;
+
+            & .item-state:before {
+                content: '';
+                display: block;
+                width: 1.85rem;
+                height: 1rem;
+                background-image: url(../img/arrow.svg);
+                @include back-image($size: 100% auto);
+                transform: rotate(90deg);
+                position: absolute;
+                left: 50%;
+                top: 100%;
+                margin-left: -.85rem;
+                margin-top: .75rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .effect-card {
+            @include padding-y(2.5rem);
+        }
+    }
+}

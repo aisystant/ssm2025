@@ -1,0 +1,77 @@
+.marathon-intro {
+    @extend %section-grid;
+    @include padding-y(2rem);
+
+    & .section-container {
+        @extend .container;
+    }
+
+    & .section-row {
+        @extend .row;
+        @extend .gy-4;
+        @extend .gy-sm-5;
+        align-items: center;
+    }
+
+    & .intro-body {
+        @extend .col-md-7;
+    }
+
+    & .intro-image {
+        @extend .col-md-5;
+        @extend .px-sm-0;
+
+        & img {
+            display: block;
+            @extend .mx-auto;
+        }
+    }
+
+    & .marathon-title {
+        @extend .mb-md-4;
+
+        & small {
+            display: block;
+            font-size: .6em;
+            margin-top: .5rem;
+        }
+    }
+
+    & .marathon-subtitle {
+        color: $secondary;
+        font-size: $lead-font-size;
+    }
+
+    & .marathon-text {
+        font-weight: $font-weight-light;
+        max-width: 38em;
+    }
+
+    @include media-breakpoint-up(md) {
+        @include padding-y(2.5rem, 3.5rem);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        @include padding-y(3rem, 5rem);
+
+        & .marathon-title {
+            font-size: 2.75rem;
+        }
+
+        & .marathon-text {
+            font-size: $font-size-lg;
+        }
+
+        & .marathon-subtitle {
+            font-size: $h5-font-size;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        & .intro-image {
+            & img {
+                width: 24rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,190 @@
+.marathon-apply {
+    @extend .container-md;
+    @extend %section-padding;
+    @extend %section-margin;
+
+    & .section-row {
+        position: relative;
+        @include back-color();
+        border-radius: $border-radius;
+        padding: 3rem 1.25rem;
+        overflow: hidden;
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            aspect-ratio: 1 / 1;
+            width: 240px;
+            background-image: url(../img/openendedness-apply.svg);
+            @include back-image();
+            position: absolute;
+        }
+
+        &:before {
+            top: 0;
+            left: 0;
+            transform: translate(-30%, -60%);
+        }
+
+        &:after {
+            bottom: 0;
+            right: 0;
+            transform: translate(45%, 35%);
+        }
+    }
+
+    & .section-body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 30rem;
+        @extend .mx-auto;
+        z-index: 2;
+    }
+
+    & .marathon-price {
+        font-size: $font-size-lg;
+        line-height: 1.4;
+        background-color: $secondary;
+        border-radius: $border-radius;
+        padding: 1.25rem;
+        @extend .px-sm-5;
+        @extend .mb-5;
+        @extend .mb-lg-6;
+
+        & .price-row {
+            @extend .row;
+            @extend .g-2;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        & .price-col {
+            @extend .col-sm-auto;
+            text-align: center;
+        }
+
+        & .price-wrap {
+            min-width: 7em;
+            font-size: 1.15em;
+            @include back-color($white, $secondary);
+            border-radius: .25rem;
+            padding: .5rem 1.25rem;
+        }
+    }
+
+    & .apply-body {
+        @include flex();
+        flex-direction: column;
+
+        & .apply-title {
+            @extend h4;
+        }
+
+        & .apply-list {
+            @extend .list-unstyled;
+            display: inline-flex;
+            flex-direction: column;
+            margin-bottom: 0;
+
+            & li {
+                display: inline-flex;
+                align-items: flex-start;
+                font-weight: $font-weight-light;
+                line-height: 1.4;
+                padding: .75em 1.15em;
+                border: 1px solid currentColor;
+                border-radius: $border-radius-sm;
+
+                &:before {
+                    content: '';
+                    @include point();
+                    flex-shrink: 0;
+                    margin-right: .5em;
+                    margin-top: .15em;
+                }
+
+                & ~ li {
+                    margin-top: .5em;
+                }
+            }
+        }
+    }
+
+    & .apply-action {
+        text-align: center;
+        @extend .mt-5;
+        @extend .mt-lg-6;
+
+        & .btn {
+            @extend .btn-white;
+            @extend .btn-lg;
+            min-width: 20rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .section-row {
+            border-radius: $border-radius-lg;
+            padding: 4rem 2rem;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        & .section-row {
+            @include padding-y(5rem);
+
+            &:before {
+                transform: translate(-10%, -40%);
+            }
+
+            &:after {
+                transform: translate(40%, 0%);
+            }
+        }
+
+        & .section-body {
+            max-width: 36rem;
+        }
+
+        & .marathon-price {
+            font-size: $h5-font-size;
+        }
+
+        & .apply-body {
+            font-size: $font-size-lg;
+
+            & .apply-title {
+                font-size: $h3-font-size;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .section-row {
+            @include padding-y(6rem);
+
+            &:before,
+            &:after {
+                width: 365px;
+            }
+        }
+
+
+        & .apply-action {
+            & .btn {
+                font-size: 1.25rem;
+                padding: .85rem 3rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        & .apply-action {
+            & .btn {
+                min-width: 18rem;
+            }
+        }
+    }
+}

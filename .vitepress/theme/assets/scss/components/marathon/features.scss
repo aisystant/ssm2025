@@ -1,0 +1,41 @@
+.marathon-features {
+    margin-bottom: 2rem;
+
+    & .features-title {
+        font-size: $h5-font-size;
+        margin-bottom: $headings-margin-bottom;
+    }
+
+    & ul {
+        @extend .list-point;
+        margin: 0;
+
+        & li {
+            display: block;
+            text-align: left;
+            font-weight: $font-weight-light;
+            @include padding-y(.75rem);
+            @include padding-x(2.5rem);
+            border: 1px solid $gray-500;
+            border-radius: $border-radius-sm;
+
+            &:before {
+                top: .9rem;
+                left: 1rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        & ul {
+            display: inline-block;
+            min-width: 23rem;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        & .features-title {
+            font-size: $h4-font-size;
+        }
+    }
+}

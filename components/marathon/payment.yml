@@ -1,0 +1,20 @@
+title: 'Присоединиться к марафону'
+features:
+    name: 'Марафон — это не мотивация.<br>Это структурированный процесс:'
+    items:
+      - '21 день'
+      - 'Ежедневные короткие шаги'
+      - 'Персональный маршрут'
+      - 'Поддержка'
+body:
+    - '<b class="text-secondary">Стоимость участия:</b> 2 490 ₽'
+    - '<b class="text-secondary">Старт:</b> 25.03.2026'
+
+footer:
+    - 'После оплаты вы получите ссылку на&nbsp;чат участников и дальнейшие инструкции на почту, указанную на&nbsp;странице оплаты.'
+    - 'Оплата юридических лиц и по иностранным картам — пишите <a href="https://t.me/Gelya1848" target="_blank" rel="nofollow noopener">@Gelya1848</a>.'
+    - 'В случае возникновения проблем пишите на&nbsp;<a href="https://t.me/ssm_tg" target="_blank" rel="nofollow noopener">@ssm_tg</a>.'
+
+button:
+    name: 'Перейти к оплате'
+    link: 'https://yookassa.ru/my/i/abfRaHC_ewef/l'

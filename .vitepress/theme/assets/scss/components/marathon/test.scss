@@ -1,0 +1,115 @@
+.marathon-modal {
+    & .test-caption {
+        @extend .row;
+        @extend .g-3;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-light;
+        align-items: center;
+        text-align: left;
+        margin-bottom: 1.5rem;
+        @extend .mb-lg-5;
+
+        & .skip-button {
+            @extend .col-lg-auto;
+            text-align: center;
+
+            & .btn {
+                --bs-btn-bg: transparent;
+                @extend .btn-outline;
+                @extend .btn-sm;
+            }
+        }
+    }
+
+    & .test-questions {
+        counter-reset: count;
+
+        & .questions-item {
+            counter-increment: count;
+            @extend .row;
+            @extend .g-3;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            @extend .mb-lg-3;
+        }
+
+        & .question-text {
+            @extend .col-lg;
+
+            & span {
+                text-align: left;
+                background-color: $white;
+                @extend .border;
+
+                &:before {
+                    content: counter(count) ". ";
+                }
+            }
+        }
+
+        & .question-radio {
+            @extend .col-6;
+            @extend .col-lg-auto;
+
+            & .btn {
+                min-width: 6rem;
+                background-color: $gray-300;
+                border: 0;
+
+                &:hover {
+                    background-color: $gray-400;
+                }
+            }
+
+            & input {
+                position: absolute;
+                left: 0;
+                z-index: -1;
+                opacity: 0;
+
+                &:checked {
+                    & ~ .btn {
+                        @include back-color($secondary);
+                    }
+                }
+            }
+        }
+
+        & .question-text span,
+        & .question-radio .btn {
+            display: block;
+            padding: .75rem 1rem;
+            border-radius: $border-radius-sm;
+            font-weight: $font-weight-light;
+            line-height: 1.4;
+        }
+    }
+
+    & .test-submit {
+        @extend .row;
+        @extend .g-3;
+        justify-content: center;
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+
+        & .btn-submit {
+            @extend .col-lg-auto;
+            @extend .order-lg-1;
+
+            & .btn {
+                @extend .btn-secondary;
+                width: 100%;
+                min-width: 16rem;
+            }
+        }
+
+        & .btn-next {
+            @extend .col-lg-auto;
+
+            & .btn {
+                @extend .btn-outline;
+                width: 100%;
+            }
+        }
+    }
+}

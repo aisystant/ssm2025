@@ -1,0 +1,53 @@
+.marathon-benefits {
+    background-color: $white;
+    @extend %section-padding;
+
+    & .section-row {
+        @extend .row;
+        @extend .g-4;
+        @extend .g-xl-5;
+    }
+
+    & .section-col {
+        @extend .col-lg-6;
+        display: flex;
+    }
+
+    & .benefits-card {
+        @extend .practice-card;
+
+        & .card-title {
+            @include back-color($secondary);
+            padding: .5rem 1rem;
+            border-radius: $border-radius-sm;
+        }
+
+        & .benefits-list {
+            @extend .practice-list;
+
+            & .benefits-item {
+                @extend .practice-item;
+                display: block;
+            }
+        }
+
+        &.card-dark {
+            & .card-title {
+                background-color: $dark;
+            }
+
+            & .benefits-list {
+                & li {
+                    &:before {
+                        background-color: $gray-600;
+                        border-color: mix($dark, $white, 20%);
+                    }
+
+                    &:after {
+                        border-left-color: $gray-600;
+                    }
+                }
+            }
+        }
+    }
+}

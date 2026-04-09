@@ -1,0 +1,132 @@
+.marathon-conditions {
+    @extend .container;
+    @extend %section-margin;
+
+    & .section-body {
+        @extend .slim-body;
+    }
+
+    & .section-row {
+        @extend .row;
+        @extend .g-3;
+        @extend .g-lg-4;
+        @extend .g-xl-5;
+        display: flex;
+    }
+
+    & .section-col {
+        @extend .col-lg;
+        display: flex;
+    }
+
+    & .condition-card {
+        @extend .card;
+        font-weight: $font-weight-light;
+        padding: 1.5rem 1.25rem;
+        @extend .mx-auto;
+
+        @include media-breakpoint-up(lg) {
+            padding: 2rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include padding-x(2.5rem);
+        }
+
+        & .card-title {
+            @extend h4;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: .5rem;
+
+            & [class^="icon-"] {
+                @include circle(1.15em);
+                @include flex();
+                flex-shrink: 0;
+                margin-right: .5em;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 80%;
+                    height: 80%;
+                }
+            }
+
+            & .icon-success {
+                @include back-color($success);
+
+                &:before {
+                    @include mask(escape-svg($form-check-input-checked-bg-image));
+                }
+            }
+
+            & .icon-danger {
+                @include back-color($danger);
+
+                &:before {
+                    @include mask(escape-svg($icon-cancel));
+                }
+            }
+        }
+
+        & .conditions-list {
+            @extend .list-unstyled;
+            margin-left: .85em;
+            margin-bottom: 0;
+
+            & li {
+                position: relative;
+                padding-left: 1.75em;
+                @include padding-y(.375em);
+                line-height: 1.4;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 1em;
+                    height: 50%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-style: solid;
+                    border-color: $gray-500;
+                    border-width: 0 0 1px 1px;
+                }
+
+                &:not(:last-child) {
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 1em;
+                        height: 50%;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        border-style: solid;
+                        border-color: $gray-500;
+                        border-width: 0 0 0 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        & .condition-card {
+            max-width: 34rem;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        & .condition-card {
+            & .card-title {
+                font-size: $h5-font-size;
+            }
+
+            & .conditions-list {
+                font-size: $font-size-sm;
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+.marathon-practice {
+    $gap: .5rem;
+    @extend .section-white;
+
+    & .section-row {
+        @extend .row;
+        @extend .g-0;
+        @include padding-x($gap);
+        margin-top: 3rem;
+    }
+
+    & .section-col {
+        $offset: 6rem;
+        @extend .col-6;
+        @extend .col-md;
+        @include padding-y($offset);
+
+        &:nth-child(odd) {
+            & .practice-figure {
+                margin-top: -$offset;
+            }
+        }
+
+        &:nth-child(even) {
+            & .practice-figure {
+                margin-bottom: -$offset;
+            }
+        }
+    }
+
+    & .practice-figure {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & .figure-icon {
+            aspect-ratio: 1 / 1;
+            width: 6.25rem;
+            background-image: url(../img/icon-bg.svg);
+            @include back-image();
+            margin-bottom: 1rem;
+
+            & img {
+                display: block;
+                height: 50%;
+                @extend .mx-auto;
+            }
+        }
+
+        & .figure-caption {
+            position: relative;
+            align-self: stretch;
+            text-align: center;
+            line-height: 1.4;
+            background-color: $gray-100;
+            border-radius: $border-radius-sm;
+            padding: .75rem 1rem;
+            margin-left: -$gap;
+            margin-right: -$gap;
+        }
+    }
+
+    @include media-breakpoint-between(md, xl) {
+        & .practice-figure {
+            & .figure-icon {
+                width: 4.5rem;
+            }
+
+            & .figure-caption {
+                font-size: $font-size-sm;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        & .section-row {
+            margin-top: 2rem;
+        }
+
+        & .section-col {
+            $offset: 5rem;
+            @include padding-y($offset);
+
+            &:nth-child(odd) {
+                & .practice-figure {
+                    margin-top: -$offset;
+                }
+            }
+
+            &:nth-child(even) {
+                & .practice-figure {
+                    margin-bottom: -$offset;
+                }
+            }
+        }
+
+        & .practice-figure {
+            & .figure-icon {
+                width: 5rem;
+            }
+
+            & .figure-caption {
+                font-size: $font-size-sm;
+            }
+        }
+    }
+}
