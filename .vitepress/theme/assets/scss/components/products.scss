@@ -17,21 +17,23 @@
         align-items: center;
         @include padding-y(1.25rem);
 
-        &:after {
-            content: '';
-            display: block;
-            width: 1em;
-            height: 1em;
-            background-image: escape-svg($form-select-indicator);
-            @include back-image();
-            flex-shrink: 0;
-            margin-left: 1rem;
-            transition: transform .3s;
-        }
-
-        &[aria-expanded="true"] {
+        &[data-bs-toggle="collapse"] {
             &:after {
-                transform: rotate(180deg);
+                content: '';
+                display: block;
+                width: 1em;
+                height: 1em;
+                background-image: escape-svg($form-select-indicator);
+                @include back-image();
+                flex-shrink: 0;
+                margin-left: 1rem;
+                transition: transform .3s;
+            }
+
+            &[aria-expanded="true"] {
+                &:after {
+                    transform: rotate(180deg);
+                }
             }
         }
     }

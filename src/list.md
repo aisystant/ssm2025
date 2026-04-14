@@ -21,4 +21,13 @@ tbody:
     sitelink: '/open-endedness'
     format: 'самостоятельная'
     price: 'от {{ data.subscription.12m.month }} ₽/ месяц'
+  -
+    date: 'Сегодня'
+    program: 'Все программы'
+    prerequisite: 'Нет'
+    name: 'Записи прошедших семинаров'
+    sitelink: 'https://events.system-school.ru/'
+    target: '_blank'
+    format: 'самостоятельная'
+    price: 'от 5&nbsp;000 ₽'
 ---
