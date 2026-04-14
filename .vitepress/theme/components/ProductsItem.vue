@@ -13,21 +13,37 @@ interface Card {
 defineProps<{
     idx: number,
     title: string,
-    items: Card[],
+    items?: Card[],
     more?: {
         name: string
         link: string
+        target?: string
     }
 }>()
 </script>
 
 <template>
     <div class="products__item">
-        <div class="product-head" data-bs-toggle="collapse" :data-bs-target="`#product${idx}`" role="button">
-            <h4 class="product-name" v-html="title"></h4>
+        <div
+            class="product-head"
+            data-bs-toggle="collapse"
+            :data-bs-target="`#product${idx}`"
+            role="button"
+            v-if="items">
+            <h4
+                class="product-name"
+                v-html="title">
+            </h4>
         </div>
 
-        <div class="collapse" :id="`product${idx}`">
+        <div class="product-head" v-else>
+            <h4
+                class="product-name"
+                v-html="title">
+            </h4>
+        </div>
+
+        <div class="collapse" :id="`product${idx}`" v-if="items">
             <div class="product-body">
                 <div class="product-card" v-for="item in items" :key="item.name">
                     <div class="card-body">
@@ -53,7 +69,11 @@ defineProps<{
         </div>
 
         <div class="product-footer" v-if="more">
-            <a :href="more.link.trim()">{{ more.name }}</a>
+            <a
+                :href="more.link.trim()"
+                :target="more.target ?? undefined">
+                {{ more.name }}
+            </a>
         </div>
     </div>
 </template>

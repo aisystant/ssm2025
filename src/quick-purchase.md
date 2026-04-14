@@ -37,6 +37,13 @@ products:
       link: '/open-endedness'
 
   -
+    title: 'Записи прошедших семинаров'
+    more:
+      name: 'Выбрать семинар'
+      link: 'https://events.system-school.ru/'
+      target: '_blank'
+
+  -
     title: 'Программа «Личное развитие»'
     items:
       -
