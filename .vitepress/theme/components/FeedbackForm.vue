@@ -14,6 +14,7 @@ const form = yaml.load(yamlText) as {
     name?: string
     account?: string
     email?: string
+    text?: string
     submit?: string
     success: string
     error: string
@@ -22,6 +23,7 @@ const form = yaml.load(yamlText) as {
 const name = ref('')
 const email = ref('')
 const nic = ref('')
+const text = ref('')
 const agreement = ref(false)
 const loading = ref(false)
 const success = ref(false)
@@ -41,6 +43,7 @@ const data = computed(() => {
         'user_name': name.value,
         'user_tg_name': nic.value,
         'email': email.value,
+        'user_message_text': text.value,
     }
 })
 
@@ -150,6 +153,13 @@ onMounted(() => {
                                     class="form-control"
                                     v-model.trim="nic"
                                     :placeholder="form.account ?? 'Аккаунт Telegram'">
+                            </div>
+
+                            <div class="mb-3">
+                                <textarea
+                                    class="form-control"
+                                    v-model.trim="text"
+                                    :placeholder="form.text ?? 'Ваш вопрос'"></textarea>
                             </div>
 
                             <div class="form-agreement">
