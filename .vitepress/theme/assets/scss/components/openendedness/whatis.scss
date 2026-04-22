@@ -1,5 +1,5 @@
 .openendedness-whatis {
-    @extend %section-margin;
+    @extend %section-padding;
 
     & .section-row {
         @extend .slim-body;
