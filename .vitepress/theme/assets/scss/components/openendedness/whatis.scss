@@ -1,6 +1,5 @@
 .openendedness-whatis {
-    @extend .section-light;
-    text-align: left;
+    @extend %section-margin;
 
     & .section-row {
         @extend .slim-body;
@@ -22,7 +21,7 @@
 
     & .whatis-item {
         position: relative;
-        @extend .bg-white;
+        @extend .bg-light;
         @extend .rounded;
         line-height: 1.4;
         padding: 1rem 1.25rem;

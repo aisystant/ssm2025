@@ -56,6 +56,12 @@
             left: 0;
         }
     }
+
+    &.point-gray {
+        & li:before {
+            filter: grayscale(100%);
+        }
+    }
 }
 
 .check-list {

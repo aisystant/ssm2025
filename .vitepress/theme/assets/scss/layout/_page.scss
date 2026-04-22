@@ -42,6 +42,12 @@
         margin-top: 1rem;
     }
 
+    &-layout {
+        background-color: $white;
+        @extend .rounded;
+        padding: 2rem;
+    }
+
     @include media-breakpoint-up(xl) {
         &__content,
         &__error {
@@ -60,6 +66,10 @@
     @include media-breakpoint-down(sm) {
         &-subtitle {
             font-size: $font-size-sm;
+        }
+
+        &-layout {
+            padding: 1.5rem 1.25rem;
         }
     }
 }

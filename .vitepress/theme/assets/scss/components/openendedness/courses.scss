@@ -9,7 +9,6 @@
 
     & .courses-list {
         @extend .list-unstyled;
-        column-width: 300px;
         margin-bottom: 0;
 
         & li {
@@ -28,6 +27,12 @@
         display: none;
         @extend .d-lg-block;
         padding-left: 2rem;
+    }
+
+    @include media-breakpoint-up(md) {
+        & .courses-list {
+            column-count: 2;
+        }
     }
 
     @include media-breakpoint-up(xl) {

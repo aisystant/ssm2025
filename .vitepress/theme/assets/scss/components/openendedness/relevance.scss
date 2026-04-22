@@ -1,0 +1,77 @@
+.openendedness-relevance {
+    background-color: $light;
+
+    & .section-body {
+        @extend .slim-body;
+    }
+
+    & .section-row {
+        @extend .row;
+        @extend .gy-3;
+        @extend .gy-sm-4;
+    }
+
+    & .section-text {
+        @extend .col-md-9;
+        @extend .col-lg-8;
+        font-weight: $font-weight-light;
+        padding-top: 2.5rem;
+
+        @include media-breakpoint-up(md) {
+            @include padding-y(3rem);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include padding-y(4.5rem);
+        }
+    }
+
+    & .section-image {
+        position: relative;
+        @extend .col-md-3;
+        @extend .col-lg-4;
+        overflow: hidden;
+
+        & img {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @include media-breakpoint-only(md) {
+            & img {
+                top: 5rem;
+                width: 70%;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            & img {
+                top: 3rem;
+                width: 80%;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            aspect-ratio: 5 / 2;
+
+            & img {
+                width: 38%;
+                left: 50%;
+                top: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        & .section-text {
+            font-size: $font-size-lg;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        & .relevance-title {
+            text-align: center;
+        }
+    }
+}

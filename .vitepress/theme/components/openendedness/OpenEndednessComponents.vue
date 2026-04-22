@@ -7,6 +7,7 @@ defineProps<{
     items: {
         icon: string
         text: string
+        name?: string
     }[]
 }>()
 </script>
@@ -21,7 +22,10 @@ defineProps<{
                 <ul class="components-list">
                     <li v-for="item in items" :key="item.icon">
                         <SvgIcon :name="item.icon" />
-                        <span v-html="item.text"></span>
+                        <div>
+                            <div class="fw-semibold mb-1" v-html="item.name" v-if="item.name"></div>
+                            <span v-html="item.text"></span>
+                        </div>
                     </li>
                 </ul>
             </div>

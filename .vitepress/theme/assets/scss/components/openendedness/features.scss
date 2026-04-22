@@ -1,0 +1,40 @@
+.openendedness-features {
+    @extend .section-white;
+    @extend %section-margin;
+
+    & .section-body {
+        @extend .slim-body;
+    }
+
+    & .section-row {
+        @extend .row;
+        @extend .g-4;
+        @extend .g-xl-5;
+    }
+
+    & .section-col {
+        @extend .col-lg-6;
+        display: flex;
+    }
+
+    & .section-card {
+        @extend .card;
+        background-color: $gray-100;
+        font-weight: $font-weight-light;
+        padding: 1.5rem 1.25rem;
+
+        @include media-breakpoint-up(md) {
+            padding: 2rem;
+        }
+
+        & .card-title {
+            @extend h5;
+            font-weight: $font-weight-semibold;
+            margin-bottom: 1rem;
+        }
+
+        & ul {
+            margin-bottom: 0;
+        }
+    }
+}

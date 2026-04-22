@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import OpenEndednessIntro from './../openendedness/OpenEndednessIntro.vue'
+import OpenEndednessRelevance from './../openendedness/OpenEndednessRelevance.vue'
+import OpenEndednessFeatures from './../openendedness/OpenEndednessFeatures.vue'
 import OpenEndednessWhatIs from './../openendedness/OpenEndednessWhatIs.vue'
 import OpenEndednessBenefits from './../openendedness/OpenEndednessBenefits.vue'
 import OpenEndednessComponents from './../openendedness/OpenEndednessComponents.vue'
@@ -22,6 +24,16 @@ const { frontmatter } = useData()
     :image="frontmatter.image"
     :buttons="frontmatter.buttons" />
 
+    <OpenEndednessRelevance
+    :title="frontmatter.relevance.title"
+    :text="frontmatter.relevance.text"
+    :image="frontmatter.relevance.image"
+    v-if="frontmatter.relevance" />
+
+    <OpenEndednessFeatures
+    :items="frontmatter.features"
+    v-if="frontmatter.features" />
+
     <OpenEndednessWhatIs
     :title="frontmatter.whatis.title"
     :text="frontmatter.whatis.text"
@@ -30,7 +42,6 @@ const { frontmatter } = useData()
 
     <OpenEndednessCourses
     :title="frontmatter.courses.title"
-    :image="frontmatter.courses.image"
     :items="frontmatter.courses.items"
     v-if="frontmatter.courses" />
 
@@ -48,7 +59,7 @@ const { frontmatter } = useData()
 
     <OpenEndednessApply
     :title="frontmatter.apply.title"
-    :subtitle="frontmatter.apply.text"
+    :subtitle="frontmatter.apply.subtitle"
     :items="frontmatter.apply.items"
     :checks="frontmatter.apply.checks"
     :footer="frontmatter.apply.footer"
