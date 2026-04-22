@@ -36,10 +36,8 @@
         &.bg-gray {
             background-color: $gray-400;
 
-            & ul li {
-                &:before {
-                    filter: grayscale(100%);
-                }
+            & ul {
+                @extend .point-gray;
             }
         }
     }

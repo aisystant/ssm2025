@@ -1,7 +1,6 @@
 <script setup lang="ts">
 defineProps<{
     title: string,
-    image?: string,
     items: string[]
 }>()
 </script>
@@ -17,10 +16,6 @@ defineProps<{
                         <li v-html="item"></li>
                     </template>
                 </ul>
-            </div>
-
-            <div class="section-image" v-if="image">
-                <img :src="`/images/${image}`">
             </div>
         </div>
     </section>

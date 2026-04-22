@@ -47,7 +47,7 @@ $black:    #000;
 
 $blue:    #0d6efd;
 $indigo:  #6610f2;
-$purple:  #6f42c1;
+$purple:  #6636D1;
 $pink:    #d63384;
 $red:     #D61E1E;
 $orange:  #fd7e14;
@@ -155,6 +155,8 @@ $input-border-radius: $border-radius-sm;
 $input-placeholder-color: $gray-500;
 $input-padding-x: 1rem;
 $input-padding-y: .777rem;
+$input-padding-x-sm: .85rem;
+$input-padding-y-sm: .7rem;
 
 $form-check-input-width: 1.25em;
 $form-check-padding-start: $form-check-input-width + .75em;

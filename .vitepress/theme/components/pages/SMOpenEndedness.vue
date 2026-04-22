@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import OpenEndednessIntro from './../openendedness/OpenEndednessIntro.vue'
+import OpenEndednessRelevance from './../openendedness/OpenEndednessRelevance.vue'
+import OpenEndednessFeatures from './../openendedness/OpenEndednessFeatures.vue'
 import OpenEndednessWhatIs from './../openendedness/OpenEndednessWhatIs.vue'
 import OpenEndednessBenefits from './../openendedness/OpenEndednessBenefits.vue'
 import OpenEndednessComponents from './../openendedness/OpenEndednessComponents.vue'
@@ -22,17 +24,21 @@ const { frontmatter } = useData()
     :image="frontmatter.image"
     :buttons="frontmatter.buttons" />
 
-    <OpenEndednessWhatIs
-    :title="frontmatter.whatis.title"
-    :text="frontmatter.whatis.text"
-    :items="frontmatter.whatis.items"
-    v-if="frontmatter.whatis" />
+    <OpenEndednessRelevance
+    :title="frontmatter.relevance.title"
+    :text="frontmatter.relevance.text"
+    :image="frontmatter.relevance.image"
+    v-if="frontmatter.relevance" />
 
-    <OpenEndednessCourses
-    :title="frontmatter.courses.title"
-    :image="frontmatter.courses.image"
-    :items="frontmatter.courses.items"
-    v-if="frontmatter.courses" />
+    <OpenEndednessFeatures
+    :items="frontmatter.features"
+    v-if="frontmatter.features" />
+
+    <OpenEndednessBenefits
+    :title="frontmatter.benefits.title"
+    :items="frontmatter.benefits.items"
+    :buttons="frontmatter.benefits.buttons"
+    v-if="frontmatter.benefits" />
 
     <OpenEndednessComponents
     :title="frontmatter.components.title"
@@ -48,7 +54,7 @@ const { frontmatter } = useData()
 
     <OpenEndednessApply
     :title="frontmatter.apply.title"
-    :subtitle="frontmatter.apply.text"
+    :subtitle="frontmatter.apply.subtitle"
     :items="frontmatter.apply.items"
     :checks="frontmatter.apply.checks"
     :footer="frontmatter.apply.footer"
@@ -59,11 +65,16 @@ const { frontmatter } = useData()
     :items="frontmatter.reviews.items"
     v-if="frontmatter.reviews" />
 
-    <OpenEndednessBenefits
-    :title="frontmatter.benefits.title"
-    :items="frontmatter.benefits.items"
-    :buttons="frontmatter.benefits.buttons"
-    v-if="frontmatter.benefits" />
+    <OpenEndednessWhatIs
+    :title="frontmatter.whatis.title"
+    :text="frontmatter.whatis.text"
+    :items="frontmatter.whatis.items"
+    v-if="frontmatter.whatis" />
+
+    <OpenEndednessCourses
+    :title="frontmatter.courses.title"
+    :items="frontmatter.courses.items"
+    v-if="frontmatter.courses" />
 
     <OpenEndednessResources
     :title="frontmatter.resources.title"

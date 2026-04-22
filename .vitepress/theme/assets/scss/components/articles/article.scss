@@ -114,14 +114,14 @@
     @include media-breakpoint-up(xl) {
         &__header {
             @include padding-y(3rem, 5rem);
+
+            & .article-nav {
+                margin-bottom: 2rem;
+            }
         }
 
         &__footer {
             margin-top: 1rem;
-        }
-
-        &-nav {
-            margin-bottom: 2rem;
         }
 
         &-author {
