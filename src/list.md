@@ -17,7 +17,7 @@ tbody:
     date: 'Сегодня'
     program: 'Подписка'
     prerequisite: 'Нет'
-    name: 'Подписка "Бесконечное развитие"'
+    name: 'Подписка "Инженерия интеллекта"'
     sitelink: '/open-endedness'
     format: 'самостоятельная'
     price: 'от {{ data.subscription.12m.month }} ₽/ месяц'
