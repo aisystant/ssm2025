@@ -447,16 +447,15 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <h4>Бот Telegram — самый простой старт</h4>
 <p>Не нужно ничего устанавливать. Персональный маршрут за 5 минут.</p>
 <details class="iwe-steps-wrap">
-<summary>Пошаговая инструкция (6 шагов)</summary>
+<summary>Пошаговая инструкция (5 шагов)</summary>
 <ol class="iwe-steps">
 <li>Найди в Telegram бота <code>@aist_me_bot</code></li>
 <li>Нажми <code>/start</code> — бот задаст 3–4 вопроса</li>
 <li>Ответь: чем занимаешься, какая цель, сколько часов в неделю</li>
-<li>Получи персональный маршрут — что читать, как практиковать</li>
-<li>Записывай мысли в любое время: начни сообщение с точки <code>.твоя заметка</code></li>
 <li>Оформи подписку командой <code>/subscribe</code> и выбери план</li>
+<li>Привяжи аккаунт Aisystant командой <code>/login</code> — пройди авторизацию по ссылке</li>
 </ol>
-<div class="iwe-steps-hint">Дальше — всё через бота. Спроси: «Что мне изучить следующим?» — получишь следующий шаг по твоему маршруту.</div>
+<div class="iwe-steps-hint">Дальше — получишь персональный маршрут (что читать, как практиковать). Записывай мысли в любое время: начни сообщение с точки, например <code>.моя идея</code>. Спроси у бота «Что мне изучить следующим?» — получишь следующий шаг.</div>
 </details>
 <a href="https://t.me/aist_me_bot" target="_blank">Написать @aist_me_bot →</a>
 </div>
@@ -467,16 +466,14 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <h4>Браузер — полная среда без установки</h4>
 <p>Подключи базу знаний IWE и работай прямо в claude.ai. Git не нужен.</p>
 <details class="iwe-steps-wrap">
-<summary>Пошаговая инструкция (6 шагов)</summary>
+<summary>Пошаговая инструкция (4 шага)</summary>
 <ol class="iwe-steps">
 <li>Войди или зарегистрируйся на <a href="https://claude.ai" target="_blank">claude.ai</a></li>
-<li>Открой Настройки → Connectors → Add</li>
-<li>Подключи базу знаний Aisystant MCP по адресу:<code class="iwe-cmd">https://mcp.aisystant.com/mcp</code></li>
+<li>Открой <a href="https://claude.ai/settings/connectors" target="_blank">Настройки → Connectors</a> → нажми «Add custom connector»</li>
+<li>В форме введи: Name — <code>Aisystant</code>, Remote MCP server URL — <code class="iwe-cmd">https://mcp.aisystant.com/mcp</code>, нажми Add</li>
 <li>Создай новый чат и напиши: «Проведём первую стратегическую сессию»</li>
-<li>Claude проведёт 4 шага: цели → неудовлетворённости → план недели → память</li>
-<li>Каждую сессию: начинай словом «открывай», заканчивай словом «закрывай» — контекст сохранится</li>
 </ol>
-<div class="iwe-steps-hint">Дальше — продолжай спрашивать Claude в том же чате. Или открой <a href="https://system-school.ru/quick-start">полное руководство</a> для углублённой настройки среды.</div>
+<div class="iwe-steps-hint">Дальше — Claude проведёт через 4 шага (цели → неудовлетворённости → план недели → память). Каждую следующую сессию начинай словом «открывай», заканчивай словом «закрывай» — контекст сохраняется. Подробно — в <a href="https://system-school.ru/quick-start">полном руководстве</a>.</div>
 </details>
 <a href="https://claude.ai" target="_blank">Открыть claude.ai →</a>
 </div>
@@ -487,17 +484,15 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <h4>VS Code + Claude Code — среда для серьёзной работы</h4>
 <p>Полный контроль, накопление знаний на своём компьютере. Нужен аккаунт GitHub (бесплатно) — он хранит твой личный репозиторий стратегии.</p>
 <details class="iwe-steps-wrap">
-<summary>Пошаговая инструкция (7 шагов)</summary>
+<summary>Пошаговая инструкция (5 шагов)</summary>
 <ol class="iwe-steps">
-<li>Установи инструменты: Git, Node.js, GitHub CLI, Claude Code CLI. <a href="https://system-school.ru/quick-start">Полное руководство (15 мин)</a></li>
+<li>Установи инструменты: Git, Node.js, GitHub CLI, Claude Code CLI. <a href="https://github.com/TserenTserenov/FMT-exocortex-template/blob/main/docs/QUICK-START.md" target="_blank">Полное руководство (15 мин)</a></li>
 <li>Скопируй шаблон IWE и запусти установку — три команды по очереди:<code class="iwe-cmd">mkdir -p ~/IWE &amp;&amp; cd ~/IWE</code><code class="iwe-cmd">gh repo fork TserenTserenov/FMT-exocortex-template --clone</code><code class="iwe-cmd">cd FMT-exocortex-template &amp;&amp; bash setup.sh</code></li>
 <li>Скрипт настроит среду автоматически: CLAUDE.md, память агентов, приватный репозиторий стратегии на GitHub</li>
-<li>Подключи Aisystant MCP в <a href="https://claude.ai/settings/connectors" target="_blank">claude.ai → Настройки → Connectors → Add</a> по адресу:<code class="iwe-cmd">https://mcp.aisystant.com/mcp</code></li>
+<li>Подключи Aisystant MCP в <a href="https://claude.ai/settings/connectors" target="_blank">claude.ai → Настройки → Connectors</a>: имя <code>Aisystant</code>, URL <code class="iwe-cmd">https://mcp.aisystant.com/mcp</code></li>
 <li>Перезапусти Claude Code в терминале:<code class="iwe-cmd">cd ~/IWE</code><code class="iwe-cmd">claude</code></li>
-<li>Напиши: «Проведём первую стратегическую сессию»</li>
-<li>Каждый день: «открывай» → работа → «закрывай». Среда накапливает твой контекст в папке <code>~/IWE/DS-strategy/</code></li>
 </ol>
-<div class="iwe-steps-hint">Дальше — погружение через персональное руководство в твоих файлах и диалог с Claude. Полный путь: <a href="https://system-school.ru/quick-start">LEARNING-PATH</a>.</div>
+<div class="iwe-steps-hint">Дальше — напиши «Проведём первую стратегическую сессию». Каждый день: «открывай» → работа → «закрывай». Среда накапливает твой контекст в <code>~/IWE/DS-strategy/</code>. Полная дорожная карта — в <a href="https://github.com/TserenTserenov/FMT-exocortex-template/blob/main/docs/LEARNING-PATH.md" target="_blank">LEARNING-PATH</a> (после установки доступен локально в <code>~/IWE/FMT-exocortex-template/docs/LEARNING-PATH.md</code>).</div>
 </details>
 <a href="https://system-school.ru/quick-start">Быстрый старт (15 мин) →</a>
 </div>
