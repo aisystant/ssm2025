@@ -119,16 +119,18 @@ description: 'Не просто чат — постоянный коллега, 
 }
 .iwe-steps li {
   counter-increment: step-counter;
-  display: flex;
-  gap: 0.6rem;
+  position: relative;
+  padding-left: 2.1rem;
   font-size: 0.88rem;
   color: var(--vp-c-text-1);
-  line-height: 1.55;
-  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  margin-bottom: 0.7rem;
 }
 .iwe-steps li::before {
   content: counter(step-counter);
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
   width: 1.4rem;
   height: 1.4rem;
   background: var(--vp-c-brand);
@@ -139,7 +141,6 @@ description: 'Не просто чат — постоянный коллега, 
   justify-content: center;
   font-size: 0.75rem;
   font-weight: 700;
-  margin-top: 0.1rem;
 }
 .iwe-steps code {
   background: var(--vp-c-bg-mute);
@@ -148,15 +149,22 @@ description: 'Не просто чат — постоянный коллега, 
   font-size: 0.82rem;
   font-family: var(--vp-font-family-mono);
 }
-.iwe-steps pre {
-  background: var(--vp-c-bg-mute);
+.iwe-steps code.iwe-cmd {
+  display: block;
+  padding: 0.45rem 0.75rem;
+  margin: 0.35rem 0 0;
+  font-size: 0.82rem;
+  white-space: pre-wrap;
+  word-break: break-all;
   border-radius: 6px;
-  padding: 0.6rem 0.9rem;
-  font-size: 0.8rem;
-  font-family: var(--vp-font-family-mono);
-  margin: 0.25rem 0 0;
-  overflow-x: auto;
-  line-height: 1.5;
+}
+.iwe-intro {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 1.5rem;
+  color: var(--vp-c-text-2);
+  font-size: 1rem;
+  line-height: 1.7;
 }
 .iwe-path-body {
   flex: 1;
@@ -352,7 +360,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
     Помнит твои проекты, замыслы и опыт.
     Формализует знания по структуре первых принципов.
     Подбирает мировой опыт под твой контекст.
-    Со временем будет знать твои дела лучше тебя.
+    Со временем будет знать твои дела в определённых деталях даже лучше тебя — но поможет удерживать всё вместе.
   </p>
 </div>
 
@@ -362,18 +370,19 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
   <div class="iwe-nature-card">
     <div class="icon">🧭</div>
     <h3>Наставник</h3>
-    <p>Знает, где ты сейчас. Подбирает темп, объясняет «зачем» и предлагает следующий шаг — не общий, а твой.</p>
+    <p>Знает, где ты сейчас застрял в развитии. Подбирает темп, объясняет «зачем» и предлагает следующий шаг исключительно для тебя.</p>
   </div>
   <div class="iwe-nature-card">
     <div class="icon">🛠️</div>
     <h3>Мастерская</h3>
-    <p>Рабочий стол с несколькими исполнителями и агентами под задачу. Здесь учатся управлять ансамблем ИИ-агентов и людей — главный навык эпохи.</p>
+    <p>Рабочий стол с несколькими ролями под задачу. Здесь учитесь управлять ансамблем ИИ-агентов и людей — главный навык эпохи.</p>
   </div>
 </div>
 
 <hr class="iwe-divider" />
 
 <div class="iwe-compare">
+  <p class="iwe-intro">Доступ к IWE — через несколько интерфейсов: Бот, Браузер или VS Code. Каждый — самостоятельный вход. Подключай постепенно по мере роста.</p>
   <h2>Чем отличаются интерфейсы</h2>
   <table class="iwe-compare-table">
     <thead>
@@ -441,10 +450,6 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
       </tr>
     </tbody>
   </table>
-  <div class="iwe-compare-legend">
-    Подписка МИМ = программы Aisystant, сообщество, база знаний.
-    Подписка на ИИ = аккаунт claude.ai (Pro или выше).
-  </div>
   <p class="iwe-combine-note">Не нужно выбирать один навсегда. Начни с бота — потом добавь браузер, потом VS Code.<br>Каждый уровень добавляет возможности, а не отменяет предыдущий.</p>
 </div>
 
@@ -454,17 +459,17 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <div class="iwe-path">
 <div class="step">💬</div>
 <div class="iwe-path-body">
-<h4>Telegram — самый простой старт</h4>
+<h4>Бот Telegram — самый простой старт</h4>
 <p>Не нужно ничего устанавливать. Персональный маршрут за 5 минут.</p>
 <details class="iwe-steps-wrap">
 <summary>Пошаговая инструкция (6 шагов)</summary>
 <ol class="iwe-steps">
-<li>Найди в Telegram: <code>@aist_me_bot</code></li>
+<li>Найди в Telegram бота <code>@aist_me_bot</code></li>
 <li>Нажми <code>/start</code> — бот задаст 3–4 вопроса</li>
 <li>Ответь: чем занимаешься, какая цель, сколько часов в неделю</li>
 <li>Получи персональный маршрут — что читать, как практиковать</li>
-<li>Записывай мысли в любое время: начни сообщение с точки → <code>.твоя заметка</code></li>
-<li>Подписка: <code>/subscribe</code> → выбери план</li>
+<li>Записывай мысли в любое время: начни сообщение с точки <code>.твоя заметка</code></li>
+<li>Оформи подписку командой <code>/subscribe</code> и выбери план</li>
 </ol>
 <div class="iwe-steps-hint">Дальше — всё через бота. Спроси: «Что мне изучить следующим?» — получишь следующий шаг по твоему маршруту.</div>
 </details>
@@ -477,13 +482,14 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <h4>Браузер — полная среда без установки</h4>
 <p>Подключи базу знаний IWE и работай прямо в claude.ai. Git не нужен.</p>
 <details class="iwe-steps-wrap">
-<summary>Пошаговая инструкция (5 шагов)</summary>
+<summary>Пошаговая инструкция (6 шагов)</summary>
 <ol class="iwe-steps">
 <li>Войди или зарегистрируйся на <a href="https://claude.ai" target="_blank">claude.ai</a></li>
-<li>Подключи базу знаний Aisystant MCP: Настройки → Connectors → Add → <code>https://mcp.aisystant.com/mcp</code></li>
-<li>Создай новый чат → напиши: «Проведём первую стратегическую сессию»</li>
+<li>Открой Настройки → Connectors → Add</li>
+<li>Подключи базу знаний Aisystant MCP по адресу:<code class="iwe-cmd">https://mcp.aisystant.com/mcp</code></li>
+<li>Создай новый чат и напиши: «Проведём первую стратегическую сессию»</li>
 <li>Claude проведёт 4 шага: цели → неудовлетворённости → план недели → память</li>
-<li>Каждую сессию: начинай «открывай», заканчивай «закрывай» — контекст сохраняется</li>
+<li>Каждую сессию: начинай словом «открывай», заканчивай словом «закрывай» — контекст сохранится</li>
 </ol>
 <div class="iwe-steps-hint">Дальше — продолжай спрашивать Claude в том же чате. Или открой <a href="https://system-school.ru/quick-start">полное руководство</a> для углублённой настройки среды.</div>
 </details>
@@ -498,13 +504,13 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <details class="iwe-steps-wrap">
 <summary>Пошаговая инструкция (7 шагов)</summary>
 <ol class="iwe-steps">
-<li>Установи инструменты: Git, Node.js, GitHub CLI, Claude Code CLI → <a href="https://system-school.ru/quick-start">полное руководство (15 мин)</a></li>
-<li>Скопируй шаблон IWE и запусти установку:<br><code>mkdir -p ~/IWE &amp;&amp; cd ~/IWE</code><br><code>gh repo fork TserenTserenov/FMT-exocortex-template --clone</code><br><code>cd FMT-exocortex-template &amp;&amp; bash setup.sh</code></li>
+<li>Установи инструменты: Git, Node.js, GitHub CLI, Claude Code CLI. <a href="https://system-school.ru/quick-start">Полное руководство (15 мин)</a></li>
+<li>Скопируй шаблон IWE и запусти установку — три команды по очереди:<code class="iwe-cmd">mkdir -p ~/IWE &amp;&amp; cd ~/IWE</code><code class="iwe-cmd">gh repo fork TserenTserenov/FMT-exocortex-template --clone</code><code class="iwe-cmd">cd FMT-exocortex-template &amp;&amp; bash setup.sh</code></li>
 <li>Скрипт настроит среду автоматически: CLAUDE.md, память агентов, приватный репозиторий стратегии на GitHub</li>
-<li>Подключи Aisystant MCP: <a href="https://claude.ai/settings/connectors" target="_blank">claude.ai → Настройки → Connectors</a> → Add → <code>https://mcp.aisystant.com/mcp</code></li>
-<li>Перезапусти Claude Code: <code>cd ~/IWE</code>, затем <code>claude</code></li>
+<li>Подключи Aisystant MCP в <a href="https://claude.ai/settings/connectors" target="_blank">claude.ai → Настройки → Connectors → Add</a> по адресу:<code class="iwe-cmd">https://mcp.aisystant.com/mcp</code></li>
+<li>Перезапусти Claude Code в терминале:<code class="iwe-cmd">cd ~/IWE</code><code class="iwe-cmd">claude</code></li>
 <li>Напиши: «Проведём первую стратегическую сессию»</li>
-<li>Каждый день: «открывай» → работа → «закрывай». Среда накапливает твой контекст в <code>~/IWE/DS-strategy/</code></li>
+<li>Каждый день: «открывай» → работа → «закрывай». Среда накапливает твой контекст в папке <code>~/IWE/DS-strategy/</code></li>
 </ol>
 <div class="iwe-steps-hint">Дальше — погружение через персональное руководство в твоих файлах и диалог с Claude. Полный путь: <a href="https://system-school.ru/quick-start">LEARNING-PATH</a>.</div>
 </details>
