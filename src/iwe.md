@@ -538,7 +538,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
     <div class="iwe-format-card">
       <h3>Самостоятельно</h3>
       <p>Персональное руководство, свой темп. ИИ подстраивает среду под тебя с первого дня.</p>
-      <p style="font-size:0.85rem;color:var(--vp-c-text-2);margin:0 0 1rem;">Доступ в сообщество IWE (120+ чел.) через покупку <a href="https://system-school.ru/programs/intro" target="_blank">видео семинара об IWE</a> (5 000 ₽ навсегда).</p>
+      <p style="font-size:0.85rem;color:var(--vp-c-text-2);margin:0 0 1rem;">Доступ в сообщество IWE (120+ чел.) через покупку <a href="https://t.me/aist_me_bot?start=seminar_SE-2026.2-T-sem" target="_blank">видео семинара об IWE</a> (5 000 ₽ навсегда).</p>
       <a href="https://system-school.ru/pricing" class="btn btn-primary">Купить подписку</a>
     </div>
     <div class="iwe-format-card featured">
