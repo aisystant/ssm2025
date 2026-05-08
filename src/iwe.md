@@ -469,7 +469,9 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <li>Привяжи аккаунт Aisystant командой <code>/link</code> — бот найдёт твой аккаунт автоматически или пришлёт ссылку для входа</li>
 <li>Оформи подписку командой <code>/buy</code> — откроется витрина с подпиской «Бесконечное развитие» и семинарами</li>
 </ol>
-<div class="iwe-steps-hint">Дальше — спроси бота: <b>«Что мне делать дальше?»</b> Он подберёт следующий шаг по твоему маршруту. Для бесплатного знакомства запусти Марафон командой <code>/learn</code>.</div>
+<div class="iwe-steps-hint"><b>Дальше — два пути:</b><br>
+• <b>Бесплатно потестировать подход</b> — запусти Марафон командой <code>/learn</code>, получай уроки и тренировки, чтобы постепенно погрузиться в системное саморазвитие.<br>
+• <b>Использовать бот как часть IWE</b> — спроси бота: «как мне подключить бот к IWE?» или «как пользоваться ботом?»</div>
 </details>
 <a href="https://t.me/aist_me_bot" target="_blank">Написать @aist_me_bot →</a>
 </div>
@@ -487,7 +489,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <li>В форме введи: Name — <code>Aisystant</code>, Remote MCP server URL — <code class="iwe-cmd">https://mcp.aisystant.com/mcp</code>, нажми Add</li>
 <li>Создай новый чат и напиши: «Проведём первую стратегическую сессию»</li>
 </ol>
-<div class="iwe-steps-hint">Дальше — спроси Claude: <b>«Как мне развиваться дальше?»</b> Он подберёт следующий шаг под твой контекст и поможет создать персональное руководство в Projects. Каждую сессию начинай словом «открывай», заканчивай «закрывай» — контекст сохраняется.</div>
+<div class="iwe-steps-hint">Дальше — спроси Claude: <b>«Как мне развиваться дальше?»</b> или <b>«Создай для меня персональное руководство по личному развитию, включая IWE»</b>. Claude запустит программу «Личное развитие» через твоё персональное руководство в Projects. Каждую следующую сессию начинай словом «открывай», заканчивай «закрывай».</div>
 </details>
 <a href="https://claude.ai" target="_blank">Открыть claude.ai →</a>
 </div>
@@ -506,7 +508,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <li>Подключи Aisystant MCP в <a href="https://claude.ai/settings/connectors" target="_blank">claude.ai → Настройки → Connectors</a>: имя <code>Aisystant</code>, URL <code class="iwe-cmd">https://mcp.aisystant.com/mcp</code></li>
 <li>Перезапусти Claude Code в терминале:<code class="iwe-cmd">cd ~/IWE</code><code class="iwe-cmd">claude</code></li>
 </ol>
-<div class="iwe-steps-hint">Дальше — спроси Claude: <b>«С чего начать освоение IWE?»</b> Он откроет твою дорожную карту в <code>~/IWE/FMT-exocortex-template/docs/LEARNING-PATH.md</code> и проведёт по этапам. Ежедневный ритм: «открывай» → работа → «закрывай».</div>
+<div class="iwe-steps-hint">Дальше — спроси Claude: <b>«Проверь все мои подключения IWE и помоги настроить его»</b> или <b>«Создай для меня персональное руководство по личному развитию, включая IWE»</b>. Claude проверит окружение, MCP-подключения, а затем проведёт по программе «Личное развитие». Ежедневный ритм: «открывай» → работа → «закрывай».</div>
 </details>
 <a href="https://system-school.ru/quick-start">Быстрый старт (15 мин) →</a>
 </div>
