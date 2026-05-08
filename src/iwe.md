@@ -111,6 +111,56 @@ description: 'Не просто чат — постоянный коллега, 
   text-decoration: none;
 }
 .iwe-path a:hover { text-decoration: underline; }
+.iwe-steps {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step-counter;
+}
+.iwe-steps li {
+  counter-increment: step-counter;
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--vp-c-text-1);
+  line-height: 1.55;
+  margin-bottom: 0.5rem;
+}
+.iwe-steps li::before {
+  content: counter(step-counter);
+  flex-shrink: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: var(--vp-c-brand);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 0.1rem;
+}
+.iwe-steps code {
+  background: var(--vp-c-bg-mute);
+  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+  font-size: 0.82rem;
+  font-family: var(--vp-font-family-mono);
+}
+.iwe-steps pre {
+  background: var(--vp-c-bg-mute);
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.8rem;
+  font-family: var(--vp-font-family-mono);
+  margin: 0.25rem 0 0;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+.iwe-path-body {
+  flex: 1;
+}
 .iwe-section-label {
   text-align: center;
   font-size: 0.85rem;
@@ -228,32 +278,64 @@ description: 'Не просто чат — постоянный коллега, 
 <hr class="iwe-divider" />
 
 <div class="iwe-choice">
-  <h2>Выбери формат для старта</h2>
+  <h2>С чего начать: выбери интерфейс</h2>
   <div class="iwe-paths">
+
     <div class="iwe-path">
       <div class="step">💬</div>
-      <div>
+      <div class="iwe-path-body">
         <h4>Telegram — самый простой старт</h4>
-        <p>Не нужно ничего устанавливать. Отправь сообщение — получи персональный маршрут за 5 минут.</p>
+        <p>Не нужно ничего устанавливать. Персональный маршрут за 5 минут.</p>
+        <ol class="iwe-steps">
+          <li>Найди в Telegram: <code>@aist_me_bot</code></li>
+          <li>Нажми <code>/start</code> — бот задаст 3–4 вопроса</li>
+          <li>Ответь: чем занимаешься, какая цель, сколько часов в неделю</li>
+          <li>Получи персональный маршрут — что читать, как практиковать</li>
+          <li>Записывай мысли в любое время: начни сообщение с точки → <code>.твоя заметка</code></li>
+          <li>Подписка: <code>/subscribe</code> → выбери план</li>
+        </ol>
         <a href="https://t.me/aist_me_bot" target="_blank">Написать @aist_me_bot →</a>
       </div>
     </div>
+
     <div class="iwe-path">
       <div class="step">🌐</div>
-      <div>
-        <h4>Браузер — удобно без установки</h4>
-        <p>Открой claude.ai, напиши «Стратег» — и работай с полноценной средой прямо в браузере.</p>
+      <div class="iwe-path-body">
+        <h4>Браузер — полная среда без установки</h4>
+        <p>Подключи базу знаний IWE и начни работать прямо в claude.ai.</p>
+        <ol class="iwe-steps">
+          <li>Войди или зарегистрируйся на <a href="https://claude.ai" target="_blank">claude.ai</a></li>
+          <li>Подключи базу знаний: Настройки → Connectors → Add → введи <code>https://mcp.aisystant.com/mcp</code></li>
+          <li>Создай новый чат → напиши: «Проведём первую стратегическую сессию»</li>
+          <li>Claude проведёт 4 шага: цели → неудовлетворённости → план недели → память</li>
+          <li>Каждую сессию: начинай «открывай», заканчивай «закрывай» — контекст сохраняется</li>
+        </ol>
         <a href="https://claude.ai" target="_blank">Открыть claude.ai →</a>
       </div>
     </div>
+
     <div class="iwe-path">
       <div class="step">⚡</div>
-      <div>
-        <h4>VS Code — среда для серьёзной работы</h4>
-        <p>Git, Claude Code CLI, полный контроль над своим IWE. Для тех, кто хочет максимум.</p>
-        <a href="/quick-start">Инструкция по установке →</a>
+      <div class="iwe-path-body">
+        <h4>VS Code + Claude Code — среда для серьёзной работы</h4>
+        <p>Git, полный контроль, накопление знаний. Для тех, кто хочет максимум.</p>
+        <ol class="iwe-steps">
+          <li>Установи: Git, Node.js, GitHub CLI, Claude Code CLI → <a href="/quick-start">полное руководство</a></li>
+          <li>В терминале:
+            <pre>mkdir -p ~/IWE && cd ~/IWE
+gh repo fork TserenTserenov/FMT-exocortex-template --clone
+cd FMT-exocortex-template && bash setup.sh</pre>
+          </li>
+          <li>Скрипт настроит среду: CLAUDE.md, память агентов, личный репозиторий стратегии</li>
+          <li>Подключи Aisystant MCP: <a href="https://claude.ai/settings/connectors" target="_blank">claude.ai → Настройки → Connectors</a> → Add → <code>https://mcp.aisystant.com/mcp</code></li>
+          <li>Перезапусти Claude Code: <code>cd ~/IWE && claude</code></li>
+          <li>Напиши: «Проведём первую стратегическую сессию»</li>
+          <li>Каждый день: «открывай» → работа → «закрывай» — среда накапливает контекст</li>
+        </ol>
+        <a href="/quick-start">Быстрый старт (15 мин) →</a>
       </div>
     </div>
+
   </div>
 </div>
 
