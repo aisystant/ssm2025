@@ -245,10 +245,24 @@ details.iwe-steps-wrap > summary::before { content: '▶ '; font-size: 0.7rem; }
 details.iwe-steps-wrap[open] > summary::before { content: '▼ '; }
 details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 .iwe-steps-hint {
-  margin: 0.75rem 0 0;
+  margin: 0.85rem 0 0;
+  padding: 0.85rem 1rem;
+  background: var(--vp-c-bg-soft);
+  border-left: 3px solid var(--vp-c-brand);
+  border-radius: 0 6px 6px 0;
   font-size: 0.88rem;
-  color: var(--vp-c-text-2);
-  line-height: 1.6;
+  color: var(--vp-c-text-1);
+  line-height: 1.7;
+}
+.iwe-steps-hint b {
+  color: var(--vp-c-text-1);
+}
+.iwe-steps-hint code {
+  background: var(--vp-c-bg-mute);
+  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+  font-size: 0.82rem;
+  font-family: var(--vp-font-family-mono);
 }
 .iwe-section-label {
   text-align: center;
@@ -445,17 +459,19 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <div class="step">💬</div>
 <div class="iwe-path-body">
 <h4>Бот Telegram — самый простой старт</h4>
-<p>Не нужно ничего устанавливать. Персональный маршрут за 5 минут.</p>
+<p>Удобно для заметок в любой момент и работы с Марафоном прямо в мессенджере. Без установки.</p>
 <details class="iwe-steps-wrap">
 <summary>Пошаговая инструкция (5 шагов)</summary>
 <ol class="iwe-steps">
 <li>Найди в Telegram бота <code>@aist_me_bot</code></li>
-<li>Нажми <code>/start</code> — бот задаст 3–4 вопроса</li>
+<li>Нажми <code>/start</code> — бот задаст 3–4 вопроса для диагностики</li>
 <li>Ответь: чем занимаешься, какая цель, сколько часов в неделю</li>
-<li>Оформи подписку командой <code>/subscribe</code> и выбери план</li>
-<li>Привяжи аккаунт Aisystant командой <code>/login</code> — пройди авторизацию по ссылке</li>
+<li>Открой <code>/settings</code> → «Привязать Aisystant» → пройди авторизацию по ссылке</li>
+<li>Там же <code>/settings</code> → «Оформить подписку «Бесконечное развитие»» — выбери план</li>
 </ol>
-<div class="iwe-steps-hint">Дальше — получишь персональный маршрут (что читать, как практиковать). Записывай мысли в любое время: начни сообщение с точки, например <code>.моя идея</code>. Спроси у бота «Что мне изучить следующим?» — получишь следующий шаг.</div>
+<div class="iwe-steps-hint"><b>Дальше — два пути:</b><br>
+• <b>Бесплатно потестировать подход</b> — запусти Марафон командой <code>/learn</code>, получай уроки и тренировки.<br>
+• <b>Использовать бот как часть IWE</b> — подключи Браузер или VS Code (см. ниже). Бот останется для быстрых заметок и команд из любого места.</div>
 </details>
 <a href="https://t.me/aist_me_bot" target="_blank">Написать @aist_me_bot →</a>
 </div>
@@ -464,7 +480,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <div class="step">🌐</div>
 <div class="iwe-path-body">
 <h4>Браузер — полная среда без установки</h4>
-<p>Подключи базу знаний IWE и работай прямо в claude.ai. Git не нужен.</p>
+<p>Удобно вне рабочего места — на телефоне, в дороге, на чужом компьютере. Стратегические сессии с памятью между разговорами через Projects на claude.ai. Git не нужен.</p>
 <details class="iwe-steps-wrap">
 <summary>Пошаговая инструкция (4 шага)</summary>
 <ol class="iwe-steps">
@@ -473,7 +489,11 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <li>В форме введи: Name — <code>Aisystant</code>, Remote MCP server URL — <code class="iwe-cmd">https://mcp.aisystant.com/mcp</code>, нажми Add</li>
 <li>Создай новый чат и напиши: «Проведём первую стратегическую сессию»</li>
 </ol>
-<div class="iwe-steps-hint">Дальше — Claude проведёт через 4 шага (цели → неудовлетворённости → план недели → память). Каждую следующую сессию начинай словом «открывай», заканчивай словом «закрывай» — контекст сохраняется. Подробно — в <a href="https://system-school.ru/quick-start">полном руководстве</a>.</div>
+<div class="iwe-steps-hint"><b>Дальше — работай с Claude как с экзокортексом:</b><br>
+• Стратегические сессии, планирование недели, разбор проектов — всё в одном чате с памятью.<br>
+• Claude создаст <b>персональное руководство</b> прямо в Projects — изучай платформу через диалог и собственный текст.<br>
+• Каждую следующую сессию начинай словом «открывай», заканчивай словом «закрывай» — контекст сохраняется.<br>
+• Полная дорожная карта — <a href="https://github.com/TserenTserenov/FMT-exocortex-template/blob/main/docs/LEARNING-PATH.md" target="_blank">LEARNING-PATH</a>.</div>
 </details>
 <a href="https://claude.ai" target="_blank">Открыть claude.ai →</a>
 </div>
@@ -482,7 +502,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <div class="step">⚡</div>
 <div class="iwe-path-body">
 <h4>VS Code + Claude Code — среда для серьёзной работы</h4>
-<p>Полный контроль, накопление знаний на своём компьютере. Нужен аккаунт GitHub (бесплатно) — он хранит твой личный репозиторий стратегии.</p>
+<p>Полная среда у тебя на компьютере — накопление знаний, личное руководство, автономные агенты. Лучший выбор для долгосрочного развития. Нужен аккаунт GitHub (бесплатно) — он хранит твой личный репозиторий стратегии.</p>
 <details class="iwe-steps-wrap">
 <summary>Пошаговая инструкция (5 шагов)</summary>
 <ol class="iwe-steps">
@@ -492,7 +512,11 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <li>Подключи Aisystant MCP в <a href="https://claude.ai/settings/connectors" target="_blank">claude.ai → Настройки → Connectors</a>: имя <code>Aisystant</code>, URL <code class="iwe-cmd">https://mcp.aisystant.com/mcp</code></li>
 <li>Перезапусти Claude Code в терминале:<code class="iwe-cmd">cd ~/IWE</code><code class="iwe-cmd">claude</code></li>
 </ol>
-<div class="iwe-steps-hint">Дальше — напиши «Проведём первую стратегическую сессию». Каждый день: «открывай» → работа → «закрывай». Среда накапливает твой контекст в <code>~/IWE/DS-strategy/</code>. Полная дорожная карта — в <a href="https://github.com/TserenTserenov/FMT-exocortex-template/blob/main/docs/LEARNING-PATH.md" target="_blank">LEARNING-PATH</a> (после установки доступен локально в <code>~/IWE/FMT-exocortex-template/docs/LEARNING-PATH.md</code>).</div>
+<div class="iwe-steps-hint"><b>Дальше — работай с Claude в своём IWE:</b><br>
+• Claude знает твой контекст, ведёт стратегические сессии и отслеживает прогресс по дням.<br>
+• Изучай платформу через <b>персональное руководство</b> — оно живёт в твоих файлах <code>~/IWE/CLAUDE.md</code> и <code>~/IWE/DS-strategy/</code>.<br>
+• Дорожная карта обучения — в <code>~/IWE/FMT-exocortex-template/docs/LEARNING-PATH.md</code> (онлайн-версия — <a href="https://github.com/TserenTserenov/FMT-exocortex-template/blob/main/docs/LEARNING-PATH.md" target="_blank">здесь</a>).<br>
+• Ритм дня: «открывай» → работа → «закрывай». Контекст накапливается автоматически.</div>
 </details>
 <a href="https://system-school.ru/quick-start">Быстрый старт (15 мин) →</a>
 </div>
