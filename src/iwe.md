@@ -505,16 +505,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <div class="iwe-path-body">
 <h4>VS Code + Claude Code — среда для серьёзной работы</h4>
 <p>Полная среда у тебя на компьютере — накопление знаний, формализация опыта общения с ИИ в процессе реализации проектов, персональные руководства МИМ, автономные агенты. Лучший выбор для системного развития. Нужен аккаунт GitHub (бесплатно), в котором хранится и развивается твоя личная база знаний, включая стратегию, проекты и т.п.</p>
-<details class="iwe-steps-wrap">
-<summary>Инструкция</summary>
-<ol class="iwe-steps">
-<li>Нужны Git, Node.js, GitHub CLI и Claude Code CLI. Уже установлены — переходи к следующему шагу. Нет — <a href="https://github.com/TserenTserenov/FMT-exocortex-template/blob/main/docs/SETUP-GUIDE.md" target="_blank">установи по инструкции</a> (15 мин). 💡 Открой второй экран с <a href="https://claude.ai" target="_blank">claude.ai</a> — копируй туда любые непонятные сообщения из терминала и спрашивай, что делать.</li>
-<li>Скопируй шаблон IWE и запусти установку — три команды в терминале по очереди:<code class="iwe-cmd">mkdir -p ~/IWE &amp;&amp; cd ~/IWE</code><code class="iwe-cmd">gh repo fork TserenTserenov/FMT-exocortex-template --clone</code><code class="iwe-cmd">cd FMT-exocortex-template &amp;&amp; bash setup.sh</code></li>
-<li>Подключи Aisystant MCP в <a href="https://claude.ai/settings/connectors" target="_blank">claude.ai → Настройки → Connectors</a>: имя <code>Aisystant</code>, URL <code class="iwe-cmd">https://mcp.aisystant.com/mcp</code>. Если уже подключал в браузерном варианте — пропусти этот шаг.</li>
-<li>Запусти Claude Code в терминале:<code class="iwe-cmd">cd ~/IWE</code><code class="iwe-cmd">claude</code></li>
-</ol>
-<div class="iwe-steps-hint">Дальше — спроси Claude: <b>«Проверь все мои подключения IWE и помоги настроить его»</b> или <b>«Создай для меня персональное руководство по личному развитию, включая IWE»</b>. Claude проверит окружение, MCP-подключения, а затем проведёт по программе «Личное развитие». Ежедневный ритм: «открывай» → работа → «закрывай».</div>
-</details>
+<div class="iwe-steps-hint">Следуй <a href="https://github.com/TserenTserenov/FMT-exocortex-template/blob/main/docs/SETUP-GUIDE.md" target="_blank">полной инструкции на GitHub</a> — от установки до первого запуска (15 мин).<br>💡 Открой второй экран с <a href="https://claude.ai" target="_blank">claude.ai</a> — спрашивай туда всё непонятное.</div>
 </div>
 </div>
 </div>
