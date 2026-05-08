@@ -113,33 +113,18 @@ description: 'Не просто чат — постоянный коллега, 
 .iwe-path a:hover { text-decoration: underline; }
 .iwe-steps {
   margin: 0.75rem 0 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: step-counter;
+  padding-left: 1.6rem;
+  list-style: decimal;
 }
 .iwe-steps li {
-  counter-increment: step-counter;
-  position: relative;
-  padding-left: 2.1rem;
   font-size: 0.88rem;
   color: var(--vp-c-text-1);
   line-height: 1.6;
   margin-bottom: 0.7rem;
+  padding-left: 0.25rem;
 }
-.iwe-steps li::before {
-  content: counter(step-counter);
-  position: absolute;
-  left: 0;
-  top: 0.1rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background: var(--vp-c-brand);
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
+.iwe-steps li::marker {
+  color: var(--vp-c-brand);
   font-weight: 700;
 }
 .iwe-steps code {
@@ -419,19 +404,19 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
         <td class="iwe-yes">✓</td>
       </tr>
       <tr>
-        <td class="iwe-ft-col">Работа с проектами</td>
+        <td class="iwe-ft-col">Работа с личными проектами</td>
         <td class="iwe-no">—</td>
         <td class="iwe-partial">частично</td>
         <td class="iwe-yes">✓</td>
       </tr>
       <tr>
-        <td class="iwe-ft-col">Автономный помощник (план дня)</td>
+        <td class="iwe-ft-col">Автономный помощник (план дня и т.п.)</td>
         <td class="iwe-no">—</td>
         <td class="iwe-no">—</td>
         <td class="iwe-yes">✓</td>
       </tr>
       <tr>
-        <td class="iwe-ft-col">Подписка МИМ (Aisystant)</td>
+        <td class="iwe-ft-col">Подписка МИМ</td>
         <td class="iwe-yes">✓</td>
         <td class="iwe-yes">✓</td>
         <td class="iwe-yes">✓</td>
@@ -528,12 +513,12 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
   <div class="iwe-nature-card">
     <div class="icon">🤝</div>
     <h3>Сотворец</h3>
-    <p>Ты вкладываешь опыт, проекты и замыслы — IWE возвращает структуру и ясность. Оба растут вместе. Со временем это становится частью тебя.</p>
+    <p>Ты вкладываешь опыт, проекты и замыслы — IWE возвращает структуру и ясность. Растёте вместе. Со временем IWE становится частью тебя.</p>
   </div>
   <div class="iwe-nature-card">
     <div class="icon">🌐</div>
     <h3>Аватар в сети</h3>
-    <p>Ты не один. IWE соединяет созидателей, которые работают рядом. Твой узел — часть сети людей, меняющих мир делом.</p>
+    <p>Ты не один, а в сообществе системных созидателей. IWE соединяет людей с одинаковой культурой работы и жизни в эпоху ИИ.</p>
   </div>
 </div>
 
@@ -543,13 +528,13 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
   <div class="iwe-formats">
     <div class="iwe-format-card">
       <h3>Самостоятельно</h3>
-      <p>Персональное руководство, свой темп. Портной подстраивает среду под тебя с первого дня.</p>
-      <a href="https://t.me/aist_me_bot" class="btn btn-outline" target="_blank">Начать бесплатно</a>
+      <p>Персональное руководство, свой темп. ИИ подстраивает среду под тебя с первого дня.</p>
+      <a href="https://system-school.ru/pricing" class="btn btn-outline">Купить подписку</a>
     </div>
     <div class="iwe-format-card featured">
-      <h3>В когорте</h3>
+      <h3>Группа с наставником</h3>
       <p>Встреча с наставником раз в неделю, общий чат участников, совместный темп и обратная связь.</p>
-      <a href="https://t.me/aist_me_bot" class="btn btn-primary" target="_blank">Узнать о когорте</a>
+      <a href="https://system-school.ru/programs/intro#schedule" class="btn btn-primary">Узнать о группе</a>
     </div>
   </div>
 </div>
