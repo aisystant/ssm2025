@@ -335,12 +335,13 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 }
 .btn:hover { opacity: 0.85; text-decoration: none; }
 .btn-primary {
-  background: var(--vp-c-brand);
+  background: #16a34a;
   color: #fff;
+  border: 1.5px solid #16a34a;
 }
 .btn-outline {
-  border: 1.5px solid var(--vp-c-brand);
-  color: var(--vp-c-brand);
+  border: 1.5px solid #16a34a;
+  color: #16a34a;
 }
 </style>
 
@@ -459,7 +460,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <div class="step">💬</div>
 <div class="iwe-path-body">
 <h4>Бот Telegram — самый простой старт</h4>
-<p>Удобно для заметок в любой момент и работы с Марафоном прямо в мессенджере. Без установки.</p>
+<p>Удобно для заметок в любой момент и старта погружения в системное саморазвитие прямо в мессенджере. Не требует сложных установок, рекомендуется также для получения платформенных сообщений и бесед с ИИ, обученным системному мышлению.</p>
 <details class="iwe-steps-wrap">
 <summary>Пошаговая инструкция (5 шагов)</summary>
 <ol class="iwe-steps">
@@ -478,7 +479,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <div class="step">🌐</div>
 <div class="iwe-path-body">
 <h4>Браузер — полная среда без установки</h4>
-<p>Удобно вне рабочего места — на телефоне, в дороге, на чужом компьютере. Стратегические сессии с памятью между разговорами через Projects на claude.ai. Git не нужен.</p>
+<p>Удобно вне рабочего места — на телефоне, в дороге, на чужом компьютере. Стратегические сессии и общение с ИИ, которые фиксируются в твоей базе знаний, включая твои личные проекты. Освоение программ МИМ через персональные руководства, которые можно сразу применять в работе и в своих проектах.</p>
 <details class="iwe-steps-wrap">
 <summary>Пошаговая инструкция (4 шага)</summary>
 <ol class="iwe-steps">
@@ -496,7 +497,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <div class="step">⚡</div>
 <div class="iwe-path-body">
 <h4>VS Code + Claude Code — среда для серьёзной работы</h4>
-<p>Полная среда у тебя на компьютере — накопление знаний, личное руководство, автономные агенты. Лучший выбор для долгосрочного развития. Нужен аккаунт GitHub (бесплатно) — он хранит твой личный репозиторий стратегии.</p>
+<p>Полная среда у тебя на компьютере — накопление знаний, формализация опыта общения с ИИ в процессе реализации проектов, персональные руководства МИМ, автономные агенты. Лучший выбор для системного развития. Нужен аккаунт GitHub (бесплатно), в котором хранится и развивается твоя личная база знаний, включая стратегию, проекты и т.п.</p>
 <details class="iwe-steps-wrap">
 <summary>Пошаговая инструкция (5 шагов)</summary>
 <ol class="iwe-steps">
@@ -538,12 +539,12 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
     <div class="iwe-format-card">
       <h3>Самостоятельно</h3>
       <p>Персональное руководство, свой темп. ИИ подстраивает среду под тебя с первого дня.</p>
-      <a href="https://system-school.ru/pricing" class="btn btn-outline">Купить подписку</a>
+      <a href="https://system-school.ru/pricing" class="btn btn-primary">Купить подписку</a>
     </div>
     <div class="iwe-format-card featured">
       <h3>Группа с наставником</h3>
       <p>Встреча с наставником раз в неделю, общий чат участников, совместный темп и обратная связь.</p>
-      <a href="https://system-school.ru/programs/intro#schedule" class="btn btn-primary">Узнать о группе</a>
+      <a href="https://system-school.ru/programs/intro#schedule" class="btn btn-outline">Узнать о группе</a>
     </div>
   </div>
 </div>
