@@ -104,13 +104,24 @@ description: 'Не просто чат — постоянный коллега, 
   color: var(--vp-c-text-2);
   margin: 0 0 0.5rem;
 }
-.iwe-path a {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--vp-c-brand);
-  text-decoration: none;
+.iwe-path a,
+.iwe-steps a,
+.iwe-steps-hint a,
+.iwe-compare a,
+.iwe-promise a,
+.iwe-natures a,
+.iwe-format-card a:not(.btn) {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
-.iwe-path a:hover { text-decoration: underline; }
+.iwe-path a:hover,
+.iwe-steps a:hover,
+.iwe-steps-hint a:hover,
+.iwe-compare a:hover,
+.iwe-promise a:hover,
+.iwe-natures a:hover,
+.iwe-format-card a:not(.btn):hover { opacity: 0.8; }
 .iwe-steps {
   margin: 0.75rem 0 0;
   padding-left: 1.6rem;
