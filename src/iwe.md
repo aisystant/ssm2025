@@ -356,7 +356,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 
 <div class="iwe-promise">
   <p>
-    <strong>IWE — не ещё один чат с ИИ.</strong><br>
+    <strong>IWE (Intellectual Work Environment) — не ещё один чат с ИИ.</strong><br>
     Помнит твои проекты, замыслы и опыт.
     Формализует знания по структуре первых принципов.
     Подбирает мировой опыт под твой контекст.
@@ -382,8 +382,8 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <hr class="iwe-divider" />
 
 <div class="iwe-compare">
-  <p class="iwe-intro">Доступ к IWE — через несколько интерфейсов: Бот, Браузер или VS Code. Каждый — самостоятельный вход. Подключай постепенно по мере роста.</p>
   <h2>Чем отличаются интерфейсы</h2>
+  <p class="iwe-intro">Доступ к IWE — через несколько интерфейсов: Бот, Браузер или VS Code. Каждый — самостоятельный вход.</p>
   <table class="iwe-compare-table">
     <thead>
       <tr>
@@ -454,7 +454,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 </div>
 
 <div class="iwe-choice">
-<h2>Начать с любого:</h2>
+<h2>Инструкции для подключения IWE</h2>
 <div class="iwe-paths">
 <div class="iwe-path">
 <div class="step">💬</div>
@@ -464,7 +464,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <details class="iwe-steps-wrap">
 <summary>Пошаговая инструкция (5 шагов)</summary>
 <ol class="iwe-steps">
-<li>Найди в Telegram бота <code>@aist_me_bot</code></li>
+<li>Найди в Telegram бота <a href="https://t.me/aist_me_bot" target="_blank"><code>@aist_me_bot</code></a></li>
 <li>Нажми <code>/start</code> — бот задаст 3–4 вопроса для диагностики</li>
 <li>Ответь: чем занимаешься, какая цель, сколько часов в неделю</li>
 <li>Привяжи аккаунт Aisystant командой <code>/link</code> — бот найдёт твой аккаунт автоматически или пришлёт ссылку для входа</li>
@@ -472,7 +472,6 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 </ol>
 <div class="iwe-steps-hint">Дальше — спроси бота дословно: <b>«? Что нужно подключить для полного IWE?»</b> (знак вопроса вначале). Для полного IWE потребуется подписка: оформи командой <code>/buy</code>.</div>
 </details>
-<a href="https://t.me/aist_me_bot" target="_blank">Написать @aist_me_bot →</a>
 </div>
 </div>
 <div class="iwe-path">
@@ -490,7 +489,6 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 </ol>
 <div class="iwe-steps-hint">Дальше — спроси Claude: <b>«Как мне развиваться дальше?»</b> или <b>«Создай для меня персональное руководство по личному развитию, включая IWE»</b>. Claude запустит программу «Личное развитие» через твоё персональное руководство в Projects. Каждую следующую сессию начинай словом «открывай», заканчивай «закрывай».</div>
 </details>
-<a href="https://claude.ai" target="_blank">Открыть claude.ai →</a>
 </div>
 </div>
 <div class="iwe-path">
@@ -509,7 +507,6 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 </ol>
 <div class="iwe-steps-hint">Дальше — спроси Claude: <b>«Проверь все мои подключения IWE и помоги настроить его»</b> или <b>«Создай для меня персональное руководство по личному развитию, включая IWE»</b>. Claude проверит окружение, MCP-подключения, а затем проведёт по программе «Личное развитие». Ежедневный ритм: «открывай» → работа → «закрывай».</div>
 </details>
-<a href="https://system-school.ru/quick-start">Быстрый старт (15 мин) →</a>
 </div>
 </div>
 </div>
@@ -539,11 +536,12 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
     <div class="iwe-format-card">
       <h3>Самостоятельно</h3>
       <p>Персональное руководство, свой темп. ИИ подстраивает среду под тебя с первого дня.</p>
+      <p style="font-size:0.85rem;color:var(--vp-c-text-2);margin:0 0 1rem;">Доступ в сообщество 100+ человек, которые осваивают IWE, — отдельно: <a href="https://system-school.ru/programs/intro" target="_blank">семинар об IWE</a>, 5 000 ₽ навсегда.</p>
       <a href="https://system-school.ru/pricing" class="btn btn-primary">Купить подписку</a>
     </div>
     <div class="iwe-format-card featured">
       <h3>Группа с наставником</h3>
-      <p>Встреча с наставником раз в неделю, общий чат участников, совместный темп и обратная связь.</p>
+      <p>Встреча с наставником раз в неделю, общий чат участников, совместный темп и обратная связь. Доступ в сообщество включён.</p>
       <a href="https://system-school.ru/programs/intro#schedule" class="btn btn-outline">Узнать о группе</a>
     </div>
   </div>
