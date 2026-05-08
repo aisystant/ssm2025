@@ -194,24 +194,24 @@ description: 'Не просто чат — постоянный коллега, 
   font-weight: 600;
   color: var(--vp-c-text-2);
 }
-.iwe-tr-section td {
-  background: var(--vp-c-bg-mute);
-  font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--vp-c-text-3);
-  text-align: center;
-  padding: 0.4rem 0.85rem;
-}
-.iwe-yes, .iwe-no, .iwe-partial {
+.iwe-yes {
   text-align: center;
   font-size: 1rem;
   font-weight: 700;
+  color: #16a34a;
 }
-.iwe-yes { color: #16a34a; }
-.iwe-no { color: var(--vp-c-text-3); }
-.iwe-partial { color: #ca8a04; }
+.iwe-no {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--vp-c-text-3);
+}
+.iwe-partial {
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ca8a04;
+}
 .iwe-compare-legend {
   margin: 1rem 0 0;
   font-size: 0.82rem;
@@ -379,9 +379,6 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
       </tr>
     </thead>
     <tbody>
-      <tr class="iwe-tr-section">
-        <td colspan="4">Что получаете</td>
-      </tr>
       <tr>
         <td class="iwe-ft-col">Чат с ИИ</td>
         <td class="iwe-yes">✓</td>
@@ -401,15 +398,15 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
         <td class="iwe-yes">✓</td>
       </tr>
       <tr>
-        <td class="iwe-ft-col">Программы МИМ</td>
+        <td class="iwe-ft-col">Марафон Aisystant</td>
         <td class="iwe-yes">✓</td>
         <td class="iwe-no">—</td>
         <td class="iwe-no">—</td>
       </tr>
       <tr>
         <td class="iwe-ft-col">Память между сессиями</td>
-        <td class="iwe-partial">~</td>
-        <td class="iwe-partial">~</td>
+        <td class="iwe-no">—</td>
+        <td class="iwe-partial">частично</td>
         <td class="iwe-yes">✓</td>
       </tr>
       <tr>
@@ -418,14 +415,11 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
         <td class="iwe-no">—</td>
         <td class="iwe-yes">✓</td>
       </tr>
-      <tr class="iwe-tr-section">
-        <td colspan="4">Что нужно</td>
-      </tr>
       <tr>
         <td class="iwe-ft-col">Подписка МИМ (Aisystant)</td>
         <td class="iwe-yes">✓</td>
-        <td class="iwe-no">—</td>
-        <td class="iwe-no">—</td>
+        <td class="iwe-yes">✓</td>
+        <td class="iwe-yes">✓</td>
       </tr>
       <tr>
         <td class="iwe-ft-col">Подписка на ИИ (claude.ai)</td>
@@ -442,7 +436,6 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
     </tbody>
   </table>
   <div class="iwe-compare-legend">
-    ~ — частичная поддержка.
     Подписка МИМ = программы Aisystant, сообщество, база знаний.
     Подписка на ИИ = аккаунт claude.ai (Pro или выше).
   </div>
