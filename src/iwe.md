@@ -470,7 +470,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <li>Привяжи аккаунт Aisystant командой <code>/link</code> — бот найдёт твой аккаунт автоматически или пришлёт ссылку для входа</li>
 <li>Запусти Марафон командой <code>/learn</code> — бесплатный старт без подписки</li>
 </ol>
-<div class="iwe-steps-hint">Дальше — спроси бота: <b>«Что мне ещё нужно подключить для полного IWE?»</b> Для этого потребуется подписка — оформи командой <code>/buy</code>.</div>
+<div class="iwe-steps-hint">Дальше — спроси бота: <b>«Что нужно подключить для полного IWE?»</b> Для этого потребуется подписка — оформи командой <code>/buy</code>.</div>
 </details>
 <a href="https://t.me/aist_me_bot" target="_blank">Написать @aist_me_bot →</a>
 </div>
