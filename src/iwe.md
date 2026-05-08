@@ -496,7 +496,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <li>Открой <a href="https://claude.ai/settings/connectors" target="_blank">Настройки → Connectors</a> → нажми «Add custom connector»</li>
 <li>В форме введи: Name — <code>Aisystant</code>, Remote MCP server URL — <code class="iwe-cmd">https://mcp.aisystant.com/mcp</code>. Нажми Add, затем Connect и пройди верификацию.</li>
 </ol>
-<div class="iwe-steps-hint">Дальше — спроси Claude: <b>«Как мне развиваться дальше?»</b> или <b>«Создай для меня персональное руководство по личному развитию, включая IWE»</b>. Claude запустит программу «Личное развитие» через твоё персональное руководство в Projects. Каждую следующую сессию начинай словом «открывай», заканчивай «закрывай».</div>
+<div class="iwe-steps-hint">Дальше — спроси Claude: <b>«Как мне развиваться дальше?»</b> или <b>«Создай для меня персональное руководство по личному развитию, включая IWE»</b>. Claude запустит программу «Личное развитие» через твоё персональное руководство в Projects.</div>
 </details>
 </div>
 </div>
@@ -505,7 +505,10 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <div class="iwe-path-body">
 <h4>VS Code + Claude Code — среда для серьёзной работы</h4>
 <p>Полная среда у тебя на компьютере — накопление знаний, формализация опыта общения с ИИ в процессе реализации проектов, персональные руководства МИМ, автономные агенты. Лучший выбор для системного развития. Нужен аккаунт GitHub (бесплатно), в котором хранится и развивается твоя личная база знаний, включая стратегию, проекты и т.п.</p>
+<details class="iwe-steps-wrap">
+<summary>Инструкция</summary>
 <div class="iwe-steps-hint">Следуй <a href="https://github.com/TserenTserenov/FMT-exocortex-template/blob/main/docs/SETUP-GUIDE.md" target="_blank">полной инструкции на GitHub</a> — от установки до первого запуска (15 мин).<br>💡 Открой второй экран с <a href="https://claude.ai" target="_blank">claude.ai</a> — спрашивай туда всё непонятное.</div>
+</details>
 </div>
 </div>
 </div>
@@ -535,7 +538,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
     <div class="iwe-format-card">
       <h3>Самостоятельно</h3>
       <p>Персональное руководство, свой темп. ИИ подстраивает среду под тебя с первого дня.</p>
-      <p style="font-size:0.85rem;color:var(--vp-c-text-2);margin:0 0 1rem;">Доступ в сообщество 100+ человек, которые осваивают IWE, — отдельно: <a href="https://system-school.ru/programs/intro" target="_blank">семинар об IWE</a>, 5 000 ₽ навсегда.</p>
+      <p style="font-size:0.85rem;color:var(--vp-c-text-2);margin:0 0 1rem;">Доступ в сообщество IWE (120+ чел.) через покупку <a href="https://system-school.ru/programs/intro" target="_blank">видео семинара об IWE</a> (5 000 ₽ навсегда).</p>
       <a href="https://system-school.ru/pricing" class="btn btn-primary">Купить подписку</a>
     </div>
     <div class="iwe-format-card featured">
