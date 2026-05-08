@@ -180,7 +180,7 @@ description: 'Не просто чат — постоянный коллега, 
 .iwe-compare-table td {
   padding: 0.6rem 0.85rem;
   border: 1px solid var(--vp-c-divider);
-  vertical-align: top;
+  vertical-align: middle;
 }
 .iwe-compare-table thead th {
   background: var(--vp-c-bg-soft);
@@ -188,17 +188,39 @@ description: 'Не просто чат — постоянный коллега, 
   text-align: center;
   font-size: 0.95rem;
 }
-.iwe-compare-table td:first-child {
+.iwe-ft-col {
   background: var(--vp-c-bg-soft);
+  font-size: 0.85rem;
   font-weight: 600;
-  font-size: 0.82rem;
-  white-space: nowrap;
   color: var(--vp-c-text-2);
+}
+.iwe-tr-section td {
+  background: var(--vp-c-bg-mute);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-3);
+  text-align: center;
+  padding: 0.4rem 0.85rem;
+}
+.iwe-yes, .iwe-no, .iwe-partial {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.iwe-yes { color: #16a34a; }
+.iwe-no { color: var(--vp-c-text-3); }
+.iwe-partial { color: #ca8a04; }
+.iwe-compare-legend {
+  margin: 1rem 0 0;
+  font-size: 0.82rem;
+  color: var(--vp-c-text-3);
+  line-height: 1.7;
 }
 @media (max-width: 600px) {
   .iwe-compare-table { font-size: 0.78rem; }
   .iwe-compare-table th, .iwe-compare-table td { padding: 0.45rem 0.55rem; }
-  .iwe-compare-table td:first-child { white-space: normal; }
 }
 .iwe-combine-note {
   margin: 1.25rem 0 0;
@@ -357,32 +379,73 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Нужно</td>
-        <td>Только Telegram</td>
-        <td>Аккаунт claude.ai</td>
-        <td>Git, GitHub (бесплатно), Claude Code CLI</td>
+      <tr class="iwe-tr-section">
+        <td colspan="4">Что получаете</td>
       </tr>
       <tr>
-        <td>Персональное руководство</td>
-        <td>Создаётся прямо в боте</td>
-        <td>Хранится в Projects claude.ai</td>
-        <td>Файлы в <code>~/IWE</code> — твои навсегда</td>
+        <td class="iwe-ft-col">Чат с ИИ</td>
+        <td class="iwe-yes">✓</td>
+        <td class="iwe-yes">✓</td>
+        <td class="iwe-yes">✓</td>
       </tr>
       <tr>
-        <td>Что даёт</td>
-        <td>Диагностика, маршрут, заметки</td>
-        <td>Стратегии, планы, полная среда</td>
-        <td>Стратег, агенты, накопление знаний</td>
+        <td class="iwe-ft-col">Персональное руководство</td>
+        <td class="iwe-yes">✓</td>
+        <td class="iwe-yes">✓</td>
+        <td class="iwe-yes">✓</td>
       </tr>
       <tr>
-        <td>Когда выбирать</td>
-        <td>Первый шаг прямо сейчас</td>
-        <td>Полная среда без установки</td>
-        <td>Постоянная система на своём ПК</td>
+        <td class="iwe-ft-col">База знаний Aisystant</td>
+        <td class="iwe-yes">✓</td>
+        <td class="iwe-yes">✓</td>
+        <td class="iwe-yes">✓</td>
+      </tr>
+      <tr>
+        <td class="iwe-ft-col">Программы МИМ</td>
+        <td class="iwe-yes">✓</td>
+        <td class="iwe-no">—</td>
+        <td class="iwe-no">—</td>
+      </tr>
+      <tr>
+        <td class="iwe-ft-col">Память между сессиями</td>
+        <td class="iwe-partial">~</td>
+        <td class="iwe-partial">~</td>
+        <td class="iwe-yes">✓</td>
+      </tr>
+      <tr>
+        <td class="iwe-ft-col">Автономный помощник (план дня)</td>
+        <td class="iwe-no">—</td>
+        <td class="iwe-no">—</td>
+        <td class="iwe-yes">✓</td>
+      </tr>
+      <tr class="iwe-tr-section">
+        <td colspan="4">Что нужно</td>
+      </tr>
+      <tr>
+        <td class="iwe-ft-col">Подписка МИМ (Aisystant)</td>
+        <td class="iwe-yes">✓</td>
+        <td class="iwe-no">—</td>
+        <td class="iwe-no">—</td>
+      </tr>
+      <tr>
+        <td class="iwe-ft-col">Подписка на ИИ (claude.ai)</td>
+        <td class="iwe-no">—</td>
+        <td class="iwe-yes">✓</td>
+        <td class="iwe-yes">✓</td>
+      </tr>
+      <tr>
+        <td class="iwe-ft-col">Установка на компьютер</td>
+        <td class="iwe-no">—</td>
+        <td class="iwe-no">—</td>
+        <td class="iwe-yes">✓</td>
       </tr>
     </tbody>
   </table>
+  <div class="iwe-compare-legend">
+    ~ — частичная поддержка.
+    Подписка МИМ = программы Aisystant, сообщество, база знаний.
+    Подписка на ИИ = аккаунт claude.ai (Pro или выше).
+  </div>
   <p class="iwe-combine-note">Не нужно выбирать один навсегда. Начни с бота — потом добавь браузер, потом VS Code.<br>Каждый уровень добавляет возможности, а не отменяет предыдущий.</p>
 </div>
 
