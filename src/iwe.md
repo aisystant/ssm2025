@@ -466,12 +466,10 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <li>Найди в Telegram бота <code>@aist_me_bot</code></li>
 <li>Нажми <code>/start</code> — бот задаст 3–4 вопроса для диагностики</li>
 <li>Ответь: чем занимаешься, какая цель, сколько часов в неделю</li>
-<li>Открой <code>/settings</code> → «Привязать Aisystant» → пройди авторизацию по ссылке</li>
-<li>Там же <code>/settings</code> → «Оформить подписку «Бесконечное развитие»» — выбери план</li>
+<li>Привяжи аккаунт Aisystant командой <code>/link</code> — бот найдёт твой аккаунт автоматически или пришлёт ссылку для входа</li>
+<li>Оформи подписку командой <code>/buy</code> — откроется витрина с подпиской «Бесконечное развитие» и семинарами</li>
 </ol>
-<div class="iwe-steps-hint"><b>Дальше — два пути:</b><br>
-• <b>Бесплатно потестировать подход</b> — запусти Марафон командой <code>/learn</code>, получай уроки и тренировки.<br>
-• <b>Использовать бот как часть IWE</b> — подключи Браузер или VS Code (см. ниже). Бот останется для быстрых заметок и команд из любого места.</div>
+<div class="iwe-steps-hint">Дальше — спроси бота: <b>«Что мне делать дальше?»</b> Он подберёт следующий шаг по твоему маршруту. Для бесплатного знакомства запусти Марафон командой <code>/learn</code>.</div>
 </details>
 <a href="https://t.me/aist_me_bot" target="_blank">Написать @aist_me_bot →</a>
 </div>
@@ -489,11 +487,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <li>В форме введи: Name — <code>Aisystant</code>, Remote MCP server URL — <code class="iwe-cmd">https://mcp.aisystant.com/mcp</code>, нажми Add</li>
 <li>Создай новый чат и напиши: «Проведём первую стратегическую сессию»</li>
 </ol>
-<div class="iwe-steps-hint"><b>Дальше — работай с Claude как с экзокортексом:</b><br>
-• Стратегические сессии, планирование недели, разбор проектов — всё в одном чате с памятью.<br>
-• Claude создаст <b>персональное руководство</b> прямо в Projects — изучай платформу через диалог и собственный текст.<br>
-• Каждую следующую сессию начинай словом «открывай», заканчивай словом «закрывай» — контекст сохраняется.<br>
-• Полная дорожная карта — <a href="https://github.com/TserenTserenov/FMT-exocortex-template/blob/main/docs/LEARNING-PATH.md" target="_blank">LEARNING-PATH</a>.</div>
+<div class="iwe-steps-hint">Дальше — спроси Claude: <b>«Как мне развиваться дальше?»</b> Он подберёт следующий шаг под твой контекст и поможет создать персональное руководство в Projects. Каждую сессию начинай словом «открывай», заканчивай «закрывай» — контекст сохраняется.</div>
 </details>
 <a href="https://claude.ai" target="_blank">Открыть claude.ai →</a>
 </div>
@@ -512,11 +506,7 @@ details.iwe-steps-wrap > summary:hover { opacity: 0.75; }
 <li>Подключи Aisystant MCP в <a href="https://claude.ai/settings/connectors" target="_blank">claude.ai → Настройки → Connectors</a>: имя <code>Aisystant</code>, URL <code class="iwe-cmd">https://mcp.aisystant.com/mcp</code></li>
 <li>Перезапусти Claude Code в терминале:<code class="iwe-cmd">cd ~/IWE</code><code class="iwe-cmd">claude</code></li>
 </ol>
-<div class="iwe-steps-hint"><b>Дальше — работай с Claude в своём IWE:</b><br>
-• Claude знает твой контекст, ведёт стратегические сессии и отслеживает прогресс по дням.<br>
-• Изучай платформу через <b>персональное руководство</b> — оно живёт в твоих файлах <code>~/IWE/CLAUDE.md</code> и <code>~/IWE/DS-strategy/</code>.<br>
-• Дорожная карта обучения — в <code>~/IWE/FMT-exocortex-template/docs/LEARNING-PATH.md</code> (онлайн-версия — <a href="https://github.com/TserenTserenov/FMT-exocortex-template/blob/main/docs/LEARNING-PATH.md" target="_blank">здесь</a>).<br>
-• Ритм дня: «открывай» → работа → «закрывай». Контекст накапливается автоматически.</div>
+<div class="iwe-steps-hint">Дальше — спроси Claude: <b>«С чего начать освоение IWE?»</b> Он откроет твою дорожную карту в <code>~/IWE/FMT-exocortex-template/docs/LEARNING-PATH.md</code> и проведёт по этапам. Ежедневный ритм: «открывай» → работа → «закрывай».</div>
 </details>
 <a href="https://system-school.ru/quick-start">Быстрый старт (15 мин) →</a>
 </div>
