@@ -58,7 +58,7 @@ function send() {
 }
 
 function getStream() {
-    const url = `https://aisystant.system-school.ru/api/crm/potok/${data.marathon_id}`
+    const url = `/api/crm/potok/${data.marathon_id}`
     axios
         .get(url)
         .then(response => {
