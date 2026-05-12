@@ -2,15 +2,16 @@
 import { ref, onMounted } from 'vue'
 import MarathonModalTesting from './MarathonModalTesting.vue'
 import MarathonModalResult from './MarathonModalResult.vue'
+import MarathonModalInvite from './MarathonModalInvite.vue'
 import MarathonModalPayment from './MarathonModalPayment.vue'
 
 const modal = ref<HTMLElement | null>(null)
 const result = ref<number | null>(null)
-const layout = ref<'testing'|'result'|'payment'>('testing')
+const layout = ref<'testing'|'result'|'invite'|'payment'>('testing')
 
 const summary = (count: number | null) => {
     result.value = count
-    if (count === null) layout.value = 'payment'
+    if (count === null) layout.value = 'invite'
     else layout.value = 'result'
 }
 
@@ -44,8 +45,12 @@ onMounted(() => {
 
                 <MarathonModalResult
                 :count="result"
-                @next="layout = 'payment'"
+                @next="layout = 'invite'"
                 v-if="result !== null && layout == 'result'" />
+
+                <MarathonModalInvite
+                @next="layout = 'payment'"
+                v-if="layout == 'invite'" />
 
                 <MarathonModalPayment
                 v-if="layout == 'payment'" />

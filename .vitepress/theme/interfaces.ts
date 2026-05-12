@@ -137,3 +137,11 @@ export interface MarathonResultCard {
     items: string[]
     footer?: string
 }
+
+export interface MarathonFormSuccess {
+    accept_text: string
+    link_text?: string[]
+    email_text?: string[]
+    footer?: string[]
+    button: string
+}
