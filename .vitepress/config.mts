@@ -100,6 +100,14 @@ export default defineConfig({
     },
 
     vite: {
+        server: {
+            proxy: {
+                '/api': {
+                    target: 'https://aisystant.system-school.ru',
+                    changeOrigin: true,
+                },
+            },
+        },
         plugins: [
             createSvgSpritePlugin({
                 symbolId: 'icon-[name]-[hash]',

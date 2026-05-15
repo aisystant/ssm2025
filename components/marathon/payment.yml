@@ -1,20 +1,25 @@
-title: 'Присоединиться к марафону'
-features:
-    name: 'Марафон — это не мотивация.<br>Это структурированный процесс:'
-    items:
-      - '21 день'
-      - 'Ежедневные короткие шаги'
-      - 'Персональный маршрут'
-      - 'Поддержка'
+marathon_id: 337
+title: 'Заявка на участие в марафоне'
 body:
-    - '<b class="text-secondary">Стоимость участия:</b> 2 490 ₽'
-    - '<b class="text-secondary">Старт:</b> 25.03.2026'
+    - 'Если у вас есть аккаунт в <a href="https://aisystant.system-school.ru/" target="_blank" rel="nofollow">Aisystant</a>, укажите email этого аккаунта.'
 
 footer:
-    - 'После оплаты вы получите ссылку на&nbsp;чат участников и дальнейшие инструкции на почту, указанную на&nbsp;странице оплаты.'
-    - 'Оплата юридических лиц и по иностранным картам — пишите <a href="https://t.me/Gelya1848" target="_blank" rel="nofollow noopener">@Gelya1848</a>.'
-    - 'В случае возникновения проблем пишите на&nbsp;<a href="https://t.me/ssm_tg" target="_blank" rel="nofollow noopener">@ssm_tg</a>.'
+    - 'На указанную почту вы получите индивидуальную ссылку на&nbsp;вступление в&nbsp;телеграм-чат марафона.'
 
-button:
-    name: 'Перейти к оплате'
-    link: 'https://yookassa.ru/my/i/abfRaHC_ewef/l'
+button: 'Перейти к оплате'
+
+error: 'Ошибка отправки заявки! Попробуйте еще раз или обратитесь в поддержку <a href="https://t.me/ssm_tg" target="_blank" rel="nofollow noopener">@ssm_tg</a>.'
+
+success:
+    accept_text: 'Ваша заявка принята!'
+
+    link_text: 'Если переход к&nbsp;оплате не&nbsp;произошел автоматически, перейдите по '
+    link_name: 'этой ссылке'
+
+    email_text: 'После успешной оплаты вы получите индивидуальную ссылку на&nbsp;вступление в&nbsp;телеграм-чат марафона на '
+    email_default: 'указанную почту'
+
+    footer:
+        - 'В случае возникновения проблем пишите на&nbsp;<a href="https://t.me/ssm_tg" target="_blank" rel="nofollow noopener">@ssm_tg</a> или на&nbsp;<a href="mailto:support@system-school.ru">support@system-school.ru</a>.'
+
+    button: 'Закрыть'
