@@ -13,34 +13,40 @@ const data = yaml.load(yamlText) as {
     body?: string[]
     footer?: string[]
     button: string
+    error: string
     success: MarathonFormSuccess
 }
 
 import axios from 'axios'
 import { ref, computed, watch, onMounted } from 'vue'
 
+const paymentId = ref(crypto.randomUUID())
+const state = ref<''|'loading'|'success'|'fail'>('')
+const code = ref('')
+const price = ref('')
+const link = ref('')
 const surname = ref('')
 const name = ref('')
 const email = ref('')
 const agreement = ref(false)
-const loading = ref(false)
-const success = ref(false)
-const error = ref(false)
 const confirmError = ref(false)
 
 const valid = computed(() => {
     return surname.value.length > 2
         && name.value.length > 2
-        && email.value.length > 3
-        && email.value.includes('@')
+        && isValidEmail.value
+})
+
+const isValidEmail = computed(() => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)
 })
 
 const sendData = computed(() => {
     return {
-        'code': '',
-        'amount': '',
+        'code': code.value,
+        'amount': price.value,
         'lastName': surname.value,
-        'firstName': email.value,
+        'firstName': name.value,
     }
 })
 
@@ -49,25 +55,33 @@ watch(() => agreement.value, (val) => {
 })
 
 function send() {
-    error.value = false
+    state.value = ''
     confirmError.value = !agreement.value
 
     if (confirmError.value) return
-    loading.value = true
-    ///send
-}
 
-function getStream() {
-    const url = `/api/crm/potok/${data.marathon_id}`
+    state.value = 'loading'
+    const url = `/api/subscriptions/create-internship-payment-external?request-id=${paymentId.value}&email=${email.value}&test=true`
     axios
-        .get(url)
+        .post(url, sendData.value)
         .then(response => {
-            console.log(response.data)
+            link.value = response.data.confirmationUrl
+            state.value = 'success'
+            window.open(link.value, '_blank')
+        })
+        .catch(() => {
+            state.value = 'fail'
+            paymentId.value = crypto.randomUUID()
         })
 }
 
 onMounted(() => {
-    getStream()
+    axios
+        .get(`/api/crm/potok/${data.marathon_id}`)
+        .then(response => {
+            code.value = response.data.code
+            price.value = response.data.price
+        })
 })
 </script>
 
@@ -76,8 +90,11 @@ onMounted(() => {
     :title="data.title" />
 
     <MarathonFormComplete
+    v-if="state === 'success'"
     :data="data.success"
-    v-if="success" />
+    :name="name"
+    :email="email"
+    :link="link" />
 
     <template v-else>
         <div class="modal-body">
@@ -87,6 +104,13 @@ onMounted(() => {
                         v-for="item in data.body"
                         :key="item"
                         v-html="item"></p>
+                </div>
+
+                <div
+                    v-if="state === 'fail'"
+                    class="alert alert-danger text-small"
+                    v-html="data.error"
+                    role="alert">
                 </div>
 
                 <div class="mb-3">
@@ -134,8 +158,8 @@ onMounted(() => {
         <div class="modal-footer">
             <button
                 type="button"
-                :class="['btn', {'btn-loading' : loading }]"
-                :disabled="!valid || loading"
+                :class="['btn', { 'btn-loading' : state === 'loading' }]"
+                :disabled="!valid || state === 'loading'"
                 @click="send">
                 {{ data.button }}
             </button>

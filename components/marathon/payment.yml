@@ -8,20 +8,16 @@ footer:
 
 button: 'Перейти к оплате'
 
-form:
-    code: 'ML-2026.1-T'
-    price: '2490'
+error: 'Ошибка отправки заявки! Попробуйте еще раз или обратитесь в поддержку <a href="https://t.me/ssm_tg" target="_blank" rel="nofollow noopener">@ssm_tg</a>.'
 
 success:
-    accept_text: 'Спасибо! Ваша заявка принята!'
+    accept_text: 'Ваша заявка принята!'
 
-    link_text:
-        - 'Если переход к оплате не произошел автоматически, перейдите по'
-        - 'этой ссылке'
+    link_text: 'Если переход к&nbsp;оплате не&nbsp;произошел автоматически, перейдите по '
+    link_name: 'этой ссылке'
 
-    email_text:
-        - 'После успешной оплаты вы получите индивидуальную ссылку на&nbsp;вступление в&nbsp;телеграм-чат марафона на'
-        - 'указанную почту'
+    email_text: 'После успешной оплаты вы получите индивидуальную ссылку на&nbsp;вступление в&nbsp;телеграм-чат марафона на '
+    email_default: 'указанную почту'
 
     footer:
         - 'В случае возникновения проблем пишите на&nbsp;<a href="https://t.me/ssm_tg" target="_blank" rel="nofollow noopener">@ssm_tg</a> или на&nbsp;<a href="mailto:support@system-school.ru">support@system-school.ru</a>.'

@@ -140,8 +140,10 @@ export interface MarathonResultCard {
 
 export interface MarathonFormSuccess {
     accept_text: string
-    link_text?: string[]
-    email_text?: string[]
+    link_text: string
+    link_name: string
+    email_text: string
+    email_default: string
     footer?: string[]
     button: string
 }

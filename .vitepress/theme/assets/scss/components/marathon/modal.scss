@@ -56,6 +56,13 @@
         text-align: left;
         max-width: 28rem;
         @extend .mx-auto;
+
+        & .alert {
+            & a {
+                font-weight: $font-weight-normal;
+                color: var(--bs-alert-link-color);
+            }
+        }
     }
 
     & .modal-footer {
