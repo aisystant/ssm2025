@@ -61,7 +61,7 @@ function send() {
     if (confirmError.value) return
 
     state.value = 'loading'
-    const url = `/api/subscriptions/create-internship-payment-external?request-id=${paymentId.value}&email=${email.value}`
+    const url = `/api/subscriptions/create-internship-payment-external?request-id=${paymentId.value}&email=${encodeURIComponent(email.value)}`
     axios
         .post(url, sendData.value)
         .then(response => {
