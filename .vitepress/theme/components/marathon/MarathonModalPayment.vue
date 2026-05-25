@@ -30,6 +30,7 @@ const name = ref('')
 const email = ref('')
 const agreement = ref(false)
 const confirmError = ref(false)
+const errorText = ref('')
 
 const valid = computed(() => {
     return surname.value.length > 2
@@ -69,8 +70,9 @@ function send() {
             state.value = 'success'
             window.open(link.value, '_blank')
         })
-        .catch(() => {
+        .catch(error => {
             state.value = 'fail'
+            errorText.value = error.response.data.message || data.error
             paymentId.value = crypto.randomUUID()
         })
 }
@@ -109,7 +111,7 @@ onMounted(() => {
                 <div
                     v-if="state === 'fail'"
                     class="alert alert-danger text-small"
-                    v-html="data.error"
+                    v-html="errorText"
                     role="alert">
                 </div>
 
