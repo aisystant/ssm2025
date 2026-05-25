@@ -76,11 +76,11 @@ publications:
 
 contacts:
     club: 'https://systemsworld.club/u/metelki'
-    telegram: 'https://t.me/IvanMetelkin'
+    telegram: 'tg://resolve?domain=IvanMetelkin'
     social:
       -
         name: 'Telegram-канал'
-        link: 'https://t.me/AllMyCircuits'
+        link: 'tg://resolve?domain=AllMyCircuits'
       -
         name: 'LinkedIn'
         link: 'https://www.linkedin.com/in/IvanMetelkin'

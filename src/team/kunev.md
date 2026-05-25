@@ -69,11 +69,11 @@ practice:
             status: 'Развивается'
 
 contacts:
-    telegram: 'https://t.me/cunevv'
+    telegram: 'tg://resolve?domain=cunevv'
     social:
       -
         name: 'Telegram-канал'
-        link: 'https://t.me/veaceslavcunev'
+        link: 'tg://resolve?domain=veaceslavcunev'
       -
         name: 'Facebook'
         link: 'https://www.facebook.com/veaceslav.cunev'

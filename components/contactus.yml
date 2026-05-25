@@ -8,7 +8,7 @@ items:
 footer: 'Если остались вопросы — напишите нам в&nbsp;Telegram, и&nbsp;мы ответим лично.'
 
 btn_bot: 'Телерам-бот МИМ'
-link_bot: 'https://t.me/SystemsSchool_bot'
+link_bot: 'tg://resolve?domain=SystemsSchool_bot'
 
 btn_modal: 'Свяжитесь со мной'
 

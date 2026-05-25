@@ -21,7 +21,7 @@ main:
       -
         icon: 'tg'
         name: 'Телеграм-бот с расписанием'
-        link: 'https://t.me/SystemsSchool_bot'
+        link: 'tg://resolve?domain=SystemsSchool_bot'
 
 address:
     title: 'Почтовый адрес'
@@ -40,7 +40,7 @@ connect:
       -
         icon: 'tg'
         name: 'Чат с оператором'
-        link: 'https://t.me/ssm_tg'
+        link: 'tg://resolve?domain=ssm_tg'
 
 english:
     title: 'На английском языке'
@@ -79,11 +79,11 @@ community:
           -
             icon: 'tg'
             name: 'Телеграм-канал'
-            link: 'https://t.me/system_school'
+            link: 'tg://resolve?domain=system_school'
           -
             icon: 'chat'
             name: 'Чат участников'
-            link: 'https://t.me/welcomeSSM'
+            link: 'tg://resolve?domain=welcomeSSM'
           -
             icon: 'yt'
             name: 'YouTube-канал'
@@ -95,11 +95,11 @@ community:
           -
             icon: 'tg'
             name: 'Телеграм-канал'
-            link: 'https://t.me/aisystant_platform'
+            link: 'tg://resolve?domain=aisystant_platform'
           -
             icon: 'chat'
             name: 'Чат для предложений'
-            link: 'https://t.me/+5WH59nuwrnY3M2Ji'
+            link: 'tg://join?invite=5WH59nuwrnY3M2Ji'
 
     chats:
         title: 'Полезные чаты в Телеграм'
@@ -107,11 +107,11 @@ community:
           -
             icon: 'brain'
             name: 'Чат об экзокортексе'
-            link: 'https://t.me/exocortexssm'
+            link: 'tg://resolve?domain=exocortexssm'
           -
             icon: 'person'
             name: 'Чат волонтёров'
-            link: 'https://t.me/+pJqH9beH9OpjODcy'
+            link: 'tg://join?invite=pJqH9beH9OpjODcy'
 
     bots:
         title: 'Боты и прототипы AI-ассистентов'
@@ -119,19 +119,19 @@ community:
           -
             icon: 'tg'
             name: 'По вопросам участия в&nbsp;стажировках'
-            link: 'https://t.me/SystemsSchool_bot'
+            link: 'tg://resolve?domain=SystemsSchool_bot'
           -
             icon: 'note'
             name: 'Для отправки заметок в&nbsp;клуб'
-            link: 'https://t.me/AisystantInboxBot'
+            link: 'tg://resolve?domain=AisystantInboxBot'
           -
             icon: 'chat'
             name: 'Для "случайных встреч" в&nbsp;сообществе'
-            link: 'https://t.me/AisystantNetworkingBot'
+            link: 'tg://resolve?domain=AisystantNetworkingBot'
           -
             icon: 'bot'
             name: 'Бот AI-репетитора по&nbsp;личному развитию'
-            link: 'https://t.me/tutor_system_bot'
+            link: 'tg://resolve?domain=tutor_system_bot'
 
 programs:
     title: 'Наши программы в Телеграм'
@@ -146,7 +146,7 @@ programs:
           -
             icon: 'chat'
             name: 'Чат'
-            link: 'https://t.me/intro_systemsthinking'
+            link: 'tg://resolve?domain=intro_systemsthinking'
       -
         title: 'Рабочее развитие'
         contacts:
@@ -157,7 +157,7 @@ programs:
           -
             icon: 'chat'
             name: 'Чат'
-            link: 'https://t.me/systemsthinking_course'
+            link: 'tg://resolve?domain=systemsthinking_course'
       -
         title: 'Исследовательское развитие'
         contacts:
@@ -168,5 +168,5 @@ programs:
           -
             icon: 'chat'
             name: 'Чат'
-            link: 'https://t.me/modelcollect'
+            link: 'tg://resolve?domain=modelcollect'
 ---

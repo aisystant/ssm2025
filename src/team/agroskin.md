@@ -72,7 +72,7 @@ practice:
 
 contacts:
     club: 'https://systemsworld.club/u/viktor-agroskin/'
-    telegram: 'https://t.me/vvagr'
+    telegram: 'tg://resolve?domain=vvagr'
     email: 'vic5784@gmail.com'
     social:
       -

@@ -137,7 +137,7 @@ questions:
         text: 'Наставничество/тренерство — часть моей деятельности; системно передаю опыт и масштабирую практики.'
         score: 5
 
-footer: 'Получи индивидуальный разбор → <a href="https://t.me/ssm_tg" target="_blank">напиши в Телеграм</a>'
+footer: 'Получи индивидуальный разбор → <a href="tg://resolve?domain=ssm_tg" target="_blank">напиши в Телеграм</a>'
 
 conclude:
   image: 'quiz/yourstartingpoint-result.svg'
@@ -178,7 +178,7 @@ conclude:
     name: 'Запишитесь на индивидуальную разбор-сессию'
     text: 'если хотите понять, где точка роста именно для вас.'
     button: 'Записаться'
-    link: 'https://t.me/ssm_tg'
+    link: 'tg://resolve?domain=ssm_tg'
 
   subscribe:
     name: 'Подпишитесь на 5-дневный челлендж по системному саморазвитию'

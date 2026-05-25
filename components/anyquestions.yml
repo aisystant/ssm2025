@@ -5,16 +5,16 @@ text:
 buttons:
   -
     name: 'Телерам-бот МИМ'
-    link: 'https://t.me/SystemsSchool_bot'
+    link: 'tg://resolve?domain=SystemsSchool_bot'
     style: 'btn-white'
     target: '_blank'
   -
     name: 'Чат с поддержкой'
-    link: 'https://t.me/welcomeSSM'
+    link: 'tg://resolve?domain=welcomeSSM'
     style: 'btn-white'
     target: '_blank'
   -
     name: 'Получить консультацию'
-    link: 'https://t.me/ssm_tg'
+    link: 'tg://resolve?domain=ssm_tg'
     style: 'btn-secondary'
     target: '_blank'

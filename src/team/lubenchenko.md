@@ -77,7 +77,7 @@ books:
 
 contacts:
     club: 'https://systemsworld.club/u/annlub902gmail-com/'
-    telegram: 'https://t.me/selfdiscipline'
+    telegram: 'tg://resolve?domain=selfdiscipline'
     email: 'annlub902@gmail.com'
     social:
       -

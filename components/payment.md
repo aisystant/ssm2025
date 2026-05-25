@@ -177,7 +177,7 @@ list:
       - "WS - Самоа"
       - "YT - Майотта"
     text:
-      - 'Если вашей страны нет в&nbsp;списке, напишите нам на&nbsp;<a href="https://t.me/ssm_tg" target="_blank" rel="nofollow noopener">@ssm_tg</a>.'
+      - 'Если вашей страны нет в&nbsp;списке, напишите нам на&nbsp;<a href="tg://resolve?domain=ssm_tg" target="_blank" rel="nofollow noopener">@ssm_tg</a>.'
       - 'При оплате иностранной картой стоимость выше на&nbsp;15%.'
 
 cis_list:
@@ -199,4 +199,4 @@ cis_list:
 
 После оплаты в течение нескольких часов в&nbsp;Личном кабинете появится новая стажировка, где будет ссылка на&nbsp;вступление в&nbsp;Телеграм-чат вашего потока.
 
-В случае возникновения проблем пишите на&nbsp;<a href="https://t.me/ssm_tg" target="_blank" rel="nofollow noopener">@ssm_tg</a>.
+В случае возникновения проблем пишите на&nbsp;<a href="tg://resolve?domain=ssm_tg" target="_blank" rel="nofollow noopener">@ssm_tg</a>.

@@ -63,11 +63,11 @@ practice:
             name: 'Сообщество усиления интеллекта'
 
 contacts:
-    telegram: 'https://t.me/pionmedvedeva'
+    telegram: 'tg://resolve?domain=pionmedvedeva'
     social:
       -
         name: 'Telegram-канал'
-        link: 'https://t.me/ontologics'
+        link: 'tg://resolve?domain=ontologics'
 
 reviews:
     title: 'Отзывы о наставнике'

@@ -80,7 +80,7 @@ questions:
         text: 'Не понимаю, с чего начать и как собраться.'
         score: 0
 
-footer: 'Получи индивидуальный разбор → <a href="https://t.me/ssm_tg" target="_blank">напиши в Телеграм</a>'
+footer: 'Получи индивидуальный разбор → <a href="tg://resolve?domain=ssm_tg" target="_blank">напиши в Телеграм</a>'
 
 conclude:
   image: 'quiz/whereyoustuck-result.svg'
@@ -108,7 +108,7 @@ conclude:
     name: 'Запишитесь на индивидуальную разбор-сессию'
     text: 'если хотите понять, где точка роста именно для&nbsp;вас.'
     button: 'Записаться'
-    link: 'https://t.me/ssm_tg'
+    link: 'tg://resolve?domain=ssm_tg'
 
   subscribe:
     name: 'Подпишитесь на серию писем'

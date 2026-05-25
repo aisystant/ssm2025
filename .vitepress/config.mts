@@ -70,7 +70,7 @@ export default defineConfig({
         ],
         socialLinks: [
             { icon: "youtube", name: "YouTube", link: "https://www.youtube.com/channel/UCJ0Uq_WB7GLmY-NTz2oFoUQ" },
-            { icon: "telegram", name: "Telegram", link: "https://t.me/system_school" },
+            { icon: "telegram", name: "Telegram", link: "tg://resolve?domain=system_school" },
             { icon: "facebook", name: "Facebook", link: "https://www.facebook.com/system.school.ru" },
             { icon: "instagram", name: "Instagram", link: "https://www.instagram.com/sys.school" },
             { icon: "linkedin", name: "LinkedIn", link: "https://www.linkedin.com/school/86146919" },
@@ -80,7 +80,7 @@ export default defineConfig({
         contacts: {
             address: "115054, г.&nbsp;Москва, ул.&nbsp;Земляной Вал, д.&nbsp;68/18, стр.&nbsp;5, этаж&nbsp;3, офис&nbsp;314",
             workhours: "(ежедневно c&nbsp10 до&nbsp18&nbspч.)",
-            telegram: "https://t.me/ssm_tg",
+            telegram: "tg://resolve?domain=ssm_tg",
             email: "info@system-school.ru",
         },
         extLinks: {
