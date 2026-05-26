@@ -41,6 +41,6 @@ activity:
 
 contacts:
     club: 'https://systemsworld.club/u/ylika_chaikovskaya'
-    telegram: 'https://t.me/Ylika_Chai'
+    telegram: 'tg://resolve?domain=Ylika_Chai'
     email: 'ylika_@list.ru'
 ---

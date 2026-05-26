@@ -68,7 +68,7 @@ practice:
 
 contacts:
     club: 'https://systemsworld.club/u/nedbailov375426'
-    telegram: 'https://t.me/stas_levelup'
+    telegram: 'tg://resolve?domain=stas_levelup'
     email: 'niadbailau@pm.me'
     social:
       -

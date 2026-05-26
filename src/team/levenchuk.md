@@ -113,12 +113,12 @@ books:
 
 contacts:
     club: 'https://systemsworld.club/u/ailev/'
-    telegram: 'https://t.me/ailevenchuk'
+    telegram: 'tg://resolve?domain=ailevenchuk'
     email: ''
     social:
       -
         name: 'Telegram-канал'
-        link: 'https://t.me/ailev_blog'
+        link: 'tg://resolve?domain=ailev_blog'
       -
         name: 'Livejournal'
         link: 'https://ailev.livejournal.com/'

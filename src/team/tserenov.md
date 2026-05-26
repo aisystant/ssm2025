@@ -129,12 +129,12 @@ books:
 
 contacts:
     club: 'https://systemsworld.club/u/tseren-tserenov/'
-    telegram: 'https://t.me/TserenTserenov'
+    telegram: 'tg://resolve?domain=TserenTserenov'
     email: 'tseren@system-school.ru'
     social:
       -
         name: 'Telegram-канал'
-        link: 'https://t.me/systemsthinkinglife'
+        link: 'tg://resolve?domain=systemsthinkinglife'
       -
         name: 'Youtube'
         link: 'https://www.youtube.com/@tserentserenov77'
