@@ -142,7 +142,7 @@ programs:
           -
             icon: 'tg'
             name: 'Телеграм-канал'
-            link: 'https://t.me/self_development_guides'
+            link: 'tg://resolve?domain=mim_self'
           -
             icon: 'chat'
             name: 'Чат'
@@ -153,7 +153,7 @@ programs:
           -
             icon: 'tg'
             name: 'Телеграм-канал'
-            link: 'https://t.me/work_development_guides'
+            link: 'tg://resolve?domain=mim_workdev'
           -
             icon: 'chat'
             name: 'Чат'
@@ -164,7 +164,7 @@ programs:
           -
             icon: 'tg'
             name: 'Телеграм-канал'
-            link: 'https://t.me/research_development_guides'
+            link: 'tg://resolve?domain=mim_research'
           -
             icon: 'chat'
             name: 'Чат'

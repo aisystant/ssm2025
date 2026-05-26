@@ -54,9 +54,9 @@ export default defineConfig({
                 items: [
                     { text: "Клуб", link: "https://systemsworld.club/", target: "_blank" },
                     { text: "Амбассадоры", link: "/ambassador" },
-                    { text: "Канал «Личного развития»", link: "https://t.me/self_development_guides", target: "_blank" },
-                    { text: "Канал «Рабочего развития»", link: "https://t.me/work_development_guides", target: "_blank" },
-                    { text: "Канал «Исследовательского развития»", link: "https://t.me/research_development_guides", target: "_blank" },
+                    { text: "Канал «Личного развития»", link: "tg://resolve?domain=mim_self", target: "_blank" },
+                    { text: "Канал «Рабочего развития»", link: "tg://resolve?domain=mim_workdev", target: "_blank" },
+                    { text: "Канал «Исследовательского развития»", link: "tg://resolve?domain=mim_research", target: "_blank" },
                 ],
             },
         ],
