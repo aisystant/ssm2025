@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /intro-marathon
+Allow: /
 
 Sitemap: https://system-school.ru/sitemap.xml

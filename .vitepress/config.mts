@@ -41,6 +41,10 @@ export default defineConfig({
                 ],
             },
             {
+                text: "Купить",
+                link: "/quick-purchase",
+            },
+            {
                 text: "Исследования",
                 items: [
                     { text: "Обзор исследований", link: "/research" },

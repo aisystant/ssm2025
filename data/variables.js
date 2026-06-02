@@ -20,7 +20,7 @@ export const data = {
     // Программа «Личное развитие»
     selfdev1: {
         name: 'S1. Системное саморазвитие',
-        date: '2026-05-17',
+        date: '2026-06-14',
         price: '35000',
         pay_rus: 'https://yookassa.ru/my/i/aVLixBRGvscC/l',
         pay_foreign: 'https://kassa.payanyway.ru/176477452980220',
@@ -30,7 +30,7 @@ export const data = {
     },
     selfdev2: {
         name: 'S2. Методы саморазвития',
-        date: '2026-05-18',
+        date: '2026-06-15',
         price: '35000',
         pay_rus: 'https://yookassa.ru/my/i/aVLjP9w0Apo1/l',
         pay_foreign: 'https://kassa.payanyway.ru/1764775076332191',
@@ -61,7 +61,7 @@ export const data = {
     // Программа «Рабочее развитие»
     workdev1: {
         name: 'R1. Распожаризация',
-        date: '2026-04-11',
+        date: '2026-08-11',
         price: '60000',
         pay_rus: 'https://yookassa.ru/my/i/aVJ2QLZRa5H0/l',
         pay_foreign: 'https://kassa.payanyway.ru/176701232338332',
@@ -71,7 +71,7 @@ export const data = {
     },
     workdev2: {
         name: 'R2. Моделирование как основа коммуникации и лидерства',
-        date: '2026-06-01',
+        date: '2026-06-03',
         price: '60000',
         pay_rus: 'https://yookassa.ru/my/i/aVLpsP9k2Ok5/l',
         pay_foreign: 'https://kassa.payanyway.ru/1767042532460540',
@@ -81,7 +81,7 @@ export const data = {
     },
     workdev3: {
         name: 'R3. Рабочее моделирование в инженерии и менеджменте',
-        date: '2026-05-12',
+        date: '2026-06-23',
         price: '60000',
         pay_rus: 'https://yookassa.ru/my/i/aVLqNdJL6mIJ/l',
         pay_foreign: 'https://kassa.payanyway.ru/1767042583486448',
@@ -111,7 +111,7 @@ export const data = {
     },
     workdev6: {
         name: 'R6. Системное моделирование',
-        date: '2026-05-18',
+        date: '2026-07-20',
         price: '60000',
         pay_rus: 'https://yookassa.ru/my/i/aVLqfe1P6Nlc/l',
         pay_foreign: 'https://kassa.payanyway.ru/1767042697589468',
@@ -169,7 +169,7 @@ export const data = {
     // Расписание
     schedule: [
         {
-            date: '2026-05-17',
+            date: '2026-06-14',
             program: 'Личное развитие',
             prerequisite: 'Нет',
             name: 'S1. Системное саморазвитие',
@@ -178,7 +178,7 @@ export const data = {
             price: '35000',
         },
         {
-            date: '2026-05-18',
+            date: '2026-06-15',
             program: 'Личное развитие',
             prerequisite: 'Нет',
             name: 'S2. Методы саморазвития',
@@ -187,16 +187,7 @@ export const data = {
             price: '35000',
         },
         {
-            date: '2026-04-11',
-            program: 'Рабочее развитие',
-            prerequisite: 'Нет',
-            name: 'R1. Распожаризация: как не "тушить пожары" на&nbsp;работе, а&nbsp;избегать их появления',
-            sitelink: '/programs/orgdev?tab=1-org-dev',
-            format: 'резидентура с&nbsp;наставником',
-            price: '60000',
-        },
-        {
-            date: '2026-06-01',
+            date: '2026-06-03',
             program: 'Рабочее развитие',
             prerequisite: 'Завершённая R1 +&nbsp;эссе',
             name: 'R2. Моделирование как основа коммуникации и&nbsp;лидерства',
@@ -205,7 +196,7 @@ export const data = {
             price: '60000',
         },
         {
-            date: '2026-05-12',
+            date: '2026-06-23',
             program: 'Рабочее развитие',
             prerequisite: 'Завершённая R2 +&nbsp;эссе',
             name: 'R3. Рабочее моделирование в&nbsp;инженерии и&nbsp;менеджменте',
@@ -232,7 +223,7 @@ export const data = {
             price: '60000',
         },
         {
-            date: '2026-05-18',
+            date: '2026-07-20',
             program: 'Рабочее развитие',
             prerequisite: 'Завершённая R5 +&nbsp;эссе',
             name: 'R6. Системное моделирование',
@@ -259,22 +250,13 @@ export const data = {
             price: '60000',
         },
         {
-            date: '2026-03-10',
-            program: 'Рабочее развитие',
-            prerequisite: 'Завершённая R8 +&nbsp;эссе',
-            name: 'R9. Инженерия мастерства',
-            sitelink: '/programs/orgdev?tab=9-org-dev',
-            format: 'резидентура с&nbsp;наставником',
-            price: '60000',
-        },
-        {
-            date: '2026-05-12',
-            program: 'Рабочее развитие',
-            prerequisite: 'Завершённая R9 +&nbsp;эссе',
-            name: 'R10. Системный менеджмент',
-            sitelink: '/programs/orgdev?tab=10-org-dev',
-            format: 'резидентура с&nbsp;наставником',
-            price: '60000',
+            date: '2026-06-04',
+            program: 'Личное развитие',
+            prerequisite: 'Нет',
+            name: 'Марафон: От расфокуса к результатам за 2 недели',
+            sitelink: '/intro-marathon',
+            format: 'марафон с&nbsp;наставником',
+            price: '2490',
         },
     ],
 }

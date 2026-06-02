@@ -37,6 +37,12 @@ products:
       link: '/open-endedness'
 
   -
+    title: 'Марафон: От расфокуса к результатам за 2 недели'
+    more:
+      name: 'Подробнее о марафоне'
+      link: '/intro-marathon'
+
+  -
     title: 'Записи прошедших семинаров'
     more:
       name: 'Выбрать семинар'
