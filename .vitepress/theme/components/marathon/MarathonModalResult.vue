@@ -58,6 +58,13 @@ onMounted(() => {
                     :key="item"
                     v-html="item"></p>
             </div>
+
+            <div class="text-small mt-5" v-if="result.footer">
+                <p
+                    v-for="item in result.footer"
+                    :key="item"
+                    v-html="item"></p>
+            </div>
         </div>
 
         <div class="modal-footer">

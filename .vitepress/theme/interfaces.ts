@@ -128,6 +128,7 @@ export interface MarathonResult {
     title: string
     cards?: MarathonResultCard[]
     body?: string[]
+    footer?: string[]
     button: string
 }
 
