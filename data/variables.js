@@ -40,7 +40,7 @@ export const data = {
     },
     selfdev3: {
         name: 'S3. Введение в системное мышление',
-        date: 'зима',
+        date: 'осень',
         price: '80000',
         pay_rus: 'https://yookassa.ru/my/i/aVLjZSRp0Hie/l',
         pay_foreign: 'https://kassa.payanyway.ru/1764775166473645',
