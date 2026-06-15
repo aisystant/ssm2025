@@ -25,8 +25,8 @@ export const data = {
         pay_rus: 'https://yookassa.ru/my/i/aVLixBRGvscC/l',
         pay_foreign: 'https://kassa.payanyway.ru/176477452980220',
         schedule: 'Занятия по воскресеньям с 11:00 до 13:30',
-        start: 'Первое занятие — 24 мая',
-        finish: 'Защита — 26 июля',
+        start: 'Первое занятие — 14 июня',
+        finish: 'Регулярные встречи 21 июня — 9 августа',
     },
     selfdev2: {
         name: 'S2. Методы саморазвития',
@@ -35,8 +35,8 @@ export const data = {
         pay_rus: 'https://yookassa.ru/my/i/aVLjP9w0Apo1/l',
         pay_foreign: 'https://kassa.payanyway.ru/1764775076332191',
         schedule: 'Занятия по понедельникам с 18:00 до 19:30',
-        start: 'Первое занятие — 25 мая',
-        finish: 'Защита — 27 июля',
+        start: 'Первое занятие — 15 июня',
+        finish: 'Регулярные встречи 22 июня — 10 августа',
     },
     selfdev3: {
         name: 'S3. Введение в системное мышление',
