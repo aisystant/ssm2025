@@ -34,8 +34,8 @@ programs:
       - 'Как работать с различными агентами, включая ИИ, для создания разных видов систем?'
     courses:
       -
-        name: '{{ data.workdev2.name }}'
-        date: '{{ data.workdev2.date }}'
+        name: '{{ data.workdev1.name }}'
+        date: '{{ data.workdev1.date }}'
       -
         name: '{{ data.workdev3.name }}'
         date: '{{ data.workdev3.date }}'
