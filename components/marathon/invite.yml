@@ -8,6 +8,6 @@ features:
       - 'Поддержка'
 body:
     - '<b class="text-secondary">Стоимость участия:</b> 2 490 ₽'
-    - '<b class="text-secondary">Старт:</b> 09.07.2026'
+    - '<b class="text-secondary">Старт:</b> 08.07.2026'
 
 button: 'Продолжить'
