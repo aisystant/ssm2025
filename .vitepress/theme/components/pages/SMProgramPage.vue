@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ProgramIntro from './../program/ProgramIntro.vue'
 import ProgramResult from './../program/ProgramResult.vue'
+import ProgramWhyNow from './../program/ProgramWhyNow.vue'
 import ProgramAudience from './../program/ProgramAudience.vue'
 import ProgramObjectives from './../program/ProgramObjectives.vue'
 import ProgramContent from './../program/ProgramContent.vue'
@@ -35,6 +36,11 @@ const { frontmatter } = useData()
     :before="frontmatter.result.before"
     :after="frontmatter.result.after"
     v-if="frontmatter.result" />
+
+    <ProgramWhyNow
+    :title="frontmatter.whynow.title"
+    :items="frontmatter.whynow.items"
+    v-if="frontmatter.whynow" />
 
     <ProgramAudience
     :title="frontmatter.audience.title"
