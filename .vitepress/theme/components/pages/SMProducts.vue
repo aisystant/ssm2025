@@ -17,6 +17,7 @@ const { frontmatter } = useData()
             :idx="i"
             :title="product.title"
             :items="product.items"
+            :text="product.text"
             :more="product.more"
             :key="product.title"
             v-for="(product, i) in frontmatter.products" />

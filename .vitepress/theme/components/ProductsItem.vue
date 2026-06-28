@@ -14,6 +14,7 @@ defineProps<{
     idx: number,
     title: string,
     items?: Card[],
+    text?: string[],
     more?: {
         name: string
         link: string
@@ -68,10 +69,15 @@ defineProps<{
             </div>
         </div>
 
-        <div class="product-footer" v-if="more">
+        <div class="product-footer" v-if="more || text">
+            <template v-if="text">
+                <p v-for="item in text" :key="item" v-html="item"></p>
+            </template>
+
             <a
                 :href="more.link.trim()"
-                :target="more.target ?? undefined">
+                :target="more.target ?? undefined"
+                v-if="more">
                 {{ more.name }}
             </a>
         </div>

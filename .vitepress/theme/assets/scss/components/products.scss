@@ -103,6 +103,15 @@
         font-size: $font-size-sm;
         border-top: 1px solid $gray-400;
         @include padding-y(.75rem, 1rem);
+
+        & p {
+            font-weight: $font-weight-light;
+            margin-bottom: .5rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 
     @include media-breakpoint-down(md) {
