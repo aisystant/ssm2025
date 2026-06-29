@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import SMInfoModal from '../layout/SMInfoModal.vue'
 import ContactUs from './../ContactUs.vue'
 import { data } from '../../../../data/variables'
 import { useData } from '../../composables/data'
@@ -16,6 +17,7 @@ interface ScheduleRow {
     target?: string
     format: string
     price: string
+    info?: string
 }
 
 const rows = ref<ScheduleRow[]>([])
@@ -26,6 +28,14 @@ const formatting = (row: ScheduleRow) => {
         date: formatMonthDay(row.date),
         price: formatPrice(row.price)
     }
+}
+
+const info = ref('')
+const modal = ref(false)
+const openModal = (path: string) => {
+    if (!path) return
+    info.value = path
+    modal.value = true
 }
 
 onMounted(() => {
@@ -79,6 +89,13 @@ onMounted(() => {
                                 :target="row.target ?? undefined">
                             </a>
                         </td>
+                        <td v-else-if="row.info">
+                            <a role="button"
+                                class="btn-link"
+                                @click.prevent="openModal(row.info)"
+                                v-html="row.name">
+                            </a>
+                        </td>
                         <td v-html="row.name" v-else></td>
                         <td v-html="row.format"></td>
                         <td v-html="row.price"></td>
@@ -87,6 +104,11 @@ onMounted(() => {
             </table>
         </div>
     </div>
+
+    <SMInfoModal
+    :path="info"
+    @close="modal = false"
+    v-if="modal" />
 
     <ContactUs />
 </template>
