@@ -169,15 +169,6 @@ export const data = {
     // Расписание
     schedule: [
         {
-            date: '2026-06-29',
-            program: 'Рабочее развитие',
-            prerequisite: 'Завершённая R7 +&nbsp;эссе',
-            name: 'R8. Системная инженерия',
-            sitelink: '/programs/orgdev?tab=8-org-dev',
-            format: 'резидентура с&nbsp;наставником',
-            price: '60000',
-        },
-        {
             date: '2026-07-08',
             program: 'Личное развитие',
             prerequisite: 'Нет',
