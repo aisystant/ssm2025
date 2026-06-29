@@ -49,8 +49,9 @@ products:
         name: 'Вся серия FPF + SPF (5 семинаров)'
         text: 'Цена с 06.07 — 60 000 ₽'
         price: '44&nbsp;000&nbsp;₽'
-        paylink:
-          rus: 'tg://resolve?domain=SystemsSchool_bot'
+        info:
+          name: 'Подробнее'
+          path: 'fpf'
       -
         name: 'FPF-1. Минимум FPF-грамотности: как направлять рабочие ходы AI-агента в&nbsp;проекте'
         text: '12 июля. Цена с 06.07 — 14 000 ₽'
