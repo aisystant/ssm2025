@@ -53,31 +53,31 @@ products:
           rus: 'tg://resolve?domain=SystemsSchool_bot'
       -
         name: 'FPF-1. Минимум FPF-грамотности: как направлять рабочие ходы AI-агента в&nbsp;проекте'
-        text: 'Цена с 06.07 — 14 000 ₽'
+        text: '12 июля. Цена с 06.07 — 14 000 ₽'
         price: '12&nbsp;000&nbsp;₽'
         paylink:
           rus: 'tg://resolve?domain=SystemsSchool_bot'
       -
         name: 'FPF-2. Какие ходы решают судьбу проекта: архитектурное мышление, когда системного уже мало'
-        text: 'Цена с 06.07 — 14 000 ₽'
+        text: '19 июля. Цена с 06.07 — 14 000 ₽'
         price: '12&nbsp;000&nbsp;₽'
         paylink:
           rus: 'tg://resolve?domain=SystemsSchool_bot'
       -
         name: 'FPF-3. От проблемной ситуации к выполненной работе: как собрать рабочий процесс'
-        text: 'Цена с 06.07 — 14 000 ₽'
+        text: '26 июля. Цена с 06.07 — 14 000 ₽'
         price: '12&nbsp;000&nbsp;₽'
         paylink:
           rus: 'tg://resolve?domain=SystemsSchool_bot'
       -
         name: 'FPF-4. Точность языка: как слова вроде "готово", "качество" и "согласовано" срывают планы'
-        text: 'Цена с 06.07 — 14 000 ₽'
+        text: '2 августа. Цена с 06.07 — 14 000 ₽'
         price: '12&nbsp;000&nbsp;₽'
         paylink:
           rus: 'tg://resolve?domain=SystemsSchool_bot'
       -
         name: 'FPF-5. Свой SPF: как дать AI-агенту правила вашей работы'
-        text: 'Цена с 06.07 — 14 000 ₽'
+        text: '9 августа. Цена с 06.07 — 14 000 ₽'
         price: '12&nbsp;000&nbsp;₽'
         paylink:
           rus: 'tg://resolve?domain=SystemsSchool_bot'
