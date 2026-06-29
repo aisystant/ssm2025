@@ -1,13 +1,19 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { formatPrice, formatMonthDay } from '../composables/format'
 import { PaymentLinks } from './../interfaces'
 import SMPayment from './payment/SMPayment.vue'
+import SMInfoModal from './layout/SMInfoModal.vue'
 
 interface Card {
     name: string
     price: string
     text?: string
     paylink: PaymentLinks
+    info?: {
+        name: string
+        path: string
+    }
 }
 
 defineProps<{
@@ -21,6 +27,14 @@ defineProps<{
         target?: string
     }
 }>()
+
+const info = ref('')
+const modal = ref(false)
+const openModal = (path: string) => {
+    if (!path) return
+    info.value = path
+    modal.value = true
+}
 </script>
 
 <template>
@@ -58,11 +72,18 @@ defineProps<{
                         <div class="card-price">
                             {{ formatPrice(item.price) }}
                         </div>
-                        <div class="card-button">
+                        <div class="card-button" v-if="item.paylink">
                             <SMPayment
                             :rus="item.paylink.rus"
                             :foreign="item.paylink.foreign ?? undefined"
                             v-if="item.paylink.rus" />
+                        </div>
+                        <div class="card-button" v-else-if="item.info">
+                            <button
+                                class="btn"
+                                @click="openModal(item.info.path)">
+                                {{ item.info.name }}
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -82,4 +103,9 @@ defineProps<{
             </a>
         </div>
     </div>
+
+    <SMInfoModal
+    :path="info"
+    @close="modal = false"
+    v-if="modal" />
 </template>

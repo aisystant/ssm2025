@@ -67,3 +67,28 @@
         }
     }
 }
+
+.modal-info {
+    @extend .modal-dialog-centered;
+    @extend .modal-lg;
+
+    & .modal-header {
+        @extend .pb-0;
+
+        & .modal-title {
+            font-weight: $font-weight-semibold;
+            margin-right: 1rem;
+        }
+    }
+
+    & .text-sm {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-light;
+    }
+
+    & .modal-footer {
+        justify-content: center;
+        padding-bottom: 2rem;
+        margin-top: -1rem;
+    }
+}

@@ -49,38 +49,44 @@ products:
         name: 'Вся серия FPF + SPF (5 семинаров)'
         text: 'Цена с 06.07 — 60 000 ₽'
         price: '44&nbsp;000&nbsp;₽'
-        paylink:
-          rus: 'tg://resolve?domain=SystemsSchool_bot'
+        info:
+          name: 'Подробнее'
+          path: 'fpf'
       -
         name: 'FPF-1. Минимум FPF-грамотности: как направлять рабочие ходы AI-агента в&nbsp;проекте'
         text: '12 июля. Цена с 06.07 — 14 000 ₽'
         price: '12&nbsp;000&nbsp;₽'
-        paylink:
-          rus: 'tg://resolve?domain=SystemsSchool_bot'
+        info:
+          name: 'Подробнее'
+          path: 'fpf1'
       -
         name: 'FPF-2. Какие ходы решают судьбу проекта: архитектурное мышление, когда системного уже мало'
         text: '19 июля. Цена с 06.07 — 14 000 ₽'
         price: '12&nbsp;000&nbsp;₽'
-        paylink:
-          rus: 'tg://resolve?domain=SystemsSchool_bot'
+        info:
+          name: 'Подробнее'
+          path: 'fpf2'
       -
         name: 'FPF-3. От проблемной ситуации к выполненной работе: как собрать рабочий процесс'
         text: '26 июля. Цена с 06.07 — 14 000 ₽'
         price: '12&nbsp;000&nbsp;₽'
-        paylink:
-          rus: 'tg://resolve?domain=SystemsSchool_bot'
+        info:
+          name: 'Подробнее'
+          path: 'fpf3'
       -
         name: 'FPF-4. Точность языка: как слова вроде "готово", "качество" и "согласовано" срывают планы'
         text: '2 августа. Цена с 06.07 — 14 000 ₽'
         price: '12&nbsp;000&nbsp;₽'
-        paylink:
-          rus: 'tg://resolve?domain=SystemsSchool_bot'
+        info:
+          name: 'Подробнее'
+          path: 'fpf4'
       -
         name: 'FPF-5. Свой SPF: как дать AI-агенту правила вашей работы'
         text: '9 августа. Цена с 06.07 — 14 000 ₽'
         price: '12&nbsp;000&nbsp;₽'
-        paylink:
-          rus: 'tg://resolve?domain=SystemsSchool_bot'
+        info:
+          name: 'Подробнее'
+          path: 'fpf5'
     text:
       - '5 практикумов с <a href="/team/levenchuk">Анатолием Левенчуком</a> о&nbsp;том, как использовать FPF и SPF для&nbsp;работы с&nbsp;AI-агентами: от&nbsp;минимальной FPF-грамотности до&nbsp;предметных регламентов под&nbsp;свою работу.'
       - 'Можно купить отдельный семинар или всю серию пакетом. Оплата проходит через Telegram-бот МИМ. По&nbsp;вопросам оплаты или доступа пишите <a href="tg://resolve?domain=Gelya1848">@Gelya1848</a>.'
