@@ -65,9 +65,9 @@ export const data = {
         price: '60000',
         pay_rus: 'https://yookassa.ru/my/i/aVJ2QLZRa5H0/l',
         pay_foreign: 'https://kassa.payanyway.ru/176701232338332',
-        schedule: 'Разборы по субботам с 10:00',
-        start: '',
-        finish: '',
+        schedule: 'Разборы по вторникам с 18:30',
+        start: 'Первый разбор — 11 августа',
+        finish: 'Шестой разбор — 15 сентября',
     },
     workdev2: {
         name: 'R2. Моделирование как основа коммуникации и лидерства',
@@ -203,6 +203,15 @@ export const data = {
             sitelink: '/programs/intro?tab=selfdev',
             format: 'практикум с&nbsp;наставником',
             price: '35000',
+        },
+        {
+            date: '2026-08-11',
+            program: 'Рабочее развитие',
+            prerequisite: 'Нет',
+            name: 'R1. Распожаризация: как не "тушить пожары" на&nbsp;работе, а&nbsp;избегать их появления',
+            sitelink: '/programs/orgdev?tab=1-org-dev',
+            format: 'резидентура с&nbsp;наставником',
+            price: '60000',
         },
         {
             date: '2026-07-19',
