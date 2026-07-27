@@ -63,7 +63,7 @@ export const data = {
         name: 'R1. Распожаризация',
         date: '2026-08-11',
         price: '60000',
-        pay_rus: 'https://yookassa.ru/my/i/aVJ2QLZRa5H0/l',
+        pay_rus: 'https://yookassa.ru/my/i/amcx64_mCDr1/l',
         pay_foreign: 'https://kassa.payanyway.ru/176701232338332',
         schedule: 'Разборы по вторникам с 18:30',
         start: 'Первый разбор — 11 августа',
