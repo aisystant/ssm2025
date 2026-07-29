@@ -188,8 +188,7 @@ layout: page
     IWE — не ещё один чат с ИИ. Помнит твои проекты, замыслы и опыт. Формализует знания по структуре первых принципов. Подбирает мировой опыт под твой контекст.
   </p>
   <div class="iwe-btns">
-    <a href="https://t.me/aist_me_bot" class="iwe-btn-p">Начать в Telegram</a>
-    <a href="#iwe-connect" class="iwe-btn-s">Подключить в браузере</a>
+    <a href="#iwe-connect" class="iwe-btn-p">Подключить ИИ-среду IWE</a>
   </div>
 </div>
 
@@ -395,11 +394,5 @@ layout: page
 
 </div>
 
-<script>
-function iweTab(id, btn) {
-  document.querySelectorAll('.iwe-tab-pane').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.iwe-tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('iwe-tab-' + id).classList.add('active');
-  btn.classList.add('active');
-}
-</script>
+<!-- Переключение вкладок (iweTab) живёт в теме сайта (.vitepress/theme/index.ts) —
+     inline <script> здесь вырезается сборкой vitepress и в проде не работал. -->
