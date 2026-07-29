@@ -121,6 +121,12 @@ layout: page
 .iwe-tab-desc p { font-size:14px; color:var(--its); line-height:1.7; margin:0 0 12px; }
 .iwe-tip { margin-top:18px; background:#fff; border:1.5px solid var(--ib); border-radius:10px; padding:16px 18px; font-size:13px; color:var(--its); line-height:1.65; }
 .iwe-tip strong { color:var(--it); }
+/* Две карточки-варианта во вкладке «Браузер» (Claude / Kimi) */
+.iwe-channel-note { grid-column:1/-1; background:#fff; border:1.5px solid var(--ib); border-radius:10px; padding:16px 18px; font-size:15px; color:var(--it); line-height:1.65; }
+.iwe-channel-card { background:#fff; border:1.5px solid var(--ib); border-radius:12px; padding:24px; }
+.iwe-channel-card h4 { font-size:19px; font-weight:700; margin-bottom:8px; }
+.iwe-channel-card > p { font-size:14px; color:var(--its); line-height:1.65; margin-bottom:16px; }
+.iwe-channel-tag { display:inline-block; font-size:12px; font-weight:600; color:var(--ia); background:var(--ial); border-radius:999px; padding:3px 12px; margin-bottom:12px; }
 .iwe-tip a,.iwe-step-body a { color:var(--ia); text-decoration:none; font-weight:500; }
 .iwe-tip a:hover,.iwe-step-body a:hover { text-decoration:underline; }
 .iwe-steps-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; }
@@ -183,7 +189,7 @@ layout: page
   </p>
   <div class="iwe-btns">
     <a href="https://t.me/aist_me_bot" class="iwe-btn-p">Начать в Telegram</a>
-    <a href="https://claude.ai" class="iwe-btn-s">Подключить в браузере</a>
+    <a href="#iwe-connect" class="iwe-btn-s">Подключить в браузере</a>
   </div>
 </div>
 
@@ -241,7 +247,7 @@ layout: page
         <tr><td>База знаний МИМ</td><td><span class="iwe-ch">✓</span></td><td><span class="iwe-ch">✓</span></td><td><span class="iwe-ch">✓</span></td></tr>
         <tr><td>Подписка МИМ</td><td><span class="iwe-ch">✓</span></td><td><span class="iwe-ch">✓</span></td><td><span class="iwe-ch">✓</span></td></tr>
         <tr><td>Руководства МИМ / Марафон</td><td><span class="iwe-dash">—</span></td><td><span class="iwe-ch">✓</span></td><td><span class="iwe-ch">✓</span></td></tr>
-        <tr><td>Подписка на ИИ (Claude.ai)</td><td><span class="iwe-dash">—</span></td><td><span class="iwe-ch">✓</span></td><td><span class="iwe-ch">✓</span></td></tr>
+        <tr><td>Подписка на ИИ (Claude.ai или через платформу)</td><td><span class="iwe-dash">—</span></td><td><span class="iwe-ch">✓</span></td><td><span class="iwe-ch">✓</span></td></tr>
         <tr><td>Память между сессиями</td><td><span class="iwe-dash">—</span></td><td><span class="iwe-part">частично</span></td><td><span class="iwe-ch">✓</span></td></tr>
         <tr><td>Работа с личными проектами</td><td><span class="iwe-dash">—</span></td><td><span class="iwe-part">частично</span></td><td><span class="iwe-ch">✓</span></td></tr>
         <tr><td>Автономный помощник (план дня и т.п.)</td><td><span class="iwe-dash">—</span></td><td><span class="iwe-dash">—</span></td><td><span class="iwe-ch">✓</span></td></tr>
@@ -254,7 +260,7 @@ layout: page
 
 <hr class="iwe-hr" />
 
-<div class="iwe-section-bg">
+<div class="iwe-section-bg" id="iwe-connect">
 <div class="iwe-inner">
   <span class="iwe-lbl">Инструкции подключения</span>
   <h2 class="iwe-stitle">Начните за 5 минут</h2>
@@ -283,19 +289,34 @@ layout: page
   </div>
 
   <div id="iwe-tab-browser" class="iwe-tab-pane">
-    <div class="iwe-tab-desc">
-      <h3>Браузер — полная среда без установки</h3>
-      <p>Удобно вне рабочего места — на телефоне, в дороге, на чужом компьютере. Стратегические сессии и общение с ИИ фиксируются в твоей базе знаний, включая личные проекты. Освоение программ МИМ через персональные руководства, которые можно сразу применять в работе.</p>
+    <div class="iwe-channel-note">
+      Удобно вне рабочего места — на телефоне, в дороге, на чужом компьютере. Стратегические сессии и общение с ИИ фиксируются в твоей базе знаний, включая личные проекты.<br>
+      <strong>Как выбрать:</strong> есть аккаунт Claude.ai → вариант 1 (полный коннектор). Claude недоступен или его нет → вариант 2 (Kimi) — вход своим логином Aisystant, оплата через подписку платформы.
+    </div>
+    <div class="iwe-channel-card">
+      <span class="iwe-channel-tag">Вариант 1 · Claude.ai</span>
+      <h4>Полный коннектор</h4>
+      <p>Вся база знаний и личные проекты прямо в claude.ai. Освоение программ МИМ через персональные руководства, которые можно сразу применять в работе.</p>
+      <ol class="iwe-steps-list">
+        <li class="iwe-step"><div class="iwe-step-n">1</div><div class="iwe-step-body"><h4>Войди на Claude.ai</h4><p>Войди или зарегистрируйся на <a href="https://claude.ai" target="_blank">claude.ai</a>.</p></div></li>
+        <li class="iwe-step"><div class="iwe-step-n">2</div><div class="iwe-step-body"><h4>Открой настройки коннекторов</h4><p>Перейди в <a href="https://claude.ai/settings/connectors" target="_blank">Настройки → Connectors</a> и нажми «Add custom connector».</p></div></li>
+        <li class="iwe-step"><div class="iwe-step-n">3</div><div class="iwe-step-body"><h4>Введи параметры Aisystant</h4><p>Name: <code>Aisystant</code><br>Remote MCP server URL: <code>https://mcp.aisystant.com/mcp</code></p></div></li>
+        <li class="iwe-step"><div class="iwe-step-n">4</div><div class="iwe-step-body"><h4>Подключись</h4><p>Нажми Add, затем Connect и пройди верификацию. Готово.</p></div></li>
+      </ol>
       <div class="iwe-tip">
         Дальше — спроси Claude: <strong>«Как мне развиваться дальше?»</strong> или <strong>«Создай для меня персональное руководство по личному развитию, включая IWE»</strong>. Claude запустит программу «Личное развитие» через твоё персональное руководство в Projects.
       </div>
     </div>
-    <ol class="iwe-steps-list">
-      <li class="iwe-step"><div class="iwe-step-n">1</div><div class="iwe-step-body"><h4>Войди на Claude.ai</h4><p>Войди или зарегистрируйся на <a href="https://claude.ai" target="_blank">claude.ai</a>.</p></div></li>
-      <li class="iwe-step"><div class="iwe-step-n">2</div><div class="iwe-step-body"><h4>Открой настройки коннекторов</h4><p>Перейди в <a href="https://claude.ai/settings/connectors" target="_blank">Настройки → Connectors</a> и нажми «Add custom connector».</p></div></li>
-      <li class="iwe-step"><div class="iwe-step-n">3</div><div class="iwe-step-body"><h4>Введи параметры Aisystant</h4><p>Name: <code>Aisystant</code><br>Remote MCP server URL: <code>https://mcp.aisystant.com/mcp</code></p></div></li>
-      <li class="iwe-step"><div class="iwe-step-n">4</div><div class="iwe-step-body"><h4>Подключись</h4><p>Нажми Add, затем Connect и пройди верификацию. Готово.</p></div></li>
-    </ol>
+    <div class="iwe-channel-card">
+      <span class="iwe-channel-tag">Вариант 2 · Kimi</span>
+      <h4>Без аккаунта Claude</h4>
+      <p>Тот же доступ к базе знаний и личным заметкам через наш веб-стенд. Ничего дополнительно заводить не нужно — оплата уже включена в подписку платформы.</p>
+      <ol class="iwe-steps-list">
+        <li class="iwe-step"><div class="iwe-step-n">1</div><div class="iwe-step-body"><h4>Открой стенд</h4><p>Перейди на <a href="https://kimi-adapter-production.up.railway.app" target="_blank">kimi-adapter-production.up.railway.app</a>.</p></div></li>
+        <li class="iwe-step"><div class="iwe-step-n">2</div><div class="iwe-step-body"><h4>Войди через Aisystant</h4><p>Тот же логин, что в Telegram-боте — пройди экран входа, и откроется чат.</p></div></li>
+        <li class="iwe-step"><div class="iwe-step-n">3</div><div class="iwe-step-body"><h4>Пиши в чат</h4><p>Спроси, например: <strong>«Что такое ОРЗ-фрактал?»</strong> — ответ придёт из твоей базы знаний. Попроси записать заметку — она сохранится в твоих личных знаниях.</p></div></li>
+      </ol>
+    </div>
   </div>
 
   <div id="iwe-tab-vscode" class="iwe-tab-pane">
