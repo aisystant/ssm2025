@@ -121,7 +121,7 @@ layout: page
 .iwe-tab-desc p { font-size:14px; color:var(--its); line-height:1.7; margin:0 0 12px; }
 .iwe-tip { margin-top:18px; background:#fff; border:1.5px solid var(--ib); border-radius:10px; padding:16px 18px; font-size:13px; color:var(--its); line-height:1.65; }
 .iwe-tip strong { color:var(--it); }
-/* Две карточки-варианта во вкладке «Браузер» (Claude / Kimi) */
+/* Две карточки-варианта во вкладке «Браузер» (Claude.ai / Стенд МИМ) */
 .iwe-channel-note { grid-column:1/-1; background:#fff; border:1.5px solid var(--ib); border-radius:10px; padding:16px 18px; font-size:15px; color:var(--it); line-height:1.65; }
 .iwe-channel-card { background:#fff; border:1.5px solid var(--ib); border-radius:12px; padding:24px; }
 .iwe-channel-card h4 { font-size:19px; font-weight:700; margin-bottom:8px; }
@@ -290,7 +290,7 @@ layout: page
   <div id="iwe-tab-browser" class="iwe-tab-pane">
     <div class="iwe-channel-note">
       Удобно вне рабочего места — на телефоне, в дороге, на чужом компьютере. Стратегические сессии и общение с ИИ фиксируются в твоей базе знаний, включая личные проекты.<br>
-      <strong>Как выбрать:</strong> есть аккаунт Claude.ai → вариант 1 (полный коннектор). Claude недоступен или его нет → вариант 2 (Kimi) — вход своим логином Aisystant, оплата через подписку платформы.
+      <strong>Как выбрать:</strong> есть аккаунт Claude.ai → вариант 1 (полный коннектор). Claude недоступен или его нет → вариант 2 (веб-стенд МИМ) — вход своим логином, оплата уже включена в подписку платформы.
     </div>
     <div class="iwe-channel-card">
       <span class="iwe-channel-tag">Вариант 1 · Claude.ai</span>
@@ -307,12 +307,12 @@ layout: page
       </div>
     </div>
     <div class="iwe-channel-card">
-      <span class="iwe-channel-tag">Вариант 2 · Kimi</span>
+      <span class="iwe-channel-tag">Вариант 2 · Стенд МИМ</span>
       <h4>Без аккаунта Claude</h4>
       <p>Тот же доступ к базе знаний и личным заметкам через наш веб-стенд. Ничего дополнительно заводить не нужно — оплата уже включена в подписку платформы.</p>
       <ol class="iwe-steps-list">
-        <li class="iwe-step"><div class="iwe-step-n">1</div><div class="iwe-step-body"><h4>Открой стенд</h4><p>Перейди на <a href="https://kimi-adapter-production.up.railway.app" target="_blank">kimi-adapter-production.up.railway.app</a>.</p></div></li>
-        <li class="iwe-step"><div class="iwe-step-n">2</div><div class="iwe-step-body"><h4>Войди через Aisystant</h4><p>Тот же логин, что в Telegram-боте — пройди экран входа, и откроется чат.</p></div></li>
+        <li class="iwe-step"><div class="iwe-step-n">1</div><div class="iwe-step-body"><h4>Открой стенд</h4><p>Перейди на <a href="https://mim-iwe.railway.app" target="_blank">mim-iwe.railway.app</a>.</p></div></li>
+        <li class="iwe-step"><div class="iwe-step-n">2</div><div class="iwe-step-body"><h4>Войди своим логином</h4><p>Тот же логин, что в Telegram-боте — пройди экран входа, и откроется чат.</p></div></li>
         <li class="iwe-step"><div class="iwe-step-n">3</div><div class="iwe-step-body"><h4>Пиши в чат</h4><p>Спроси, например: <strong>«Что такое ОРЗ-фрактал?»</strong> — ответ придёт из твоей базы знаний. Попроси записать заметку — она сохранится в твоих личных знаниях.</p></div></li>
       </ol>
     </div>
