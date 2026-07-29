@@ -311,7 +311,7 @@ layout: page
       <h4>Без аккаунта Claude</h4>
       <p>Тот же доступ к базе знаний и личным заметкам через наш веб-стенд. Ничего дополнительно заводить не нужно — оплата уже включена в подписку платформы.</p>
       <ol class="iwe-steps-list">
-        <li class="iwe-step"><div class="iwe-step-n">1</div><div class="iwe-step-body"><h4>Открой стенд</h4><p>Перейди на <a href="https://mim-iwe.railway.app" target="_blank">mim-iwe.railway.app</a>.</p></div></li>
+        <li class="iwe-step"><div class="iwe-step-n">1</div><div class="iwe-step-body"><h4>Открой стенд</h4><p>Перейди на <a href="https://mim-iwe-production.up.railway.app" target="_blank">mim-iwe-production.up.railway.app</a>.</p></div></li>
         <li class="iwe-step"><div class="iwe-step-n">2</div><div class="iwe-step-body"><h4>Войди своим логином</h4><p>Тот же логин, что в Telegram-боте — пройди экран входа, и откроется чат.</p></div></li>
         <li class="iwe-step"><div class="iwe-step-n">3</div><div class="iwe-step-body"><h4>Пиши в чат</h4><p>Спроси, например: <strong>«Что такое ОРЗ-фрактал?»</strong> — ответ придёт из твоей базы знаний. Попроси записать заметку — она сохранится в твоих личных знаниях.</p></div></li>
       </ol>
