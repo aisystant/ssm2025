@@ -19,8 +19,9 @@ const data = yaml.load(yamlText) as {
 
 import axios from 'axios'
 import { ref, computed, watch, onMounted } from 'vue'
+import { generateUUID } from '../../utils/uuid'
 
-const paymentId = ref(crypto.randomUUID())
+const paymentId = ref(generateUUID())
 const state = ref<''|'loading'|'success'|'fail'>('')
 const code = ref('')
 const price = ref('')
@@ -73,7 +74,7 @@ function send() {
         .catch(error => {
             state.value = 'fail'
             errorText.value = error.response.data.message || data.error
-            paymentId.value = crypto.randomUUID()
+            paymentId.value = generateUUID()
         })
 }
 
