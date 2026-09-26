@@ -296,12 +296,17 @@ layout: page
       <span class="iwe-channel-tag">Вариант 1 · Claude.ai</span>
       <h4>Полный коннектор</h4>
       <p>Вся база знаний и личные проекты прямо в claude.ai. Освоение программ МИМ через персональные руководства, которые можно сразу применять в работе.</p>
-      <ol class="iwe-steps-list">
-        <li class="iwe-step"><div class="iwe-step-n">1</div><div class="iwe-step-body"><h4>Войди на Claude.ai</h4><p>Войди или зарегистрируйся на <a href="https://claude.ai" target="_blank">claude.ai</a>.</p></div></li>
-        <li class="iwe-step"><div class="iwe-step-n">2</div><div class="iwe-step-body"><h4>Открой настройки коннекторов</h4><p>Перейди в <a href="https://claude.ai/settings/connectors" target="_blank">Настройки → Connectors</a> и нажми «Add custom connector».</p></div></li>
-        <li class="iwe-step"><div class="iwe-step-n">3</div><div class="iwe-step-body"><h4>Введи параметры Aisystant</h4><p>Name: <code>Aisystant</code><br>Remote MCP server URL: <code>https://mcp.aisystant.com/mcp</code></p></div></li>
-        <li class="iwe-step"><div class="iwe-step-n">4</div><div class="iwe-step-body"><h4>Подключись</h4><p>Нажми Add, затем Connect и пройди верификацию. Готово.</p></div></li>
-      </ol>
+      <a href="https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Aisystant&connectorUrl=https%3A%2F%2Fmcp.aisystant.com%2Fmcp" target="_blank" class="iwe-btn-p" style="margin-bottom:18px">Подключить одной кнопкой →</a>
+      <p style="font-size:13px;color:var(--its);line-height:1.6;margin-bottom:18px">Откроется claude.ai с уже заполненными параметрами коннектора — останется нажать Add, затем Connect и пройти верификацию. Нет аккаунта Claude — сначала зарегистрируйся на <a href="https://claude.ai" target="_blank">claude.ai</a>.</p>
+      <details>
+        <summary style="cursor:pointer;font-size:13px;font-weight:600;color:var(--its)">Кнопка не открылась — подключить вручную</summary>
+        <ol class="iwe-steps-list" style="margin-top:8px">
+          <li class="iwe-step"><div class="iwe-step-n">1</div><div class="iwe-step-body"><h4>Войди на Claude.ai</h4><p>Войди или зарегистрируйся на <a href="https://claude.ai" target="_blank">claude.ai</a>.</p></div></li>
+          <li class="iwe-step"><div class="iwe-step-n">2</div><div class="iwe-step-body"><h4>Открой настройки коннекторов</h4><p>Перейди в <a href="https://claude.ai/settings/connectors" target="_blank">Настройки → Connectors</a> и нажми «Add custom connector».</p></div></li>
+          <li class="iwe-step"><div class="iwe-step-n">3</div><div class="iwe-step-body"><h4>Введи параметры Aisystant</h4><p>Name: <code>Aisystant</code><br>Remote MCP server URL: <code>https://mcp.aisystant.com/mcp</code></p></div></li>
+          <li class="iwe-step"><div class="iwe-step-n">4</div><div class="iwe-step-body"><h4>Подключись</h4><p>Нажми Add, затем Connect и пройди верификацию. Готово.</p></div></li>
+        </ol>
+      </details>
       <div class="iwe-tip">
         Дальше — спроси Claude: <strong>«Как мне развиваться дальше?»</strong> или <strong>«Создай для меня персональное руководство по личному развитию, включая IWE»</strong>. Claude запустит программу «Личное развитие» через твоё персональное руководство в Projects.
       </div>
