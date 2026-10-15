@@ -1,0 +1,58 @@
+name: No-Cyrillic Gate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  no-cyrillic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve diff range
+        id: range
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            base="${{ github.event.pull_request.base.sha }}"
+            head="${{ github.event.pull_request.head.sha }}"
+          else
+            base="${{ github.event.before }}"
+            head="${{ github.event.after }}"
+            case "$base" in
+              ""|0000000000000000000000000000000000000000)
+                base="$(git rev-list --max-parents=0 "$head" | tail -1)" ;;
+            esac
+          fi
+          echo "base=$base" >> "$GITHUB_OUTPUT"
+          echo "head=$head" >> "$GITHUB_OUTPUT"
+
+      - name: Cyrillic gate — new lines introduced by this change
+        # Scoped to the diff, not the whole tree: these repositories carry
+        # pre-existing Cyrillic (legacy comments/docs); the gate blocks new
+        # drift going forward, not retroactive cleanup nobody asked for.
+        # The range is written as a hex Unicode escape, not literal Cyrillic
+        # letters, so the gate's own source file never trips its own check.
+        run: |
+          base="${{ steps.range.outputs.base }}"
+          head="${{ steps.range.outputs.head }}"
+          added=$(git diff "$base" "$head" -- . | grep -P '^\+[^+]' | grep -P '[\x{0400}-\x{04FF}\x{0500}-\x{052F}]' || true)
+          if [ -n "$added" ]; then
+            echo '::error::New Cyrillic text introduced by this change -- this repository is English-only going forward.'
+            printf '%s\n' "$added"
+            exit 1
+          fi
+          echo 'PASS: no new Cyrillic introduced.'
+
+      - name: Cyrillic gate — commit messages
+        run: |
+          base="${{ steps.range.outputs.base }}"
+          head="${{ steps.range.outputs.head }}"
+          messages="$(git log "$base..$head" --format=%B)"
+          if printf '%s' "$messages" | grep -qP '[\x{0400}-\x{04FF}\x{0500}-\x{052F}]'; then
+            echo '::error::Commit message contains Cyrillic -- this repository is English-only going forward.'
+            exit 1
+          fi
+          echo 'PASS: commit messages contain no Cyrillic.'
