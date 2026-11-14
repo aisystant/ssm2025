@@ -1,3 +1,3 @@
 export const exampleData = {
-    currentDate: '2026-11-13',
+    currentDate: '2026-11-14',
 };
